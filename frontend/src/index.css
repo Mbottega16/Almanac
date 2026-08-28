@@ -589,6 +589,191 @@ nav a {
   opacity: 0.7;
 }
 
+/* --- Guided discovery (pre-dashboard swipe flow) --------------------- */
+
+.discover {
+  max-width: 640px;
+  margin-inline: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 2rem;
+  box-sizing: border-box;
+}
+
+.discover-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.discover-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.discover-skip {
+  background: none;
+  border: none;
+  font: inherit;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.discover-skip:hover {
+  opacity: 1;
+}
+
+.discover-progress {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.discover-dot {
+  height: 4px;
+  flex: 1;
+  border-radius: 999px;
+  background: #8883;
+}
+.discover-dot.on {
+  background: var(--accent);
+}
+.discover-dot.done {
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+.discover-viewport {
+  overflow: hidden;
+  flex: 1;
+  touch-action: pan-y;
+}
+
+.discover-track {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: flex-start;
+}
+
+.discover-panel {
+  flex: 0 0 100%;
+}
+
+.discover-panel h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.4rem;
+}
+
+.discover-sub {
+  margin: 0 0 1.25rem;
+  opacity: 0.65;
+  font-size: 0.92rem;
+}
+
+.discover-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.discover-choice {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border: 1px solid #8884;
+  border-radius: 10px;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.06s ease;
+}
+.discover-choice:hover {
+  border-color: var(--accent);
+  background: #4a90e20d;
+}
+.discover-choice:active {
+  transform: scale(0.99);
+}
+.discover-choice.picked {
+  border-color: var(--accent);
+  background: #4a90e21a;
+}
+
+.discover-choice-label {
+  font-weight: 600;
+}
+.discover-choice-hint {
+  font-size: 0.82rem;
+  opacity: 0.6;
+}
+
+.discover-freetext {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.discover-freetext input {
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #8884;
+  border-radius: 10px;
+  background: none;
+  color: inherit;
+}
+.discover-freetext button {
+  align-self: flex-start;
+  padding: 0.6rem 1.1rem;
+  font: inherit;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+}
+
+.discover-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #8882;
+}
+
+.discover-nav {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.discover-nav:hover {
+  opacity: 1;
+}
+.discover-nav:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.discover-count {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .discover-track {
+    transition: none;
+  }
+}
+
 .login-gate {
   max-width: 320px;
   margin: 15vh auto 0;

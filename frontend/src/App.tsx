@@ -2,15 +2,29 @@ import { useEffect, useState } from "react";
 
 import { ApiError, fetchAuthStatus, markVisited, randomResource, searchResources } from "./api/client";
 import CollectionPanel from "./components/CollectionPanel";
+import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
 import LoginGate from "./components/LoginGate";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
+import DiscoverPage from "./pages/DiscoverPage";
 
 type Tab = "browse" | "capture";
+const DISCOVERED_KEY = "almanac.discovered";
+
+function seenDiscover(): boolean {
+  try {
+    return localStorage.getItem(DISCOVERED_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
 
 export default function App() {
   const [tab, setTab] = useState<Tab>("browse");
   const [authed, setAuthed] = useState<boolean | null>(null); // null = still checking
+  const [discovering, setDiscovering] = useState(!seenDiscover());
+  const [browseFilters, setBrowseFilters] = useState<Filters>(EMPTY_FILTERS);
+  const [browseKey, setBrowseKey] = useState(0);
 
   useEffect(() => {
     (async () => {
@@ -57,8 +71,24 @@ export default function App() {
 
   const handleFavoriteToggle = () => setCollectionRefreshKey((k) => k + 1);
 
+  const leaveDiscover = (filters?: Filters) => {
+    try {
+      localStorage.setItem(DISCOVERED_KEY, "1");
+    } catch {
+      // fine — they'll just see it again next visit
+    }
+    if (filters) {
+      setBrowseFilters(filters);
+      setBrowseKey((k) => k + 1); // force BrowsePage to re-seed its filter state
+    }
+    setTab("browse");
+    setDiscovering(false);
+  };
+
   if (authed === null) return <div style={{ padding: "2rem" }}>Loading…</div>;
   if (authed === false) return <LoginGate onAuthed={() => setAuthed(true)} />;
+  if (discovering)
+    return <DiscoverPage onDone={(f) => leaveDiscover(f)} onSkip={() => leaveDiscover()} />;
 
   return (
     <div>
@@ -91,6 +121,16 @@ export default function App() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
+            setDiscovering(true);
+          }}
+          title="Answer a few questions to narrow things down"
+        >
+          ✨ Guided
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
             if (!rolling) handleSurpriseMe();
           }}
           style={{ marginLeft: "auto", opacity: rolling ? 0.5 : 1 }}
@@ -110,7 +150,12 @@ export default function App() {
         </a>
       </nav>
       {tab === "browse" ? (
-        <BrowsePage onVisit={handleVisit} onFavoriteToggle={handleFavoriteToggle} />
+        <BrowsePage
+          key={browseKey}
+          initialFilters={browseFilters}
+          onVisit={handleVisit}
+          onFavoriteToggle={handleFavoriteToggle}
+        />
       ) : (
         <CapturePage />
       )}

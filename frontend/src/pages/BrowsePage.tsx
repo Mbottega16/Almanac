@@ -27,13 +27,18 @@ function loadViewMode(): ViewMode {
 }
 
 export default function BrowsePage({
+  initialFilters,
   onVisit,
   onFavoriteToggle,
 }: {
+  initialFilters?: Filters;
   onVisit: () => void;
   onFavoriteToggle: () => void;
 }) {
-  const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
+  const [filters, setFilters] = useState<Filters>(() => ({
+    ...EMPTY_FILTERS,
+    ...initialFilters,
+  }));
   const [resources, setResources] = useState<Resource[]>([]);
   const [total, setTotal] = useState(0);
   const [subjects, setSubjects] = useState<NameCount[]>([]);
