@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { markVisited, randomResource } from "./api/client";
+import { ApiError, fetchAuthStatus, markVisited, randomResource, searchResources } from "./api/client";
 import CollectionPanel from "./components/CollectionPanel";
+import LoginGate from "./components/LoginGate";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
 
@@ -9,6 +10,25 @@ type Tab = "browse" | "capture";
 
 export default function App() {
   const [tab, setTab] = useState<Tab>("browse");
+  const [authed, setAuthed] = useState<boolean | null>(null); // null = still checking
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { gate_enabled } = await fetchAuthStatus();
+        if (!gate_enabled) return setAuthed(true);
+        // Gate is on — probe a protected route to see if we already have a cookie.
+        try {
+          await searchResources({});
+          setAuthed(true);
+        } catch (e) {
+          setAuthed(e instanceof ApiError && e.status === 401 ? false : true);
+        }
+      } catch {
+        setAuthed(true); // if even the status check fails, don't hard-block the UI
+      }
+    })();
+  }, []);
   const [collectionOpen, setCollectionOpen] = useState(false);
   const [collectionRefreshKey, setCollectionRefreshKey] = useState(0);
   const [hasAutoOpened, setHasAutoOpened] = useState(false);
@@ -36,6 +56,9 @@ export default function App() {
   };
 
   const handleFavoriteToggle = () => setCollectionRefreshKey((k) => k + 1);
+
+  if (authed === null) return <div style={{ padding: "2rem" }}>Loading…</div>;
+  if (authed === false) return <LoginGate onAuthed={() => setAuthed(true)} />;
 
   return (
     <div>

@@ -144,6 +144,19 @@ def test_batch_import_upserts_on_link(client):
     assert body["updated"][0]["source"] == "capture"
 
 
+def test_auth_gate_dormant_by_default(client):
+    # No ADMIN_PASSWORD in the test env -> every route is open.
+    assert client.get("/api/auth-status").json() == {"gate_enabled": False}
+    assert client.get("/api/resources").status_code == 200
+
+
+def test_capture_research_disabled_without_key(client):
+    assert client.get("/api/capture/enabled").json() == {"enabled": False}
+    resp = client.post("/api/capture/research", json={"links": ["https://x.com"]})
+    assert resp.status_code == 503
+    assert "ANTHROPIC_API_KEY" in resp.json()["detail"]
+
+
 def test_udl_coverage(client):
     client.post("/api/resources", json=_payload(link="https://v.com", resource_type="video", tags=["water cycle"], udl_principles=["representation"]))
     client.post("/api/resources", json=_payload(link="https://lab.com", resource_type="activity", tags=["water cycle"], udl_principles=["action_expression", "engagement"]))

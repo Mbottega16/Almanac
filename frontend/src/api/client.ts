@@ -50,15 +50,26 @@ export const UDL_LABELS: Record<UdlPrinciple, string> = {
 
 const BASE = import.meta.env.VITE_API_BASE_URL || "";
 
+export class ApiError extends Error {
+  constructor(public status: number, path: string) {
+    super(`Request to ${path} failed: ${status}`);
+  }
+}
+
 async function apiGet<T>(path: string): Promise<T> {
-  const resp = await fetch(`${BASE}${path}`);
-  if (!resp.ok) throw new Error(`Request to ${path} failed: ${resp.status}`);
+  const resp = await fetch(`${BASE}${path}`, { credentials: "include" });
+  if (!resp.ok) throw new ApiError(resp.status, path);
   return resp.json();
 }
 
-async function apiPost<T>(path: string): Promise<T> {
-  const resp = await fetch(`${BASE}${path}`, { method: "POST" });
-  if (!resp.ok) throw new Error(`Request to ${path} failed: ${resp.status}`);
+async function apiPost<T>(path: string, body?: unknown): Promise<T> {
+  const resp = await fetch(`${BASE}${path}`, {
+    method: "POST",
+    credentials: "include",
+    headers: body !== undefined ? { "Content-Type": "application/json" } : undefined,
+    body: body !== undefined ? JSON.stringify(body) : undefined,
+  });
+  if (!resp.ok) throw new ApiError(resp.status, path);
   return resp.json();
 }
 
@@ -124,4 +135,48 @@ export function markVisited(id: number): Promise<Resource> {
 
 export function setFavorite(id: number, favorite: boolean): Promise<Resource> {
   return apiPost(`/api/resources/${id}/favorite?favorite=${favorite}`);
+}
+
+// --- auth gate (dormant unless the backend has ADMIN_PASSWORD set) ---
+
+export function fetchAuthStatus(): Promise<{ gate_enabled: boolean }> {
+  return apiGet("/api/auth-status");
+}
+
+export function login(password: string): Promise<{ ok?: boolean; detail?: string }> {
+  return apiPost("/api/login", { password });
+}
+
+// --- live capture (dormant unless the backend has ANTHROPIC_API_KEY set) ---
+
+export function fetchCaptureEnabled(): Promise<{ enabled: boolean }> {
+  return apiGet("/api/capture/enabled");
+}
+
+export function researchLinks(
+  links: string[],
+  notes?: string
+): Promise<{ drafts: ResourceDraft[] }> {
+  return apiPost("/api/capture/research", { links, notes });
+}
+
+export type ResourceDraft = {
+  link: string;
+  title: string | null;
+  description: string | null;
+  description_source: string;
+  subject: string;
+  grade_band: string | null;
+  resource_type: string | null;
+  cost: string;
+  price_note: string | null;
+  source_site: string | null;
+  license: string | null;
+  standards: string | null;
+  tags: string[];
+  udl_principles: string[];
+};
+
+export function batchImport(items: ResourceDraft[]): Promise<{ created: Resource[]; updated: Resource[] }> {
+  return apiPost("/api/resources/batch", items);
 }
