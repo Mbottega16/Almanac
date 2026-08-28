@@ -55,15 +55,24 @@ to assemble.
   coverage strip** shown for any theme search, resource cards with cost
   badge + UDL pills, a "My Collection" slide-in panel, and a read-only
   Capture page. Type-checks and builds clean.
-- **Seed**: a first curated batch imported from well-known free/OER +
-  notable paid repositories (CommonLit, PhET, ReadWorks, Khan Academy,
-  PBS LearningMedia, Illustrative Mathematics, EngageNY, Code.org,
-  Smithsonian, Library of Congress, NASA, CAST UDL Guidelines, Goalbook,
-  Facing History, Learning for Justice, Zinn Education Project, TpT
-  (paid), BrainPOP (paid), etc.). 17 passing pytest tests.
+- **Seed**: **289 curated resources** at `backend/seed/almanac-seed.json`
+  (idempotent load via `scripts/import_seed.py`). Grew from 91 via four
+  subject-cluster research passes, enum-validated + deduped. Every subject
+  covered (Science 70, ELA 58, Math 44, SocStd 32, SEL 19, CS 18, Arts
+  14, WorldLang 14, PE/Health 13, Other 7); free 245 / freemium 30 / paid
+  14. ~112 rows link a section/portal page rather than one specific
+  lesson — deepen with a real page-fetching pass later.
+- **Lesson format** (the "categorizer"): each resource also carries
+  `age_min`/`age_max`, `duration_minutes`, `materials`, and
+  `learning_outcomes` (list of "Students will be able to …"). Age
+  back-fills from `grade_band` via `resource_service.GRADE_TO_AGE` so the
+  `age` query param works library-wide; `q` also searches outcomes +
+  materials; the live-capture prompt extracts all of it.
+  `scripts/migrate_add_lesson_fields.py` is ready for a persistent DB.
+  20 passing pytest tests.
 - **Still to do**: activate the auth gate + capture (set the env vars),
-  move to a persistent DB, top up thin subjects (Arts, World Languages,
-  SEL, PreK), delete the dead `almanac` Vercel project.
+  move to a persistent DB, deepen the ~112 portal-only links, delete the
+  dead standalone `almanac` Vercel project.
 
 ## Decisions already made
 
