@@ -17,8 +17,29 @@ three principles (Engagement / Representation / Action & Expression) and
 in which formats, so gaps are obvious and a multi-modal lesson is fast
 to assemble.
 
-## Current state (2026-08-27)
+## Current state (2026-08-28)
 
+- **Deployed & live: https://almanac-api.vercel.app** — one Vercel Python
+  service (project `almanac-api`, CheggaWeb team) serves the built SPA at
+  `/` and the API at `/api/*`. `scripts/build_frontend.py` builds the
+  frontend into `backend/static/`; `app.main` mounts it via `StaticFiles`.
+  On Vercel `DATABASE_URL` is `/tmp` and the app auto-seeds from
+  `backend/seed/almanac-seed.json` on an empty DB — so cold starts are
+  never blank, but favorites/visits don't survive a cold start. A
+  persistent host (Render — `render.yaml` is ready — or Vercel Postgres)
+  is the real fix. Only the canonical `almanac-api.vercel.app` is public;
+  custom aliases 302 behind the team's Deployment Protection (disable it
+  or rename the project for a nicer URL). The old standalone `almanac`
+  Vercel project is superseded and can be deleted.
+- **Auth gate** (`app/auth.py` + `routes/auth.py`): built, **dormant** —
+  set `ADMIN_PASSWORD` (env var) to activate; the frontend then shows a
+  login screen. `itsdangerous`-signed cookie, `SameSite=None; Secure`.
+- **Live Claude-assisted capture** (`services/capture_service.py` + `POST
+  /api/capture/research`): built, **dormant** — 503s until
+  `ANTHROPIC_API_KEY` is set. Returns draft, unsaved resources; the
+  Capture page grows a paste-box + review UI when `GET
+  /api/capture/enabled` is true. Runs on the operator's key — off by
+  default on purpose.
 - **Backend**: `resources` model (Atlas's `Entry` fields plus
   `subject`, `grade_band`, `resource_type`, `cost` (free/paid/freemium),
   `price_note`, `source_site`, `license`, `standards`,
@@ -39,8 +60,10 @@ to assemble.
   PBS LearningMedia, Illustrative Mathematics, EngageNY, Code.org,
   Smithsonian, Library of Congress, NASA, CAST UDL Guidelines, Goalbook,
   Facing History, Learning for Justice, Zinn Education Project, TpT
-  (paid), BrainPOP (paid), etc.).
-- **Not yet built**: auth gate, deployment, live Claude-assisted capture.
+  (paid), BrainPOP (paid), etc.). 17 passing pytest tests.
+- **Still to do**: activate the auth gate + capture (set the env vars),
+  move to a persistent DB, top up thin subjects (Arts, World Languages,
+  SEL, PreK), delete the dead `almanac` Vercel project.
 
 ## Decisions already made
 
@@ -90,10 +113,11 @@ learned when several scrape sources didn't pan out.
 
 1–4. ✅ Scaffold, data model, browse/capture UI, session-assisted
    capture, first seed batch.
-5. Auth gate (`ADMIN_PASSWORD` + signed cookie).
-6. Deploy — Render backend + Vercel frontend. **Ask first.**
-7. Live Claude-assisted capture (`POST /api/capture/research`). Needs an
-   approved `ANTHROPIC_API_KEY`.
+5. ✅ Auth gate built (dormant — set `ADMIN_PASSWORD` to turn on).
+6. ✅ Deployed — one Vercel service at https://almanac-api.vercel.app
+   (user signed off 2026-08-28). Follow-up: persistent DB.
+7. ✅ Live Claude-assisted capture built (dormant — set
+   `ANTHROPIC_API_KEY` to turn on; spend is the operator's).
 
 ## Why this file exists
 

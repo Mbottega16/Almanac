@@ -24,9 +24,14 @@ Repo: `EduSystems-Code/Almanac` (private), cloned at `Desktop\Almanac`
 Teachers building UDL-aligned lessons. (First user: the user, dogfooding
 it the way Atlas is a personal tool.)
 
-## Where it stands (2026-08-27)
+## Where it stands (2026-08-28)
 
-Scaffolded, tested, and seeded:
+**Live at https://almanac-api.vercel.app** — one Vercel Python service
+serves the SPA + API. Auth gate and live Claude-assisted capture are both
+built but dormant (flip on with `ADMIN_PASSWORD` / `ANTHROPIC_API_KEY`
+env vars). On Vercel the DB is `/tmp` + auto-seeded, so favorites don't
+persist across cold starts — a persistent host (Render/`render.yaml` is
+ready) is the follow-up. Scaffolded, tested (17 pytest), and seeded:
 - Backend: `resources` + `tags` + fixed 3-row `udl_principles` model;
   full CRUD, faceted search, `random`, `visit`, `favorite`,
   batch-upsert on `link`, `GET /api/udl-coverage`. 15 passing pytest
@@ -60,12 +65,13 @@ Scaffolded, tested, and seeded:
 
 ## What happens next
 
-1. More capture passes as sources are supplied — this is meant to become
-   a large collective bank, not just the seed set.
-2. Build the auth gate.
-3. Deploy — Render backend + Vercel frontend. **Ask before this.**
-4. Once deployed and a key is approved: live Claude-assisted capture
-   (`POST /api/capture/research`, draft-then-commit).
+1. Move to a persistent database (Render or Vercel Postgres) so
+   favorites/visits survive cold starts.
+2. Turn on the auth gate / live capture by setting `ADMIN_PASSWORD` /
+   `ANTHROPIC_API_KEY` env vars, when wanted.
+3. More capture passes — start with the thin subjects (Arts, World
+   Languages, SEL, PreK).
+4. Delete the superseded standalone `almanac` Vercel project.
 
 ## Why this file exists
 
