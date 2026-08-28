@@ -1,0 +1,2104 @@
+[
+  {
+    "link": "https://www.commonlit.org",
+    "title": "CommonLit Reading Collection",
+    "description": "Curated library of 2,000+ texts (short stories, poems, nonfiction) across reading levels with embedded comprehension questions and discussion prompts.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CommonLit",
+    "license": "CC BY",
+    "standards": "",
+    "tags": [
+      "reading comprehension",
+      "literature",
+      "formative assessment"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.readworks.org",
+    "title": "ReadWorks Passages & Lessons",
+    "description": "Free K-12 reading resource with fiction and nonfiction passages, teacher lesson plans, and assessments aligned to Common Core standards.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "K-2",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWorks",
+    "license": "OER",
+    "standards": "CCSS.ELA-LITERACY.RL.1.2",
+    "tags": [
+      "reading comprehension",
+      "phonics",
+      "guided reading"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.readwritethink.org/classroom-resources",
+    "title": "ReadWriteThink Lesson Plans",
+    "description": "Collection of peer-reviewed, standards-aligned lessons in reading, writing, and language arts from IRA and NCTE.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWriteThink",
+    "license": "CC BY-NC-ND",
+    "standards": "CCSS.ELA-LITERACY.W.6.1",
+    "tags": [
+      "writing process",
+      "collaboration",
+      "argumentation"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/math",
+    "title": "Khan Academy Math Course Library",
+    "description": "Free video lessons and practice problems in arithmetic, fractions, algebra, geometry, and statistics with immediate feedback.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.MATH.K.CC.A.1",
+    "tags": [
+      "counting",
+      "number sense",
+      "foundational"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/math/cc-3rd-grade-math",
+    "title": "Khan Academy Grade 3 Math",
+    "description": "Video lessons and interactive practice for multiplication, division, fractions, and measurement concepts.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.MATH.3.OA.A.1",
+    "tags": [
+      "multiplication",
+      "division",
+      "area and perimeter"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://phet.colorado.edu/en/simulations",
+    "title": "PhET Interactive Simulations",
+    "description": "Free interactive STEM simulations for math and science covering topics like forces, energy, fractions, and chemical reactions.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PhET Interactive Simulations",
+    "license": "CC BY",
+    "standards": "NGSS 3-PS2-1",
+    "tags": [
+      "forces",
+      "motion",
+      "interactive",
+      "student-choice"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://phet.colorado.edu/en/simulations/filter?subjects=math",
+    "title": "PhET Fractions Simulation",
+    "description": "Interactive visual model for understanding fraction concepts through manipulative exploration and problem-solving.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PhET Interactive Simulations",
+    "license": "CC BY",
+    "standards": "CCSS.MATH.3.NF.A.1",
+    "tags": [
+      "fractions",
+      "numeracy",
+      "visual model"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.pbslearningmedia.org",
+    "title": "PBS LearningMedia Lesson Library",
+    "description": "Curated educational videos and interactive lessons aligned to standards across subjects K-12.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PBS LearningMedia",
+    "license": "CC BY-NC",
+    "standards": "NGSS MS-LS1-1",
+    "tags": [
+      "life science",
+      "inquiry",
+      "video-based"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.illustrativemathematics.org",
+    "title": "Illustrative Mathematics Course Resources",
+    "description": "Free K-12 math curriculum with problem-based tasks and lessons illustrating concepts and building mathematical reasoning.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Illustrative Mathematics",
+    "license": "CC BY-NC",
+    "standards": "CCSS.MATH.6.RP.A.1",
+    "tags": [
+      "ratio",
+      "proportional reasoning",
+      "mathematical thinking"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.nysed.gov/curriculum-instruction/engageny",
+    "title": "Eureka Math Grade 3 Module 1",
+    "description": "Complete instructional module with lesson plans, problem sets, and teacher guidance aligned to Common Core standards. Part of the archived EngageNY curriculum (ELA and math, PreK-12), now hosted by the New York State Education Department.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "EngageNY/Eureka Math",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.MATH.3.OA.A.1",
+    "tags": [
+      "multiplication",
+      "arrays",
+      "structured lessons",
+      "engageny",
+      "curriculum module",
+      "daily lessons"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://code.org/learn",
+    "title": "Code.org Courses & Tutorials",
+    "description": "Free curriculum for computer science from pre-K through high school with block-based and text-based coding.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Code.org",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "coding",
+      "computational thinking",
+      "self-paced"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/science",
+    "title": "Khan Academy Science",
+    "description": "Free video library and practice for biology, chemistry, physics, and earth science with interactive assessments.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "9-12",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "NGSS HS-LS1-1",
+    "tags": [
+      "biology",
+      "chemistry",
+      "self-paced learning"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://mysteryscience.com",
+    "title": "Mystery Science Lessons",
+    "description": "Inquiry-based science lessons with real-world mysteries that guide students through the scientific method.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "K-2",
+    "resource_type": "lesson plan",
+    "cost": "freemium",
+    "price_note": "free w/ account",
+    "source_site": "Mystery Science",
+    "license": "All rights reserved",
+    "standards": "NGSS K-LS1-1",
+    "tags": [
+      "inquiry",
+      "scientific method",
+      "wonder-driven"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.ck12.org/book/ck-12-biology/",
+    "title": "CK-12 Biology Textbook",
+    "description": "Free, open-source digital biology textbook with interactive diagrams and modular lessons.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "9-12",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CK-12",
+    "license": "CC BY-NC",
+    "standards": "NGSS HS-LS1-1",
+    "tags": [
+      "biology",
+      "digital textbook",
+      "accessible"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.facinghistory.org/resource-library",
+    "title": "Facing History & Ourselves Resource Library",
+    "description": "Free lessons and primary source collections addressing difficult histories and contemporary issues through student inquiry.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Facing History & Ourselves",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.RH.6-8.1",
+    "tags": [
+      "primary sources",
+      "critical thinking",
+      "civic engagement"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.learningforjustice.org/teaching-kits",
+    "title": "Learning for Justice Teaching Kits",
+    "description": "Free curriculum kits for teaching social justice, inclusion, and equity with lesson plans and multimedia resources.",
+    "description_source": "generated",
+    "subject": "SEL",
+    "grade_band": "3-5",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Learning for Justice",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "social-emotional learning",
+      "inclusion",
+      "student voice"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.zinnedproject.org/materials",
+    "title": "Zinn Education Project Lesson Bank",
+    "description": "Free peer-reviewed lessons teaching history through the perspective of ordinary people and social movements.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Zinn Education Project",
+    "license": "CC BY-SA",
+    "standards": "CCSS.RH.9-10.1",
+    "tags": [
+      "social history",
+      "primary sources",
+      "alternative narratives"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://learninglab.si.edu/",
+    "title": "Smithsonian Learning Lab Collections",
+    "description": "Curated digital collections of artifacts and media with educator resources and guided inquiry activities.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Smithsonian Learning Lab",
+    "license": "Public Domain",
+    "standards": "",
+    "tags": [
+      "primary sources",
+      "museum collections",
+      "cultural heritage",
+      "cultural artifacts",
+      "visual primary sources",
+      "inspiration"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.loc.gov/collections",
+    "title": "Library of Congress Classroom Collections",
+    "description": "Free primary source collections including photographs, maps, documents, and audio organized for classroom instruction.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.9-10.3",
+    "tags": [
+      "primary sources",
+      "primary documents",
+      "research"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.nasa.gov/stem",
+    "title": "NASA STEM Education Resources",
+    "description": "Free STEM lessons, simulations, and activities aligned to standards using real space exploration content and data.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "NASA STEM",
+    "license": "Public Domain",
+    "standards": "NGSS 3-PS2-1",
+    "tags": [
+      "space exploration",
+      "engineering",
+      "real-world context"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://education.nationalgeographic.org",
+    "title": "National Geographic Education Resources",
+    "description": "Free and paid curriculum, videos, and interactive maps exploring geography, cultures, and natural science topics.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "video",
+    "cost": "freemium",
+    "price_note": "free w/ account",
+    "source_site": "National Geographic Education",
+    "license": "All rights reserved",
+    "standards": "NGSS MS-LS1-1",
+    "tags": [
+      "geography",
+      "ecology",
+      "documentaries"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://oercommons.org",
+    "title": "OER Commons Repository",
+    "description": "Searchable repository of open educational resources across all subjects and grade levels with peer reviews.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "OER Commons",
+    "license": "CC BY",
+    "standards": "",
+    "tags": [
+      "open educational resources",
+      "search portal",
+      "metadata"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.sharemylesson.com",
+    "title": "Share My Lesson Classroom Resources",
+    "description": "Community-driven platform with lesson plans and resources across subjects created by teachers for teachers.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Share My Lesson",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "teacher-created",
+      "lesson plans",
+      "collaboration"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.brainpop.com",
+    "title": "BrainPOP Animated Lessons",
+    "description": "Subscription-based animated videos and interactive activities covering science, social studies, math, and ELA with formative quizzes.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "video",
+    "cost": "paid",
+    "price_note": "subscription",
+    "source_site": "BrainPOP",
+    "license": "All rights reserved",
+    "standards": "NGSS 3-LS1-1",
+    "tags": [
+      "animated instruction",
+      "formative assessment",
+      "multimodal"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.generationgenius.com",
+    "title": "Generation Genius Video Lessons",
+    "description": "Animated science videos with standards-aligned lessons and accompanying worksheets for elementary and middle school.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "video",
+    "cost": "paid",
+    "price_note": "subscription",
+    "source_site": "Generation Genius",
+    "license": "All rights reserved",
+    "standards": "NGSS 4-LS1-1",
+    "tags": [
+      "science videos",
+      "visual learning",
+      "standards-aligned"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.twinkl.com",
+    "title": "Twinkl Resource Library",
+    "description": "Large repository of lesson plans, worksheets, games, and printables across subjects with free and premium tiers.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "K-2",
+    "resource_type": "worksheet/printable",
+    "cost": "freemium",
+    "price_note": "subscription for premium",
+    "source_site": "Twinkl",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "printables",
+      "teacher tools",
+      "phonics"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.teacherspayteachers.com/Browse/Math",
+    "title": "Teachers Pay Teachers Math Resources",
+    "description": "Marketplace of teacher-created lesson plans and resources, mostly paid, covering all math topics and grade levels.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "paid",
+    "price_note": "$2-10 per resource",
+    "source_site": "Teachers Pay Teachers",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "teacher marketplace",
+      "algebra",
+      "geometry"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.teacherspayteachers.com/Browse/Reading",
+    "title": "Teachers Pay Teachers Reading & Literature",
+    "description": "Paid marketplace resources including guided reading bundles, book guides, and reading comprehension activities.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "paid",
+    "price_note": "$2-15 per resource",
+    "source_site": "Teachers Pay Teachers",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "guided reading",
+      "literature circles",
+      "comprehension"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.nearpod.com",
+    "title": "Nearpod Interactive Lessons",
+    "description": "Freemium platform for creating interactive student-centered lessons with real-time feedback and student response tools.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "interactive/sim",
+    "cost": "freemium",
+    "price_note": "free w/ account",
+    "source_site": "Nearpod",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "interactive lessons",
+      "student engagement",
+      "real-time feedback"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://udlguidelines.cast.org",
+    "title": "CAST UDL Guidelines",
+    "description": "Comprehensive framework for Universal Design for Learning including research-based principles, checkpoints, and examples.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "All",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CAST UDL Guidelines",
+    "license": "CC BY",
+    "standards": "",
+    "tags": [
+      "universal design",
+      "udl framework",
+      "accessible design"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.goalbook.org/toolkit",
+    "title": "Goalbook Toolkit for UDL",
+    "description": "Free online platform with UDL strategies, lesson plan templates, and resources for creating accessible instruction.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Goalbook",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "udl toolkit",
+      "lesson planning",
+      "differentiation"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.curriki.org",
+    "title": "Curriki Open Course Library",
+    "description": "Free open educational resource platform featuring full courses and individual lessons aligned to standards.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "9-12",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Curriki",
+    "license": "CC BY-NC-SA",
+    "standards": "NGSS HS-LS1-1",
+    "tags": [
+      "open courses",
+      "unit-based",
+      "customizable"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.achievethecore.org",
+    "title": "Achieve the Core Resource Collections",
+    "description": "Free resources developed by educators including model lesson plans, instructional guides, and assessment tools.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Achieve the Core",
+    "license": "CC BY-NC",
+    "standards": "CCSS.ELA-LITERACY.RL.9-10.1",
+    "tags": [
+      "model lessons",
+      "instructional design",
+      "assessments"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/math/cc-2nd-grade-math",
+    "title": "Khan Academy Grade 2 Math Practice",
+    "description": "Video lessons and interactive practice for addition, subtraction, measurement, and place value with immediate feedback.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.MATH.2.NBT.A.1",
+    "tags": [
+      "place value",
+      "addition",
+      "subtraction"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.readwritethink.org/materials/acrostic",
+    "title": "ReadWriteThink Acrostic Poem Tool",
+    "description": "Interactive tool for creating and sharing acrostic poems with word banks and customizable templates.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWriteThink",
+    "license": "CC BY-NC-ND",
+    "standards": "CCSS.ELA-LITERACY.L.3.2",
+    "tags": [
+      "poetry",
+      "writing tool",
+      "student creation"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://phet.colorado.edu/en/simulations/filter?subjects=science&levels=middle-school",
+    "title": "PhET Water Cycle Simulation",
+    "description": "Interactive visual model of the water cycle with adjustable variables to explore evaporation, condensation, and precipitation.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PhET Interactive Simulations",
+    "license": "CC BY",
+    "standards": "NGSS MS-ESS2-4",
+    "tags": [
+      "water cycle",
+      "weather",
+      "earth systems"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/math/cc-6th-grade-math",
+    "title": "Khan Academy Grade 6 Math",
+    "description": "Comprehensive lessons and practice for ratios, rates, variables, expressions, and equations with step-by-step support.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.MATH.6.RP.A.1",
+    "tags": [
+      "ratios",
+      "proportions",
+      "algebraic thinking"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.pbslearningmedia.org/collection/steam-clips",
+    "title": "PBS LearningMedia STEAM Video Clips",
+    "description": "Curated short videos featuring STEAM careers and real-world applications with discussion guides for classrooms.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "6-8",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PBS LearningMedia",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "steam careers",
+      "real-world context",
+      "engagement"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://code.org/courses",
+    "title": "Code.org Intro to Computer Science",
+    "description": "Structured curriculum for teaching computer science fundamentals with block-based and text-based coding progression.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "9-12",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Code.org",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "computer science",
+      "coding",
+      "algorithms"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.teacherspayteachers.com/Browse/Science",
+    "title": "Teachers Pay Teachers Science Units",
+    "description": "Paid marketplace with complete science units, experiments, and lab guides covering K-12 science standards.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "unit",
+    "cost": "paid",
+    "price_note": "$5-25 per unit",
+    "source_site": "Teachers Pay Teachers",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "science units",
+      "experiments",
+      "hands-on"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://mysteryscience.com/curriculum",
+    "title": "Mystery Science Curriculum",
+    "description": "Inquiry-based elementary science lessons using real-world mysteries to guide discovery of scientific concepts.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "unit",
+    "cost": "freemium",
+    "price_note": "subscription for premium",
+    "source_site": "Mystery Science",
+    "license": "All rights reserved",
+    "standards": "NGSS 3-LS1-1",
+    "tags": [
+      "inquiry learning",
+      "wonder-based",
+      "engaging"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.illustrativemathematics.org/8-1",
+    "title": "Illustrative Mathematics Grade 8",
+    "description": "Grade 8 math course with problem-based lessons on functions, linear equations, and geometry foundations.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Illustrative Mathematics",
+    "license": "CC BY-NC",
+    "standards": "CCSS.MATH.8.F.A.1",
+    "tags": [
+      "functions",
+      "linear equations",
+      "problem-based"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.readworks.org/books",
+    "title": "ReadWorks Book Library",
+    "description": "Collection of classic and contemporary fiction with built-in comprehension questions and reading level scaffolds.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWorks",
+    "license": "OER",
+    "standards": "CCSS.ELA-LITERACY.RL.6.1",
+    "tags": [
+      "literature",
+      "reading comprehension",
+      "leveled texts"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.learningforjustice.org/classroom-resources",
+    "title": "Learning for Justice Classroom Resources",
+    "description": "Free, peer-reviewed lessons and activities promoting anti-bias education and social justice awareness.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Learning for Justice",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "anti-bias education",
+      "social justice",
+      "inclusive"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.facinghistory.org/holocaust-and-human-behavior",
+    "title": "Facing History Holocaust & Human Behavior",
+    "description": "In-depth resource with primary sources, lesson plans, and student activities exploring historical and contemporary themes.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Facing History & Ourselves",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.RH.9-10.1",
+    "tags": [
+      "primary sources",
+      "historical thinking",
+      "difficult histories"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.loc.gov/teachers/classroommaterials",
+    "title": "Library of Congress Teacher Resources",
+    "description": "Curated collections of primary sources with lesson plans and analysis tools for social studies and history.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.9-10.2",
+    "tags": [
+      "primary sources",
+      "historical analysis",
+      "archives"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.nasa.gov/stem/elementary",
+    "title": "NASA STEM for Elementary Students",
+    "description": "Age-appropriate STEM activities including hands-on experiments and guided virtual tours of space exploration.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "K-2",
+    "resource_type": "activity",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "NASA STEM",
+    "license": "Public Domain",
+    "standards": "NGSS K-PS2-1",
+    "tags": [
+      "space exploration",
+      "engineering design",
+      "inquiry"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://education.nationalgeographic.org/encyclopedia",
+    "title": "National Geographic Encyclopedia",
+    "description": "Comprehensive reference with articles, photos, and maps covering geography, animals, history, and science topics.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Geographic Education",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "reference",
+      "research",
+      "visual learning"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.ck12.org/book/ck-12-algebra-i/",
+    "title": "CK-12 Algebra I Textbook",
+    "description": "Free, interactive digital algebra textbook with problems, videos, and real-world applications.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CK-12",
+    "license": "CC BY-NC",
+    "standards": "CCSS.MATH.8.EE.B.5",
+    "tags": [
+      "algebra",
+      "digital textbook",
+      "accessible"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.readwritethink.org/classroom-resources/student-interactives",
+    "title": "ReadWriteThink Interactive Writing Tools",
+    "description": "Collection of interactive tools for writing different text types including story builders, essay organizers, and comic creators.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWriteThink",
+    "license": "CC BY-NC-ND",
+    "standards": "CCSS.ELA-LITERACY.W.3.3",
+    "tags": [
+      "writing tools",
+      "scaffolding",
+      "creativity"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://phet.colorado.edu/en/simulations/filter?subjects=science&levels=elementary-school",
+    "title": "PhET Forces and Motion Simulation",
+    "description": "Interactive model exploring Newton's laws through simulated objects, ramps, and forces with real-time feedback.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PhET Interactive Simulations",
+    "license": "CC BY",
+    "standards": "NGSS 3-PS2-1",
+    "tags": [
+      "forces",
+      "motion",
+      "physics"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.brainpop.com/subject/science",
+    "title": "BrainPOP Science Videos",
+    "description": "Animated science lessons covering biology, earth science, and physical science with quizzes and related activities.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "video",
+    "cost": "paid",
+    "price_note": "subscription",
+    "source_site": "BrainPOP",
+    "license": "All rights reserved",
+    "standards": "NGSS MS-LS1-1",
+    "tags": [
+      "animated videos",
+      "science instruction",
+      "formative assessment"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.generationgenius.com/science-topics/",
+    "title": "Generation Genius Ecosystems",
+    "description": "Animated videos and worksheets exploring ecosystems, food chains, and habitats for elementary and middle grades.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "video",
+    "cost": "paid",
+    "price_note": "subscription",
+    "source_site": "Generation Genius",
+    "license": "All rights reserved",
+    "standards": "NGSS 3-LS2-1",
+    "tags": [
+      "ecosystems",
+      "habitats",
+      "video lesson"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.commonlit.org/en/texts/the-lottery",
+    "title": "CommonLit 'The Lottery' Lesson",
+    "description": "Full text of Shirley Jackson's classic short story with close reading questions and discussion prompts for high school.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CommonLit",
+    "license": "CC BY",
+    "standards": "CCSS.ELA-LITERACY.RL.9-10.3",
+    "tags": [
+      "short stories",
+      "literary analysis",
+      "discussion"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.oercommons.org/browse/reviews",
+    "title": "OER Commons Peer-Reviewed Resources",
+    "description": "Vetted open educational resources across all subjects with community ratings and detailed metadata.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "All",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "OER Commons",
+    "license": "CC BY",
+    "standards": "",
+    "tags": [
+      "peer-reviewed",
+      "quality assurance",
+      "metadata"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.sharemylesson.com/lesson-plans",
+    "title": "Share My Lesson Lesson Plan Database",
+    "description": "Searchable database of educator-created lesson plans vetted by teachers with standards alignment and ratings.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Share My Lesson",
+    "license": "CC BY-NC",
+    "standards": "CCSS.ELA-LITERACY.RL.6.2",
+    "tags": [
+      "lesson plans",
+      "teacher-curated",
+      "searchable"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.twinkl.com/resource/t2-e-2321-phonics-and-alphabet-flash-cards",
+    "title": "Twinkl Phonics Flash Cards",
+    "description": "Printable flash cards and worksheets for teaching letter sounds and phonemic awareness to early learners.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "K-2",
+    "resource_type": "worksheet/printable",
+    "cost": "freemium",
+    "price_note": "premium content available",
+    "source_site": "Twinkl",
+    "license": "All rights reserved",
+    "standards": "CCSS.ELA-LITERACY.RF.K.3",
+    "tags": [
+      "phonics",
+      "alphabet",
+      "printable cards"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/humanities/us-history",
+    "title": "Khan Academy U.S. History",
+    "description": "Comprehensive video library and practice problems covering major themes and events in American history.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.RH.9-10.1",
+    "tags": [
+      "american history",
+      "video lessons",
+      "self-paced"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/sat/passage-reading-and-writing",
+    "title": "Khan Academy SAT Reading & Writing Prep",
+    "description": "Free test preparation with lessons and full-length practice problems for college admissions readiness.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "test preparation",
+      "reading strategies",
+      "college ready"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.achievethecore.org/aligned-resources",
+    "title": "Achieve the Core Aligned Resources",
+    "description": "Collection of math and ELA lessons aligned to college and career readiness standards with teacher guides.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Achieve the Core",
+    "license": "CC BY-NC",
+    "standards": "CCSS.MATH.3.NF.A.1",
+    "tags": [
+      "standards-aligned",
+      "fractions",
+      "teacher supports"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.curriki.org/browse?subjects=science",
+    "title": "Curriki Science Courses",
+    "description": "Comprehensive science courses from elementary through high school with flexible, modular lesson structures.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Curriki",
+    "license": "CC BY-NC-SA",
+    "standards": "NGSS MS-LS1-1",
+    "tags": [
+      "open courses",
+      "modular design",
+      "customizable"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.pbslearningmedia.org/collection/grades-6-8-ela",
+    "title": "PBS LearningMedia Grade 6-8 ELA",
+    "description": "Curated collection of videos and lesson plans for teaching reading, writing, and language arts in middle grades.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PBS LearningMedia",
+    "license": "CC BY-NC",
+    "standards": "CCSS.ELA-LITERACY.RL.6.1",
+    "tags": [
+      "video-based",
+      "standards-aligned",
+      "curated"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.teacherspayteachers.com/Browse/Social-Studies",
+    "title": "Teachers Pay Teachers Social Studies",
+    "description": "Paid marketplace with history lessons, map activities, and social studies units covering K-12 content.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "paid",
+    "price_note": "$2-15 per resource",
+    "source_site": "Teachers Pay Teachers",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "history lessons",
+      "maps",
+      "social studies"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/test-prep/praxis-core",
+    "title": "Khan Academy Praxis Core Test Prep",
+    "description": "Free preparation resources for teacher certification exams with lessons and full-length practice tests.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "HigherEd/Adult",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "teacher certification",
+      "test prep",
+      "professional development"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.nearpod.com/library",
+    "title": "Nearpod Resource Library",
+    "description": "Free and premium interactive lesson templates for formative assessment and student engagement across subjects.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "interactive/sim",
+    "cost": "freemium",
+    "price_note": "free w/ account",
+    "source_site": "Nearpod",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "interactive",
+      "formative assessment",
+      "engagement"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.zinnedproject.org/materials/teaching-malcolm-x",
+    "title": "Zinn Project Teaching Malcolm X",
+    "description": "Lesson plan with primary sources and activities exploring Malcolm X's life and role in civil rights movements.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Zinn Education Project",
+    "license": "CC BY-SA",
+    "standards": "CCSS.RH.9-10.2",
+    "tags": [
+      "civil rights",
+      "biography",
+      "primary sources"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.goalbook.org/resources",
+    "title": "Goalbook UDL Strategy Library",
+    "description": "Database of evidence-based UDL strategies with practical examples and implementation guidance for diverse learners.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "All",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Goalbook",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "udl strategies",
+      "differentiation",
+      "accessibility"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.illustrativemathematics.org/k",
+    "title": "Illustrative Mathematics Kindergarten",
+    "description": "K curriculum with counting, shapes, and measurement tasks designed to build number sense and mathematical reasoning.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Illustrative Mathematics",
+    "license": "CC BY-NC",
+    "standards": "CCSS.MATH.K.CC.A.1",
+    "tags": [
+      "counting",
+      "shapes",
+      "problem-solving"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://phet.colorado.edu/en/simulations/filter?subjects=science&levels=high-school",
+    "title": "PhET Molecular Polarity Simulation",
+    "description": "Interactive model of molecular structure and electronegativity with adjustable variables to explore chemical properties.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "9-12",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PhET Interactive Simulations",
+    "license": "CC BY",
+    "standards": "NGSS HS-PS2-6",
+    "tags": [
+      "chemistry",
+      "molecular structure",
+      "visualization"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.readworks.org/videos",
+    "title": "ReadWorks Video Library",
+    "description": "Instructional videos on reading strategies, phonics, and comprehension techniques for teachers and students.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "K-2",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWorks",
+    "license": "OER",
+    "standards": "CCSS.ELA-LITERACY.RF.K.1",
+    "tags": [
+      "reading strategies",
+      "instructional videos",
+      "phonics"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.brainpop.com/subject/math",
+    "title": "BrainPOP Math Videos",
+    "description": "Animated math lessons covering arithmetic, geometry, algebra, and statistics with quizzes and related activities.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "video",
+    "cost": "paid",
+    "price_note": "subscription",
+    "source_site": "BrainPOP",
+    "license": "All rights reserved",
+    "standards": "CCSS.MATH.3.NF.A.1",
+    "tags": [
+      "animated instruction",
+      "math concepts",
+      "formative assessment"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://education.nationalgeographic.org/activity",
+    "title": "National Geographic Classroom Activities",
+    "description": "Hands-on STEM activities and field investigations connected to global topics and curriculum standards.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "activity",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Geographic Education",
+    "license": "All rights reserved",
+    "standards": "NGSS MS-LS2-4",
+    "tags": [
+      "hands-on activities",
+      "inquiry-based",
+      "real-world"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.facinghistory.org/resource/civil-rights-movement",
+    "title": "Facing History Civil Rights Module",
+    "description": "In-depth lessons and primary source collections exploring civil rights history with student discussion and analysis activities.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Facing History & Ourselves",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.RH.9-10.2",
+    "tags": [
+      "civil rights",
+      "primary sources",
+      "historical thinking"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.learningforjustice.org/magazines",
+    "title": "Learning for Justice Magazines",
+    "description": "Free quarterly publications and digital resources featuring articles and lesson ideas for anti-bias education.",
+    "description_source": "generated",
+    "subject": "SEL",
+    "grade_band": "6-8",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Learning for Justice",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "social justice",
+      "reading material",
+      "monthly publication"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.teacherspayteachers.com/Browse/World-Language",
+    "title": "Teachers Pay Teachers World Languages",
+    "description": "Paid lesson plans, activities, and assessments for teaching Spanish, French, and other world languages K-12.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "paid",
+    "price_note": "$2-10 per resource",
+    "source_site": "Teachers Pay Teachers",
+    "license": "All rights reserved",
+    "standards": "",
+    "tags": [
+      "foreign language",
+      "vocabulary",
+      "conversation"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://code.org/minecraft",
+    "title": "Code.org Minecraft Education Edition",
+    "description": "Free coding curriculum using Minecraft to teach algorithmic thinking and computational problem-solving.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "3-5",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Code.org",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "minecraft",
+      "coding",
+      "game-based"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.pbslearningmedia.org/collection/social-emotional-learning",
+    "title": "PBS LearningMedia Social-Emotional Learning",
+    "description": "Videos and lessons supporting SEL competencies including self-awareness, relationship skills, and responsible decision-making.",
+    "description_source": "generated",
+    "subject": "SEL",
+    "grade_band": "3-5",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PBS LearningMedia",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "social-emotional learning",
+      "character education",
+      "video-based"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.readwritethink.org/classroom-resources/lesson-plans",
+    "title": "ReadWriteThink Lesson Plan Collection",
+    "description": "Extensive database of peer-reviewed ELA lessons including writing workshops, literature circles, and media literacy.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWriteThink",
+    "license": "CC BY-NC-ND",
+    "standards": "CCSS.ELA-LITERACY.RL.9-10.1",
+    "tags": [
+      "lesson plans",
+      "writing workshop",
+      "literature"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.oercommons.org/courseware",
+    "title": "OER Commons Courseware",
+    "description": "Complete open courses and curriculum bundles for K-12 and higher education across all subject areas.",
+    "description_source": "generated",
+    "subject": "Other",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "OER Commons",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "open curriculum",
+      "complete courses",
+      "flexible design"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.twinkl.com/resource/t2-m-2654-early-years-maths-games",
+    "title": "Twinkl Early Math Games",
+    "description": "Printable and interactive games for teaching early math skills including counting, number recognition, and shapes.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "resource_type": "game",
+    "cost": "freemium",
+    "price_note": "premium content available",
+    "source_site": "Twinkl",
+    "license": "All rights reserved",
+    "standards": "CCSS.MATH.K.CC.A.1",
+    "tags": [
+      "game-based",
+      "early learning",
+      "printables"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.commonlit.org/en/texts/the-gettysburg-address",
+    "title": "CommonLit Gettysburg Address Lesson",
+    "description": "Lincoln's famous speech with annotation tools, comprehension questions, and historical context for analysis.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CommonLit",
+    "license": "CC BY",
+    "standards": "CCSS.RH.6-8.2",
+    "tags": [
+      "primary sources",
+      "speeches",
+      "civil war"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.khanacademy.org/test-prep/sat/sat-math",
+    "title": "Khan Academy SAT Math Prep",
+    "description": "Comprehensive math test preparation with video lessons and full-length practice tests for college admission.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Khan Academy",
+    "license": "CC BY-NC-SA",
+    "standards": "",
+    "tags": [
+      "test preparation",
+      "algebra",
+      "college ready"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.nasa.gov/stem/middle-school",
+    "title": "NASA STEM Middle School Resources",
+    "description": "Science and engineering challenges designed for middle grades with real space mission data and hands-on activities.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "6-8",
+    "resource_type": "activity",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "NASA STEM",
+    "license": "Public Domain",
+    "standards": "NGSS MS-PS2-1",
+    "tags": [
+      "engineering design",
+      "space science",
+      "real data"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.readworks.org/nonfiction",
+    "title": "ReadWorks Nonfiction Passages",
+    "description": "Curated collection of informational texts on science, history, and social topics with comprehension scaffolds.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "3-5",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWorks",
+    "license": "OER",
+    "standards": "CCSS.RH.3-5.1",
+    "tags": [
+      "informational text",
+      "reading comprehension",
+      "science"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.achievethecore.org/page/2962/high-quality-instruction",
+    "title": "Achieve the Core Math Instructional Strategies",
+    "description": "Research-based instructional practices for teaching rigorous, equitable math with examples and implementation tools.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "All",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Achieve the Core",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "instructional strategies",
+      "professional development",
+      "equity"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.sharemylesson.com/activities",
+    "title": "Share My Lesson Interactive Activities",
+    "description": "Peer-reviewed interactive lessons and activities for engaging students across subject areas with multimedia.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "activity",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Share My Lesson",
+    "license": "CC BY-NC",
+    "standards": "",
+    "tags": [
+      "interactive activities",
+      "student engagement",
+      "multimedia"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.ck12.org/book/ck-12-earth-science-for-high-school/",
+    "title": "CK-12 Earth Science Textbook",
+    "description": "Free, interactive digital earth science textbook with topics including geology, weather, space, and environmental science.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "9-12",
+    "resource_type": "article/text",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "CK-12",
+    "license": "CC BY-NC",
+    "standards": "NGSS HS-ESS1-1",
+    "tags": [
+      "earth science",
+      "digital textbook",
+      "accessible"
+    ],
+    "udl_principles": [
+      "representation"
+    ]
+  },
+  {
+    "link": "https://www.illustrativemathematics.org/6",
+    "title": "Illustrative Mathematics Grade 6",
+    "description": "Grade 6 curriculum with problem-based lessons on ratios, fractions, and early algebraic thinking.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Illustrative Mathematics",
+    "license": "CC BY-NC",
+    "standards": "CCSS.MATH.6.RP.A.1",
+    "tags": [
+      "ratios",
+      "proportional thinking",
+      "problem-solving"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "link": "https://www.pbslearningmedia.org/collection/grades-9-12-stem",
+    "title": "PBS LearningMedia High School STEM",
+    "description": "STEM lessons and videos for high school science covering physics, chemistry, biology, and earth science.",
+    "description_source": "generated",
+    "subject": "Science",
+    "grade_band": "9-12",
+    "resource_type": "video",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PBS LearningMedia",
+    "license": "CC BY-NC",
+    "standards": "NGSS HS-PS1-1",
+    "tags": [
+      "stem videos",
+      "high school",
+      "standards-aligned"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.readwritethink.org/classroom-resources/swap-meet",
+    "title": "ReadWriteThink Swap Meet Tool",
+    "description": "Interactive writing tool for creating classified ads or product descriptions, building persuasive writing skills.",
+    "description_source": "generated",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "interactive/sim",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "ReadWriteThink",
+    "license": "CC BY-NC-ND",
+    "standards": "CCSS.ELA-LITERACY.W.6.1",
+    "tags": [
+      "persuasive writing",
+      "interactive tool",
+      "student creation"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "link": "https://www.facinghistory.org/resource/prejudice-and-propaganda",
+    "title": "Facing History Prejudice & Propaganda",
+    "description": "In-depth teaching resource examining how propaganda shapes attitudes with primary source documents and activities.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "unit",
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Facing History & Ourselves",
+    "license": "CC BY-NC-SA",
+    "standards": "CCSS.RH.9-10.3",
+    "tags": [
+      "propaganda",
+      "primary sources",
+      "critical thinking"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ]
+  }
+]

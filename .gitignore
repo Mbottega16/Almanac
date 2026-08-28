@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env / secrets
+.env
+*.key
+*.pem
+*credentials*
+
+# SQLite data
+backend/data/*.db
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+
+# Editor
+.vscode/
+.idea/
