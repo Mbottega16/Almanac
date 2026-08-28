@@ -1,6 +1,15 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, Column, DateTime, ForeignKey, String, Table, Text
+from sqlalchemy import (
+    Boolean,
+    Column,
+    DateTime,
+    ForeignKey,
+    Integer,
+    String,
+    Table,
+    Text,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -38,7 +47,17 @@ class Resource(Base):
 
     subject: Mapped[str] = mapped_column(String, nullable=False, index=True)
     grade_band: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
+    # Age range the resource targets. Filled from grade_band when a source
+    # only gives grades — see resource_service.GRADE_TO_AGE.
+    age_min: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)
+    age_max: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)
     resource_type: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
+    duration_minutes: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # What a teacher needs on hand to run it ("" / null = nothing / digital-only).
+    materials: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # Newline-separated "Students will be able to …" statements; the API
+    # serialises this to/from a list[str].
+    learning_outcomes: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     # 'free' | 'paid' | 'freemium'
     cost: Mapped[str] = mapped_column(String, default="free", index=True)

@@ -6,6 +6,9 @@ def _payload(**over):
         "subject": "Math",
         "grade_band": "3-5",
         "resource_type": "lesson plan",
+        "duration_minutes": 45,
+        "materials": "fraction tiles",
+        "learning_outcomes": ["Students will be able to compare fractions"],
         "cost": "free",
         "source_site": "Example",
         "tags": ["Fractions", "number sense"],
@@ -13,6 +16,30 @@ def _payload(**over):
     }
     base.update(over)
     return base
+
+
+def test_learning_outcomes_and_age_backfill(client):
+    body = client.post("/api/resources", json=_payload(link="https://lo.com")).json()
+    assert body["learning_outcomes"] == ["Students will be able to compare fractions"]
+    # grade_band 3-5 -> ages 8-11 auto-filled
+    assert body["age_min"] == 8 and body["age_max"] == 11
+    assert body["duration_minutes"] == 45
+
+
+def test_age_filter(client):
+    client.post("/api/resources", json=_payload(link="https://k2.com", grade_band="K-2"))
+    client.post("/api/resources", json=_payload(link="https://hs.com", grade_band="9-12"))
+    resp = client.get("/api/resources", params={"age": 7})
+    assert resp.json()["total"] == 1
+    assert resp.json()["items"][0]["link"] == "https://k2.com"
+
+
+def test_explicit_age_range_kept(client):
+    body = client.post(
+        "/api/resources",
+        json=_payload(link="https://ar.com", grade_band="All", age_min=10, age_max=12),
+    ).json()
+    assert body["age_min"] == 10 and body["age_max"] == 12
 
 
 def test_health(client):

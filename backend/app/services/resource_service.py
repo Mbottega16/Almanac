@@ -7,6 +7,36 @@ from app.models.resource import Resource, resource_tags, resource_udl
 from app.models.tag import Tag
 from app.models.udl import UDL_PRINCIPLES, UdlPrinciple
 
+# When a source only gives a grade band, back-fill an age range from it so the
+# `age` filter works library-wide. Rough but useful (US grade -> typical age).
+GRADE_TO_AGE = {
+    "PreK": (3, 5),
+    "K-2": (5, 8),
+    "3-5": (8, 11),
+    "6-8": (11, 14),
+    "9-12": (14, 18),
+    "HigherEd/Adult": (18, 99),
+    "All": (5, 18),
+}
+
+# Plain scalar columns copied straight from the payload on create/upsert.
+_SCALAR_FIELDS = (
+    "title", "description", "description_source", "subject", "grade_band",
+    "age_min", "age_max", "resource_type", "duration_minutes", "materials",
+    "cost", "price_note", "source_site", "license", "standards",
+)
+
+
+def _outcomes_to_str(outcomes: list[str] | None) -> str | None:
+    if not outcomes:
+        return None
+    cleaned = [o.strip() for o in outcomes if o and o.strip()]
+    return "\n".join(cleaned) or None
+
+
+def outcomes_to_list(raw: str | None) -> list[str]:
+    return [line for line in (raw or "").splitlines() if line.strip()]
+
 
 def _get_or_create_tags(db: Session, names: list[str]) -> list[Tag]:
     tags = []
@@ -34,6 +64,19 @@ def _resolve_udl(db: Session, names: list[str]) -> list[UdlPrinciple]:
     )
 
 
+def _apply_fields(db: Session, resource: Resource, data) -> None:
+    """Copy scalars + relationships + derived fields from a payload onto a
+    Resource. Shared by create and upsert so they never drift apart."""
+    for field in _SCALAR_FIELDS:
+        setattr(resource, field, getattr(data, field))
+    resource.learning_outcomes = _outcomes_to_str(data.learning_outcomes)
+    # Back-fill an age range from the grade band when the source didn't give one.
+    if resource.age_min is None and resource.age_max is None and data.grade_band in GRADE_TO_AGE:
+        resource.age_min, resource.age_max = GRADE_TO_AGE[data.grade_band]
+    resource.tags = _get_or_create_tags(db, data.tags)
+    resource.udl_principles = _resolve_udl(db, data.udl_principles)
+
+
 def _base_query(
     q: str | None = None,
     subject: str | None = None,
@@ -43,6 +86,7 @@ def _base_query(
     source_site: str | None = None,
     udl: str | None = None,
     tag: str | None = None,
+    age: int | None = None,
     favorite: bool | None = None,
 ):
     stmt = select(Resource)
@@ -53,6 +97,8 @@ def _base_query(
             | (Resource.description.ilike(like))
             | (Resource.link.ilike(like))
             | (Resource.standards.ilike(like))
+            | (Resource.learning_outcomes.ilike(like))
+            | (Resource.materials.ilike(like))
         )
     if subject:
         stmt = stmt.where(Resource.subject == subject)
@@ -64,6 +110,13 @@ def _base_query(
         stmt = stmt.where(Resource.cost == cost)
     if source_site:
         stmt = stmt.where(Resource.source_site == source_site)
+    if age is not None:
+        stmt = stmt.where(
+            Resource.age_min.is_not(None),
+            Resource.age_max.is_not(None),
+            Resource.age_min <= age,
+            Resource.age_max >= age,
+        )
     if tag:
         stmt = stmt.join(Resource.tags).where(Tag.name == tag.strip().lower())
     if udl:
@@ -85,12 +138,13 @@ def list_resources(
     source_site: str | None = None,
     udl: str | None = None,
     tag: str | None = None,
+    age: int | None = None,
     favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
 ) -> tuple[int, list[Resource]]:
     stmt = _base_query(
-        q, subject, grade_band, resource_type, cost, source_site, udl, tag, favorite
+        q, subject, grade_band, resource_type, cost, source_site, udl, tag, age, favorite
     )
     total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
     stmt = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
@@ -118,23 +172,8 @@ def get_resource_by_link(db: Session, link: str) -> Resource | None:
 
 
 def create_resource(db: Session, data, source: str = "manual") -> Resource:
-    resource = Resource(
-        link=data.link,
-        title=data.title,
-        description=data.description,
-        description_source=data.description_source,
-        subject=data.subject,
-        grade_band=data.grade_band,
-        resource_type=data.resource_type,
-        cost=data.cost,
-        price_note=data.price_note,
-        source_site=data.source_site,
-        license=data.license,
-        standards=data.standards,
-        source=source,
-    )
-    resource.tags = _get_or_create_tags(db, data.tags)
-    resource.udl_principles = _resolve_udl(db, data.udl_principles)
+    resource = Resource(link=data.link, source=source)
+    _apply_fields(db, resource, data)
     db.add(resource)
     db.commit()
     db.refresh(resource)
@@ -142,9 +181,13 @@ def create_resource(db: Session, data, source: str = "manual") -> Resource:
 
 
 def update_resource(db: Session, resource: Resource, data) -> Resource:
-    updates = data.model_dump(exclude_unset=True, exclude={"tags", "udl_principles"})
+    updates = data.model_dump(
+        exclude_unset=True, exclude={"tags", "udl_principles", "learning_outcomes"}
+    )
     for field, value in updates.items():
         setattr(resource, field, value)
+    if data.learning_outcomes is not None:
+        resource.learning_outcomes = _outcomes_to_str(data.learning_outcomes)
     if data.tags is not None:
         resource.tags = _get_or_create_tags(db, data.tags)
     if data.udl_principles is not None:
@@ -180,19 +223,7 @@ def upsert_resource(db: Session, data, source: str = "capture") -> tuple[Resourc
     existing = get_resource_by_link(db, data.link)
     if existing is None:
         return create_resource(db, data, source=source), True
-    existing.title = data.title
-    existing.description = data.description
-    existing.description_source = data.description_source
-    existing.subject = data.subject
-    existing.grade_band = data.grade_band
-    existing.resource_type = data.resource_type
-    existing.cost = data.cost
-    existing.price_note = data.price_note
-    existing.source_site = data.source_site
-    existing.license = data.license
-    existing.standards = data.standards
-    existing.tags = _get_or_create_tags(db, data.tags)
-    existing.udl_principles = _resolve_udl(db, data.udl_principles)
+    _apply_fields(db, existing, data)
     db.commit()
     db.refresh(existing)
     return existing, False

@@ -6,7 +6,12 @@ export interface Resource {
   description_source: string;
   subject: string;
   grade_band: string | null;
+  age_min: number | null;
+  age_max: number | null;
   resource_type: string | null;
+  duration_minutes: number | null;
+  materials: string | null;
+  learning_outcomes: string[];
   cost: string;
   price_note: string | null;
   source_site: string | null;
@@ -82,6 +87,7 @@ export interface ResourceQuery {
   source_site?: string;
   udl?: string;
   tag?: string;
+  age?: number | string;
   favorite?: boolean;
 }
 
@@ -167,7 +173,12 @@ export type ResourceDraft = {
   description_source: string;
   subject: string;
   grade_band: string | null;
+  age_min: number | null;
+  age_max: number | null;
   resource_type: string | null;
+  duration_minutes: number | null;
+  materials: string | null;
+  learning_outcomes: string[];
   cost: string;
   price_note: string | null;
   source_site: string | null;

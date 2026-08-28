@@ -30,14 +30,21 @@ _TYPES = [
 
 _SYSTEM = f"""You catalog teaching resources for a UDL-focused library.
 For each URL you are given, produce one JSON object with keys:
-link, title, description (1-2 factual sentences you write yourself),
+link, title,
+description (1-2 factual sentences you write yourself),
 description_source (always "generated"),
 subject (one of {_SUBJECTS}),
 grade_band (one of {_GRADE_BANDS}),
+age_min (integer or null — youngest typical age),
+age_max (integer or null),
 resource_type (one of {_TYPES}),
+duration_minutes (integer or null — how long the lesson/activity runs),
+materials (string, "" if digital-only / nothing needed),
+learning_outcomes (array of 1-4 short strings, each phrased
+  "Students will be able to ..."),
 cost ("free" | "paid" | "freemium"),
 price_note (short, "" if free),
-source_site, license, standards ("" unless a real CCSS/NGSS code is clear),
+source_site, license, standards ("" unless a real CCSS/NGSS/C3 code is clear),
 tags (2-5 lowercase theme strings),
 udl_principles (1-3 of {list(UDL_PRINCIPLES)}).
 Reply with ONLY a JSON array, no prose."""

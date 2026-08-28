@@ -54,7 +54,19 @@ export default function ResourceCard({
   };
 
   const favicon = faviconUrl(resource.link);
-  const meta = [resource.subject, resource.grade_band, resource.resource_type]
+  const ageLabel =
+    resource.age_min != null && resource.age_max != null
+      ? `ages ${resource.age_min}–${resource.age_max}`
+      : null;
+  const durationLabel =
+    resource.duration_minutes != null ? `${resource.duration_minutes} min` : null;
+  const meta = [
+    resource.subject,
+    resource.grade_band,
+    ageLabel,
+    resource.resource_type,
+    durationLabel,
+  ]
     .filter(Boolean)
     .join(" · ");
 
@@ -99,6 +111,18 @@ export default function ResourceCard({
           {resource.source_site ? ` — ${resource.source_site}` : ""}
         </div>
         {resource.description && <p>{resource.description}</p>}
+        {resource.learning_outcomes.length > 0 && (
+          <ul className="outcomes">
+            {resource.learning_outcomes.map((o, i) => (
+              <li key={i}>{o}</li>
+            ))}
+          </ul>
+        )}
+        {resource.materials && (
+          <p className="materials">
+            <strong>Materials:</strong> {resource.materials}
+          </p>
+        )}
         <div className="udl-row">
           {resource.udl_principles.map((p) => (
             <span key={p} className={`udl-pill udl-${p}`}>

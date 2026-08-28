@@ -10,7 +10,12 @@ class ResourceBase(BaseModel):
     description_source: str = "manual"
     subject: str
     grade_band: str | None = None
+    age_min: int | None = None
+    age_max: int | None = None
     resource_type: str | None = None
+    duration_minutes: int | None = None
+    materials: str | None = None
+    learning_outcomes: list[str] = []
     cost: str = "free"
     price_note: str | None = None
     source_site: str | None = None
@@ -31,7 +36,12 @@ class ResourceUpdate(BaseModel):
     description_source: str | None = None
     subject: str | None = None
     grade_band: str | None = None
+    age_min: int | None = None
+    age_max: int | None = None
     resource_type: str | None = None
+    duration_minutes: int | None = None
+    materials: str | None = None
+    learning_outcomes: list[str] | None = None
     cost: str | None = None
     price_note: str | None = None
     source_site: str | None = None

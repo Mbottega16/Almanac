@@ -10,6 +10,7 @@ export interface Filters {
   cost: string;
   udl: string;
   tag: string;
+  age: string;
 }
 
 export const EMPTY_FILTERS: Filters = {
@@ -20,6 +21,7 @@ export const EMPTY_FILTERS: Filters = {
   cost: "",
   udl: "",
   tag: "",
+  age: "",
 };
 
 const COST_OPTIONS = [
@@ -108,6 +110,15 @@ export default function FilterBar({
             </option>
           ))}
         </select>
+        <input
+          className="age-input"
+          type="number"
+          min={2}
+          max={99}
+          placeholder="Age"
+          value={filters.age}
+          onChange={(e) => set({ age: e.target.value })}
+        />
         <select
           value={filters.resource_type}
           onChange={(e) => set({ resource_type: e.target.value })}

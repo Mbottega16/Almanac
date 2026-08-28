@@ -23,7 +23,12 @@ def _to_out(resource: Resource) -> ResourceOut:
         description_source=resource.description_source,
         subject=resource.subject,
         grade_band=resource.grade_band,
+        age_min=resource.age_min,
+        age_max=resource.age_max,
         resource_type=resource.resource_type,
+        duration_minutes=resource.duration_minutes,
+        materials=resource.materials,
+        learning_outcomes=resource_service.outcomes_to_list(resource.learning_outcomes),
         cost=resource.cost,
         price_note=resource.price_note,
         source_site=resource.source_site,
@@ -49,6 +54,7 @@ def search_resources(
     source_site: str | None = None,
     udl: str | None = None,
     tag: str | None = None,
+    age: int | None = None,
     favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
@@ -56,7 +62,7 @@ def search_resources(
 ):
     total, items = resource_service.list_resources(
         db, q, subject, grade_band, resource_type, cost, source_site, udl, tag,
-        favorite, limit, offset,
+        age, favorite, limit, offset,
     )
     return ResourceListOut(total=total, items=[_to_out(r) for r in items])
 

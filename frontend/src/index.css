@@ -385,7 +385,9 @@ h1 {
 
 .entry-card.view-list p,
 .entry-card.view-list .visited-badge,
-.entry-card.view-list .udl-row {
+.entry-card.view-list .udl-row,
+.entry-card.view-list .outcomes,
+.entry-card.view-list .materials {
   display: none;
 }
 
@@ -434,6 +436,26 @@ h1 {
 .entry-card p {
   margin: 0 0 0.5rem;
   font-size: 0.9rem;
+}
+
+.outcomes {
+  margin: 0 0 0.5rem;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.outcomes li {
+  margin-bottom: 0.15rem;
+}
+
+.materials {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+.age-input {
+  width: 5rem;
 }
 
 .favorite-btn {
