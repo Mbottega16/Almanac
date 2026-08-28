@@ -1,4 +1,4 @@
-import json
+import logging
 import pathlib
 
 from fastapi import FastAPI
@@ -9,30 +9,37 @@ from app import models as _models  # noqa: F401  (register models on Base.metada
 from app.api.routes import auth, capture, facets, health, resources, udl
 from app.auth import AuthGateMiddleware
 from app.db.base import Base
+from app.db.seed import ensure_seed_db_file, load_seed_rows
 from app.db.session import SessionLocal, engine
 from app.models.resource import Resource
 from app.models.udl import seed_udl_principles
-from app.schemas.resource import ResourceCreate
-from app.services import resource_service
+
+log = logging.getLogger("almanac.bootstrap")
 
 app = FastAPI(title="Almanac")
+
+# On an ephemeral serverless filesystem the SQLite file in /tmp is gone on
+# every cold start. Copying a pre-built seed DB into place (milliseconds)
+# instead of re-inserting the JSON seed row-by-row (~8s, was tripping the
+# function timeout) is what keeps cold starts fast. Must run before
+# create_all and any query.
+ensure_seed_db_file()
 
 # MVP: create tables directly from models. Switch to Alembic migrations
 # once the schema needs to evolve without dropping data.
 Base.metadata.create_all(bind=engine)
 
-_SEED_FILE = pathlib.Path(__file__).resolve().parent.parent / "seed" / "almanac-seed.json"
-
 
 def _bootstrap() -> None:
-    with SessionLocal() as db:
-        seed_udl_principles(db)
-        # On a fresh / ephemeral database (e.g. a serverless cold start),
-        # load the committed seed so the app is never empty.
-        if db.query(Resource).count() == 0 and _SEED_FILE.exists():
-            rows = json.loads(_SEED_FILE.read_text(encoding="utf-8"))
-            for row in rows:
-                resource_service.upsert_resource(db, ResourceCreate(**row))
+    # Never let a seeding hiccup take down module import (would 500 every route).
+    try:
+        with SessionLocal() as db:
+            seed_udl_principles(db)
+            if db.query(Resource).count() == 0:
+                n = load_seed_rows(db)
+                log.warning("cold DB: loaded %d seed rows via JSON fallback", n)
+    except Exception:  # noqa: BLE001
+        log.exception("bootstrap seeding failed; continuing with current DB state")
 
 
 _bootstrap()

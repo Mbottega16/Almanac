@@ -23,11 +23,17 @@ to assemble.
   service (project `almanac-api`, CheggaWeb team) serves the built SPA at
   `/` and the API at `/api/*`. `scripts/build_frontend.py` builds the
   frontend into `backend/static/`; `app.main` mounts it via `StaticFiles`.
-  On Vercel `DATABASE_URL` is `/tmp` and the app auto-seeds from
-  `backend/seed/almanac-seed.json` on an empty DB — so cold starts are
-  never blank, but favorites/visits don't survive a cold start. A
-  persistent host (Render — `render.yaml` is ready — or Vercel Postgres)
-  is the real fix. Only the canonical `almanac-api.vercel.app` is public;
+  On Vercel `DATABASE_URL` is `/tmp` and the DB is wiped on every cold
+  start. **Cold-start seeding fix (2026-08-28):** re-inserting the 289 JSON
+  seed rows row-by-row took ~8s and was intermittently tripping the
+  serverless function timeout (504s / "backend failures"). Now `app.main`
+  first calls `db.seed.ensure_seed_db_file()`, which copies a committed
+  pre-built `backend/seed/almanac-seed.db` into `/tmp` (milliseconds); cold
+  import is ~1.8s. Rebuild that file with `scripts/build_seed_db.py`
+  whenever `almanac-seed.json` changes. The JSON path is still the fallback
+  (`load_seed_rows`, now one transaction). Favorites/visits still don't
+  survive a cold start — a persistent host (Render — `render.yaml` is
+  ready — or Vercel Postgres) is the real fix. Only the canonical `almanac-api.vercel.app` is public;
   custom aliases 302 behind the team's Deployment Protection (disable it
   or rename the project for a nicer URL). The old standalone `almanac`
   Vercel project is superseded and can be deleted.

@@ -171,12 +171,15 @@ def get_resource_by_link(db: Session, link: str) -> Resource | None:
     return db.execute(select(Resource).where(Resource.link == link)).scalar_one_or_none()
 
 
-def create_resource(db: Session, data, source: str = "manual") -> Resource:
+def create_resource(db: Session, data, source: str = "manual", commit: bool = True) -> Resource:
     resource = Resource(link=data.link, source=source)
     _apply_fields(db, resource, data)
     db.add(resource)
-    db.commit()
-    db.refresh(resource)
+    if commit:
+        db.commit()
+        db.refresh(resource)
+    else:
+        db.flush()  # caller batches many creates into one transaction (seed load)
     return resource
 
 
@@ -216,16 +219,22 @@ def set_favorite(db: Session, resource: Resource, is_favorite: bool) -> Resource
     return resource
 
 
-def upsert_resource(db: Session, data, source: str = "capture") -> tuple[Resource, bool]:
+def upsert_resource(
+    db: Session, data, source: str = "capture", commit: bool = True
+) -> tuple[Resource, bool]:
     """Create, or update-in-place if `link` already exists. Returns
     (resource, created). Defaults to source='capture' — this is what the
-    batch/import endpoint calls."""
+    batch/import endpoint calls. Pass commit=False to batch many upserts
+    into a single transaction (the seed loader does this)."""
     existing = get_resource_by_link(db, data.link)
     if existing is None:
-        return create_resource(db, data, source=source), True
+        return create_resource(db, data, source=source, commit=commit), True
     _apply_fields(db, existing, data)
-    db.commit()
-    db.refresh(existing)
+    if commit:
+        db.commit()
+        db.refresh(existing)
+    else:
+        db.flush()
     return existing, False
 
 
