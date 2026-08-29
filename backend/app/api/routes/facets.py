@@ -27,6 +27,16 @@ def list_resource_types(db: Session = Depends(get_db)):
     return _as_counts(resource_service.list_resource_types_with_counts(db))
 
 
+@router.get("/scopes", response_model=list[NameCount])
+def list_scopes(db: Session = Depends(get_db)):
+    return _as_counts(resource_service.list_scopes_with_counts(db))
+
+
+@router.get("/publishers", response_model=list[NameCount])
+def list_publishers(db: Session = Depends(get_db)):
+    return _as_counts(resource_service.list_publishers_with_counts(db))
+
+
 @router.get("/sources", response_model=list[NameCount])
 def list_sources(db: Session = Depends(get_db)):
     return _as_counts(resource_service.list_sources_with_counts(db))

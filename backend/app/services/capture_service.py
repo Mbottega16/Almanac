@@ -38,6 +38,12 @@ grade_band (one of {_GRADE_BANDS}),
 age_min (integer or null — youngest typical age),
 age_max (integer or null),
 resource_type (one of {_TYPES}),
+scope (one of "lesson" | "unit" | "course" | "curriculum" — a single
+  class period is "lesson"; a multi-lesson topic module is "unit"; a
+  full semester/year of one subject is "course"; a publisher's complete
+  multi-grade program is "curriculum"),
+publisher (the program or publisher name for a course/curriculum, e.g.
+  "Illustrative Mathematics", "OpenSciEd"; "" for a one-off lesson),
 duration_minutes (integer or null — how long the lesson/activity runs),
 materials (string, "" if digital-only / nothing needed),
 learning_outcomes (array of 1-4 short strings, each phrased

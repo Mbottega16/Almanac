@@ -7,6 +7,7 @@ export interface Filters {
   subject: string;
   grade_band: string;
   resource_type: string;
+  scope: string;
   cost: string;
   udl: string;
   tag: string;
@@ -18,6 +19,7 @@ export const EMPTY_FILTERS: Filters = {
   subject: "",
   grade_band: "",
   resource_type: "",
+  scope: "",
   cost: "",
   udl: "",
   tag: "",
@@ -29,6 +31,15 @@ const COST_OPTIONS = [
   { value: "free", label: "Free" },
   { value: "freemium", label: "Freemium" },
   { value: "paid", label: "Paid" },
+];
+
+// What size of thing to plan with — a single period, or a whole program.
+const SCOPE_OPTIONS = [
+  { value: "", label: "Anything" },
+  { value: "lesson", label: "Single lessons" },
+  { value: "unit", label: "Units" },
+  { value: "course", label: "Full courses" },
+  { value: "curriculum", label: "Curricula" },
 ];
 
 export default function FilterBar({
@@ -62,6 +73,19 @@ export default function FilterBar({
             key={o.value}
             className={filters.cost === o.value ? "active" : ""}
             onClick={() => set({ cost: o.value })}
+          >
+            {o.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Scope — one-off lesson vs. a full commercial curriculum. */}
+      <div className="cost-toggle" role="group" aria-label="Lesson vs. curriculum">
+        {SCOPE_OPTIONS.map((o) => (
+          <button
+            key={o.value}
+            className={filters.scope === o.value ? "active" : ""}
+            onClick={() => set({ scope: o.value })}
           >
             {o.label}
           </button>

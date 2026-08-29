@@ -1,6 +1,14 @@
 import { useState } from "react";
 
-import { Resource, UDL_LABELS, UdlPrinciple, markVisited, setFavorite } from "../api/client";
+import {
+  Resource,
+  SCOPE_LABELS,
+  Scope,
+  UDL_LABELS,
+  UdlPrinciple,
+  markVisited,
+  setFavorite,
+} from "../api/client";
 
 function faviconUrl(link: string): string | null {
   try {
@@ -70,6 +78,12 @@ export default function ResourceCard({
     .filter(Boolean)
     .join(" · ");
 
+  // Only worth calling out when it's bigger than a single lesson.
+  const scopeLabel =
+    resource.scope && resource.scope !== "lesson"
+      ? SCOPE_LABELS[resource.scope as Scope] ?? resource.scope
+      : null;
+
   return (
     <div className={`entry-card view-${view}${visited ? " visited" : ""}`}>
       <button
@@ -95,6 +109,9 @@ export default function ResourceCard({
             {COST_LABEL[resource.cost] ?? resource.cost}
             {resource.price_note ? ` · ${resource.price_note}` : ""}
           </span>
+          {scopeLabel && (
+            <span className={`scope-badge scope-${resource.scope}`}>{scopeLabel}</span>
+          )}
           {visited && (
             <span className="visited-badge" title="You've opened this before">
               ✓ visited
@@ -108,7 +125,7 @@ export default function ResourceCard({
         </h3>
         <div className="meta">
           {meta}
-          {resource.source_site ? ` — ${resource.source_site}` : ""}
+          {resource.publisher ? ` — ${resource.publisher}` : resource.source_site ? ` — ${resource.source_site}` : ""}
         </div>
         {resource.description && <p>{resource.description}</p>}
         {resource.learning_outcomes.length > 0 && (

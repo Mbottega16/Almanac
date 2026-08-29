@@ -52,6 +52,18 @@ class Resource(Base):
     age_min: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)
     age_max: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)
     resource_type: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
+    # How big a chunk of teaching this is:
+    #   'lesson'     — a single class period / one-off activity (the default)
+    #   'unit'       — a multi-lesson module on one topic
+    #   'course'     — a full semester or year of one subject
+    #   'curriculum' — a publisher's complete, multi-grade program
+    # 'course' and 'curriculum' are usually a commercial product; pair with
+    # `publisher` and (often) cost='paid'.
+    scope: Mapped[str] = mapped_column(String, default="lesson", index=True)
+    # The program / publisher behind a course or curriculum
+    # ("Illustrative Mathematics", "OpenSciEd", "EL Education"). Null for
+    # one-off lessons.
+    publisher: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
     duration_minutes: Mapped[int | None] = mapped_column(Integer, nullable=True)
     # What a teacher needs on hand to run it ("" / null = nothing / digital-only).
     materials: Mapped[str | None] = mapped_column(Text, nullable=True)

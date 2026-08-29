@@ -9,6 +9,8 @@ export interface Resource {
   age_min: number | null;
   age_max: number | null;
   resource_type: string | null;
+  scope: string;
+  publisher: string | null;
   duration_minutes: number | null;
   materials: string | null;
   learning_outcomes: string[];
@@ -53,6 +55,19 @@ export const UDL_LABELS: Record<UdlPrinciple, string> = {
   action_expression: "Action & Expression",
 };
 
+// How big a chunk of teaching a resource is. 'lesson' is the default and
+// covers one-off lessons/activities; 'course'/'curriculum' are the
+// commercial full programs.
+export const SCOPES = ["lesson", "unit", "course", "curriculum"] as const;
+export type Scope = (typeof SCOPES)[number];
+
+export const SCOPE_LABELS: Record<Scope, string> = {
+  lesson: "Single lesson",
+  unit: "Unit",
+  course: "Full course",
+  curriculum: "Curriculum",
+};
+
 const BASE = import.meta.env.VITE_API_BASE_URL || "";
 
 export class ApiError extends Error {
@@ -83,6 +98,8 @@ export interface ResourceQuery {
   subject?: string;
   grade_band?: string;
   resource_type?: string;
+  scope?: string;
+  publisher?: string;
   cost?: string;
   source_site?: string;
   udl?: string;
@@ -114,6 +131,12 @@ export function fetchResourceTypes(): Promise<NameCount[]> {
 }
 export function fetchSources(): Promise<NameCount[]> {
   return apiGet("/api/sources");
+}
+export function fetchScopes(): Promise<NameCount[]> {
+  return apiGet("/api/scopes");
+}
+export function fetchPublishers(): Promise<NameCount[]> {
+  return apiGet("/api/publishers");
 }
 export function fetchTags(): Promise<NameCount[]> {
   return apiGet("/api/tags");
@@ -176,6 +199,8 @@ export type ResourceDraft = {
   age_min: number | null;
   age_max: number | null;
   resource_type: string | null;
+  scope: string;
+  publisher: string | null;
   duration_minutes: number | null;
   materials: string | null;
   learning_outcomes: string[];

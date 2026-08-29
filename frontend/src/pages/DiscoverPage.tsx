@@ -51,6 +51,22 @@ const STEPS: Step[] = [
     ],
   },
   {
+    key: "scope",
+    question: "How much are you planning?",
+    sub: "A single class, or a whole program to run from.",
+    choices: [
+      { label: "One lesson or activity", hint: "a single class period", value: "lesson" },
+      { label: "A unit", hint: "a few lessons on one topic", value: "unit" },
+      { label: "A full course", hint: "a semester or year", value: "course" },
+      {
+        label: "A whole curriculum",
+        hint: "a publisher's complete program",
+        value: "curriculum",
+      },
+      { label: "Doesn't matter", value: "" },
+    ],
+  },
+  {
     key: "resource_type",
     question: "What kind of resource do you want?",
     choices: [

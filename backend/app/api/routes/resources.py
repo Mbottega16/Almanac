@@ -26,6 +26,8 @@ def _to_out(resource: Resource) -> ResourceOut:
         age_min=resource.age_min,
         age_max=resource.age_max,
         resource_type=resource.resource_type,
+        scope=resource.scope,
+        publisher=resource.publisher,
         duration_minutes=resource.duration_minutes,
         materials=resource.materials,
         learning_outcomes=resource_service.outcomes_to_list(resource.learning_outcomes),
@@ -50,6 +52,8 @@ def search_resources(
     subject: str | None = None,
     grade_band: str | None = None,
     resource_type: str | None = None,
+    scope: str | None = None,
+    publisher: str | None = None,
     cost: str | None = None,
     source_site: str | None = None,
     udl: str | None = None,
@@ -61,8 +65,8 @@ def search_resources(
     db: Session = Depends(get_db),
 ):
     total, items = resource_service.list_resources(
-        db, q, subject, grade_band, resource_type, cost, source_site, udl, tag,
-        age, favorite, limit, offset,
+        db, q, subject, grade_band, resource_type, scope, publisher, cost,
+        source_site, udl, tag, age, favorite, limit, offset,
     )
     return ResourceListOut(total=total, items=[_to_out(r) for r in items])
 

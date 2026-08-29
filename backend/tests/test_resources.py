@@ -42,6 +42,44 @@ def test_explicit_age_range_kept(client):
     assert body["age_min"] == 10 and body["age_max"] == 12
 
 
+def test_scope_defaults_to_lesson_and_filters(client):
+    body = client.post("/api/resources", json=_payload(link="https://one.com")).json()
+    assert body["scope"] == "lesson"
+    assert body["publisher"] is None
+
+    client.post(
+        "/api/resources",
+        json=_payload(
+            link="https://im.com",
+            title="Illustrative Mathematics 6–8",
+            scope="curriculum",
+            publisher="Illustrative Mathematics",
+            cost="free",
+        ),
+    )
+    resp = client.get("/api/resources", params={"scope": "curriculum"})
+    assert resp.json()["total"] == 1
+    assert resp.json()["items"][0]["publisher"] == "Illustrative Mathematics"
+
+    # publisher name is searchable via q
+    assert client.get("/api/resources", params={"q": "Illustrative"}).json()["total"] == 1
+    # and filterable exactly
+    assert (
+        client.get("/api/resources", params={"publisher": "Illustrative Mathematics"})
+        .json()["total"]
+        == 1
+    )
+
+
+def test_scope_and_publisher_facets(client):
+    client.post(
+        "/api/resources",
+        json=_payload(link="https://c.com", scope="course", publisher="OpenSciEd"),
+    )
+    assert any(s["name"] == "course" for s in client.get("/api/scopes").json())
+    assert any(p["name"] == "OpenSciEd" for p in client.get("/api/publishers").json())
+
+
 def test_health(client):
     resp = client.get("/api/health")
     assert resp.status_code == 200

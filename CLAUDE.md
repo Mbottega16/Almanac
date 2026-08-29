@@ -47,27 +47,35 @@ to assemble.
   /api/capture/enabled` is true. Runs on the operator's key — off by
   default on purpose.
 - **Backend**: `resources` model (Atlas's `Entry` fields plus
-  `subject`, `grade_band`, `resource_type`, `cost` (free/paid/freemium),
-  `price_note`, `source_site`, `license`, `standards`,
-  `description_source`), real many-to-many `tags` **and** a fixed
-  3-row `udl_principles` join. Full CRUD, search/filter
-  (`q`/`subject`/`grade_band`/`resource_type`/`cost`/`source_site`/`udl`/`tag`/`favorite`),
+  `subject`, `grade_band`, `resource_type`, `scope`, `publisher`,
+  `cost` (free/paid/freemium), `price_note`, `source_site`, `license`,
+  `standards`, `description_source`), real many-to-many `tags` **and** a
+  fixed 3-row `udl_principles` join. Full CRUD, search/filter
+  (`q`/`subject`/`grade_band`/`resource_type`/`scope`/`publisher`/`cost`/`source_site`/`udl`/`tag`/`age`/`favorite`),
   `random`, `visit`, `favorite`, batch-upsert on `link`
-  (`POST /api/resources/batch`), faceted-count endpoints, and
-  `GET /api/udl-coverage`. 15 passing pytest tests (in-memory SQLite).
-- **Frontend**: Browse page (theme search, Free/Paid toggle, subject
-  chips, grade/format/theme selects, three UDL-principle toggles,
-  grid/list/large view modes persisted in `localStorage`), a **UDL
-  coverage strip** shown for any theme search, resource cards with cost
-  badge + UDL pills, a "My Collection" slide-in panel, and a read-only
-  Capture page. Type-checks and builds clean.
-- **Seed**: **289 curated resources** at `backend/seed/almanac-seed.json`
-  (idempotent load via `scripts/import_seed.py`). Grew from 91 via four
-  subject-cluster research passes, enum-validated + deduped. Every subject
-  covered (Science 70, ELA 58, Math 44, SocStd 32, SEL 19, CS 18, Arts
-  14, WorldLang 14, PE/Health 13, Other 7); free 245 / freemium 30 / paid
-  14. ~112 rows link a section/portal page rather than one specific
-  lesson — deepen with a real page-fetching pass later.
+  (`POST /api/resources/batch`), faceted-count endpoints (incl.
+  `/api/scopes` and `/api/publishers`), and `GET /api/udl-coverage`.
+  22 passing pytest tests (in-memory SQLite).
+- **Frontend**: Browse page (theme search, Free/Paid toggle, a
+  **scope toggle** — Single lessons / Units / Full courses / Curricula —
+  subject chips, grade/format/theme selects, three UDL-principle
+  toggles, grid/list/large view modes persisted in `localStorage`), a
+  **UDL coverage strip** shown for any theme search, resource cards with
+  cost badge + **scope badge** + publisher line + UDL pills, a "My
+  Collection" slide-in panel, and a read-only Capture page. The Guided
+  discovery flow asks a "how much are you planning?" (scope) step.
+  Type-checks and builds clean.
+- **Seed**: **320 curated resources** at `backend/seed/almanac-seed.json`
+  (idempotent load via `scripts/import_seed.py`). 289 one-off lessons
+  grew from 91 via four subject-cluster research passes; a 2026-08-29
+  pass added **31 full courses / commercial curricula** (Illustrative
+  Mathematics, OpenSciEd, EL Education, Amplify, Great Minds / Eureka /
+  Wit & Wisdom, Zearn, Fishtank, Open Up Resources, CommonLit 360,
+  Carnegie Learning, Bridges, PLTW, iCivics, Code.org courses, Khan
+  Academy courses, MIT OCW, Crash Course, TERC, Bootstrap) with `scope`
+  and `publisher` set. ~112 lesson rows still link a section/portal page
+  rather than one specific lesson — deepen with a real page-fetching
+  pass later.
 - **Lesson format** (the "categorizer"): each resource also carries
   `age_min`/`age_max`, `duration_minutes`, `materials`, and
   `learning_outcomes` (list of "Students will be able to …"). Age
@@ -75,7 +83,18 @@ to assemble.
   `age` query param works library-wide; `q` also searches outcomes +
   materials; the live-capture prompt extracts all of it.
   `scripts/migrate_add_lesson_fields.py` is ready for a persistent DB.
-  20 passing pytest tests.
+- **Lesson scope / commercial curriculum** (2026-08-29): every resource
+  carries `scope` — `lesson` (a single class period / one-off, the
+  default and all 289 original rows), `unit` (a multi-lesson module),
+  `course` (a semester or year of one subject), or `curriculum` (a
+  publisher's complete multi-grade program) — plus a `publisher` string
+  for the program behind a course/curriculum. Both are filterable
+  (`?scope=`, `?publisher=`), faceted (`/api/scopes`, `/api/publishers`),
+  and `publisher` is covered by `q` search. `course`/`curriculum` rows
+  are the commercial (and free-OER) full programs; a card shows a scope
+  badge and the publisher name in place of `source_site`.
+  `scripts/migrate_add_curriculum_fields.py` is ready for a persistent DB.
+  22 passing pytest tests.
 - **Still to do**: activate the auth gate + capture (set the env vars),
   move to a persistent DB, deepen the ~112 portal-only links, delete the
   dead standalone `almanac` Vercel project.
@@ -94,6 +113,15 @@ to assemble.
   names are dropped, never created.
 - **`cost` is `free` | `paid` | `freemium`.** `freemium` is real and
   common for teacher platforms; don't collapse it into paid.
+- **`scope` is `lesson` | `unit` | `course` | `curriculum`**, separate
+  from `resource_type` (which is the *format* — video, worksheet, sim…).
+  Scope answers "how much of a plan is this?" A one-off lesson is
+  `lesson` (the default); a publisher's whole program is `curriculum`.
+  Commercial curriculum is deliberately in scope for the library — link
+  the program's landing page, set `publisher` + `scope`, and set
+  `cost` honestly (`free` for OER programs like IM / OpenSciEd,
+  `freemium` where core is free, `paid` otherwise). Still a pointer
+  index — never mirror the program's materials.
 - **Quick-capture is two-phase**, exactly like Atlas:
   - *Now:* a Claude Code session rooted here researches pasted links /
     named sites via `WebFetch`/`WebSearch` and saves via

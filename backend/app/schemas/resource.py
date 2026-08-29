@@ -13,6 +13,8 @@ class ResourceBase(BaseModel):
     age_min: int | None = None
     age_max: int | None = None
     resource_type: str | None = None
+    scope: str = "lesson"
+    publisher: str | None = None
     duration_minutes: int | None = None
     materials: str | None = None
     learning_outcomes: list[str] = []
@@ -39,6 +41,8 @@ class ResourceUpdate(BaseModel):
     age_min: int | None = None
     age_max: int | None = None
     resource_type: str | None = None
+    scope: str | None = None
+    publisher: str | None = None
     duration_minutes: int | None = None
     materials: str | None = None
     learning_outcomes: list[str] | None = None

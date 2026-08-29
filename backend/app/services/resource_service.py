@@ -22,7 +22,8 @@ GRADE_TO_AGE = {
 # Plain scalar columns copied straight from the payload on create/upsert.
 _SCALAR_FIELDS = (
     "title", "description", "description_source", "subject", "grade_band",
-    "age_min", "age_max", "resource_type", "duration_minutes", "materials",
+    "age_min", "age_max", "resource_type", "scope", "publisher",
+    "duration_minutes", "materials",
     "cost", "price_note", "source_site", "license", "standards",
 )
 
@@ -82,6 +83,8 @@ def _base_query(
     subject: str | None = None,
     grade_band: str | None = None,
     resource_type: str | None = None,
+    scope: str | None = None,
+    publisher: str | None = None,
     cost: str | None = None,
     source_site: str | None = None,
     udl: str | None = None,
@@ -99,6 +102,7 @@ def _base_query(
             | (Resource.standards.ilike(like))
             | (Resource.learning_outcomes.ilike(like))
             | (Resource.materials.ilike(like))
+            | (Resource.publisher.ilike(like))
         )
     if subject:
         stmt = stmt.where(Resource.subject == subject)
@@ -106,6 +110,10 @@ def _base_query(
         stmt = stmt.where(Resource.grade_band == grade_band)
     if resource_type:
         stmt = stmt.where(Resource.resource_type == resource_type)
+    if scope:
+        stmt = stmt.where(Resource.scope == scope)
+    if publisher:
+        stmt = stmt.where(Resource.publisher == publisher)
     if cost:
         stmt = stmt.where(Resource.cost == cost)
     if source_site:
@@ -134,6 +142,8 @@ def list_resources(
     subject: str | None = None,
     grade_band: str | None = None,
     resource_type: str | None = None,
+    scope: str | None = None,
+    publisher: str | None = None,
     cost: str | None = None,
     source_site: str | None = None,
     udl: str | None = None,
@@ -144,7 +154,8 @@ def list_resources(
     offset: int = 0,
 ) -> tuple[int, list[Resource]]:
     stmt = _base_query(
-        q, subject, grade_band, resource_type, cost, source_site, udl, tag, age, favorite
+        q, subject, grade_band, resource_type, scope, publisher, cost,
+        source_site, udl, tag, age, favorite,
     )
     total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
     stmt = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
@@ -260,6 +271,14 @@ def list_grade_bands_with_counts(db: Session) -> list[tuple[str, int]]:
 
 def list_resource_types_with_counts(db: Session) -> list[tuple[str, int]]:
     return _column_counts(db, Resource.resource_type)
+
+
+def list_scopes_with_counts(db: Session) -> list[tuple[str, int]]:
+    return _column_counts(db, Resource.scope)
+
+
+def list_publishers_with_counts(db: Session) -> list[tuple[str, int]]:
+    return _column_counts(db, Resource.publisher)
 
 
 def list_sources_with_counts(db: Session) -> list[tuple[str, int]]:
