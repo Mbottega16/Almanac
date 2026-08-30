@@ -45,13 +45,19 @@ follow-up. Scaffolded, tested (22 pytest), and seeded:
   searches, resource cards with cost badge + **scope badge** + publisher
   line + UDL pills + learning outcomes, "My Collection" panel, read-only
   Capture page. Builds clean.
-- **Seed: 320 resources.** 289 one-off lessons + a 2026-08-29 pass of
+- **Seed: 291 resources.** One-off lessons + a 2026-08-29 pass of
   **31 full courses / commercial curricula** (Illustrative Mathematics,
   OpenSciEd, EL Education, Amplify, Great Minds, Zearn, Fishtank, Open
   Up Resources, CommonLit 360, Carnegie Learning, Bridges, PLTW,
   iCivics, Code.org / Khan Academy courses, MIT OCW, Crash Course, TERC,
   Bootstrap), each with `scope` + `publisher`. `Almanac/CLAUDE.md` is
   authoritative for live counts.
+- **Link-validation pass (2026-08-30):** new `scripts/check_links.py`
+  (ported from Atlas). Fixed 64 broken URLs (a systemic PhET
+  `/simulations/html/` path bug, plus provider reorgs — PBS LearningMedia,
+  NatGeo, NASA, OpenSciEd, Learning for Justice→SPLC, iCivics, SHEG) and
+  dropped 29 genuinely-dead rows → 320 → 291. ~40 more still flag but are
+  live sites the build box's DNS can't reach — recheck from a real network.
 - **Lesson vs. curriculum (2026-08-29):** `scope` column —
   `lesson` (default) / `unit` / `course` / `curriculum` — plus a
   `publisher` string. Lets a teacher ask for a one-off lesson or a whole

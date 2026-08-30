@@ -209,7 +209,7 @@
     ]
   },
   {
-    "link": "https://www.pbslearningmedia.org",
+    "link": "https://www.pbslearningmedia.org/",
     "title": "PBS LearningMedia Lesson Library",
     "description": "Curated educational videos and interactive lessons aligned to standards across subjects K-12.",
     "description_source": "generated",
@@ -298,7 +298,7 @@
     ]
   },
   {
-    "link": "https://code.org/learn",
+    "link": "https://code.org/en-US/curriculum",
     "title": "Code.org Courses & Tutorials",
     "description": "Free curriculum for computer science from pre-K through high school with block-based and text-based coding.",
     "description_source": "generated",
@@ -445,7 +445,7 @@
     ]
   },
   {
-    "link": "https://www.learningforjustice.org/teaching-kits",
+    "link": "https://archive.learningforjustice.org/classroom-resources/film-kits",
     "title": "Learning for Justice Teaching Kits",
     "description": "Free curriculum kits for teaching social justice, inclusion, and equity with lesson plans and multimedia resources.",
     "description_source": "generated",
@@ -987,7 +987,7 @@
     ]
   },
   {
-    "link": "https://www.readwritethink.org/materials/acrostic",
+    "link": "https://www.readwritethink.org/classroom-resources/student-interactives/acrostic-poems",
     "title": "ReadWriteThink Acrostic Poem Tool",
     "description": "Interactive tool for creating and sharing acrostic poems with word banks and customizable templates.",
     "description_source": "generated",
@@ -1042,7 +1042,7 @@
     ]
   },
   {
-    "link": "https://www.pbslearningmedia.org/collection/steam-clips",
+    "link": "https://www.pbslearningmedia.org/collection/steam-careers/",
     "title": "PBS LearningMedia STEAM Video Clips",
     "description": "Curated short videos featuring STEAM careers and real-world applications with discussion guides for classrooms.",
     "description_source": "generated",
@@ -1070,7 +1070,7 @@
     ]
   },
   {
-    "link": "https://code.org/courses",
+    "link": "https://code.org/en-US/curriculum/computer-science-fundamentals",
     "title": "Code.org Intro to Computer Science",
     "description": "Structured curriculum for teaching computer science fundamentals with block-based and text-based coding progression.",
     "description_source": "generated",
@@ -1129,35 +1129,7 @@
     ]
   },
   {
-    "link": "https://mysteryscience.com/curriculum",
-    "title": "Mystery Science Curriculum",
-    "description": "Inquiry-based elementary science lessons using real-world mysteries to guide discovery of scientific concepts.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "3-5",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "unit",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "freemium",
-    "price_note": "subscription for premium",
-    "source_site": "Mystery Science",
-    "license": "All rights reserved",
-    "standards": "NGSS 3-LS1-1",
-    "tags": [
-      "inquiry learning",
-      "wonder-based",
-      "engaging"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.illustrativemathematics.org/8-1",
+    "link": "https://im.kendallhunt.com/MS/teachers/3/8/index.html",
     "title": "Illustrative Mathematics Grade 8",
     "description": "Grade 8 math course with problem-based lessons on functions, linear equations, and geometry foundations.",
     "description_source": "generated",
@@ -1213,7 +1185,7 @@
     ]
   },
   {
-    "link": "https://www.learningforjustice.org/classroom-resources",
+    "link": "https://www.splcenter.org/learning-for-justice/the-learning-center/",
     "title": "Learning for Justice Classroom Resources",
     "description": "Free, peer-reviewed lessons and activities promoting anti-bias education and social justice awareness.",
     "description_source": "generated",
@@ -1299,7 +1271,7 @@
     ]
   },
   {
-    "link": "https://www.nasa.gov/stem/elementary",
+    "link": "https://www.jpl.nasa.gov/edu/teach/",
     "title": "NASA STEM for Elementary Students",
     "description": "Age-appropriate STEM activities including hands-on experiments and guided virtual tours of space exploration.",
     "description_source": "generated",
@@ -1328,7 +1300,7 @@
     ]
   },
   {
-    "link": "https://education.nationalgeographic.org/encyclopedia",
+    "link": "https://education.nationalgeographic.org/search/resources/",
     "title": "National Geographic Encyclopedia",
     "description": "Comprehensive reference with articles, photos, and maps covering geography, animals, history, and science topics.",
     "description_source": "generated",
@@ -1440,7 +1412,7 @@
     ]
   },
   {
-    "link": "https://www.generationgenius.com/science-topics/",
+    "link": "https://www.generationgenius.com/videolessons/ecosystems-video-for-kids/",
     "title": "Generation Genius Ecosystems",
     "description": "Animated videos and worksheets exploring ecosystems, food chains, and habitats for elementary and middle grades.",
     "description_source": "generated",
@@ -1495,7 +1467,7 @@
     ]
   },
   {
-    "link": "https://www.oercommons.org/browse/reviews",
+    "link": "https://oercommons.org/browse",
     "title": "OER Commons Peer-Reviewed Resources",
     "description": "Vetted open educational resources across all subjects with community ratings and detailed metadata.",
     "description_source": "generated",
@@ -1662,35 +1634,7 @@
     ]
   },
   {
-    "link": "https://www.curriki.org/browse?subjects=science",
-    "title": "Curriki Science Courses",
-    "description": "Comprehensive science courses from elementary through high school with flexible, modular lesson structures.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "6-8",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "unit",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Curriki",
-    "license": "Unknown",
-    "standards": "NGSS MS-LS1-1",
-    "tags": [
-      "open courses",
-      "modular design",
-      "customizable"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.pbslearningmedia.org/collection/grades-6-8-ela",
+    "link": "https://www.pbslearningmedia.org/subjects/english-language-arts/",
     "title": "PBS LearningMedia Grade 6-8 ELA",
     "description": "Curated collection of videos and lesson plans for teaching reading, writing, and language arts in middle grades.",
     "description_source": "generated",
@@ -1773,7 +1717,7 @@
     ]
   },
   {
-    "link": "https://www.nearpod.com/library",
+    "link": "https://nearpod.com/nearpod-library",
     "title": "Nearpod Resource Library",
     "description": "Free and premium interactive lesson templates for formative assessment and student engagement across subjects.",
     "description_source": "generated",
@@ -1802,7 +1746,7 @@
     ]
   },
   {
-    "link": "https://www.zinnedproject.org/materials/teaching-malcolm-x",
+    "link": "https://www.zinnedproject.org/collection/malcolm-x/",
     "title": "Zinn Project Teaching Malcolm X",
     "description": "Lesson plan with primary sources and activities exploring Malcolm X's life and role in civil rights movements.",
     "description_source": "generated",
@@ -1860,7 +1804,7 @@
     ]
   },
   {
-    "link": "https://www.illustrativemathematics.org/k",
+    "link": "https://im.kendallhunt.com/k5/teachers/kindergarten/unit-1/lessons.html",
     "title": "Illustrative Mathematics Kindergarten",
     "description": "K curriculum with counting, shapes, and measurement tasks designed to build number sense and mathematical reasoning.",
     "description_source": "generated",
@@ -1943,34 +1887,6 @@
     ]
   },
   {
-    "link": "https://education.nationalgeographic.org/activity",
-    "title": "National Geographic Classroom Activities",
-    "description": "Hands-on STEM activities and field investigations connected to global topics and curriculum standards.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "6-8",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "activity",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "National Geographic Education",
-    "license": "All rights reserved",
-    "standards": "NGSS MS-LS2-4",
-    "tags": [
-      "hands-on activities",
-      "inquiry-based",
-      "real-world"
-    ],
-    "udl_principles": [
-      "action_expression",
-      "engagement"
-    ]
-  },
-  {
     "link": "https://www.facinghistory.org/resource/civil-rights-movement",
     "title": "Facing History Civil Rights Module",
     "description": "In-depth lessons and primary source collections exploring civil rights history with student discussion and analysis activities.",
@@ -2000,7 +1916,7 @@
     ]
   },
   {
-    "link": "https://www.learningforjustice.org/magazines",
+    "link": "https://www.splcenter.org/learning-for-justice/magazine/",
     "title": "Learning for Justice Magazines",
     "description": "Free quarterly publications and digital resources featuring articles and lesson ideas for anti-bias education.",
     "description_source": "generated",
@@ -2084,7 +2000,7 @@
     ]
   },
   {
-    "link": "https://www.pbslearningmedia.org/collection/social-emotional-learning",
+    "link": "https://www.pbslearningmedia.org/collection/social-emotional-learning/",
     "title": "PBS LearningMedia Social-Emotional Learning",
     "description": "Videos and lessons supporting SEL competencies including self-awareness, relationship skills, and responsible decision-making.",
     "description_source": "generated",
@@ -2142,7 +2058,7 @@
     ]
   },
   {
-    "link": "https://www.oercommons.org/courseware",
+    "link": "https://oercommons.org/browse?f.material_types=full-course",
     "title": "OER Commons Courseware",
     "description": "Complete open courses and curriculum bundles for K-12 and higher education across all subject areas.",
     "description_source": "generated",
@@ -2254,7 +2170,7 @@
     ]
   },
   {
-    "link": "https://www.nasa.gov/stem/middle-school",
+    "link": "https://www.nasa.gov/learning-resources/nasa-stem-opportunities-activities/",
     "title": "NASA STEM Middle School Resources",
     "description": "Science and engineering challenges designed for middle grades with real space mission data and hands-on activities.",
     "description_source": "generated",
@@ -2337,7 +2253,7 @@
     ]
   },
   {
-    "link": "https://www.sharemylesson.com/activities",
+    "link": "https://sharemylesson.com/a-place-for/pre-k-12-teachers",
     "title": "Share My Lesson Interactive Activities",
     "description": "Peer-reviewed interactive lessons and activities for engaging students across subject areas with multimedia.",
     "description_source": "generated",
@@ -2420,7 +2336,7 @@
     ]
   },
   {
-    "link": "https://www.pbslearningmedia.org/collection/grades-9-12-stem",
+    "link": "https://www.pbslearningmedia.org/subjects/science/",
     "title": "PBS LearningMedia High School STEM",
     "description": "STEM lessons and videos for high school science covering physics, chemistry, biology, and earth science.",
     "description_source": "generated",
@@ -2694,7 +2610,7 @@
     ]
   },
   {
-    "link": "https://www.desmos.com/classroom",
+    "link": "https://classroom.amplify.com/activity/560c53f7441172070b262215",
     "title": "Desmos Classroom: Polygraph (Guess My Polygon)",
     "description": "Interactive guessing game where students ask yes/no questions to identify quadrilaterals, focusing on geometric properties and attributes.",
     "description_source": "generated",
@@ -3055,7 +2971,7 @@
     ]
   },
   {
-    "link": "https://codehs.com/course/introcs",
+    "link": "https://codehs.com/free",
     "title": "CodeHS: Introduction to Computer Science (Free)",
     "description": "Free tier of CodeHS course covering JavaScript basics, loops, functions, and project-based learning with built-in coding environment and teacher tools.",
     "description_source": "generated",
@@ -3117,7 +3033,7 @@
     ]
   },
   {
-    "link": "https://www.mathsisfun.com/geometry.html",
+    "link": "https://www.mathsisfun.com/geometry/",
     "title": "Math is Fun: Geometry Interactive Tools",
     "description": "Interactive geometry tools including protractors, compass, grid paper, and transformations for hands-on geometric exploration.",
     "description_source": "generated",
@@ -3457,7 +3373,7 @@
     ]
   },
   {
-    "link": "https://www.youtube.com/user/3Blue1Brown",
+    "link": "https://www.youtube.com/@3blue1brown",
     "title": "3Blue1Brown: Math Videos (YouTube)",
     "description": "Exceptional animation-based explanations of advanced math concepts (linear algebra, calculus, data structures) suitable for curious learners.",
     "description_source": "generated",
@@ -3488,7 +3404,7 @@
     ]
   },
   {
-    "link": "https://www.cmu.edu/gelfand-center/outreach/stem-education.html",
+    "link": "https://www.cmu.edu/gelfand/education/",
     "title": "Carnegie Mellon: STEM Learning Resources",
     "description": "Resources developed by Carnegie Mellon educators including lesson plans, project ideas, and professional development guides for STEM teaching.",
     "description_source": "generated",
@@ -3955,7 +3871,7 @@
     ]
   },
   {
-    "link": "https://www.commonlit.org/360",
+    "link": "https://www.commonlit.org/ela-curriculum",
     "title": "CommonLit 360 Comprehensive Reading Program",
     "description": "Full-year ELA curriculum integrating reading, vocabulary, and writing with assessments and student tracking. Free core features with standards alignment.",
     "description_source": "generated",
@@ -3986,7 +3902,7 @@
     ]
   },
   {
-    "link": "https://www.nwp.org/resources",
+    "link": "https://teach.nwp.org/",
     "title": "National Writing Project Resource Collection",
     "description": "Peer-reviewed resources for writing instruction including online modules, lesson plans, and teacher videos. Emphasizes process-focused and culturally responsive writing.",
     "description_source": "generated",
@@ -4143,38 +4059,7 @@
     ]
   },
   {
-    "link": "https://www.pbs.org/learning-media/",
-    "title": "PBS Learning Media Multimedia Resources",
-    "description": "Free video, lesson plans, and interactive resources aligned to standards covering literature, writing, and language. Includes content from PBS series for classroom use.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "All",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "video",
-    "duration_minutes": 20,
-    "materials": "Video player, speakers, printer",
-    "learning_outcomes": [
-      "Students will be able to analyze media and text together",
-      "Students will be able to understand historical and cultural contexts"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "PBS",
-    "license": "CC BY-NC",
-    "standards": "CCSS.ELA-LITERACY.RL.5.7",
-    "tags": [
-      "multimedia",
-      "video literacy",
-      "educational media"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ]
-  },
-  {
-    "link": "https://www.duolingo.com/schools",
+    "link": "https://schools.duolingo.com/",
     "title": "Duolingo for Schools Language Program",
     "description": "Free language learning platform for schools teaching Spanish, French, German, Mandarin, and others. Includes classroom dashboard and progress tracking.",
     "description_source": "generated",
@@ -4260,37 +4145,6 @@
       "spanish language",
       "grammar practice",
       "adaptive learning"
-    ],
-    "udl_principles": [
-      "action_expression",
-      "engagement"
-    ]
-  },
-  {
-    "link": "https://www.commonlit.org/en/assessments",
-    "title": "CommonLit Formative Assessments",
-    "description": "Free formative reading assessments in CommonLit aligned to standards with instant feedback. Provides teachers with data-driven insights on student comprehension.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "assessment",
-    "duration_minutes": 20,
-    "materials": "Digital device",
-    "learning_outcomes": [
-      "Students will be able to demonstrate reading comprehension",
-      "Teachers will be able to identify instructional needs"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "CommonLit",
-    "license": "CC BY-NC",
-    "standards": "CCSS.ELA-LITERACY.RL.7.2",
-    "tags": [
-      "assessment",
-      "formative assessment",
-      "data tracking"
     ],
     "udl_principles": [
       "action_expression",
@@ -4552,7 +4406,7 @@
     ]
   },
   {
-    "link": "https://www.bozeman science.com/gg-english-language-arts",
+    "link": "https://www.amoebasisters.com/",
     "title": "Amoeba Sisters Science Videos (ELA-adjacent)",
     "description": "Free educational science videos with clear explanations and visuals, relevant for nonfiction reading comprehension and science literacy in ELA.",
     "description_source": "generated",
@@ -4704,37 +4558,6 @@
     "udl_principles": [
       "representation",
       "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.ipl2.org/",
-    "title": "Internet Public Library Teen Division",
-    "description": "Free curated resources specifically for teen research, reading, and information literacy. Includes carefully vetted websites organized by topic.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "9-12",
-    "age_min": 14,
-    "age_max": 18,
-    "resource_type": "article/text",
-    "duration_minutes": 30,
-    "materials": "Digital device",
-    "learning_outcomes": [
-      "Students will be able to find reliable information for research",
-      "Students will be able to evaluate website credibility"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Internet Public Library",
-    "license": "CC BY-NC",
-    "standards": "CCSS.ELA-LITERACY.W.9-10.7",
-    "tags": [
-      "research skills",
-      "information literacy",
-      "teen resources"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
     ]
   },
   {
@@ -4891,37 +4714,6 @@
     "udl_principles": [
       "engagement",
       "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.nationalgeographic.com/education/",
-    "title": "National Geographic Education Resources",
-    "description": "Free educational resources including maps, photos, articles, and lesson plans. Supports nonfiction reading and science literacy in ELA contexts.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "lesson plan",
-    "duration_minutes": 30,
-    "materials": "Printer, digital device",
-    "learning_outcomes": [
-      "Students will be able to analyze multimodal texts",
-      "Students will be able to understand content using images and maps"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "National Geographic",
-    "license": "All rights reserved",
-    "standards": "CCSS.ELA-LITERACY.RI.7.7",
-    "tags": [
-      "nonfiction",
-      "multimodal literacy",
-      "environmental content"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
     ]
   },
   {
@@ -5204,37 +4996,6 @@
     ]
   },
   {
-    "link": "https://www.ducksters.com/language/",
-    "title": "Ducksters Language Learning for Kids",
-    "description": "Free language learning site for elementary students offering basic lessons, quizzes, and fun activities in Spanish, French, German, and more.",
-    "description_source": "generated",
-    "subject": "World Languages",
-    "grade_band": "3-5",
-    "age_min": 8,
-    "age_max": 11,
-    "resource_type": "interactive/sim",
-    "duration_minutes": 10,
-    "materials": "Digital device",
-    "learning_outcomes": [
-      "Students will be able to learn basic language words and phrases",
-      "Students will be able to engage with language through fun activities"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Ducksters",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "world languages",
-      "vocabulary",
-      "beginner level"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation"
-    ]
-  },
-  {
     "link": "https://www.childrenslibrary.org/",
     "title": "International Children's Digital Library",
     "description": "Free multilingual digital library providing access to thousands of books in 50+ languages. Supports early literacy in diverse language communities.",
@@ -5359,7 +5120,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/forces-and-motion-basics",
+    "link": "https://phet.colorado.edu/en/simulations/forces-and-motion-basics",
     "title": "Forces and Motion: Basics",
     "description": "Interactive simulation where students push a crate to explore how net forces affect motion. Includes applied force, velocity, and friction visualization.",
     "description_source": "generated",
@@ -5392,7 +5153,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/energy-forms-and-changes",
+    "link": "https://phet.colorado.edu/en/simulations/energy-forms-and-changes",
     "title": "Energy Forms and Changes",
     "description": "Students explore how energy transforms between kinetic, potential, thermal, and other forms through interactive systems like skateboard ramps and pendulums.",
     "description_source": "generated",
@@ -5424,40 +5185,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/photosynthesis-lab",
-    "title": "Photosynthesis Lab",
-    "description": "Students manipulate light wavelength, intensity, and CO₂ levels to observe effects on photosynthetic rate. Includes molecular-level visualization of the process.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "interactive/sim",
-    "duration_minutes": 45,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to explain how photosynthesis converts light energy to chemical energy",
-      "Students will be able to predict how changing environmental factors affects photosynthetic rate"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "PhET Interactive Simulations",
-    "license": "CC BY",
-    "standards": "NGSS MS-LS1-6",
-    "tags": [
-      "photosynthesis",
-      "plants",
-      "energy",
-      "cellular biology"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://phet.colorado.edu/en/simulations/html/states-of-matter-basics",
+    "link": "https://phet.colorado.edu/en/simulations/states-of-matter-basics",
     "title": "States of Matter: Basics",
     "description": "Interactive model of solid, liquid, and gas particles with adjustable temperature and pressure to observe phase changes and particle behavior.",
     "description_source": "generated",
@@ -5489,7 +5217,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/gravity-and-orbits",
+    "link": "https://phet.colorado.edu/en/simulations/gravity-and-orbits",
     "title": "Gravity and Orbits",
     "description": "Students control mass and distance to see gravitational effects and predict orbital mechanics. Includes Earth-Moon, Sun-Planet, and custom scenarios.",
     "description_source": "generated",
@@ -5522,7 +5250,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/wave-interference",
+    "link": "https://phet.colorado.edu/en/simulations/wave-interference",
     "title": "Wave Interference",
     "description": "Students adjust frequency and amplitude to observe constructive and destructive interference patterns. Applies to sound, water, and light waves.",
     "description_source": "generated",
@@ -5556,7 +5284,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/atomic-interactions",
+    "link": "https://phet.colorado.edu/en/simulations/atomic-interactions",
     "title": "Atomic Interactions",
     "description": "Interactive exploration of ionic and covalent bonding through atom manipulation. Shows electron transfer and sharing at the atomic level.",
     "description_source": "generated",
@@ -5589,7 +5317,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/gene-expression-essentials",
+    "link": "https://phet.colorado.edu/en/simulations/gene-expression-essentials",
     "title": "Gene Expression Essentials",
     "description": "Students manipulate positive and negative regulators to control gene expression. Shows transcription, translation, and protein synthesis.",
     "description_source": "generated",
@@ -5622,39 +5350,7 @@
     ]
   },
   {
-    "link": "https://mysteryscience.com/lessons/all",
-    "title": "Mystery Science: All Lessons (K-5)",
-    "description": "Video-led mystery investigations with hands-on activities that scaffold scientific thinking. Each 40-minute lesson presents a question students explore through experiments.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 11,
-    "resource_type": "lesson plan",
-    "duration_minutes": 40,
-    "materials": "Common classroom supplies (varies by lesson)",
-    "learning_outcomes": [
-      "Students will be able to ask scientific questions",
-      "Students will be able to design and conduct investigations"
-    ],
-    "cost": "freemium",
-    "price_note": "Free with limited lessons; full library requires subscription",
-    "source_site": "Mystery Science",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "inquiry-based",
-      "video",
-      "hands-on",
-      "elementary science"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation"
-    ]
-  },
-  {
-    "link": "https://openscied.org/k-2-life-science",
+    "link": "https://openscied.org/curriculum/",
     "title": "OpenSciEd: K-2 Life Science Curriculum",
     "description": "Free, comprehensive K-2 life science curriculum unit with NGSS-aligned lessons on animal needs, plant growth, and habitats. Includes teacher guides and student materials.",
     "description_source": "generated",
@@ -5687,73 +5383,7 @@
     ]
   },
   {
-    "link": "https://openscied.org/3-5-earth-science",
-    "title": "OpenSciEd: 3-5 Earth Systems Curriculum",
-    "description": "Openly licensed, standards-aligned Earth systems unit covering weather, water cycles, and landforms. Includes investigation-based lessons and performance tasks.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "3-5",
-    "age_min": 8,
-    "age_max": 11,
-    "resource_type": "unit",
-    "duration_minutes": null,
-    "materials": "Weather instruments, water, soil samples",
-    "learning_outcomes": [
-      "Students will be able to analyze weather patterns and seasonal changes",
-      "Students will be able to explain the water cycle and its importance"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "OpenSciEd",
-    "license": "CC BY-SA",
-    "standards": "NGSS 4-ESS3-2",
-    "tags": [
-      "earth science",
-      "weather",
-      "water cycle",
-      "ecosystems"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://openscied.org/6-8-life-science",
-    "title": "OpenSciEd: 6-8 Life Science Curriculum",
-    "description": "Middle school OER unit addressing structure and function, life cycles, and evolution. Employs 5E model and includes phenomenon-based investigations.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "unit",
-    "duration_minutes": null,
-    "materials": "Microscopes, organism samples, dissection materials",
-    "learning_outcomes": [
-      "Students will be able to explain how structures relate to biological functions",
-      "Students will be able to model the flow of energy through organisms"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "OpenSciEd",
-    "license": "CC BY-SA",
-    "standards": "NGSS MS-LS1-1",
-    "tags": [
-      "life science",
-      "cells",
-      "structures",
-      "evolution"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://science.nasa.gov/learning/learning-resources/nasa-stem-resources/",
+    "link": "https://www.nasa.gov/learning-resources/",
     "title": "NASA STEM Learning Resources",
     "description": "Comprehensive collection of free science lessons, activities, and interactive tools covering space, Earth, and physical sciences. Includes videos, printables, and virtual field trips.",
     "description_source": "generated",
@@ -5815,38 +5445,6 @@
       "engagement",
       "action_expression",
       "representation"
-    ]
-  },
-  {
-    "link": "https://education.nationalgeographic.org/resource/",
-    "title": "National Geographic Education Resources",
-    "description": "Free lesson plans, maps, images, and articles on natural science, geography, and human cultures. Emphasizes place-based and experiential learning.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": null,
-    "resource_type": "lesson plan",
-    "duration_minutes": null,
-    "materials": "Digital resources; some activities use maps and field journals",
-    "learning_outcomes": [
-      "Students will be able to analyze geographic patterns and human-environment interaction",
-      "Students will be able to explain biodiversity and conservation"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "National Geographic Education",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "geography",
-      "ecology",
-      "photography",
-      "cultural study"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
     ]
   },
   {
@@ -5916,40 +5514,7 @@
     ]
   },
   {
-    "link": "https://www.biointeractive.org/classroom-resources/protein-folding-simulator",
-    "title": "HHMI: Protein Folding Simulator",
-    "description": "Interactive 3D simulator where students fold a virtual protein to understand amino acid sequences and how proteins gain their functional shape.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "9-12",
-    "age_min": 14,
-    "age_max": 18,
-    "resource_type": "interactive/sim",
-    "duration_minutes": 45,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to explain the relationship between protein structure and function",
-      "Students will be able to predict effects of mutations on protein folding"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "HHMI BioInteractive",
-    "license": "CC BY",
-    "standards": "NGSS HS-LS1-1",
-    "tags": [
-      "proteins",
-      "molecular biology",
-      "3d modeling",
-      "structure-function"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression",
-      "engagement"
-    ]
-  },
-  {
-    "link": "https://www.concord.org/projects/energy3d/",
+    "link": "https://energy.concord.org/",
     "title": "The Concord Consortium: Energy3D",
     "description": "Free 3D modeling tool where students design solar buildings and renewable energy systems, integrating design thinking with physics and engineering.",
     "description_source": "generated",
@@ -6145,72 +5710,7 @@
     ]
   },
   {
-    "link": "https://www.stevespanglerscience.com/experiments",
-    "title": "Steve Spangler Science: Experiments",
-    "description": "Engaging chemistry and physics experiments with video demonstrations. Activities include elephant toothpaste, crystal growing, and chemistry reactions.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 14,
-    "resource_type": "activity",
-    "duration_minutes": 30,
-    "materials": "Common household items and craft supplies",
-    "learning_outcomes": [
-      "Students will be able to conduct colorful chemical reactions",
-      "Students will be able to explain the science behind demonstrations"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Steve Spangler Science",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "chemistry",
-      "demonstrations",
-      "video",
-      "hands-on"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://generationgenius.com/resources/",
-    "title": "Generation Genius Video Library (K-5)",
-    "description": "Freemium video library with 5-10 minute animated science lessons aligned to NGSS. Free tier includes limited lessons; premium unlocks full library.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 11,
-    "resource_type": "video",
-    "duration_minutes": 8,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to understand key science concepts through animated instruction",
-      "Students will be able to engage with science vocabulary"
-    ],
-    "cost": "freemium",
-    "price_note": "Free limited access; premium subscription available",
-    "source_site": "Generation Genius",
-    "license": "All rights reserved",
-    "standards": "NGSS K-5",
-    "tags": [
-      "video",
-      "animation",
-      "elementary",
-      "ngss aligned"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ]
-  },
-  {
-    "link": "https://www.kidshealth.org/en/teachers/classroom-materials.html",
+    "link": "https://kidshealth.org/classroom/",
     "title": "KidsHealth in the Classroom: Elementary Lessons",
     "description": "Free, research-based health and wellness lessons for K-5. Covers nutrition, exercise, emotions, and healthy habits with printable student pages.",
     "description_source": "generated",
@@ -6277,38 +5777,6 @@
     ]
   },
   {
-    "link": "https://www.actionforhealthykids.org/programs-and-resources/",
-    "title": "Action for Healthy Kids: Programs and Resources",
-    "description": "Free, evidence-based physical activity and nutrition resources for schools. Includes recess activities, classroom movement, and professional development.",
-    "description_source": "generated",
-    "subject": "PE / Health",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 14,
-    "resource_type": "activity",
-    "duration_minutes": 20,
-    "materials": "Equipment varies; many use playground equipment",
-    "learning_outcomes": [
-      "Students will be able to participate in physical activity",
-      "Students will be able to develop motor skills and teamwork"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Action for Healthy Kids",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "physical activity",
-      "recess",
-      "movement",
-      "wellness"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ]
-  },
-  {
     "link": "https://www.shapeamerica.org/education/resources",
     "title": "SHAPE America: Grades 6-12 PE Lesson Plans",
     "description": "Standards-aligned physical education lessons and units from the national PE organization. Covers fitness, sport skills, and lifetime wellness.",
@@ -6339,38 +5807,6 @@
       "engagement",
       "action_expression",
       "representation"
-    ]
-  },
-  {
-    "link": "https://www.openphysed.org/browse",
-    "title": "OPEN Phys Ed: Physical Education Lessons",
-    "description": "Freely available, teacher-created K-12 PE lessons and units. Organized by grade, skill level, and activity type for easy curriculum building.",
-    "description_source": "generated",
-    "subject": "PE / Health",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": 18,
-    "resource_type": "lesson plan",
-    "duration_minutes": 45,
-    "materials": "Standard gym equipment and outdoor space",
-    "learning_outcomes": [
-      "Students will be able to develop movement competence",
-      "Students will be able to engage in physical activity for health"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "OPEN Phys Ed",
-    "license": "CC BY",
-    "standards": "SHAPE Standards",
-    "tags": [
-      "oer",
-      "pe",
-      "lesson plans",
-      "open source"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
     ]
   },
   {
@@ -6406,72 +5842,7 @@
     ]
   },
   {
-    "link": "https://www.kognito.com/products/school-programs",
-    "title": "Kognito Simulations: Mental Health and Social-Emotional Learning",
-    "description": "Interactive simulations where students practice conversations and decision-making in social-emotional scenarios. Addresses stress, relationships, and help-seeking.",
-    "description_source": "generated",
-    "subject": "PE / Health",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 18,
-    "resource_type": "interactive/sim",
-    "duration_minutes": 30,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to identify and express emotions",
-      "Students will be able to practice help-seeking and support-building skills"
-    ],
-    "cost": "freemium",
-    "price_note": "Some free modules; schools may license full access",
-    "source_site": "Kognito",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "mental health",
-      "social-emotional",
-      "simulation",
-      "wellness"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression",
-      "representation"
-    ]
-  },
-  {
-    "link": "https://www.nemours.org/forkids/healthinfo/nutrition.html",
-    "title": "Nemours: Health and Wellness Resources for Kids",
-    "description": "Free health education content covering nutrition, exercise, and wellness. Includes kid-friendly articles, interactive tools, and downloadable resources.",
-    "description_source": "generated",
-    "subject": "PE / Health",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 11,
-    "resource_type": "article/text",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to understand basics of nutrition and healthy choices",
-      "Students will be able to engage with health content written for their level"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Nemours",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "health",
-      "nutrition",
-      "wellness",
-      "reference"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ]
-  },
-  {
-    "link": "https://phet.colorado.edu/en/simulations/html/ramp-forces-and-motion",
+    "link": "https://phet.colorado.edu/en/simulations/ramp-forces-and-motion",
     "title": "PhET: The Ramp (Forces and Motion)",
     "description": "Interactive ramp simulation where students predict and measure how friction and angle affect motion. Visualizes forces acting on objects.",
     "description_source": "generated",
@@ -6504,7 +5875,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/natural-selection",
+    "link": "https://phet.colorado.edu/en/simulations/natural-selection",
     "title": "PhET: Natural Selection",
     "description": "Students breed rabbits and observe how traits change over generations based on selection pressures. Models evolution and genetic variation.",
     "description_source": "generated",
@@ -6537,7 +5908,7 @@
     ]
   },
   {
-    "link": "https://phet.colorado.edu/en/simulations/html/circuit-construction-kit-ac",
+    "link": "https://phet.colorado.edu/en/simulations/circuit-construction-kit-ac",
     "title": "PhET: Circuit Construction Kit",
     "description": "Build circuits with resistors, bulbs, batteries, and switches. Visualizes current, voltage, and resistance in real-time.",
     "description_source": "generated",
@@ -6570,7 +5941,7 @@
     ]
   },
   {
-    "link": "https://www.phet.colorado.edu/en/simulations/html/balancing-chemical-equations",
+    "link": "https://phet.colorado.edu/en/simulations/balancing-chemical-equations",
     "title": "PhET: Balancing Chemical Equations",
     "description": "Interactive tool for balancing equations with visual molecule representations. Students see atoms conserved across reactants and products.",
     "description_source": "generated",
@@ -6603,7 +5974,7 @@
     ]
   },
   {
-    "link": "https://www.edutopia.org/stem-resources",
+    "link": "https://www.edutopia.org/topic/stem/",
     "title": "Edutopia: STEM and Science Resources",
     "description": "Project-based and PBL lesson plans, articles, and strategies for science and STEM teaching. Includes videos and practitioner guidance.",
     "description_source": "generated",
@@ -6821,38 +6192,6 @@
       "animation",
       "3d",
       "physiology"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ]
-  },
-  {
-    "link": "https://www.youtube.com/user/DavidEckTube",
-    "title": "My Vital Stats: Health and Anatomy Videos",
-    "description": "YouTube channel with animated and live-action health science videos. Covers anatomy, disease, nutrition, and wellness concepts.",
-    "description_source": "generated",
-    "subject": "PE / Health",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 18,
-    "resource_type": "video",
-    "duration_minutes": 5,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to understand human anatomy and health processes",
-      "Students will be able to apply health knowledge to personal wellness"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "My Vital Stats",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "anatomy",
-      "health",
-      "video",
-      "wellness"
     ],
     "udl_principles": [
       "representation",
@@ -7151,7 +6490,7 @@
     ]
   },
   {
-    "link": "https://www.google.com/earth/",
+    "link": "https://earth.google.com/web/",
     "title": "Google Earth: Virtual Exploration and Geography",
     "description": "Free tool for exploring the planet virtually. Useful for Earth science, geography, and environmental studies. Includes satellite imagery and 3D terrain.",
     "description_source": "generated",
@@ -7248,7 +6587,7 @@
     ]
   },
   {
-    "link": "https://www.esa.int/esaKids",
+    "link": "https://www.esa.int/kids/en/home",
     "title": "ESA Kids: European Space Agency Education",
     "description": "Free space science resources from the European Space Agency. Includes games, activities, and information about space exploration.",
     "description_source": "generated",
@@ -7345,7 +6684,7 @@
     ]
   },
   {
-    "link": "https://www.icivics.org/games/branches-power",
+    "link": "https://ed.icivics.org/games/branches-power",
     "title": "Branches of Power",
     "description": "Interactive game where students guide a bill through the U.S. legislative process and learn how the three branches of government check and balance each other.",
     "description_source": "generated",
@@ -7376,7 +6715,7 @@
     ]
   },
   {
-    "link": "https://www.icivics.org/games/do-i-have-right",
+    "link": "https://ed.icivics.org/games/do-i-have-right",
     "title": "Do I Have a Right?",
     "description": "Students navigate real-world scenarios to explore constitutional rights, learning when rights apply and how courts protect them.",
     "description_source": "generated",
@@ -7400,68 +6739,6 @@
       "constitutional rights",
       "bill of rights",
       "civics"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation"
-    ]
-  },
-  {
-    "link": "https://www.icivics.org/games/inoculation",
-    "title": "Inoculation",
-    "description": "Students take the role of public health communicators developing campaigns to address vaccine hesitancy and misinformation.",
-    "description_source": "generated",
-    "subject": "Social Studies",
-    "grade_band": "9-12",
-    "age_min": 14,
-    "age_max": 18,
-    "resource_type": "game",
-    "duration_minutes": 45,
-    "materials": "Computer/internet access",
-    "learning_outcomes": [
-      "Students will be able to analyze misinformation",
-      "Students will be able to design persuasive public health messages"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "iCivics",
-    "license": "All rights reserved",
-    "standards": "C3.D2.Civ.2.9-12",
-    "tags": [
-      "public health",
-      "misinformation",
-      "civics"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.icivics.org/games/diplomacy",
-    "title": "Diplomacy",
-    "description": "Students negotiate international conflicts as country representatives, learning diplomacy, treaty-making, and international relations.",
-    "description_source": "generated",
-    "subject": "Social Studies",
-    "grade_band": "9-12",
-    "age_min": 14,
-    "age_max": 18,
-    "resource_type": "game",
-    "duration_minutes": 50,
-    "materials": "Computer/internet access",
-    "learning_outcomes": [
-      "Students will be able to analyze perspectives in international conflicts",
-      "Students will be able to negotiate and compromise"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "iCivics",
-    "license": "All rights reserved",
-    "standards": "C3.D2.Geo.1.9-12",
-    "tags": [
-      "international relations",
-      "diplomacy",
-      "global issues"
     ],
     "udl_principles": [
       "engagement",
@@ -7563,7 +6840,7 @@
     ]
   },
   {
-    "link": "https://www.learningforjustice.org/teaching-hard-history",
+    "link": "https://www.splcenter.org/learning-for-justice/frameworks/teaching-hard-history/american-slavery/",
     "title": "Teaching Hard History: American Slavery",
     "description": "Complete K-12 curriculum framework from Learning for Justice covering the history of slavery in America; includes lesson plans, readings, and frameworks for difficult conversations.",
     "description_source": "generated",
@@ -7594,7 +6871,7 @@
     ]
   },
   {
-    "link": "https://www.learningforjustice.org/standards",
+    "link": "https://www.splcenter.org/learning-for-justice/frameworks/social-justice-standards/",
     "title": "Social Justice Standards",
     "description": "A framework defining age-appropriate social justice learning goals across identity, diversity, justice, and action; includes classroom resources aligned to standards.",
     "description_source": "generated",
@@ -7687,7 +6964,7 @@
     ]
   },
   {
-    "link": "https://sheg.stanford.edu/history-lessons",
+    "link": "https://inquirygroup.org/history-lessons",
     "title": "Reading Like a Historian",
     "description": "Stanford History Education Group's curriculum for teaching document-based historical thinking; students evaluate primary sources to construct arguments about historical events.",
     "description_source": "generated",
@@ -7813,37 +7090,6 @@
     ]
   },
   {
-    "link": "https://www.choices.edu/",
-    "title": "Choices Program (Brown University)",
-    "description": "Decision-centered curriculum developed at Brown University for high school social studies; students engage with complex policy decisions and multiple perspectives.",
-    "description_source": "generated",
-    "subject": "Social Studies",
-    "grade_band": "9-12",
-    "age_min": 14,
-    "age_max": 18,
-    "resource_type": "unit",
-    "duration_minutes": 300,
-    "materials": "Unit modules, readings, simulations",
-    "learning_outcomes": [
-      "Students will be able to analyze multiple perspectives",
-      "Students will be able to make informed decisions"
-    ],
-    "cost": "freemium",
-    "price_note": "Some lessons free; full curriculum requires subscription",
-    "source_site": "Choices Program, Brown University",
-    "license": "All rights reserved",
-    "standards": "C3.D2.Civ.6.9-12",
-    "tags": [
-      "decision making",
-      "policy",
-      "world issues"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ]
-  },
-  {
     "link": "https://www.retroreport.org/",
     "title": "Retro Report in the Classroom",
     "description": "Lesson plans connecting archival video (Retro Report documentaries) to current events; helps students see how past decisions shape today.",
@@ -7906,7 +7152,7 @@
     ]
   },
   {
-    "link": "https://www.gilderlehrman.org/education",
+    "link": "https://www.gilderlehrman.org/history-resources/curriculum/lesson-plans-and-other-teaching-materials",
     "title": "Gilder Lehrman Institute of American History",
     "description": "Museum resources, lesson plans, and primary source collections on American history; includes exhibitions and online learning modules.",
     "description_source": "generated",
@@ -8340,7 +7586,7 @@
     ]
   },
   {
-    "link": "https://www.getty.edu/about/whatwedo/education.html",
+    "link": "https://www.getty.edu/education/for_teachers/",
     "title": "Getty Museum Education",
     "description": "Educational programs including lesson plans, educator guides, and interactive resources focused on art history and making.",
     "description_source": "generated",
@@ -8519,37 +7765,6 @@
       "sel",
       "bullying prevention",
       "classroom strategies"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.movethisworld.com/",
-    "title": "Move This World SEL Videos",
-    "description": "Short video lessons teaching emotional regulation and SEL skills; includes movement, breathing, and mindfulness techniques.",
-    "description_source": "generated",
-    "subject": "SEL",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": 18,
-    "resource_type": "video",
-    "duration_minutes": 5,
-    "materials": "Video library, teacher dashboards",
-    "learning_outcomes": [
-      "Students will regulate emotions",
-      "Students will use movement for wellbeing"
-    ],
-    "cost": "freemium",
-    "price_note": "Limited free tier; full library requires subscription",
-    "source_site": "Move This World",
-    "license": "All rights reserved",
-    "standards": "CASEL.SEL.2.K-12",
-    "tags": [
-      "emotional regulation",
-      "mindfulness",
-      "movement"
     ],
     "udl_principles": [
       "engagement",
@@ -8743,7 +7958,7 @@
     ]
   },
   {
-    "link": "https://ei.yale.edu/",
+    "link": "https://medicine.yale.edu/childstudy/services/community-and-schools-programs/center-for-emotional-intelligence/ruler/",
     "title": "Yale Center for Emotional Intelligence RULER",
     "description": "Yale's evidence-based SEL program teaching students to recognize, understand, label, express, and regulate emotions through the RULER acronym.",
     "description_source": "generated",
@@ -8802,37 +8017,6 @@
     "udl_principles": [
       "representation",
       "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.bucketfillers101.com/",
-    "title": "Bucket Fillers: Kindness in Action",
-    "description": "Resource based on the bucket-filling metaphor teaching children that kind acts fill others' buckets; includes lesson plans and daily activities.",
-    "description_source": "generated",
-    "subject": "SEL",
-    "grade_band": "All",
-    "age_min": 3,
-    "age_max": 11,
-    "resource_type": "activity",
-    "duration_minutes": 15,
-    "materials": "Activity cards, discussion prompts, visual aids",
-    "learning_outcomes": [
-      "Students will practice kindness",
-      "Students will build empathy"
-    ],
-    "cost": "freemium",
-    "price_note": "Free resources available; full curriculum and books available for purchase",
-    "source_site": "Bucket Fillers 101",
-    "license": "All rights reserved",
-    "standards": "CASEL.SEL.3.PreK-5",
-    "tags": [
-      "kindness",
-      "bucket filling",
-      "empathy"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation"
     ]
   },
   {
@@ -8899,7 +8083,7 @@
     ]
   },
   {
-    "link": "https://curriculum.illustrativemathematics.org/k5/",
+    "link": "https://im.kendallhunt.com/k5/",
     "title": "Illustrative Mathematics K-5 Math (full curriculum)",
     "description": "Openly licensed K-5 problem-based math curriculum with full units, centers, and family materials.",
     "description_source": "generated",
@@ -8931,7 +8115,7 @@
     ]
   },
   {
-    "link": "https://www.openscied.org/high-school/",
+    "link": "https://openscied.org/curriculum/high-school/",
     "title": "OpenSciEd High School Science (full curriculum)",
     "description": "Phenomenon-driven, NGSS-designed high school biology, chemistry, and physics units with full teacher and student materials, openly licensed.",
     "description_source": "generated",
@@ -8963,7 +8147,7 @@
     ]
   },
   {
-    "link": "https://www.openscied.org/get-started/access-the-materials/",
+    "link": "https://openscied.org/curriculum/middle-school/",
     "title": "OpenSciEd Middle School Science (full curriculum)",
     "description": "Full three-year middle school science curriculum built around anchoring phenomena and student sense-making; complete unit and lesson materials.",
     "description_source": "generated",
@@ -8995,7 +8179,7 @@
     ]
   },
   {
-    "link": "https://curriculum.eleducation.org/",
+    "link": "https://www.eleducation.org/curriculum/language-arts",
     "title": "EL Education K-8 Language Arts (full curriculum)",
     "description": "Content-based K-8 literacy curriculum: module lessons, additional language and literacy blocks, and K-2 skills, openly licensed.",
     "description_source": "generated",
@@ -9310,7 +8494,7 @@
     ]
   },
   {
-    "link": "https://www.zearn.org/curriculum",
+    "link": "https://about.zearn.org/curriculum",
     "title": "Zearn Math",
     "description": "K-8 math curriculum pairing teacher-led lessons with self-paced digital lessons; free for teachers, school and district plans paid.",
     "description_source": "generated",
@@ -9399,38 +8583,6 @@
       "scope and sequence"
     ],
     "udl_principles": [
-      "representation",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.commonlit.org/en/360",
-    "title": "CommonLit 360",
-    "description": "Full-year 6-12 ELA curriculum of thematic units built on paired texts, writing tasks, and grammar; core curriculum free, School Essentials paid.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "6-8",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "unit",
-    "scope": "curriculum",
-    "publisher": "CommonLit",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "freemium",
-    "price_note": "core free; School Essentials paid",
-    "source_site": "CommonLit",
-    "license": "",
-    "standards": "",
-    "tags": [
-      "paired texts",
-      "thematic units",
-      "writing",
-      "full-year ELA"
-    ],
-    "udl_principles": [
-      "engagement",
       "representation",
       "action_expression"
     ]
@@ -9526,38 +8678,6 @@
     ],
     "udl_principles": [
       "engagement",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://www.icivics.org/curriculum",
-    "title": "iCivics Curriculum Units",
-    "description": "Free scaffolded civics and government curriculum units: lesson plans, readings, and games covering the Constitution, branches, elections, and more.",
-    "description_source": "generated",
-    "subject": "Social Studies",
-    "grade_band": "6-8",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "unit",
-    "scope": "curriculum",
-    "publisher": "iCivics",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "iCivics",
-    "license": "free to use",
-    "standards": "",
-    "tags": [
-      "civics",
-      "government",
-      "primary sources",
-      "games"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation",
       "action_expression"
     ]
   },
@@ -9718,38 +8838,7 @@
     ]
   },
   {
-    "link": "https://ocw.mit.edu/collections/high-school/",
-    "title": "MIT OpenCourseWare Highlights for High School",
-    "description": "Curated MIT course materials, exam problems, and video demonstrations organized by AP physics, biology, chemistry, and calculus topics.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "9-12",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "unit",
-    "scope": "course",
-    "publisher": "MIT OpenCourseWare",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "MIT OpenCourseWare",
-    "license": "CC BY-NC-SA 4.0",
-    "standards": "",
-    "tags": [
-      "AP prep",
-      "lecture materials",
-      "problem sets",
-      "enrichment"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression"
-    ]
-  },
-  {
-    "link": "https://thecrashcourse.com/topic/worldhistory/",
+    "link": "https://thecrashcourse.com/topic/worldhistory1/",
     "title": "Crash Course World History (full video course)",
     "description": "A complete world history survey in short, fast-paced videos from agriculture and early empires through globalization and the modern world.",
     "description_source": "generated",
@@ -9812,7 +8901,7 @@
     ]
   },
   {
-    "link": "https://www.bootstrapworld.org/materials/curricular-units",
+    "link": "https://bootstrapworld.org/materials/fall2024/en-us/",
     "title": "Bootstrap Curricular Units (Algebra, Data Science, Physics, CS)",
     "description": "Free standards-aligned modules that teach computing while reinforcing algebra, data science, or physics, designed to drop into an existing course.",
     "description_source": "generated",

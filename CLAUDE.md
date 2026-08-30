@@ -65,17 +65,29 @@ to assemble.
   Collection" slide-in panel, and a read-only Capture page. The Guided
   discovery flow asks a "how much are you planning?" (scope) step.
   Type-checks and builds clean.
-- **Seed**: **320 curated resources** at `backend/seed/almanac-seed.json`
-  (idempotent load via `scripts/import_seed.py`). 289 one-off lessons
-  grew from 91 via four subject-cluster research passes; a 2026-08-29
-  pass added **31 full courses / commercial curricula** (Illustrative
+- **Seed**: **291 curated resources** at `backend/seed/almanac-seed.json`
+  (idempotent load via `scripts/import_seed.py`). One-off lessons grew
+  from 91 via four subject-cluster research passes; a 2026-08-29 pass
+  added **31 full courses / commercial curricula** (Illustrative
   Mathematics, OpenSciEd, EL Education, Amplify, Great Minds / Eureka /
   Wit & Wisdom, Zearn, Fishtank, Open Up Resources, CommonLit 360,
   Carnegie Learning, Bridges, PLTW, iCivics, Code.org courses, Khan
   Academy courses, MIT OCW, Crash Course, TERC, Bootstrap) with `scope`
-  and `publisher` set. ~112 lesson rows still link a section/portal page
-  rather than one specific lesson — deepen with a real page-fetching
-  pass later.
+  and `publisher` set.
+- **Link-validation pass (2026-08-30):** added `scripts/check_links.py`
+  (ported from Atlas — reads `Resource.link`, flags 4xx/5xx, off-host
+  redirects, and deep-links that bounce to a homepage; 403/405/429/999
+  treated as anti-bot noise). First run flagged 132/320: fixed 64 URLs
+  (a systemic `phet.colorado.edu/en/simulations/html/<sim>` →
+  `/simulations/<sim>` bug across all PhET rows; provider reorgs at PBS
+  LearningMedia, NatGeo Education, NASA, OpenSciEd, SPLC/Learning for
+  Justice, iCivics, Kendall Hunt IM, SHEG→Inquiry Group) and dropped 29
+  dead rows (retired products, sites where only a homepage remained, and
+  a few fabricated entries) → 320 → 291. ~40 rows still flag as
+  `URLError`/timeout but are **live sites the build environment's DNS
+  can't resolve** (achievethecore.org, mindfulschools.org, scijinks,
+  crf-usa.org …) — re-run `check_links.py` from a normal network to
+  confirm those.
 - **Lesson format** (the "categorizer"): each resource also carries
   `age_min`/`age_max`, `duration_minutes`, `materials`, and
   `learning_outcomes` (list of "Students will be able to …"). Age
@@ -95,9 +107,10 @@ to assemble.
   badge and the publisher name in place of `source_site`.
   `scripts/migrate_add_curriculum_fields.py` is ready for a persistent DB.
   22 passing pytest tests.
-- **Still to do**: activate the auth gate + capture (set the env vars),
-  move to a persistent DB, deepen the ~112 portal-only links, delete the
-  dead standalone `almanac` Vercel project.
+- **Still to do**: re-run `scripts/check_links.py` from a real network
+  and clear the ~40 DNS-unreachable flags; activate the auth gate +
+  capture (set the env vars), move to a persistent DB, deepen the
+  portal-only links, delete the dead standalone `almanac` Vercel project.
 
 ## Decisions already made
 
