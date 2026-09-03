@@ -79,6 +79,28 @@ class Resource(Base):
     license: Mapped[str | None] = mapped_column(String, nullable=True)
     standards: Mapped[str | None] = mapped_column(Text, nullable=True)
 
+    # 'specific' — links one lesson/activity/video a teacher can use as-is.
+    # 'collection' — links a browse/portal/library page, not a single resource.
+    # Lets Browse hide the "here's a website, go dig" rows when a teacher
+    # needs something class-ready today.
+    granularity: Mapped[str] = mapped_column(String, default="specific", index=True)
+    # One short, attributed sentence quoted from the page at research time —
+    # proof the resource is real (a row describing a page that doesn't exist
+    # is worse than no row). Audit-only, never shown to users. Stays inside
+    # the pointer-index rule: a brief attributed excerpt, <= 200 chars.
+    evidence: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # Why each assigned UDL principle applies — one line per principle, e.g.
+    # "representation: captions + transcript + diagrams". Surfaced on hover
+    # so the coverage readout is auditable, not taken on faith.
+    udl_rationale: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # Link health, refreshed by scripts/flag_dead_links.py: 'unknown' (never
+    # checked), 'ok', 'dead' (4xx/5xx or gone), 'redirect' (off-host bounce),
+    # 'unreachable' (DNS/timeout from the checker — not proof it's dead).
+    link_status: Mapped[str] = mapped_column(String, default="unknown", index=True)
+    link_checked_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
     # Row provenance: 'manual' (typed in directly) or 'capture' (batch/import flow).
     source: Mapped[str] = mapped_column(String, default="manual")
     is_favorite: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)

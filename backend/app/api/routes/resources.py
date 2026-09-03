@@ -36,10 +36,14 @@ def _to_out(resource: Resource) -> ResourceOut:
         source_site=resource.source_site,
         license=resource.license,
         standards=resource.standards,
+        granularity=resource.granularity,
+        udl_rationale=resource.udl_rationale,
         tags=[t.name for t in resource.tags],
         udl_principles=[p.name for p in resource.udl_principles],
         source=resource.source,
         is_favorite=resource.is_favorite,
+        link_status=resource.link_status,
+        link_checked_at=resource.link_checked_at,
         visited_at=resource.visited_at,
         created_at=resource.created_at,
         updated_at=resource.updated_at,
@@ -54,6 +58,7 @@ def search_resources(
     resource_type: str | None = None,
     scope: str | None = None,
     publisher: str | None = None,
+    granularity: str | None = None,
     cost: str | None = None,
     source_site: str | None = None,
     udl: str | None = None,
@@ -65,8 +70,8 @@ def search_resources(
     db: Session = Depends(get_db),
 ):
     total, items = resource_service.list_resources(
-        db, q, subject, grade_band, resource_type, scope, publisher, cost,
-        source_site, udl, tag, age, favorite, limit, offset,
+        db, q, subject, grade_band, resource_type, scope, publisher, granularity,
+        cost, source_site, udl, tag, age, favorite, limit, offset,
     )
     return ResourceListOut(total=total, items=[_to_out(r) for r in items])
 

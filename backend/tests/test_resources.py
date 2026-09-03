@@ -71,6 +71,41 @@ def test_scope_defaults_to_lesson_and_filters(client):
     )
 
 
+def test_link_canonicalized_on_write_prevents_near_dupes(client):
+    a = client.post("/api/resources", json=_payload(link="http://www.dupe.com/lesson/")).json()
+    assert a["link"] == "https://dupe.com/lesson"
+    # same resource, messier URL -> the batch upsert must land on the same row
+    body = client.post(
+        "/api/resources/batch",
+        json=[_payload(link="https://www.dupe.com/lesson", subject="Arts")],
+    ).json()
+    assert len(body["created"]) == 0 and len(body["updated"]) == 1
+    assert client.get("/api/resources").json()["total"] == 1
+
+
+def test_granularity_defaults_specific_and_filters(client):
+    client.post("/api/resources", json=_payload(link="https://one.com"))
+    client.post(
+        "/api/resources",
+        json=_payload(link="https://portal.com", granularity="collection"),
+    )
+    assert client.get("/api/resources").json()["items"][0]["granularity"] in ("specific", "collection")
+    r = client.get("/api/resources", params={"granularity": "specific"})
+    assert r.json()["total"] == 1
+    assert r.json()["items"][0]["link"] == "https://one.com"
+
+
+def test_evidence_is_write_only(client):
+    body = client.post(
+        "/api/resources",
+        json=_payload(link="https://ev.com", evidence="\"A real quoted sentence.\"",
+                      udl_rationale="representation: captions + transcript"),
+    ).json()
+    assert "evidence" not in body  # audit-only, never returned
+    assert body["udl_rationale"] == "representation: captions + transcript"
+    assert body["link_status"] == "unknown"
+
+
 def test_scope_and_publisher_facets(client):
     client.post(
         "/api/resources",

@@ -44,6 +44,8 @@ scope (one of "lesson" | "unit" | "course" | "curriculum" — a single
   multi-grade program is "curriculum"),
 publisher (the program or publisher name for a course/curriculum, e.g.
   "Illustrative Mathematics", "OpenSciEd"; "" for a one-off lesson),
+granularity ("specific" if the URL is one lesson/activity/video a teacher
+  can use as-is; "collection" if it is a browse/portal/library page),
 duration_minutes (integer or null — how long the lesson/activity runs),
 materials (string, "" if digital-only / nothing needed),
 learning_outcomes (array of 1-4 short strings, each phrased
@@ -51,6 +53,10 @@ learning_outcomes (array of 1-4 short strings, each phrased
 cost ("free" | "paid" | "freemium"),
 price_note (short, "" if free),
 source_site, license, standards ("" unless a real CCSS/NGSS/C3 code is clear),
+evidence (ONE sentence quoted verbatim from the page, <= 200 chars, in
+  quotation marks — proof the page is real; "" only if the fetch failed),
+udl_rationale (one short line per assigned principle saying why it applies,
+  e.g. "representation: captions + transcript + diagrams; engagement: ..."),
 tags (2-5 lowercase theme strings),
 udl_principles (1-3 of {list(UDL_PRINCIPLES)}).
 Reply with ONLY a JSON array, no prose."""

@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.models.resource import Resource, resource_tags, resource_udl
 from app.models.tag import Tag
 from app.models.udl import UDL_PRINCIPLES, UdlPrinciple
+from app.services.links import canonical_link
 
 # When a source only gives a grade band, back-fill an age range from it so the
 # `age` filter works library-wide. Rough but useful (US grade -> typical age).
@@ -25,6 +26,7 @@ _SCALAR_FIELDS = (
     "age_min", "age_max", "resource_type", "scope", "publisher",
     "duration_minutes", "materials",
     "cost", "price_note", "source_site", "license", "standards",
+    "granularity", "udl_rationale",
 )
 
 
@@ -70,6 +72,9 @@ def _apply_fields(db: Session, resource: Resource, data) -> None:
     Resource. Shared by create and upsert so they never drift apart."""
     for field in _SCALAR_FIELDS:
         setattr(resource, field, getattr(data, field))
+    # Audit-only column: present on ResourceCreate, not on ResourceUpdate.
+    if getattr(data, "evidence", None) is not None:
+        resource.evidence = data.evidence
     resource.learning_outcomes = _outcomes_to_str(data.learning_outcomes)
     # Back-fill an age range from the grade band when the source didn't give one.
     if resource.age_min is None and resource.age_max is None and data.grade_band in GRADE_TO_AGE:
@@ -85,6 +90,7 @@ def _base_query(
     resource_type: str | None = None,
     scope: str | None = None,
     publisher: str | None = None,
+    granularity: str | None = None,
     cost: str | None = None,
     source_site: str | None = None,
     udl: str | None = None,
@@ -114,6 +120,8 @@ def _base_query(
         stmt = stmt.where(Resource.scope == scope)
     if publisher:
         stmt = stmt.where(Resource.publisher == publisher)
+    if granularity:
+        stmt = stmt.where(Resource.granularity == granularity)
     if cost:
         stmt = stmt.where(Resource.cost == cost)
     if source_site:
@@ -144,6 +152,7 @@ def list_resources(
     resource_type: str | None = None,
     scope: str | None = None,
     publisher: str | None = None,
+    granularity: str | None = None,
     cost: str | None = None,
     source_site: str | None = None,
     udl: str | None = None,
@@ -154,8 +163,8 @@ def list_resources(
     offset: int = 0,
 ) -> tuple[int, list[Resource]]:
     stmt = _base_query(
-        q, subject, grade_band, resource_type, scope, publisher, cost,
-        source_site, udl, tag, age, favorite,
+        q, subject, grade_band, resource_type, scope, publisher, granularity,
+        cost, source_site, udl, tag, age, favorite,
     )
     total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
     stmt = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
@@ -179,11 +188,13 @@ def random_resource(
 
 
 def get_resource_by_link(db: Session, link: str) -> Resource | None:
-    return db.execute(select(Resource).where(Resource.link == link)).scalar_one_or_none()
+    return db.execute(
+        select(Resource).where(Resource.link == canonical_link(link))
+    ).scalar_one_or_none()
 
 
 def create_resource(db: Session, data, source: str = "manual", commit: bool = True) -> Resource:
-    resource = Resource(link=data.link, source=source)
+    resource = Resource(link=canonical_link(data.link), source=source)
     _apply_fields(db, resource, data)
     db.add(resource)
     if commit:
@@ -198,6 +209,8 @@ def update_resource(db: Session, resource: Resource, data) -> Resource:
     updates = data.model_dump(
         exclude_unset=True, exclude={"tags", "udl_principles", "learning_outcomes"}
     )
+    if "link" in updates and updates["link"]:
+        updates["link"] = canonical_link(updates["link"])
     for field, value in updates.items():
         setattr(resource, field, value)
     if data.learning_outcomes is not None:
