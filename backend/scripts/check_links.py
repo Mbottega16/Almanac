@@ -1,28 +1,37 @@
-"""Check every resource.link for reachability and print a report of the ones
-that look broken (connection errors, 4xx/5xx, or a redirect to a different
-host). Read-only — it never edits the DB; use the output to fix resources by
-hand, via the update endpoint, or in backend/seed/almanac-seed.json.
+"""Check every resource.link for reachability and classify its health.
 
-Ported from Atlas's identical script (swap Entry -> Resource).
+Ported from Atlas's script (swap Entry -> Resource), then extended with a
+machine-readable mode and a write-back mode for the `link_status` column.
+
+Status values: 'ok', 'dead' (4xx/5xx or gone), 'redirect' (off-host bounce),
+'bounced' (deep link -> a bare homepage), 'unreachable' (DNS/timeout from
+the checker — NOT proof it's dead; this build environment can't resolve a
+lot of live education domains).
 
 Run from backend/ with the venv:
   PYTHONPATH=. .venv/Scripts/python scripts/check_links.py
-Check the committed seed DB instead of the local dev DB:
+Against the committed seed DB instead of the local dev DB:
   DATABASE_URL=sqlite:///seed/almanac-seed.db PYTHONPATH=. .venv/Scripts/python scripts/check_links.py
+
 Options:
   --timeout N   per-request timeout in seconds (default 12)
-  --limit N     only check the first N resources (for a quick sample)
+  --limit N     only check the first N resources (quick sample)
+  --json        emit a JSON array [{id, link, status, detail}] instead of the report
+  --write       write status + link_checked_at back to the DB (implies a real run)
 """
 import concurrent.futures
+import json
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timezone
 from urllib.parse import urlsplit
 
 from app.db.session import SessionLocal
 from app.models.resource import Resource
 
 UA = "Mozilla/5.0 (compatible; AlmanacLinkCheck/1.0)"
+_ANTIBOT = {403, 405, 429, 999}  # a response, but a bot-block — not "dead"
 
 
 def _arg(name: str, default: int) -> int:
@@ -31,56 +40,84 @@ def _arg(name: str, default: int) -> int:
     return default
 
 
-def _host(url: str) -> str:
-    """Registrable-ish host for comparison: lowercase, strip a leading www."""
-    h = (urlsplit(url).hostname or "").lower()
-    return h[4:] if h.startswith("www.") else h
+def _domain(url: str) -> str:
+    """Registrable-ish domain: the last two labels, lowercased. Collapses
+    www/non-www and regional affiliate subdomains (mpt.pbslearningmedia.org
+    == pbslearningmedia.org) so only a real host change trips 'redirect'."""
+    labels = (urlsplit(url).hostname or "").lower().split(".")
+    return ".".join(labels[-2:]) if len(labels) >= 2 else ".".join(labels)
 
 
-def check(row: tuple[int, str, str | None], timeout: int) -> str | None:
-    resource_id, link, title = row
+def classify(link: str, timeout: int) -> tuple[str, str]:
+    """Return (status, detail). status in ok/dead/redirect/bounced/unreachable."""
     req = urllib.request.Request(link, method="GET", headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             final = resp.geturl()
-            # A www/non-www, http/https, or trailing-slash bounce is normal —
-            # only an actual host change (or a bounce to a bare homepage from a
-            # deep link) is worth a look.
-            if _host(final) != _host(link):
-                return f"[redirect] #{resource_id} {title or ''}\n    {link}\n -> {final}"
-            src_deep = len(urlsplit(link).path.strip("/")) > 0
-            dst_bare = len(urlsplit(final).path.strip("/")) == 0
-            if src_deep and dst_bare:
-                return f"[bounced to homepage] #{resource_id} {title or ''}\n    {link}\n -> {final}"
-            return None
+            if _domain(final) != _domain(link):
+                return "redirect", f"-> {final}"
+            if urlsplit(link).path.strip("/") and not urlsplit(final).path.strip("/"):
+                return "bounced", f"-> {final}"
+            return "ok", ""
     except urllib.error.HTTPError as e:
-        if e.code in (403, 405, 429, 999):  # anti-bot noise, not really dead
-            return None
-        return f"[HTTP {e.code}] #{resource_id} {title or ''}\n    {link}"
+        if e.code in _ANTIBOT:
+            return "ok", f"HTTP {e.code} (anti-bot, treated as ok)"
+        if e.code >= 500:
+            # server-side, usually transient — not proof the page is gone
+            return "unreachable", f"HTTP {e.code}"
+        return "dead", f"HTTP {e.code}"
     except Exception as e:  # noqa: BLE001 — timeout, DNS, SSL, connection reset
-        return f"[{type(e).__name__}] #{resource_id} {title or ''}\n    {link}"
+        return "unreachable", type(e).__name__
+
+
+def _rows(limit: int) -> list[tuple[int, str, str | None]]:
+    db = SessionLocal()
+    try:
+        q = db.query(Resource.id, Resource.link, Resource.title).order_by(Resource.id)
+        return [tuple(r) for r in (q.limit(limit).all() if limit else q.all())]
+    finally:
+        db.close()
 
 
 def main() -> None:
     timeout = _arg("--timeout", 12)
     limit = _arg("--limit", 0)
+    as_json = "--json" in sys.argv
+    write = "--write" in sys.argv
 
-    db = SessionLocal()
-    try:
-        q = db.query(Resource.id, Resource.link, Resource.title).order_by(Resource.id)
-        rows = q.limit(limit).all() if limit else q.all()
-    finally:
-        db.close()
-
-    print(f"checking {len(rows)} links (timeout {timeout}s)…\n")
-    problems: list[str] = []
+    rows = _rows(limit)
+    results: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
-        for result in pool.map(lambda r: check(tuple(r), timeout), rows):
-            if result:
-                problems.append(result)
-                print(result)
+        statuses = pool.map(lambda r: classify(r[1], timeout), rows)
+        for (rid, link, title), (status, detail) in zip(rows, statuses):
+            results.append({"id": rid, "link": link, "title": title,
+                            "status": status, "detail": detail})
 
-    print(f"\n{len(problems)} of {len(rows)} links need a look")
+    if write:
+        now = datetime.now(timezone.utc)
+        db = SessionLocal()
+        try:
+            for r in results:
+                db.query(Resource).filter(Resource.id == r["id"]).update(
+                    {"link_status": r["status"], "link_checked_at": now}
+                )
+            db.commit()
+        finally:
+            db.close()
+
+    if as_json:
+        print(json.dumps(results, indent=1))
+        return
+
+    bad = [r for r in results if r["status"] != "ok"]
+    for r in bad:
+        print(f'[{r["status"]}] #{r["id"]} {r["title"] or ""}\n    {r["link"]}  {r["detail"]}')
+    counts: dict[str, int] = {}
+    for r in results:
+        counts[r["status"]] = counts.get(r["status"], 0) + 1
+    print(f'\n{len(bad)} of {len(results)} need a look  |  {counts}')
+    if write:
+        print("(wrote link_status + link_checked_at back to the DB)")
 
 
 if __name__ == "__main__":

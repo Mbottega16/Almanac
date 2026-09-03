@@ -59,6 +59,12 @@ def load_seed_rows(db: Session) -> int:
         return 0
     rows = json.loads(SEED_JSON.read_text(encoding="utf-8"))
     for row in rows:
-        resource_service.upsert_resource(db, ResourceCreate(**row), commit=False)
+        resource, _ = resource_service.upsert_resource(
+            db, ResourceCreate(**row), commit=False
+        )
+        # link_status is a system field (set by scripts/flag_dead_links.py),
+        # not part of the create schema — carry it through from the seed row.
+        if row.get("link_status"):
+            resource.link_status = row["link_status"]
     db.commit()
     return len(rows)
