@@ -24,11 +24,12 @@ def main() -> None:
     os.environ["DATABASE_URL"] = f"sqlite:///{SEED_DB.as_posix()}"
 
     t = time.time()
+    from app import models as _models  # noqa: F401  (register every model on Base.metadata)
     from app.db.base import Base
     from app.db.session import SessionLocal, engine
     from app.db.seed import load_seed_rows
-    from app.models.udl import seed_udl_principles
     from app.models.resource import Resource
+    from app.models.udl import seed_udl_principles
 
     Base.metadata.create_all(bind=engine)
     with SessionLocal() as db:

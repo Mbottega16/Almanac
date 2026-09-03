@@ -106,6 +106,27 @@ def test_evidence_is_write_only(client):
     assert body["link_status"] == "unknown"
 
 
+def test_standards_parsed_and_filterable(client):
+    client.post(
+        "/api/resources",
+        json=_payload(link="https://ngss.com", subject="Science",
+                      standards="Aligned to NGSS MS-LS1-1 and 3-LS1-1."),
+    )
+    client.post(
+        "/api/resources",
+        json=_payload(link="https://ccss.com",
+                      standards="CCSS.MATH.CONTENT.6.RP.A.3"),
+    )
+    body = client.get("/api/resources", params={"standard": "MS-LS1-1"}).json()
+    assert body["total"] == 1
+    assert body["items"][0]["link"] == "https://ngss.com"
+    assert "MS-LS1-1" in body["items"][0]["standard_codes"]
+    # case-insensitive on the query
+    assert client.get("/api/resources", params={"standard": "ms-ls1-1"}).json()["total"] == 1
+    codes = {c["name"] for c in client.get("/api/standards").json()}
+    assert {"MS-LS1-1", "3-LS1-1", "CCSS.MATH.CONTENT.6.RP.A.3"} <= codes
+
+
 def test_scope_and_publisher_facets(client):
     client.post(
         "/api/resources",

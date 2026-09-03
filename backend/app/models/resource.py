@@ -116,3 +116,8 @@ class Resource(Base):
     udl_principles: Mapped[list["UdlPrinciple"]] = relationship(
         secondary=resource_udl, back_populates="resources"
     )
+    # Standard codes parsed out of the free-text `standards` field. See
+    # app/models/standard.py and resource_service.extract_standard_codes.
+    standards_rel: Mapped[list["Standard"]] = relationship(
+        secondary="resource_standards", back_populates="resources"
+    )

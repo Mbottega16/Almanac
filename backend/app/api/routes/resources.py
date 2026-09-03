@@ -40,6 +40,7 @@ def _to_out(resource: Resource) -> ResourceOut:
         udl_rationale=resource.udl_rationale,
         tags=[t.name for t in resource.tags],
         udl_principles=[p.name for p in resource.udl_principles],
+        standard_codes=[s.code for s in resource.standards_rel],
         source=resource.source,
         is_favorite=resource.is_favorite,
         link_status=resource.link_status,
@@ -63,6 +64,7 @@ def search_resources(
     source_site: str | None = None,
     udl: str | None = None,
     tag: str | None = None,
+    standard: str | None = None,
     age: int | None = None,
     favorite: bool | None = None,
     limit: int = 50,
@@ -71,7 +73,7 @@ def search_resources(
 ):
     total, items = resource_service.list_resources(
         db, q, subject, grade_band, resource_type, scope, publisher, granularity,
-        cost, source_site, udl, tag, age, favorite, limit, offset,
+        cost, source_site, udl, tag, standard, age, favorite, limit, offset,
     )
     return ResourceListOut(total=total, items=[_to_out(r) for r in items])
 

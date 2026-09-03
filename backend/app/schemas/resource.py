@@ -68,6 +68,7 @@ class ResourceOut(ResourceBase):
     id: int
     source: str
     is_favorite: bool
+    standard_codes: list[str] = []
     link_status: str
     link_checked_at: datetime | None
     visited_at: datetime | None

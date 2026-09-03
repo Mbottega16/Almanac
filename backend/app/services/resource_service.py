@@ -1,12 +1,48 @@
+import re
 from datetime import datetime, timezone
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.models.resource import Resource, resource_tags, resource_udl
+from app.models.standard import Standard, resource_standards
 from app.models.tag import Tag
 from app.models.udl import UDL_PRINCIPLES, UdlPrinciple
 from app.services.links import canonical_link
+
+# Pull recognisable standard codes out of the free-text `standards` field so
+# they can become real filterable rows. Deliberately conservative — a code
+# it doesn't recognise stays in the text column and just isn't filterable.
+_STANDARD_PATTERNS = (
+    # NGSS performance expectations: MS-LS1-1, 3-LS1-1, HS-PS2-4, K-ESS2-1
+    ("NGSS", re.compile(r"\b(?:K|[1-5]|MS|HS)-[A-Z]{2,4}\d?-\d{1,2}\b")),
+    # C3 Framework: D2.Civ.1.6-8, D2.His.3.9-12
+    ("C3", re.compile(r"\bD[1-4]\.[A-Za-z]{2,4}\.\d{1,2}\.(?:K-2|3-5|6-8|9-12)\b")),
+    # CCSS full form: CCSS.MATH.CONTENT.6.RP.A.3, CCSS.ELA-LITERACY.RL.6.1
+    ("CCSS", re.compile(r"\bCCSS\.[A-Z-]+(?:\.[A-Z0-9]+){2,6}[a-z]?\b", re.I)),
+    # CCSS loose form: 6.RP.A.3, K.CC.A.1, RL.6.1, W.7.2.b
+    ("CCSS", re.compile(r"\b(?:K|\d{1,2}|[A-Z]{1,3})\.[A-Z]{1,3}(?:\.[A-Z0-9]+){1,4}[a-z]?\b")),
+)
+
+
+def extract_standard_codes(raw: str | None) -> list[tuple[str, str]]:
+    """(framework, normalized code) pairs found in a free-text standards
+    string. Deduped, order-preserving."""
+    if not raw:
+        return []
+    seen: dict[str, str] = {}
+    for framework, pat in _STANDARD_PATTERNS:
+        for m in pat.findall(raw):
+            code = m.upper().strip(". ")
+            if len(code) >= 4 and code not in seen:
+                seen[code] = framework
+    # The loose CCSS pattern also matches the tail of a full "CCSS.x.y.z"
+    # code — drop the bare duplicate when the full form is present.
+    full = [c for c in seen if c.startswith("CCSS.")]
+    for code in list(seen):
+        if not code.startswith("CCSS.") and any(f.endswith("." + code) for f in full):
+            del seen[code]
+    return [(fw, code) for code, fw in seen.items()]
 
 # When a source only gives a grade band, back-fill an age range from it so the
 # `age` filter works library-wide. Rough but useful (US grade -> typical age).
@@ -56,6 +92,18 @@ def _get_or_create_tags(db: Session, names: list[str]) -> list[Tag]:
     return tags
 
 
+def _get_or_create_standards(db: Session, raw: str | None) -> list[Standard]:
+    out = []
+    for framework, code in extract_standard_codes(raw):
+        std = db.execute(select(Standard).where(Standard.code == code)).scalar_one_or_none()
+        if std is None:
+            std = Standard(code=code, framework=framework)
+            db.add(std)
+            db.flush()
+        out.append(std)
+    return out
+
+
 def _resolve_udl(db: Session, names: list[str]) -> list[UdlPrinciple]:
     """UDL principles are a fixed set — unknown names are dropped rather than
     created, so the lookup table stays exactly the three canonical rows."""
@@ -81,6 +129,7 @@ def _apply_fields(db: Session, resource: Resource, data) -> None:
         resource.age_min, resource.age_max = GRADE_TO_AGE[data.grade_band]
     resource.tags = _get_or_create_tags(db, data.tags)
     resource.udl_principles = _resolve_udl(db, data.udl_principles)
+    resource.standards_rel = _get_or_create_standards(db, data.standards)
 
 
 def _base_query(
@@ -95,6 +144,7 @@ def _base_query(
     source_site: str | None = None,
     udl: str | None = None,
     tag: str | None = None,
+    standard: str | None = None,
     age: int | None = None,
     favorite: bool | None = None,
 ):
@@ -139,6 +189,10 @@ def _base_query(
         stmt = stmt.join(Resource.udl_principles).where(
             UdlPrinciple.name == udl.strip().lower()
         )
+    if standard:
+        stmt = stmt.join(Resource.standards_rel).where(
+            Standard.code == standard.strip().upper()
+        )
     if favorite is not None:
         stmt = stmt.where(Resource.is_favorite == favorite)
     return stmt
@@ -157,6 +211,7 @@ def list_resources(
     source_site: str | None = None,
     udl: str | None = None,
     tag: str | None = None,
+    standard: str | None = None,
     age: int | None = None,
     favorite: bool | None = None,
     limit: int = 50,
@@ -164,7 +219,7 @@ def list_resources(
 ) -> tuple[int, list[Resource]]:
     stmt = _base_query(
         q, subject, grade_band, resource_type, scope, publisher, granularity,
-        cost, source_site, udl, tag, age, favorite,
+        cost, source_site, udl, tag, standard, age, favorite,
     )
     total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
     stmt = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
@@ -195,8 +250,8 @@ def get_resource_by_link(db: Session, link: str) -> Resource | None:
 
 def create_resource(db: Session, data, source: str = "manual", commit: bool = True) -> Resource:
     resource = Resource(link=canonical_link(data.link), source=source)
+    db.add(resource)  # in the session before _apply_fields flushes related rows
     _apply_fields(db, resource, data)
-    db.add(resource)
     if commit:
         db.commit()
         db.refresh(resource)
@@ -219,6 +274,8 @@ def update_resource(db: Session, resource: Resource, data) -> Resource:
         resource.tags = _get_or_create_tags(db, data.tags)
     if data.udl_principles is not None:
         resource.udl_principles = _resolve_udl(db, data.udl_principles)
+    if "standards" in updates:
+        resource.standards_rel = _get_or_create_standards(db, resource.standards)
     db.commit()
     db.refresh(resource)
     return resource
@@ -304,6 +361,16 @@ def list_tags_with_counts(db: Session) -> list[tuple[str, int]]:
         .join(resource_tags, resource_tags.c.tag_id == Tag.id)
         .group_by(Tag.name)
         .order_by(Tag.name)
+    )
+    return list(db.execute(stmt).all())
+
+
+def list_standards_with_counts(db: Session) -> list[tuple[str, int]]:
+    stmt = (
+        select(Standard.code, func.count(resource_standards.c.resource_id))
+        .join(resource_standards, resource_standards.c.standard_id == Standard.id)
+        .group_by(Standard.code)
+        .order_by(Standard.framework, Standard.code)
     )
     return list(db.execute(stmt).all())
 
