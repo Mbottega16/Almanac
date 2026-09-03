@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 import { searchResources } from "../api/client";
-import { EMPTY_FILTERS, Filters } from "../components/FilterBar";
+import { EMPTY_FILTERS, Filters, toQuery } from "../components/FilterBar";
 
-type StepKey = keyof Filters;
+// Only the string-valued filter keys can be a wizard step.
+type StepKey = "subject" | "grade_band" | "scope" | "resource_type" | "cost" | "udl" | "q";
 
 interface Choice {
   label: string;
@@ -123,6 +124,8 @@ export default function DiscoverPage({
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
   const [count, setCount] = useState<number | null>(null);
   const [text, setText] = useState("");
+  // The last narrowing choice, so a dead-end run can undo it in one tap.
+  const [lastPick, setLastPick] = useState<{ key: StepKey; label: string } | null>(null);
   const dragX = useRef<number | null>(null);
 
   const step = STEPS[i];
@@ -131,7 +134,7 @@ export default function DiscoverPage({
   // Live "how many match so far" — the pinpoint feedback.
   useEffect(() => {
     let cancelled = false;
-    searchResources(filters)
+    searchResources(toQuery(filters))
       .then((r) => !cancelled && setCount(r.total))
       .catch(() => !cancelled && setCount(null));
     return () => {
@@ -145,8 +148,18 @@ export default function DiscoverPage({
   const pick = (value: string) => {
     const next = { ...filters, [step.key]: value };
     setFilters(next);
+    const label = STEPS[i].choices.find((c) => c.value === value)?.label;
+    setLastPick(value && label ? { key: step.key, label } : null);
     if (last) finish(next);
     else setI((n) => n + 1);
+  };
+
+  // Zero results: let them drop the choice that killed it and try again.
+  const undoLast = () => {
+    if (!lastPick) return;
+    setFilters((f) => ({ ...f, [lastPick.key]: "" }));
+    setLastPick(null);
+    setI((n) => Math.max(0, n - 1));
   };
 
   const finish = (f: Filters) => onDone({ ...f, q: (f.q || text).trim() });
@@ -228,11 +241,17 @@ export default function DiscoverPage({
         <button className="discover-nav" onClick={back} disabled={i === 0}>
           ← Back
         </button>
-        <span className="discover-count">
-          {count == null
-            ? "…"
-            : `${count} resource${count === 1 ? "" : "s"} match so far`}
-        </span>
+        {count === 0 && lastPick ? (
+          <button className="discover-recover" onClick={undoLast}>
+            Nothing matches — undo "{lastPick.label}"
+          </button>
+        ) : (
+          <span className="discover-count">
+            {count == null
+              ? "…"
+              : `${count} resource${count === 1 ? "" : "s"} match so far`}
+          </span>
+        )}
         <button className="discover-nav" onClick={advance}>
           {last ? "Done" : "Skip this →"}
         </button>

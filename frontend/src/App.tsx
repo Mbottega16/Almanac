@@ -7,8 +7,9 @@ import LoginGate from "./components/LoginGate";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
 import DiscoverPage from "./pages/DiscoverPage";
+import StatsPage from "./pages/StatsPage";
 
-type Tab = "browse" | "capture";
+type Tab = "browse" | "capture" | "stats";
 const DISCOVERED_KEY = "almanac.discovered";
 
 function seenDiscover(): boolean {
@@ -121,6 +122,17 @@ export default function App() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
+            setTab("stats");
+          }}
+          style={{ opacity: tab === "stats" ? 1 : 0.5 }}
+          title="Where the library itself is thin"
+        >
+          📊 Stats
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
             setDiscovering(true);
           }}
           title="Answer a few questions to narrow things down"
@@ -149,16 +161,16 @@ export default function App() {
           ★ My Collection
         </a>
       </nav>
-      {tab === "browse" ? (
+      {tab === "browse" && (
         <BrowsePage
           key={browseKey}
           initialFilters={browseFilters}
           onVisit={handleVisit}
           onFavoriteToggle={handleFavoriteToggle}
         />
-      ) : (
-        <CapturePage />
       )}
+      {tab === "capture" && <CapturePage />}
+      {tab === "stats" && <StatsPage />}
       <CollectionPanel
         open={collectionOpen}
         onClose={() => setCollectionOpen(false)}

@@ -4,12 +4,13 @@ import {
   NameCount,
   Resource,
   UdlCoverage,
+  fetchStandards,
   fetchSubjects,
   fetchTags,
   fetchUdlCoverage,
   searchResources,
 } from "../api/client";
-import FilterBar, { EMPTY_FILTERS, Filters } from "../components/FilterBar";
+import FilterBar, { EMPTY_FILTERS, Filters, toQuery } from "../components/FilterBar";
 import ResourceCard from "../components/ResourceCard";
 import UdlCoverageStrip from "../components/UdlCoverageStrip";
 
@@ -43,6 +44,7 @@ export default function BrowsePage({
   const [total, setTotal] = useState(0);
   const [subjects, setSubjects] = useState<NameCount[]>([]);
   const [tags, setTags] = useState<NameCount[]>([]);
+  const [standards, setStandards] = useState<NameCount[]>([]);
   const [coverage, setCoverage] = useState<UdlCoverage | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -60,6 +62,7 @@ export default function BrowsePage({
   useEffect(() => {
     fetchSubjects().then(setSubjects).catch(() => {});
     fetchTags().then(setTags).catch(() => {});
+    fetchStandards().then(setStandards).catch(() => {});
   }, []);
 
   // A "theme search" is any query or theme filter — that's when the UDL
@@ -70,7 +73,7 @@ export default function BrowsePage({
     setLoading(true);
     setError(null);
     const handle = setTimeout(() => {
-      searchResources(filters)
+      searchResources(toQuery(filters))
         .then((res) => {
           setResources(res.items);
           setTotal(res.total);
@@ -96,7 +99,13 @@ export default function BrowsePage({
 
   return (
     <div>
-      <FilterBar filters={filters} onChange={setFilters} subjects={subjects} tags={tags} />
+      <FilterBar
+        filters={filters}
+        onChange={setFilters}
+        subjects={subjects}
+        tags={tags}
+        standards={standards}
+      />
       {error && <p style={{ color: "crimson" }}>{error}</p>}
       {!error && (
         <>

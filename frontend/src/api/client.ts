@@ -11,6 +11,7 @@ export interface Resource {
   resource_type: string | null;
   scope: string;
   publisher: string | null;
+  granularity: string;
   duration_minutes: number | null;
   materials: string | null;
   learning_outcomes: string[];
@@ -19,13 +20,27 @@ export interface Resource {
   source_site: string | null;
   license: string | null;
   standards: string | null;
+  standard_codes: string[];
+  udl_rationale: string | null;
   tags: string[];
   udl_principles: string[];
   source: string;
   is_favorite: boolean;
+  link_status: string;
+  link_checked_at: string | null;
   visited_at: string | null;
   created_at: string;
   updated_at: string;
+}
+
+export interface LibraryStats {
+  total: number;
+  by_subject: NameCount[];
+  by_cost: NameCount[];
+  by_scope: NameCount[];
+  by_link_status: NameCount[];
+  subject_udl: Record<string, Record<string, number>>;
+  thin_cells: { subject: string; principle: string; count: number }[];
 }
 
 export interface ResourceListResponse {
@@ -100,12 +115,16 @@ export interface ResourceQuery {
   resource_type?: string;
   scope?: string;
   publisher?: string;
+  granularity?: string;
   cost?: string;
   source_site?: string;
   udl?: string;
   tag?: string;
+  standard?: string;
   age?: number | string;
   favorite?: boolean;
+  limit?: number;
+  offset?: number;
 }
 
 function toQs(params: Record<string, unknown>): string {
@@ -140,6 +159,12 @@ export function fetchPublishers(): Promise<NameCount[]> {
 }
 export function fetchTags(): Promise<NameCount[]> {
   return apiGet("/api/tags");
+}
+export function fetchStandards(): Promise<NameCount[]> {
+  return apiGet("/api/standards");
+}
+export function fetchLibraryStats(): Promise<LibraryStats> {
+  return apiGet("/api/stats");
 }
 
 export function fetchUdlCoverage(params: {
@@ -201,6 +226,7 @@ export type ResourceDraft = {
   resource_type: string | null;
   scope: string;
   publisher: string | null;
+  granularity?: string;
   duration_minutes: number | null;
   materials: string | null;
   learning_outcomes: string[];
@@ -209,6 +235,8 @@ export type ResourceDraft = {
   source_site: string | null;
   license: string | null;
   standards: string | null;
+  evidence?: string | null;
+  udl_rationale?: string | null;
   tags: string[];
   udl_principles: string[];
 };

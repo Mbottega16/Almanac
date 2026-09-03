@@ -84,6 +84,18 @@ export default function ResourceCard({
       ? SCOPE_LABELS[resource.scope as Scope] ?? resource.scope
       : null;
 
+  // Per-principle "why this applies", parsed from the newline/`;`-separated
+  // udl_rationale string -> { principle: reason }.
+  const rationale: Record<string, string> = {};
+  (resource.udl_rationale || "")
+    .split(/[\n;]+/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .forEach((line) => {
+      const m = line.match(/^([a-z_ &]+?)\s*[:\-]\s*(.+)$/i);
+      if (m) rationale[m[1].trim().toLowerCase().replace(/[ &]+/g, "_")] = m[2].trim();
+    });
+
   return (
     <div className={`entry-card view-${view}${visited ? " visited" : ""}`}>
       <button
@@ -111,6 +123,16 @@ export default function ResourceCard({
           </span>
           {scopeLabel && (
             <span className={`scope-badge scope-${resource.scope}`}>{scopeLabel}</span>
+          )}
+          {resource.granularity === "collection" && (
+            <span className="scope-badge" title="Links a browse / portal page, not one class-ready resource">
+              Browse page
+            </span>
+          )}
+          {resource.link_status === "dead" && (
+            <span className="link-warn-badge" title="Our last check couldn't reach this page — it may have moved or been removed">
+              ⚠ link may be broken
+            </span>
           )}
           {visited && (
             <span className="visited-badge" title="You've opened this before">
@@ -142,8 +164,13 @@ export default function ResourceCard({
         )}
         <div className="udl-row">
           {resource.udl_principles.map((p) => (
-            <span key={p} className={`udl-pill udl-${p}`}>
+            <span
+              key={p}
+              className={`udl-pill udl-${p}${rationale[p] ? " has-why" : ""}`}
+              title={rationale[p] ? `Why ${UDL_LABELS[p as UdlPrinciple] ?? p}: ${rationale[p]}` : undefined}
+            >
               {UDL_LABELS[p as UdlPrinciple] ?? p}
+              {rationale[p] ? " ⓘ" : ""}
             </span>
           ))}
         </div>

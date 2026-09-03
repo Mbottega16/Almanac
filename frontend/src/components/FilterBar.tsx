@@ -11,7 +11,10 @@ export interface Filters {
   cost: string;
   udl: string;
   tag: string;
+  standard: string;
   age: string;
+  // true => only granularity=specific (hide browse/portal pages)
+  classReady: boolean;
 }
 
 export const EMPTY_FILTERS: Filters = {
@@ -23,8 +26,17 @@ export const EMPTY_FILTERS: Filters = {
   cost: "",
   udl: "",
   tag: "",
+  standard: "",
   age: "",
+  classReady: false,
 };
+
+// Filters -> API query params. `classReady` is a UI convenience for
+// `granularity=specific`; keep the translation in one place.
+export function toQuery(f: Filters) {
+  const { classReady, ...rest } = f;
+  return { ...rest, granularity: classReady ? "specific" : "" };
+}
 
 const COST_OPTIONS = [
   { value: "", label: "All" },
@@ -47,11 +59,13 @@ export default function FilterBar({
   onChange,
   subjects,
   tags,
+  standards = [],
 }: {
   filters: Filters;
   onChange: (next: Filters) => void;
   subjects: NameCount[];
   tags: NameCount[];
+  standards?: NameCount[];
 }) {
   const countFor = (name: string) => subjects.find((s) => s.name === name)?.count ?? 0;
   const known = new Set(subjects.map((s) => s.name));
@@ -162,6 +176,28 @@ export default function FilterBar({
             </option>
           ))}
         </select>
+        {standards.length > 0 && (
+          <select
+            value={filters.standard}
+            onChange={(e) => set({ standard: e.target.value })}
+            title="Filter to resources aligned to a specific standard"
+          >
+            <option value="">Any standard</option>
+            {standards.map((s) => (
+              <option key={s.name} value={s.name}>
+                {s.name} ({s.count})
+              </option>
+            ))}
+          </select>
+        )}
+        <label className="class-ready-toggle" title="Hide browse / portal pages — show only resources a class can use as-is">
+          <input
+            type="checkbox"
+            checked={filters.classReady}
+            onChange={(e) => set({ classReady: e.target.checked })}
+          />
+          Class-ready only
+        </label>
       </div>
       {filters.subject && (
         <p className="filter-hint">
