@@ -136,6 +136,20 @@ def test_scope_and_publisher_facets(client):
     assert any(p["name"] == "OpenSciEd" for p in client.get("/api/publishers").json())
 
 
+def test_library_stats(client):
+    client.post("/api/resources", json=_payload(link="https://s1.com", subject="Math",
+                                                udl_principles=["representation"]))
+    client.post("/api/resources", json=_payload(link="https://s2.com", subject="Science",
+                                                cost="paid", udl_principles=["engagement"]))
+    st = client.get("/api/stats").json()
+    assert st["total"] == 2
+    assert {"name": "Math", "count": 1} in st["by_subject"]
+    assert any(c["name"] == "paid" for c in st["by_cost"])
+    assert st["subject_udl"]["Math"]["representation"] == 1
+    assert st["subject_udl"]["Math"]["engagement"] == 0
+    assert len(st["thin_cells"]) >= 1
+
+
 def test_health(client):
     resp = client.get("/api/health")
     assert resp.status_code == 200

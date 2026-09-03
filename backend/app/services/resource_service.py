@@ -420,3 +420,54 @@ def udl_coverage(
         "action_expression": per_principle["action_expression"],
         "by_type": by_type,
     }
+
+
+# --- Library-wide stats / gap map ------------------------------------------
+
+def library_stats(db: Session) -> dict:
+    """A library-wide view of coverage and blind spots — the librarian's
+    map. The per-search UDL strip answers 'is *this theme* covered'; this
+    answers 'where is the *library* thin' so capture passes target real
+    gaps instead of guesses."""
+    total = db.execute(select(func.count(Resource.id))).scalar_one()
+
+    def _counts(rows):
+        return [{"name": n, "count": c} for n, c in rows]
+
+    by_subject = _counts(list_subjects_with_counts(db))
+    by_cost = _counts(_column_counts(db, Resource.cost))
+    by_scope = _counts(_column_counts(db, Resource.scope))
+    by_link_status = _counts(_column_counts(db, Resource.link_status))
+
+    # subject x UDL principle matrix
+    matrix_stmt = (
+        select(Resource.subject, UdlPrinciple.name, func.count(func.distinct(Resource.id)))
+        .join(resource_udl, resource_udl.c.resource_id == Resource.id)
+        .join(UdlPrinciple, UdlPrinciple.id == resource_udl.c.udl_principle_id)
+        .group_by(Resource.subject, UdlPrinciple.name)
+    )
+    subject_udl: dict[str, dict[str, int]] = {
+        s["name"]: {p: 0 for p in UDL_PRINCIPLES} for s in by_subject
+    }
+    for subject, principle, count in db.execute(matrix_stmt).all():
+        subject_udl.setdefault(subject, {p: 0 for p in UDL_PRINCIPLES})[principle] = count
+
+    # the thinnest subject x principle cells (the blind spots)
+    thin = sorted(
+        (
+            {"subject": s, "principle": p, "count": subject_udl[s][p]}
+            for s in subject_udl
+            for p in UDL_PRINCIPLES
+        ),
+        key=lambda c: c["count"],
+    )[:8]
+
+    return {
+        "total": total,
+        "by_subject": by_subject,
+        "by_cost": by_cost,
+        "by_scope": by_scope,
+        "by_link_status": by_link_status,
+        "subject_udl": subject_udl,
+        "thin_cells": thin,
+    }
