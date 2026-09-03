@@ -24,28 +24,28 @@ Repo: `EduSystems-Code/Almanac` (private), cloned at `Desktop\Almanac`
 Teachers building UDL-aligned lessons. (First user: the user, dogfooding
 it the way Atlas is a personal tool.)
 
-## Where it stands (2026-08-29)
+## Where it stands (2026-08-30)
 
 **Live at https://almanac-api.vercel.app** — one Vercel Python service
 serves the SPA + API. Auth gate and live Claude-assisted capture are both
 built but dormant (flip on with `ADMIN_PASSWORD` / `ANTHROPIC_API_KEY`
 env vars). On Vercel the DB is `/tmp` + auto-seeded from a committed
-pre-built `almanac-seed.db`, so favorites don't persist across cold
-starts — a persistent host (Render/`render.yaml` is ready) is the
-follow-up. Scaffolded, tested (22 pytest), and seeded:
-- Backend: `resources` + `tags` + fixed 3-row `udl_principles` model;
-  full CRUD, faceted search
-  (`q`/`subject`/`grade_band`/`resource_type`/`scope`/`publisher`/`cost`/`source_site`/`udl`/`tag`/`age`/`favorite`),
-  `random`, `visit`, `favorite`, batch-upsert on `link`, faceted-count
-  endpoints, `GET /api/udl-coverage`. 22 passing pytest tests.
-- Frontend: Guided discovery swipe flow + Browse (theme search,
-  Free/Paid toggle, **scope toggle** — Single lessons / Units / Full
-  courses / Curricula — subject chips, grade/format/theme/age filters,
-  UDL-principle toggles, view modes), a UDL coverage strip for theme
-  searches, resource cards with cost badge + **scope badge** + publisher
-  line + UDL pills + learning outcomes, "My Collection" panel, read-only
-  Capture page. Builds clean.
-- **Seed: 291 resources.** One-off lessons + a 2026-08-29 pass of
+pre-built `almanac-seed.db`; My Collection now mirrors to `localStorage`
+so it survives a cold start, but a persistent host (Render/`render.yaml`)
+is still the real fix. Scaffolded, tested (27 pytest), and seeded:
+- Backend: `resources` + `tags` + `standards` (parsed codes) + fixed
+  3-row `udl_principles` model; full CRUD, faceted search
+  (adds `granularity`, `standard` to the earlier params), `random`,
+  `visit`, `favorite`, batch-upsert on `link` (canonicalized on write),
+  `/api/udl-coverage`, `/api/stats`, `/api/standards`. 27 pytest.
+- Frontend: Guided discovery (with a scope step + zero-result "undo"),
+  Browse (Free/Paid + scope toggles, "Class-ready only", subject chips,
+  grade/format/theme/**standard** filters), UDL coverage strip, cards
+  with cost/scope/"Browse page"/"link may be broken" badges + UDL
+  why-tooltips, a **Stats page** (subject×UDL heatmap + thin cells), a
+  "My Collection" panel with a **Lesson plan** view, read-only Capture.
+  Builds clean.
+- **Seed: 288 resources.** One-off lessons + a 2026-08-29 pass of
   **31 full courses / commercial curricula** (Illustrative Mathematics,
   OpenSciEd, EL Education, Amplify, Great Minds, Zearn, Fishtank, Open
   Up Resources, CommonLit 360, Carnegie Learning, Bridges, PLTW,
@@ -58,6 +58,14 @@ follow-up. Scaffolded, tested (22 pytest), and seeded:
   NatGeo, NASA, OpenSciEd, Learning for Justice→SPLC, iCivics, SHEG) and
   dropped 29 genuinely-dead rows → 320 → 291. ~40 more still flag but are
   live sites the build box's DNS can't reach — recheck from a real network.
+- **Deep-critique build (2026-08-30):** all ten `/deep_critique almanac`
+  items. New columns `granularity` / `evidence` / `udl_rationale` /
+  `link_status` (+ `migrate_add_critique_fields.py`); a `standards` join
+  table with CCSS/NGSS/C3 parsing; `/api/stats` + Stats page; a Lesson
+  plan view + `localStorage` collection; link-status badges;
+  `check_links.py --json/--write`, `flag_dead_links.py`,
+  `find_near_dupes.py`; discovery zero-result recovery. Link
+  canonicalization on write (from Atlas) — dropped 2 more dupes → 288.
 - **Lesson vs. curriculum (2026-08-29):** `scope` column —
   `lesson` (default) / `unit` / `course` / `curriculum` — plus a
   `publisher` string. Lets a teacher ask for a one-off lesson or a whole

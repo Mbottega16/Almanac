@@ -48,24 +48,29 @@ to assemble.
   default on purpose.
 - **Backend**: `resources` model (Atlas's `Entry` fields plus
   `subject`, `grade_band`, `resource_type`, `scope`, `publisher`,
-  `cost` (free/paid/freemium), `price_note`, `source_site`, `license`,
-  `standards`, `description_source`), real many-to-many `tags` **and** a
-  fixed 3-row `udl_principles` join. Full CRUD, search/filter
-  (`q`/`subject`/`grade_band`/`resource_type`/`scope`/`publisher`/`cost`/`source_site`/`udl`/`tag`/`age`/`favorite`),
+  `granularity`, `cost` (free/paid/freemium), `price_note`, `source_site`,
+  `license`, `standards`, `evidence`, `udl_rationale`, `link_status`,
+  `description_source`), many-to-many `tags`, `standards` (parsed codes),
+  **and** a fixed 3-row `udl_principles` join. Full CRUD, search/filter
+  (`q`/`subject`/`grade_band`/`resource_type`/`scope`/`publisher`/`granularity`/`cost`/`source_site`/`udl`/`tag`/`standard`/`age`/`favorite`),
   `random`, `visit`, `favorite`, batch-upsert on `link`
-  (`POST /api/resources/batch`), faceted-count endpoints (incl.
-  `/api/scopes` and `/api/publishers`), and `GET /api/udl-coverage`.
-  22 passing pytest tests (in-memory SQLite).
+  (`POST /api/resources/batch`), faceted-count endpoints
+  (`/api/subjects|grade-bands|resource-types|scopes|publishers|sources|tags|standards`),
+  `GET /api/udl-coverage`, and `GET /api/stats` (library-wide gap map).
+  Links are canonicalized on write (`services/links.py`) so http/https/www
+  variants can't dupe. 27 passing pytest tests (in-memory SQLite).
 - **Frontend**: Browse page (theme search, Free/Paid toggle, a
-  **scope toggle** — Single lessons / Units / Full courses / Curricula —
-  subject chips, grade/format/theme selects, three UDL-principle
-  toggles, grid/list/large view modes persisted in `localStorage`), a
-  **UDL coverage strip** shown for any theme search, resource cards with
-  cost badge + **scope badge** + publisher line + UDL pills, a "My
-  Collection" slide-in panel, and a read-only Capture page. The Guided
-  discovery flow asks a "how much are you planning?" (scope) step.
-  Type-checks and builds clean.
-- **Seed**: **291 curated resources** at `backend/seed/almanac-seed.json`
+  **scope toggle**, subject chips, grade/format/theme/**standard**
+  selects, a **"Class-ready only"** toggle, three UDL-principle toggles,
+  grid/list/large view modes), a **UDL coverage strip** for any theme
+  search, resource cards with cost + scope + **"Browse page"** +
+  **"link may be broken"** badges, publisher line, and UDL pills with
+  per-principle **why-this-applies tooltips**. A **Stats page**
+  (subject×UDL heatmap + thinnest cells). A "My Collection" slide-in with
+  a **Lesson plan** view and a `localStorage` mirror. Guided discovery
+  asks a scope step and offers "undo last choice" on a dead-end.
+  Read-only Capture page. Type-checks and builds clean.
+- **Seed**: **288 curated resources** at `backend/seed/almanac-seed.json`
   (idempotent load via `scripts/import_seed.py`). One-off lessons grew
   from 91 via four subject-cluster research passes; a 2026-08-29 pass
   added **31 full courses / commercial curricula** (Illustrative
@@ -106,11 +111,29 @@ to assemble.
   are the commercial (and free-OER) full programs; a card shows a scope
   badge and the publisher name in place of `source_site`.
   `scripts/migrate_add_curriculum_fields.py` is ready for a persistent DB.
-  22 passing pytest tests.
-- **Still to do**: re-run `scripts/check_links.py` from a real network
-  and clear the ~40 DNS-unreachable flags; activate the auth gate +
-  capture (set the env vars), move to a persistent DB, deepen the
-  portal-only links, delete the dead standalone `almanac` Vercel project.
+- **Deep-critique build (2026-08-30):** ten items off `/deep_critique almanac`.
+  New columns (`migrate_add_critique_fields.py`): `granularity`
+  (`specific` | `collection` — hides browse/portal pages, `?granularity=`;
+  seed backfilled 185/103), `evidence` (one attributed quoted sentence,
+  write-only, proof the page is real), `udl_rationale` (one line per
+  principle, shown on card hover), `link_status` (`ok`/`dead`/`redirect`/
+  `bounced`/`unreachable`, set by `scripts/flag_dead_links.py`; a `dead`
+  row gets a warning badge). New: `standards` join table +
+  `extract_standard_codes()` (CCSS/NGSS/C3) + `?standard=` +
+  `/api/standards`; `GET /api/stats` + a **Stats page** (subject×UDL
+  heatmap, thinnest cells); a **Lesson plan** view in My Collection
+  (order by duration, union materials, combined UDL coverage) backed by a
+  `localStorage` mirror so favorites survive a `/tmp` cold start; Guided
+  discovery offers "undo last choice" on a zero-result dead-end;
+  `scripts/check_links.py` gained `--json`/`--write`;
+  `scripts/find_near_dupes.py` clusters soft duplicates for review. The
+  capture prompt now asks for `granularity` / `evidence` / `udl_rationale`.
+  27 passing pytest tests.
+- **Still to do**: re-run `scripts/check_links.py` / `flag_dead_links.py`
+  from a real network and clear the ~40 DNS-unreachable flags; activate
+  the auth gate + capture (set the env vars), move to a persistent DB,
+  deepen the portal-only links, delete the dead standalone `almanac`
+  Vercel project.
 
 ## Decisions already made
 
