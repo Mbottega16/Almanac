@@ -28,3 +28,6 @@ backend/static/
 # Editor
 .vscode/
 .idea/
+
+.agents/
+AGENTS.md
