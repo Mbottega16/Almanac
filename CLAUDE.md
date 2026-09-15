@@ -70,7 +70,8 @@ to assemble.
   a **Lesson plan** view and a `localStorage` mirror. Guided discovery
   asks a scope step and offers "undo last choice" on a dead-end.
   Read-only Capture page. Type-checks and builds clean.
-- **Seed**: **288 curated resources** at `backend/seed/almanac-seed.json`
+- **Seed**: **274 curated resources** at `backend/seed/almanac-seed.json`
+  (was 288 until the 2026-09-15 dead-link cleanup below dropped 14)
   (idempotent load via `scripts/import_seed.py`). One-off lessons grew
   from 91 via four subject-cluster research passes; a 2026-08-29 pass
   added **31 full courses / commercial curricula** (Illustrative
@@ -129,11 +130,43 @@ to assemble.
   `scripts/find_near_dupes.py` clusters soft duplicates for review. The
   capture prompt now asks for `granularity` / `evidence` / `udl_rationale`.
   27 passing pytest tests.
-- **Still to do**: re-run `scripts/check_links.py` / `flag_dead_links.py`
-  from a real network and clear the ~40 DNS-unreachable flags; activate
-  the auth gate + capture (set the env vars), move to a persistent DB,
-  deepen the portal-only links, delete the dead standalone `almanac`
-  Vercel project.
+- **Render deploy + link cleanup (2026-09-15):** `scripts/check_links.py`
+  had a real bug — Windows Python's `ssl` module carries no CA bundle by
+  default, so any link needing real chain validation (e.g. `nysed.gov`)
+  was misclassified `unreachable` instead of actually checked. Fixed by
+  pointing `urlopen` at `certifi`'s bundle + a retry for transient DNS
+  blips (`certifi` added to `requirements.txt`). Re-ran `flag_dead_links.py`
+  and cross-checked the still-flagged rows from a second, independent
+  network path: **14 confirmed-dead rows dropped** (domains that don't
+  resolve from two networks — `actively.learn`, `learnzillion.com`,
+  `scijinks.jpl.nasa.gov`, `estimationology.com`, `teachingchildrensbooks.com`,
+  `mathedinsight.com`, `miriammatthes.com`, `ireadlightly.com`,
+  `theindigebrief.org`, `culturaclassroom.org`, `pearsoneducation.com`,
+  `irasscience.org`, `greatergoodinaction.org`, `sensemaking.mit.edu`) and
+  **one seed typo fixed** (`openmidle.com` → `openmiddle.com`, confirmed
+  live and a real match for its row's title/description). 288 → 274 rows.
+  27 pytest still pass. A further ~30 rows still flag `unreachable` for
+  reasons that are real but not "confirmed dead" (broken/misconfigured
+  TLS, content that moved to an unrelated domain, or just flaky DNS) —
+  left alone pending a real curation pass, not dropped on a guess.
+  **`render.yaml` rewired for a real Render deploy** (was scaffolded but
+  never wired to build the frontend): `buildCommand` now also runs
+  `scripts/build_frontend.py` so the one Render web service serves the
+  built SPA + API from the same origin, same shape as the Vercel deploy
+  but on Render's disk instead of a serverless `/tmp` that resets every
+  cold start (mirrors how Atlas deployed to Render the same week).
+  Verified end-to-end locally: built the frontend, booted the app against
+  a fresh `sqlite:///./data/almanac.db`-style path, confirmed the seed
+  bootstraps once (288→274 rows show up via `/api/stats`), confirmed a
+  restart against the same file does not re-seed or duplicate rows, and
+  confirmed `/` serves the built SPA. **Still needs the user**: actually
+  creating the Render service from this repo (connect GitHub, Render
+  reads `render.yaml`) and setting `ADMIN_PASSWORD` in the Render
+  dashboard — this session has no Render account access to do that part.
+- **Still to do**: create the Render web service and set `ADMIN_PASSWORD`
+  (see above); once live, decide whether to also set `ANTHROPIC_API_KEY`
+  to turn on capture; deepen the portal-only links; delete the dead
+  standalone `almanac` Vercel project once Render is confirmed working.
 
 ## Decisions already made
 

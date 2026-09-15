@@ -1,13 +1,23 @@
+# One combined Render Web Service: FastAPI serves /api/* and also the built
+# frontend (backend/static/, produced by scripts/build_frontend.py — same
+# one-service pattern as the Vercel deploy, just on a real disk instead of
+# a serverless /tmp that resets every cold start). ADMIN_PASSWORD must be
+# set by hand in the Render dashboard before first boot or the app is wide
+# open; ANTHROPIC_API_KEY stays unset until live capture is approved.
 services:
   - type: web
-    name: almanac-backend
+    name: almanac
     runtime: python
     plan: free
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python scripts/build_frontend.py
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
         value: sqlite:///./data/almanac.db
-      # ADMIN_PASSWORD / ADMIN_SESSION_SECRET must be set here before this
-      # service is actually deployed — the app has no auth gate otherwise.
+      - key: ADMIN_PASSWORD
+        sync: false          # set by hand in the dashboard
+      - key: ADMIN_SESSION_SECRET
+        generateValue: true
+      - key: ANTHROPIC_API_KEY
+        sync: false          # leave blank until live capture is approved

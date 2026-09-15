@@ -2867,39 +2867,6 @@
     "granularity": "collection"
   },
   {
-    "link": "https://estimationology.com",
-    "title": "Estimation 180: Daily Estimation Challenges",
-    "description": "Bank of visual estimation problems requiring prediction, reasoning, and revision. Designed to build number sense and proportional thinking through regular practice.",
-    "description_source": "generated",
-    "subject": "Math",
-    "grade_band": "3-5",
-    "age_min": 8,
-    "age_max": 11,
-    "resource_type": "activity",
-    "duration_minutes": 10,
-    "materials": "Image display (projector or device)",
-    "learning_outcomes": [
-      "Students will be able to make reasonable estimates",
-      "Students will be able to justify reasoning about quantities"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Estimation 180",
-    "license": "CC BY",
-    "standards": "3.MD.A, 4.MD.A, 5.MD.A",
-    "tags": [
-      "estimation",
-      "number sense",
-      "reasoning"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific"
-  },
-  {
     "link": "https://www.wodb.ca",
     "title": "Which One Doesn't Belong: Visual Reasoning Tasks",
     "description": "Collection of puzzles showing four objects or images where students decide which doesn't belong and justify reasoning. Promotes visual analysis and discussion.",
@@ -2936,7 +2903,7 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.openmidle.com",
+    "link": "https://www.openmiddle.com",
     "title": "Open Middle: Elementary Number & Operations",
     "description": "Bank of open-ended mathematical tasks with multiple entry points and solution paths. Designed for formative assessment and differentiation in 3-5 grades.",
     "description_source": "generated",
@@ -2968,7 +2935,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -3074,39 +3041,6 @@
     ],
     "link_status": "ok",
     "granularity": "specific"
-  },
-  {
-    "link": "https://sensemaking.mit.edu/",
-    "title": "Scratch: Tutorials Library",
-    "description": "Guided video tutorials within Scratch for creating animations, games, and stories. Progressive difficulty from beginner to intermediate projects.",
-    "description_source": "generated",
-    "subject": "CS / STEM",
-    "grade_band": "3-5",
-    "age_min": 8,
-    "age_max": 11,
-    "resource_type": "video",
-    "duration_minutes": 15,
-    "materials": "Computer or tablet with web access",
-    "learning_outcomes": [
-      "Students will follow step-by-step tutorials",
-      "Students will build complete interactive projects"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Scratch",
-    "license": "CC BY-SA",
-    "standards": "CSTA-1B",
-    "tags": [
-      "programming",
-      "tutorials",
-      "project-based"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
   },
   {
     "link": "https://codehs.com/free",
@@ -3570,105 +3504,6 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.teachingchildrensbooks.com/",
-    "title": "Teaching Children's Literature: Math in Picture Books",
-    "description": "Guide to using picture books as springboards for mathematical thinking and discussion in elementary classrooms.",
-    "description_source": "generated",
-    "subject": "Math",
-    "grade_band": "K-2",
-    "age_min": 4,
-    "age_max": 8,
-    "resource_type": "article/text",
-    "duration_minutes": 30,
-    "materials": "Picture books",
-    "learning_outcomes": [
-      "Students will develop math vocabulary through literature",
-      "Students will connect math to real-world stories"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Teaching Children's Literature",
-    "license": "CC BY",
-    "standards": "K.CC, 1.OA, 2.OA",
-    "tags": [
-      "literature integration",
-      "early math",
-      "discussion"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific"
-  },
-  {
-    "link": "https://www.mathedinsight.com/",
-    "title": "Math Ed Insight: Teacher Resources",
-    "description": "Database of teaching strategies, lesson ideas, and classroom-ready activities for math teachers with emphasis on student reasoning and discourse.",
-    "description_source": "generated",
-    "subject": "Math",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "activity",
-    "duration_minutes": 30,
-    "materials": "Paper, pencils, optional manipulatives",
-    "learning_outcomes": [
-      "Students will engage in mathematical discourse",
-      "Students will develop flexible thinking"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Math Ed Insight",
-    "license": "CC BY",
-    "standards": "6-8 standards",
-    "tags": [
-      "teaching strategies",
-      "discussion",
-      "reasoning"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
-  },
-  {
-    "link": "https://www.miriammatthes.com/",
-    "title": "Miriam Matthes: Kinesthetic Math Activities",
-    "description": "Collection of movement-based math activities for engaging kinesthetic learners and making abstract concepts concrete.",
-    "description_source": "generated",
-    "subject": "Math",
-    "grade_band": "K-2",
-    "age_min": 4,
-    "age_max": 8,
-    "resource_type": "activity",
-    "duration_minutes": 15,
-    "materials": "Body and space only (kinesthetic)",
-    "learning_outcomes": [
-      "Students will embody mathematical concepts",
-      "Students will develop number sense through movement"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Miriam Matthes",
-    "license": "CC BY",
-    "standards": "K-2 standards",
-    "tags": [
-      "kinesthetic learning",
-      "engagement",
-      "movement"
-    ],
-    "udl_principles": [
-      "action_expression",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
-  },
-  {
     "link": "https://www.freecodecamp.org",
     "title": "freeCodeCamp: Web Development & CS Tutorials",
     "description": "Comprehensive free coding tutorials covering HTML, CSS, JavaScript, Python, and full-stack development with video lessons and projects.",
@@ -3999,39 +3834,6 @@
     ],
     "link_status": "ok",
     "granularity": "collection"
-  },
-  {
-    "link": "https://www.actively.learn/",
-    "title": "Actively Learn Interactive Reading",
-    "description": "Freemium platform for close reading with teacher-created and curated texts. Supports annotations, comprehension questions, and differentiated pathways.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "interactive/sim",
-    "duration_minutes": 25,
-    "materials": "Digital device",
-    "learning_outcomes": [
-      "Students will be able to annotate texts for meaning",
-      "Students will be able to answer inference-based comprehension questions"
-    ],
-    "cost": "freemium",
-    "price_note": "Free teacher account with limited features",
-    "source_site": "Actively Learn",
-    "license": "All rights reserved",
-    "standards": "CCSS.ELA-LITERACY.RL.7.1",
-    "tags": [
-      "close reading",
-      "annotations",
-      "interactive literature"
-    ],
-    "udl_principles": [
-      "action_expression",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific"
   },
   {
     "link": "https://www.commonlit.org/ela-curriculum",
@@ -4472,39 +4274,6 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.learnzillion.com/",
-    "title": "LearnZillion Video Lessons Library",
-    "description": "Free library of short instructional videos on ELA standards. Features multiple teaching strategies aligned to CCSS with full-year scope and sequence.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "3-5",
-    "age_min": 8,
-    "age_max": 11,
-    "resource_type": "video",
-    "duration_minutes": 12,
-    "materials": "Video player, speakers",
-    "learning_outcomes": [
-      "Students will be able to learn through multiple instructional approaches",
-      "Students will be able to review concepts independently"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "LearnZillion",
-    "license": "CC BY-NC",
-    "standards": "CCSS.ELA-LITERACY.RL.5.1",
-    "tags": [
-      "video lessons",
-      "standards-based",
-      "instructional videos"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
-  },
-  {
     "link": "https://www.wired.com/",
     "title": "Wired Magazine Article Archives",
     "description": "Free access to current technology, science, and culture articles. Suitable for secondary ELA and reading comprehension practice with contemporary topics.",
@@ -4867,39 +4636,6 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.ireadlightly.com/",
-    "title": "iRead Lightly Library Activities",
-    "description": "Free comprehensive literacy program with games, stories, and activities for beginning readers. Focuses on phonemic awareness and decoding.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "K-2",
-    "age_min": 4,
-    "age_max": 7,
-    "resource_type": "game",
-    "duration_minutes": 12,
-    "materials": "Digital device",
-    "learning_outcomes": [
-      "Students will be able to develop phonemic awareness",
-      "Students will be able to decode words and build fluency"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "iRead Lightly",
-    "license": "CC BY-NC",
-    "standards": "CCSS.ELA-LITERACY.RF.K.2",
-    "tags": [
-      "beginning reader",
-      "phonics",
-      "early literacy"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
-  },
-  {
     "link": "https://www.mrnussbaum.com/",
     "title": "Mr. Nussbaum Educational Games",
     "description": "Free educational games covering writing, grammar, vocabulary, and reading comprehension. Designed for elementary learners with immediate feedback.",
@@ -5032,39 +4768,6 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.theindigebrief.org/",
-    "title": "The Indige Brief Indigenous Perspectives",
-    "description": "Free resources presenting Indigenous perspectives, history, and literature. Supports culturally responsive ELA instruction and diverse representation.",
-    "description_source": "generated",
-    "subject": "ELA / Reading",
-    "grade_band": "9-12",
-    "age_min": 14,
-    "age_max": 18,
-    "resource_type": "article/text",
-    "duration_minutes": 20,
-    "materials": "Digital device",
-    "learning_outcomes": [
-      "Students will be able to understand Indigenous perspectives",
-      "Students will be able to engage with diverse literature and history"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "The Indige Brief",
-    "license": "CC BY-NC",
-    "standards": "CCSS.ELA-LITERACY.RL.9-10.3",
-    "tags": [
-      "indigenous literature",
-      "cultural responsiveness",
-      "diversity"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific"
-  },
-  {
     "link": "https://www.amplify.com/ela/",
     "title": "Amplify Elementary ELA Curriculum",
     "description": "Free core ELA curriculum resources covering reading, writing, and language standards. Includes lesson materials and assessments aligned to CCSS.",
@@ -5130,39 +4833,6 @@
     ],
     "link_status": "unreachable",
     "granularity": "collection"
-  },
-  {
-    "link": "https://www.culturaclassroom.org/",
-    "title": "Cultura Classroom Spanish Language Learning",
-    "description": "Free platform connecting Spanish learners with e-mail exchanges and cultural activities. Supports authentic communication and cultural exchange.",
-    "description_source": "generated",
-    "subject": "World Languages",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 14,
-    "resource_type": "activity",
-    "duration_minutes": 30,
-    "materials": "Digital device, email",
-    "learning_outcomes": [
-      "Students will be able to communicate in Spanish with peers",
-      "Students will be able to understand cultural perspectives"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Cultura Classroom",
-    "license": "CC BY-NC",
-    "standards": "",
-    "tags": [
-      "spanish",
-      "cultural exchange",
-      "authentic communication"
-    ],
-    "udl_principles": [
-      "action_expression",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific"
   },
   {
     "link": "https://www.studyspanish.com/",
@@ -5955,40 +5625,6 @@
     "granularity": "specific"
   },
   {
-    "link": "https://scijinks.jpl.nasa.gov/",
-    "title": "NASA: Climate Kids / SciJinks",
-    "description": "Engaging, animated explanations of climate and Earth science for students. Includes games, videos, and interactive tools accessible to elementary audiences.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 11,
-    "resource_type": "video",
-    "duration_minutes": 10,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to explain basic climate and weather concepts",
-      "Students will be able to identify human impacts on Earth systems"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "NASA",
-    "license": "Public Domain",
-    "standards": "",
-    "tags": [
-      "climate",
-      "earth science",
-      "video",
-      "animation"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific"
-  },
-  {
     "link": "https://kidshealth.org/classroom/",
     "title": "KidsHealth in the Classroom: Elementary Lessons",
     "description": "Free, research-based health and wellness lessons for K-5. Covers nutrition, exercise, emotions, and healthy habits with printable student pages.",
@@ -6542,41 +6178,6 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.pearsoneducation.com/en-US/open-content.html",
-    "title": "Pearson Open Learning Exchange: OER Resources",
-    "description": "Open educational resources from Pearson including science lessons, interactives, and assessment items. Aligned to standards.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": 18,
-    "resource_type": "activity",
-    "duration_minutes": null,
-    "materials": "Varies by activity",
-    "learning_outcomes": [
-      "Students will be able to engage with interactive and hands-on science activities",
-      "Students will be able to practice and be assessed on science concepts"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Pearson OLE",
-    "license": "CC BY",
-    "standards": "",
-    "tags": [
-      "oer",
-      "interactive",
-      "standards-aligned",
-      "all subjects"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
-  },
-  {
     "link": "https://www.youtube.com/channel/UCuCkxoKLV3-ixblW73dW5Iw",
     "title": "Kurzgesagt: Explainer Animated Videos on Science",
     "description": "Beautifully animated, engaging explainers of science and philosophy. Clear explanations of complex topics like biology, physics, and ecology.",
@@ -6644,39 +6245,6 @@
     ],
     "link_status": "ok",
     "granularity": "specific"
-  },
-  {
-    "link": "https://www.irasscience.org/standards/",
-    "title": "International Reading Association / Science Standards Resources",
-    "description": "Integrated literacy and science resources for K-12. Emphasizes reading and writing in science contexts.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": 18,
-    "resource_type": "article/text",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to read and write in science",
-      "Students will be able to communicate scientific thinking"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "International Reading Association",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "literacy",
-      "science communication",
-      "standards"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
   },
   {
     "link": "https://www.frontiersin.org/education/",
@@ -8079,39 +7647,6 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "specific"
-  },
-  {
-    "link": "https://greatergoodinaction.org/",
-    "title": "Greater Good in Action",
-    "description": "Science-based practices and activities for social-emotional wellbeing created by UC Berkeley; includes gratitude, mindfulness, and kindness practices.",
-    "description_source": "generated",
-    "subject": "SEL",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": null,
-    "resource_type": "activity",
-    "duration_minutes": 10,
-    "materials": "Digital activities, guides",
-    "learning_outcomes": [
-      "Students will practice gratitude and kindness",
-      "Students will develop wellbeing skills"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Greater Good Science Center (UC Berkeley)",
-    "license": "All rights reserved",
-    "standards": "CASEL.SEL.2.K-12",
-    "tags": [
-      "mindfulness",
-      "wellbeing",
-      "science-based"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
     "granularity": "specific"
   },
   {
