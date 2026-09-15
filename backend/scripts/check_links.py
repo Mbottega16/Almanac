@@ -21,17 +21,26 @@ Options:
 """
 import concurrent.futures
 import json
+import ssl
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
+
+import certifi
 
 from app.db.session import SessionLocal
 from app.models.resource import Resource
 
 UA = "Mozilla/5.0 (compatible; AlmanacLinkCheck/1.0)"
 _ANTIBOT = {403, 405, 429, 999}  # a response, but a bot-block — not "dead"
+# Default Windows Python has no CA bundle wired into `ssl`, so every site
+# needing chain validation was falsely flagged "unreachable"
+# (CERTIFICATE_VERIFY_FAILED) — use certifi's bundle explicitly.
+_SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+_RETRIES = 2  # DNS timeouts/resets are often transient, not proof of death
 
 
 def _arg(name: str, default: int) -> int:
@@ -51,23 +60,28 @@ def _domain(url: str) -> str:
 def classify(link: str, timeout: int) -> tuple[str, str]:
     """Return (status, detail). status in ok/dead/redirect/bounced/unreachable."""
     req = urllib.request.Request(link, method="GET", headers={"User-Agent": UA})
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            final = resp.geturl()
-            if _domain(final) != _domain(link):
-                return "redirect", f"-> {final}"
-            if urlsplit(link).path.strip("/") and not urlsplit(final).path.strip("/"):
-                return "bounced", f"-> {final}"
-            return "ok", ""
-    except urllib.error.HTTPError as e:
-        if e.code in _ANTIBOT:
-            return "ok", f"HTTP {e.code} (anti-bot, treated as ok)"
-        if e.code >= 500:
-            # server-side, usually transient — not proof the page is gone
-            return "unreachable", f"HTTP {e.code}"
-        return "dead", f"HTTP {e.code}"
-    except Exception as e:  # noqa: BLE001 — timeout, DNS, SSL, connection reset
-        return "unreachable", type(e).__name__
+    last_exc_name = ""
+    for attempt in range(_RETRIES):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=_SSL_CONTEXT) as resp:
+                final = resp.geturl()
+                if _domain(final) != _domain(link):
+                    return "redirect", f"-> {final}"
+                if urlsplit(link).path.strip("/") and not urlsplit(final).path.strip("/"):
+                    return "bounced", f"-> {final}"
+                return "ok", ""
+        except urllib.error.HTTPError as e:
+            if e.code in _ANTIBOT:
+                return "ok", f"HTTP {e.code} (anti-bot, treated as ok)"
+            if e.code >= 500:
+                # server-side, usually transient — not proof the page is gone
+                return "unreachable", f"HTTP {e.code}"
+            return "dead", f"HTTP {e.code}"
+        except Exception as e:  # noqa: BLE001 — timeout, DNS, SSL, connection reset
+            last_exc_name = type(e).__name__
+            if attempt + 1 < _RETRIES:
+                time.sleep(1)
+    return "unreachable", last_exc_name
 
 
 def _rows(limit: int) -> list[tuple[int, str, str | None]]:

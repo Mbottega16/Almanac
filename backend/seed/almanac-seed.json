@@ -8045,7 +8045,7 @@
       "engagement",
       "representation"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -8078,7 +8078,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
