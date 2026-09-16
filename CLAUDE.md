@@ -159,14 +159,36 @@ to assemble.
   a fresh `sqlite:///./data/almanac.db`-style path, confirmed the seed
   bootstraps once (288→274 rows show up via `/api/stats`), confirmed a
   restart against the same file does not re-seed or duplicate rows, and
-  confirmed `/` serves the built SPA. **Still needs the user**: actually
-  creating the Render service from this repo (connect GitHub, Render
-  reads `render.yaml`) and setting `ADMIN_PASSWORD` in the Render
-  dashboard — this session has no Render account access to do that part.
-- **Still to do**: create the Render web service and set `ADMIN_PASSWORD`
-  (see above); once live, decide whether to also set `ANTHROPIC_API_KEY`
-  to turn on capture; deepen the portal-only links; delete the dead
-  standalone `almanac` Vercel project once Render is confirmed working.
+  confirmed `/` serves the built SPA.
+- **Render deploy went live (2026-09-16):** the user created the Render
+  web service from this repo and set `ADMIN_PASSWORD` in its dashboard —
+  **live at https://almanac-0uue.onrender.com**. To verify it worked,
+  the user generated a Render personal API key (`RENDER_API_KEY` in
+  `backend/.env.local`, gitignored, never in chat) so a session could
+  call Render's API directly. That verification caught a real
+  production bug: **`/api/auth-status` wasn't in `OPEN_PATHS`**, so it
+  401'd for any unauthenticated request — but that endpoint's whole job
+  is telling an *unauthenticated* frontend whether to show the login
+  screen (`App.tsx` calls it before any login attempt). The 401 made
+  `fetchAuthStatus()` throw before reading `gate_enabled`, and
+  `App.tsx`'s catch-all set `authed = true` without ever rendering
+  `LoginGate` — so the moment `ADMIN_PASSWORD` went live, the site was
+  broken for anyone without a cookie: no way to log in, every real page
+  silently 401ing underneath a UI that looked fine. Fixed (`app/auth.py`
+  now includes `/api/auth-status` in `OPEN_PATHS`), covered by a new
+  `tests/test_auth.py` (5 tests — gate dormant/active, protected-route
+  blocking, login, wrong password), and `tests/conftest.py`'s shared
+  `client` fixture now uses `base_url="https://testserver"` (the login
+  cookie is `Secure`, which a plain-`http://` test client silently never
+  resends — matches how the app is actually always served, behind TLS).
+  32 pytest total. Pushed; Render auto-deployed; reconfirmed live
+  end-to-end (status check open, protected routes still gated, login
+  works, authenticated data returns 274 rows).
+- **Still to do**: decide whether to set `ANTHROPIC_API_KEY` on the
+  Render deploy to turn on live capture; delete the now-superseded
+  standalone `almanac` Vercel project (the live site is Render now;
+  `almanac-api.vercel.app` is still up too); deepen the portal-only
+  links.
 
 ## Decisions already made
 
