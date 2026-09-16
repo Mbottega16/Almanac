@@ -16,7 +16,11 @@ from app.config import settings
 
 COOKIE_NAME = "almanac_session"
 # Requests to these paths are always allowed, gate or no gate.
-OPEN_PATHS = {"/api/health", "/api/login", "/docs", "/openapi.json", "/redoc"}
+# auth-status must stay open: it's how an unauthenticated frontend decides
+# whether to show LoginGate. If it 401s, fetchAuthStatus() throws before the
+# frontend ever reads gate_enabled, and App.tsx's catch-all falls back to
+# "authed = true" without ever showing the login screen.
+OPEN_PATHS = {"/api/health", "/api/login", "/api/auth-status", "/docs", "/openapi.json", "/redoc"}
 
 
 def _serializer() -> URLSafeSerializer:

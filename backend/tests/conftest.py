@@ -39,6 +39,9 @@ def client(db_session):
             pass
 
     app.dependency_overrides[get_db] = override_get_db
-    with TestClient(app) as c:
+    # base_url must be https: the login cookie is Secure (matches production,
+    # which is always behind TLS), and a Secure cookie is never resent over
+    # plain http — the default TestClient base_url — even within one client.
+    with TestClient(app, base_url="https://testserver") as c:
         yield c
     app.dependency_overrides.clear()
