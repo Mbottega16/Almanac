@@ -79,6 +79,11 @@ class ResourceOut(ResourceBase):
 class ResourceListOut(BaseModel):
     total: int
     items: list[ResourceOut]
+    # Set only for a free-text search. `unmatched_terms` are words the library
+    # has nothing for; `broadened` means those were dropped to answer at all.
+    matched_terms: list[str] = []
+    unmatched_terms: list[str] = []
+    broadened: bool = False
 
 
 class NameCount(BaseModel):

@@ -42,6 +42,7 @@ export default function BrowsePage({
   }));
   const [resources, setResources] = useState<Resource[]>([]);
   const [total, setTotal] = useState(0);
+  const [unmatched, setUnmatched] = useState<string[]>([]);
   const [subjects, setSubjects] = useState<NameCount[]>([]);
   const [tags, setTags] = useState<NameCount[]>([]);
   const [standards, setStandards] = useState<NameCount[]>([]);
@@ -77,6 +78,7 @@ export default function BrowsePage({
         .then((res) => {
           setResources(res.items);
           setTotal(res.total);
+          setUnmatched(res.unmatched_terms ?? []);
         })
         .catch(() => setError("Couldn't reach the Almanac backend — is it running?"))
         .finally(() => setLoading(false));
@@ -115,6 +117,18 @@ export default function BrowsePage({
               active={filters.udl}
               onPick={(principle) => setFilters((f) => ({ ...f, udl: principle }))}
             />
+          )}
+          {!loading && unmatched.length > 0 && total > 0 && (
+            <p className="search-note">
+              Nothing in the library for{" "}
+              {unmatched.map((t, i) => (
+                <span key={t}>
+                  {i > 0 && ", "}
+                  <strong>“{t}”</strong>
+                </span>
+              ))}
+              . Showing the closest matches for the rest of your search.
+            </p>
           )}
           <div className="results-row">
             <p>{loading ? "Loading…" : `${total} result${total === 1 ? "" : "s"}`}</p>

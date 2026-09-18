@@ -124,6 +124,17 @@ h1 {
   opacity: 0.7;
 }
 
+/* Says which words the library couldn't answer, so a partial result doesn't
+   look like the search simply ignored half the query. */
+.search-note {
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--accent);
+  background: #4a90e21a;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+}
+
 /* --- UDL coverage strip ------------------------------------------------- */
 
 .udl-coverage {
@@ -258,11 +269,77 @@ h1 {
 .entry-card {
   position: relative;
   border: 1px solid #8884;
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+/* --- card header ------------------------------------------------------- */
+/* The top of a card is tinted with the linked site's own icon colours
+   (--card-accent / --card-wash, set per card from palettes.json) so a
+   resource is recognisable as that site before the title is read. The wash
+   is deliberately low-alpha: it composites over the page background, so the
+   same rule stays readable in light and dark mode without recomputing a
+   contrast colour per card. */
+
+.entry-card-accent {
+  height: 4px;
+  background: var(--card-accent, var(--accent));
+  flex-shrink: 0;
+}
+
+.entry-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: var(--card-wash, none);
+  border-bottom: 1px solid #8883;
+}
+
+.entry-card-headings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.entry-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.8rem 1rem 0.9rem;
+}
+
+.entry-summary {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.entry-details p {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+}
+
+.entry-more {
+  align-self: flex-start;
+  margin-bottom: 0.6rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.entry-more:hover {
+  text-decoration: underline;
 }
 
 .entry-card:hover {
@@ -291,17 +368,21 @@ h1 {
   background: #4a90e20d;
 }
 
+/* Icons are the fastest way to recognise a source, so they're given real
+   size in every view rather than a 32px afterthought. */
 .entry-card-logo {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  background: #8882;
-  margin-bottom: 0.6rem;
+  background: canvas;
+  box-shadow: 0 1px 4px #0002;
+  padding: 4px;
+  box-sizing: border-box;
 }
 
 .entry-card-logo img {
@@ -312,20 +393,14 @@ h1 {
 
 .entry-card-logo-fallback {
   font-weight: 700;
-  font-size: 0.95rem;
-  opacity: 0.6;
-}
-
-.entry-card-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  flex: 1;
+  font-size: 1.25rem;
+  opacity: 0.65;
 }
 
 .entry-card h3 {
-  margin: 0 1.75rem 0.25rem 0;
+  margin: 0 1.75rem 0 0;
   font-size: 1.05rem;
+  line-height: 1.25;
 }
 
 .badge-row {
@@ -333,7 +408,6 @@ h1 {
   align-items: center;
   gap: 0.4rem;
   flex-wrap: wrap;
-  margin-bottom: 0.35rem;
 }
 
 .cost-badge {
@@ -375,67 +449,63 @@ h1 {
   color: #fff;
 }
 
-/* List view: logo + title/meta inline, details collapse */
-.entry-card.view-list {
-  flex-direction: row;
+/* List view: one compact row — header only, body collapses away. */
+.entry-card.view-list .entry-card-head {
+  padding: 0.55rem 0.9rem;
   align-items: center;
-  padding: 0.6rem 1rem;
-  gap: 0.75rem;
+  border-bottom: none;
 }
 
 .entry-card.view-list .entry-card-logo {
-  margin-bottom: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
 }
 
-.entry-card.view-list .entry-card-body {
+.entry-card.view-list .entry-card-headings {
   flex-direction: row;
   align-items: baseline;
-  gap: 0.75rem;
   flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .entry-card.view-list h3 {
-  margin: 0;
   flex-shrink: 0;
 }
 
-.entry-card.view-list .meta {
-  margin-bottom: 0;
-}
-
-.entry-card.view-list p,
-.entry-card.view-list .visited-badge,
-.entry-card.view-list .udl-row,
-.entry-card.view-list .outcomes,
-.entry-card.view-list .materials {
+.entry-card.view-list .entry-card-body {
   display: none;
 }
 
-.entry-card.view-list .tag-row {
-  margin-top: 0;
-  margin-left: auto;
-}
-
-/* Large panels: big centered logo */
-.entry-card.view-large {
+/* Large panels: the icon is the point, so it gets the most room. */
+.entry-card.view-large .entry-card-head {
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.25rem 1rem;
+  padding: 1.1rem 1rem 0.9rem;
 }
 
 .entry-card.view-large .entry-card-logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  margin-bottom: 0.75rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
 }
 
 .entry-card.view-large .entry-card-logo-fallback {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.entry-card.view-large .entry-card-headings {
+  align-items: center;
 }
 
 .entry-card.view-large h3 {
-  margin: 0 0 0.25rem;
+  margin: 0;
+}
+
+.entry-card.view-large .entry-card-body {
+  text-align: center;
+  align-items: center;
 }
 
 .entry-card.view-large .badge-row,
@@ -447,15 +517,13 @@ h1 {
   gap: 0.3rem;
 }
 
-.entry-card .meta {
-  font-size: 0.85rem;
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
+.entry-card.view-large .outcomes {
+  text-align: left;
 }
 
-.entry-card p {
-  margin: 0 0 0.5rem;
-  font-size: 0.9rem;
+.entry-card .meta {
+  font-size: 0.82rem;
+  opacity: 0.75;
 }
 
 .outcomes {
@@ -480,8 +548,9 @@ h1 {
 
 .favorite-btn {
   position: absolute;
-  top: 0.75rem;
+  top: 0.85rem;
   right: 0.75rem;
+  z-index: 1;
   background: none;
   border: none;
   font-size: 1.3rem;

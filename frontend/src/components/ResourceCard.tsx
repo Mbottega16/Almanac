@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 
 import {
   Resource,
@@ -9,14 +9,26 @@ import {
   markVisited,
   setFavorite,
 } from "../api/client";
+import { tintFor } from "../palette";
 
 function faviconUrl(link: string): string | null {
   try {
     const { hostname } = new URL(link);
-    return `https://www.google.com/s2/favicons?sz=64&domain=${hostname}`;
+    return `https://www.google.com/s2/favicons?sz=128&domain=${hostname}`;
   } catch {
     return null;
   }
+}
+
+// Cards showed the full description everywhere, which turned a grid into a
+// wall of text. Lead with the first sentence — these descriptions are written
+// claim-first, so it carries the point — and keep the rest behind "Details".
+function firstSentence(text: string, max = 140): string {
+  const trimmed = text.trim();
+  const match = trimmed.match(/^.*?[.!?](?=\s|$)/);
+  const lead = match ? match[0] : trimmed;
+  if (lead.length <= max) return lead;
+  return `${lead.slice(0, max).replace(/\s+\S*$/, "")}…`;
 }
 
 const COST_LABEL: Record<string, string> = {
@@ -39,6 +51,7 @@ export default function ResourceCard({
   const [visited, setVisited] = useState(!!resource.visited_at);
   const [favorite, setFavoriteState] = useState(resource.is_favorite);
   const [busy, setBusy] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleOpen = () => {
     markVisited(resource.id).catch(() => {});
@@ -62,6 +75,7 @@ export default function ResourceCard({
   };
 
   const favicon = faviconUrl(resource.link);
+  const tint = tintFor(resource.link);
   const ageLabel =
     resource.age_min != null && resource.age_max != null
       ? `ages ${resource.age_min}–${resource.age_max}`
@@ -96,78 +110,127 @@ export default function ResourceCard({
       if (m) rationale[m[1].trim().toLowerCase().replace(/[ &]+/g, "_")] = m[2].trim();
     });
 
+  const description = resource.description || "";
+  const summary = description ? firstSentence(description) : "";
+  const hasMore =
+    description.length > summary.length ||
+    resource.learning_outcomes.length > 0 ||
+    !!resource.materials;
+
+  const tintStyle = {
+    "--card-accent": tint.accent,
+    "--card-wash": tint.wash,
+  } as CSSProperties;
+
   return (
-    <div className={`entry-card view-${view}${visited ? " visited" : ""}`}>
-      <button
-        className={`favorite-btn${favorite ? " active" : ""}`}
-        onClick={handleFavoriteClick}
-        title={favorite ? "Remove from collection" : "Save to collection"}
-        aria-pressed={favorite}
-      >
-        {favorite ? "★" : "☆"}
-      </button>
-      <div className="entry-card-logo">
-        {favicon ? (
-          <img src={favicon} alt="" loading="lazy" />
-        ) : (
-          <span className="entry-card-logo-fallback">
-            {(resource.title || resource.link)[0]?.toUpperCase()}
-          </span>
-        )}
+    <div
+      className={`entry-card view-${view}${visited ? " visited" : ""}`}
+      style={tintStyle}
+    >
+      <div className="entry-card-accent" aria-hidden="true" />
+      <div className="entry-card-head">
+        <button
+          className={`favorite-btn${favorite ? " active" : ""}`}
+          onClick={handleFavoriteClick}
+          title={favorite ? "Remove from collection" : "Save to collection"}
+          aria-pressed={favorite}
+        >
+          {favorite ? "★" : "☆"}
+        </button>
+        <div className="entry-card-logo">
+          {favicon ? (
+            <img src={favicon} alt="" loading="lazy" />
+          ) : (
+            <span className="entry-card-logo-fallback">
+              {(resource.title || resource.link)[0]?.toUpperCase()}
+            </span>
+          )}
+        </div>
+        <div className="entry-card-headings">
+          <h3>
+            <a href={resource.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
+              {resource.title || resource.link}
+            </a>
+          </h3>
+          <div className="meta">
+            {meta}
+            {resource.publisher
+              ? ` — ${resource.publisher}`
+              : resource.source_site
+                ? ` — ${resource.source_site}`
+                : ""}
+          </div>
+          <div className="badge-row">
+            <span className={`cost-badge cost-${resource.cost}`}>
+              {COST_LABEL[resource.cost] ?? resource.cost}
+              {resource.price_note ? ` · ${resource.price_note}` : ""}
+            </span>
+            {scopeLabel && (
+              <span className={`scope-badge scope-${resource.scope}`}>{scopeLabel}</span>
+            )}
+            {resource.granularity === "collection" && (
+              <span
+                className="scope-badge"
+                title="Links a browse / portal page, not one class-ready resource"
+              >
+                Browse page
+              </span>
+            )}
+            {resource.link_status === "dead" && (
+              <span
+                className="link-warn-badge"
+                title="Our last check couldn't reach this page — it may have moved or been removed"
+              >
+                ⚠ link may be broken
+              </span>
+            )}
+            {visited && (
+              <span className="visited-badge" title="You've opened this before">
+                ✓ visited
+              </span>
+            )}
+          </div>
+        </div>
       </div>
+
       <div className="entry-card-body">
-        <div className="badge-row">
-          <span className={`cost-badge cost-${resource.cost}`}>
-            {COST_LABEL[resource.cost] ?? resource.cost}
-            {resource.price_note ? ` · ${resource.price_note}` : ""}
-          </span>
-          {scopeLabel && (
-            <span className={`scope-badge scope-${resource.scope}`}>{scopeLabel}</span>
-          )}
-          {resource.granularity === "collection" && (
-            <span className="scope-badge" title="Links a browse / portal page, not one class-ready resource">
-              Browse page
-            </span>
-          )}
-          {resource.link_status === "dead" && (
-            <span className="link-warn-badge" title="Our last check couldn't reach this page — it may have moved or been removed">
-              ⚠ link may be broken
-            </span>
-          )}
-          {visited && (
-            <span className="visited-badge" title="You've opened this before">
-              ✓ visited
-            </span>
-          )}
-        </div>
-        <h3>
-          <a href={resource.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
-            {resource.title || resource.link}
-          </a>
-        </h3>
-        <div className="meta">
-          {meta}
-          {resource.publisher ? ` — ${resource.publisher}` : resource.source_site ? ` — ${resource.source_site}` : ""}
-        </div>
-        {resource.description && <p>{resource.description}</p>}
-        {resource.learning_outcomes.length > 0 && (
-          <ul className="outcomes">
-            {resource.learning_outcomes.map((o, i) => (
-              <li key={i}>{o}</li>
-            ))}
-          </ul>
+        {summary && <p className="entry-summary">{summary}</p>}
+        {expanded && (
+          <div className="entry-details">
+            {description && description !== summary && <p>{description}</p>}
+            {resource.learning_outcomes.length > 0 && (
+              <ul className="outcomes">
+                {resource.learning_outcomes.map((o, i) => (
+                  <li key={i}>{o}</li>
+                ))}
+              </ul>
+            )}
+            {resource.materials && (
+              <p className="materials">
+                <strong>Materials:</strong> {resource.materials}
+              </p>
+            )}
+          </div>
         )}
-        {resource.materials && (
-          <p className="materials">
-            <strong>Materials:</strong> {resource.materials}
-          </p>
+        {hasMore && (
+          <button
+            className="entry-more"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+          >
+            {expanded ? "Less" : "Details"}
+          </button>
         )}
         <div className="udl-row">
           {resource.udl_principles.map((p) => (
             <span
               key={p}
               className={`udl-pill udl-${p}${rationale[p] ? " has-why" : ""}`}
-              title={rationale[p] ? `Why ${UDL_LABELS[p as UdlPrinciple] ?? p}: ${rationale[p]}` : undefined}
+              title={
+                rationale[p]
+                  ? `Why ${UDL_LABELS[p as UdlPrinciple] ?? p}: ${rationale[p]}`
+                  : undefined
+              }
             >
               {UDL_LABELS[p as UdlPrinciple] ?? p}
               {rationale[p] ? " ⓘ" : ""}

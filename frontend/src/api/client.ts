@@ -46,6 +46,12 @@ export interface LibraryStats {
 export interface ResourceListResponse {
   total: number;
   items: Resource[];
+  /** Query words the library has nothing for — shown so a search that can't
+   *  be answered exactly says which part it couldn't answer. */
+  unmatched_terms?: string[];
+  matched_terms?: string[];
+  /** True when the dead terms had to be dropped to return anything at all. */
+  broadened?: boolean;
 }
 
 export interface NameCount {

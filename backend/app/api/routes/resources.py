@@ -71,11 +71,17 @@ def search_resources(
     offset: int = 0,
     db: Session = Depends(get_db),
 ):
-    total, items = resource_service.list_resources(
+    total, items, meta = resource_service.list_resources(
         db, q, subject, grade_band, resource_type, scope, publisher, granularity,
         cost, source_site, udl, tag, standard, age, favorite, limit, offset,
     )
-    return ResourceListOut(total=total, items=[_to_out(r) for r in items])
+    return ResourceListOut(
+        total=total,
+        items=[_to_out(r) for r in items],
+        matched_terms=meta.get("matched_terms", []),
+        unmatched_terms=meta.get("unmatched_terms", []),
+        broadened=meta.get("broadened", False),
+    )
 
 
 @router.post("/resources", response_model=ResourceOut, status_code=201)

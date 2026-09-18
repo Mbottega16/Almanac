@@ -8,6 +8,7 @@ from app.models.resource import Resource, resource_tags, resource_udl
 from app.models.standard import Standard, resource_standards
 from app.models.tag import Tag
 from app.models.udl import UDL_PRINCIPLES, UdlPrinciple
+from app.services import search
 from app.services.links import canonical_link
 
 # Pull recognisable standard codes out of the free-text `standards` field so
@@ -133,7 +134,6 @@ def _apply_fields(db: Session, resource: Resource, data) -> None:
 
 
 def _base_query(
-    q: str | None = None,
     subject: str | None = None,
     grade_band: str | None = None,
     resource_type: str | None = None,
@@ -148,18 +148,10 @@ def _base_query(
     age: int | None = None,
     favorite: bool | None = None,
 ):
+    """Hard filters only. Free-text `q` is not a filter here — it's a ranking
+    problem, handled by `app.services.search` so that a query which matches
+    nothing exactly can still fall back to what the library does have."""
     stmt = select(Resource)
-    if q:
-        like = f"%{q}%"
-        stmt = stmt.where(
-            (Resource.title.ilike(like))
-            | (Resource.description.ilike(like))
-            | (Resource.link.ilike(like))
-            | (Resource.standards.ilike(like))
-            | (Resource.learning_outcomes.ilike(like))
-            | (Resource.materials.ilike(like))
-            | (Resource.publisher.ilike(like))
-        )
     if subject:
         stmt = stmt.where(Resource.subject == subject)
     if grade_band:
@@ -216,15 +208,27 @@ def list_resources(
     favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
-) -> tuple[int, list[Resource]]:
+) -> tuple[int, list[Resource], dict]:
+    """Returns (total, page, search_meta). `search_meta` is empty for a plain
+    filter browse and describes the query's fate when `q` is set — which
+    terms the library had nothing for, and whether those had to be dropped."""
     stmt = _base_query(
-        q, subject, grade_band, resource_type, scope, publisher, granularity,
+        subject, grade_band, resource_type, scope, publisher, granularity,
         cost, source_site, udl, tag, standard, age, favorite,
     )
-    total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
-    stmt = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
-    items = list(db.execute(stmt).scalars().unique())
-    return total, items
+    if not (q and q.strip()):
+        total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
+        page = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
+        return total, list(db.execute(page).scalars().unique()), {}
+
+    result = search.search(search.load_for_search(db, stmt), q)
+    ranked = result["items"]
+    meta = {
+        "matched_terms": result["matched_terms"],
+        "unmatched_terms": result["unmatched_terms"],
+        "broadened": result["broadened"],
+    }
+    return len(ranked), ranked[offset : offset + limit], meta
 
 
 def get_resource(db: Session, resource_id: int) -> Resource | None:
@@ -386,32 +390,26 @@ def udl_coverage(
 ) -> dict:
     """For a theme search, how many matching resources hit each UDL principle
     and each resource type — so a teacher can see at a glance which of the
-    three principles is thin and needs filling."""
-    match = _base_query(q=q, subject=subject, grade_band=grade_band, tag=tag).subquery()
+    three principles is thin and needs filling.
 
-    total = db.execute(select(func.count()).select_from(match)).scalar_one()
+    Counts the same set the results list shows, ranked search included, so
+    the strip can't claim a different number from the grid below it."""
+    stmt = _base_query(subject=subject, grade_band=grade_band, tag=tag)
+    matched = search.load_for_search(db, stmt)
+    if q and q.strip():
+        matched = search.search(matched, q)["items"]
 
     per_principle = {name: 0 for name in UDL_PRINCIPLES}
-    principle_stmt = (
-        select(UdlPrinciple.name, func.count(func.distinct(match.c.id)))
-        .select_from(match)
-        .join(resource_udl, resource_udl.c.resource_id == match.c.id)
-        .join(UdlPrinciple, UdlPrinciple.id == resource_udl.c.udl_principle_id)
-        .group_by(UdlPrinciple.name)
-    )
-    for name, count in db.execute(principle_stmt).all():
-        per_principle[name] = count
-
     by_type: dict[str, int] = {}
-    type_stmt = (
-        select(match.c.resource_type, func.count())
-        .select_from(match)
-        .where(match.c.resource_type.is_not(None))
-        .group_by(match.c.resource_type)
-        .order_by(func.count().desc())
-    )
-    for rtype, count in db.execute(type_stmt).all():
-        by_type[rtype] = count
+    for resource in matched:
+        for principle in resource.udl_principles:
+            if principle.name in per_principle:
+                per_principle[principle.name] += 1
+        if resource.resource_type:
+            by_type[resource.resource_type] = by_type.get(resource.resource_type, 0) + 1
+
+    total = len(matched)
+    by_type = dict(sorted(by_type.items(), key=lambda kv: -kv[1]))
 
     return {
         "total": total,
