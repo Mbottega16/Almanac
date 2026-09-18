@@ -145,7 +145,8 @@ export default function App() {
             e.preventDefault();
             if (!rolling) handleSurpriseMe();
           }}
-          style={{ marginLeft: "auto", opacity: rolling ? 0.5 : 1 }}
+          className="nav-push"
+          style={{ opacity: rolling ? 0.5 : 1 }}
           title="Open a random resource from the whole library"
         >
           🎲 Surprise me

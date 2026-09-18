@@ -4135,7 +4135,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.literacycenter.net/",
+    "link": "https://readtoday.net/",
     "title": "Literacy Center Early Reading Games",
     "description": "Free multilingual interactive games designed for early literacy development. Covers phonics, sight words, and basic comprehension in multiple languages.",
     "description_source": "generated",
@@ -4165,7 +4165,6 @@
       "engagement",
       "representation"
     ],
-    "link_status": "unreachable",
     "granularity": "specific"
   },
   {
@@ -5554,41 +5553,6 @@
     ],
     "link_status": "ok",
     "granularity": "specific"
-  },
-  {
-    "link": "https://www.ssec.si.edu/classroom-resources",
-    "title": "Smithsonian Science Education Center Classroom Resources",
-    "description": "Research-based lesson plans and units from the Smithsonian Institution covering life, physical, and Earth science aligned to NGSS.",
-    "description_source": "generated",
-    "subject": "Science",
-    "grade_band": "All",
-    "age_min": 5,
-    "age_max": null,
-    "resource_type": "lesson plan",
-    "duration_minutes": null,
-    "materials": "Varies by lesson",
-    "learning_outcomes": [
-      "Students will be able to engage with science phenomena through Smithsonian collections",
-      "Students will be able to apply scientific practices to inquiry"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Smithsonian Science Education Center",
-    "license": "CC BY",
-    "standards": "NGSS aligned",
-    "tags": [
-      "museum resources",
-      "inquiry-based",
-      "ngss",
-      "all subjects"
-    ],
-    "udl_principles": [
-      "engagement",
-      "representation",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
   },
   {
     "link": "https://www.noaa.gov/education/resource-collections/",
@@ -8948,5 +8912,1429 @@
     ],
     "link_status": "ok",
     "granularity": "collection"
+  },
+  {
+    "link": "https://www.misspandachinese.com/",
+    "title": "Miss Panda Chinese",
+    "description": "A Mandarin-immersion resource for young children with short bilingual audio lessons, pronunciation practice, and printable play-books that introduce basic vocabulary through play.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "video",
+    "scope": "lesson",
+    "publisher": "Miss Panda Chinese (Amanda Hsiung-Blodgett)",
+    "duration_minutes": 6,
+    "materials": "None — digital (streaming audio/video)",
+    "learning_outcomes": [
+      "Students will be able to recognize and repeat basic Mandarin greetings and vocabulary.",
+      "Students will be able to identify correct pronunciation and tones for beginner Mandarin words."
+    ],
+    "cost": "freemium",
+    "price_note": "Free trial lesson; full streaming albums, play-books, and tutoring are paid.",
+    "source_site": "Miss Panda Chinese",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "mandarin",
+      "chinese",
+      "early childhood",
+      "songs",
+      "pronunciation"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: playful, short audio lessons hold young learners' attention; representation: bilingual English-Chinese audio pairs sound with meaning",
+    "evidence": "Miss Panda Chinese makes learning Mandarin simple and playful for non-native and heritage learners from the very beginning!"
+  },
+  {
+    "link": "https://rockalingua.com/",
+    "title": "Rockalingua",
+    "description": "A music-based Spanish learning site where teachers can play catchy songs, games, and karaoke videos that walk elementary classes through everyday vocabulary and grammar topics.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "game",
+    "scope": "lesson",
+    "publisher": "Rockalingua",
+    "duration_minutes": null,
+    "materials": "None — digital (songs, games, printable lyric sheets)",
+    "learning_outcomes": [
+      "Students will be able to sing along with and recall high-frequency Spanish vocabulary from a themed song.",
+      "Students will be able to practice new vocabulary through a matching or memory game."
+    ],
+    "cost": "freemium",
+    "price_note": "A selection of songs, videos, and games are free; the full library requires a paid subscription.",
+    "source_site": "Rockalingua",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "spanish",
+      "songs",
+      "elementary",
+      "games",
+      "vocabulary"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: music and karaoke format motivates young learners; representation: vocabulary is presented through song, visuals, and text together",
+    "evidence": "Videos, songs, games and much more!"
+  },
+  {
+    "link": "https://signingtime.com/pages/teachers-and-homeschoolers",
+    "title": "Signing Time — K-3 ASL Classroom Curriculum",
+    "description": "A themed ASL curriculum for early elementary classrooms, pairing videos and songs with lesson plans and printables so teachers can add sign-language vocabulary to daily routines.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Signing Time",
+    "duration_minutes": null,
+    "materials": "Printable activity guides; classroom license needed for full video access",
+    "learning_outcomes": [
+      "Students will be able to produce basic ASL signs for classroom vocabulary (colors, feelings, routines).",
+      "Students will be able to connect a spoken word, its written form, and its ASL sign."
+    ],
+    "cost": "freemium",
+    "price_note": "Some activity guides are free; the full 16-unit K-3 curriculum and video library require a paid individual or site license.",
+    "source_site": "Signing Time",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "asl",
+      "sign language",
+      "elementary",
+      "vocabulary",
+      "classroom curriculum"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "representation: vocabulary is shown orally, visually, and kinesthetically through sign; action_expression: students demonstrate understanding by producing signs rather than only speaking or writing",
+    "evidence": "Signing Time K-3 Classroom Curriculum brings American Sign Language (ASL) into the classroom"
+  },
+  {
+    "link": "https://www.mamalisa.com/",
+    "title": "Mama Lisa's World",
+    "description": "A free, browsable archive of children's songs, nursery rhymes, and folk traditions in dozens of languages, useful for giving elementary students a taste of a new language and its culture through music.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "publisher": "Mama Lisa's World",
+    "duration_minutes": null,
+    "materials": "None — digital (lyrics, translations, some audio/video)",
+    "learning_outcomes": [
+      "Students will be able to recite or sing a traditional children's rhyme in a target language.",
+      "Students will be able to compare a rhyme's version across two languages or cultures."
+    ],
+    "cost": "free",
+    "price_note": "Core site content is free; optional eBooks and print books are sold separately.",
+    "source_site": "Mama Lisa's World",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "multilingual",
+      "songs",
+      "rhymes",
+      "culture",
+      "elementary"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: familiar song and rhyme format draws in young learners; representation: original-language and translated text are shown side by side",
+    "evidence": "Mama Lisa's World, a place for songs, rhymes, and traditions from across the globe for both kids and grown-ups!"
+  },
+  {
+    "link": "https://littlepim.com/",
+    "title": "Little Pim",
+    "description": "A subscription video library that introduces young children to everyday words and phrases in 12 languages through short, character-guided episodes built for repetition and play.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "video",
+    "scope": "lesson",
+    "publisher": "Little Pim",
+    "duration_minutes": null,
+    "materials": "None — digital (streaming video)",
+    "learning_outcomes": [
+      "Students will be able to recognize and repeat everyday words and phrases in a target language.",
+      "Students will be able to associate spoken words with pictures through repeated video exposure."
+    ],
+    "cost": "freemium",
+    "price_note": "Free trial available; ongoing access is $9.99/month or $69.99/year.",
+    "source_site": "Little Pim",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "multilingual",
+      "early childhood",
+      "video",
+      "vocabulary",
+      "immersion"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: short, character-led episodes suit young attention spans; representation: new words are paired with visuals and repetition",
+    "evidence": "Together with Little Pim, your child can learn 360 words and phrases, providing the essential building blocks for language learning."
+  },
+  {
+    "link": "https://www.lifeprint.com/asl101/",
+    "title": "ASL University (Lifeprint)",
+    "description": "A free, self-study ASL curriculum covering grammar, vocabulary, fingerspelling, and Deaf culture across multiple course levels, built by a Deaf educator for independent learners.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Lifeprint / Dr. William Vicars",
+    "duration_minutes": null,
+    "materials": "None — digital (self-study lessons and quizzes)",
+    "learning_outcomes": [
+      "Students will be able to hold a basic conversation in ASL using vocabulary and grammar from ASL 1.",
+      "Students will be able to describe an aspect of Deaf culture or history."
+    ],
+    "cost": "freemium",
+    "price_note": "Self-study lesson content is free; an optional paid tuition track ($483/course) adds tracking and documentation for credit.",
+    "source_site": "Lifeprint.com",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "asl",
+      "sign language",
+      "high school",
+      "deaf culture",
+      "self-study"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "representation: grammar and culture content is presented visually, matching ASL as a visual language; action_expression: students demonstrate mastery through expressive/receptive projects and quizzes",
+    "evidence": "ASLU is a curriculum resource center. We do not offer a degree. We do not claim to prepare individuals for employment."
+  },
+  {
+    "link": "https://www.chinesepod.com/",
+    "title": "ChinesePod",
+    "description": "An audio/video Mandarin lesson library spanning six levels from Newbie to Advanced, giving high schoolers real conversational dialogues plus vocabulary and grammar notes for each lesson.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "video",
+    "scope": "lesson",
+    "publisher": "ChinesePod",
+    "duration_minutes": null,
+    "materials": "None — digital (audio/video, PDF lesson notes on free tier)",
+    "learning_outcomes": [
+      "Students will be able to follow a real-paced Mandarin dialogue at their proficiency level.",
+      "Students will be able to use new vocabulary and grammar patterns from a lesson in their own sentences."
+    ],
+    "cost": "freemium",
+    "price_note": "Free plan gives limited lesson access; full library and features are $29/month.",
+    "source_site": "ChinesePod",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "mandarin",
+      "chinese",
+      "high school",
+      "listening",
+      "conversation"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: real dialogues and level tiers let students choose appropriately challenging content; representation: audio is paired with transcripts, vocabulary lists, and grammar notes",
+    "evidence": "Became a Chinese Mandarin master from a beginner with 4,000+ lessons and self-paced learning."
+  },
+  {
+    "link": "https://www.bonjourdefrance.com/",
+    "title": "Bonjour de France",
+    "description": "A free French-as-a-foreign-language site with grammar, vocabulary, listening, and reading exercises sorted by CEFR level (A1-C1), plus interactive games for extra practice.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "interactive/sim",
+    "scope": "lesson",
+    "publisher": "Bonjour de France",
+    "duration_minutes": null,
+    "materials": "None — digital",
+    "learning_outcomes": [
+      "Students will be able to complete a self-scoring grammar or vocabulary exercise at their CEFR level.",
+      "Students will be able to demonstrate reading or listening comprehension of an authentic French text."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Bonjour de France",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "french",
+      "high school",
+      "grammar",
+      "cefr",
+      "exercises"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "representation: exercises are organized explicitly by CEFR proficiency level; action_expression: self-checking exercises give students immediate feedback on their own answers",
+    "evidence": "Venez apprendre le français en ligne gratuitement avec Bonjour de France"
+  },
+  {
+    "link": "https://www.marugoto-online.jp/info/",
+    "title": "Marugoto Japanese Online Course",
+    "description": "A free, self-paced Japanese course from the Japan Foundation covering CEFR levels A1 through C2, combining recorded conversations and speaking activities so students build real communicative skills, not just vocabulary drills.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "The Japan Foundation",
+    "duration_minutes": null,
+    "materials": "None — digital (requires free Minato account registration)",
+    "learning_outcomes": [
+      "Students will be able to take part in a simple spoken exchange in Japanese at their course level.",
+      "Students will be able to describe an aspect of Japanese culture introduced in a course unit."
+    ],
+    "cost": "free",
+    "price_note": "Requires free registration on the Japan Foundation's Minato e-learning platform.",
+    "source_site": "Japan Foundation (Marugoto)",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "japanese",
+      "high school",
+      "cefr",
+      "speaking",
+      "culture"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: real recorded conversations connect language to authentic situations; action_expression: speaking activities require students to produce language, not just recognize it",
+    "evidence": "Registration (free) to the JF Japanese e-Learning Minato is required to take the Marugoto Japanese Online Course."
+  },
+  {
+    "link": "https://villa-albertine.org/va/professionals/cineschool/",
+    "title": "CinéSchool",
+    "description": "A free nationwide program that gives registered French classes access to curated French-language films by age group, with pre-viewing workbooks and a Padlet discussion space for post-viewing reflection in French.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Villa Albertine / Albertine Foundation",
+    "duration_minutes": null,
+    "materials": "Digital film access, pre-viewing workbook, Padlet account for discussion",
+    "learning_outcomes": [
+      "Students will be able to discuss the themes and culture of a French-language film in French.",
+      "Students will be able to express and justify an opinion in French using structured discussion prompts."
+    ],
+    "cost": "free",
+    "price_note": "Free, but requires teacher registration and eligibility (accredited schools, Alliances Françaises, or FLAM programs).",
+    "source_site": "Villa Albertine",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "french",
+      "high school",
+      "film",
+      "culture",
+      "discussion"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: authentic film content connects language learning to real Francophone culture; representation: pre-viewing workbooks scaffold the film's language and context before viewing",
+    "evidence": "CinéSchool is a free educational film program for young audiences, designed to support French language learning in the United States through French-language cinema."
+  },
+  {
+    "link": "https://www.germanpod101.com/",
+    "title": "GermanPod101",
+    "description": "An audio/video German lesson library that walks students through real conversations at progressive levels, with vocabulary lists and study tools for independent practice.",
+    "description_source": "generated",
+    "subject": "World Languages",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "video",
+    "scope": "lesson",
+    "publisher": "Innovative Language Learning (GermanPod101)",
+    "duration_minutes": null,
+    "materials": "None — digital",
+    "learning_outcomes": [
+      "Students will be able to follow a real-paced German conversation at their proficiency level.",
+      "Students will be able to use new vocabulary from a lesson in a short spoken or written exchange."
+    ],
+    "cost": "freemium",
+    "price_note": "Free tier available; premium tiers add extra tools and a Premium PLUS tier includes teacher access.",
+    "source_site": "GermanPod101",
+    "license": "Not stated on site",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "german",
+      "high school",
+      "listening",
+      "conversation",
+      "vocabulary"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: real conversational audio gives purpose beyond vocabulary drilling; representation: lessons pair audio with vocabulary lists and study notes",
+    "evidence": "Our lessons take you by the hand and guide you through real German conversations."
+  },
+  {
+    "link": "https://kinderart.com/art-lessons/painting/showers/",
+    "title": "Raindrop Painting",
+    "description": "A K-2 painting activity where children sprinkle powdered tempera paint onto paper, then set it outside so falling rain blends and spreads the color into one-of-a-kind patterns.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "KinderArt",
+    "duration_minutes": null,
+    "materials": "Heavy paper, powdered tempera paint, shaker bottles, newspaper/plastic sheeting",
+    "learning_outcomes": [
+      "Students will be able to apply powdered paint to paper in an intentional pattern.",
+      "Students will be able to observe and describe how water changes a painted surface."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "KinderArt.com",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "painting",
+      "process-art",
+      "nature",
+      "k-2",
+      "weather"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students physically apply and manipulate paint materials to create an original piece; engagement: novelty of nature interacting with art hooks interest",
+    "evidence": "This activity shows kids how they can work with Mother Nature to create original works of raindrop art."
+  },
+  {
+    "link": "https://www.deepspacesparkle.com/apple-art-project/",
+    "title": "Autumn Apples: Cut-Out Apple Art for Kinders",
+    "description": "A kindergarten-level lesson where students mix primary colors of tempera paint, cut out their painted apple shapes, and arrange them into a textured fall collage.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Deep Space Sparkle",
+    "duration_minutes": null,
+    "materials": "Colored/white paper, oil and chalk pastels, tempera paint (primary colors), scissors, glue, burlap or craft paper",
+    "learning_outcomes": [
+      "Students will be able to mix primary colors to create new hues.",
+      "Students will be able to cut and arrange painted shapes into a collage composition."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Deep Space Sparkle",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "painting",
+      "collage",
+      "color-mixing",
+      "kindergarten",
+      "fall"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students mix paint and physically cut/assemble their own collage; engagement: seasonal theme (apples/fall) connects to a familiar experience",
+    "evidence": "The children had fun anticipating what would become of the bright red apple."
+  },
+  {
+    "link": "https://artprojectsforkids.org/draw-a-bear-head/",
+    "title": "How to Draw a Bear Face",
+    "description": "A free step-by-step directed-drawing tutorial that walks young students through building a bear's face from simple circles and shapes, then coloring the finished portrait.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Art Projects for Kids",
+    "duration_minutes": null,
+    "materials": "Pencil, eraser, paper, black marker, crayons or colored pencils",
+    "learning_outcomes": [
+      "Students will be able to break a complex form into basic shapes to draw it.",
+      "Students will be able to complete a finished drawing using line and color."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Art Projects for Kids",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "drawing",
+      "directed-drawing",
+      "animals",
+      "k-2"
+    ],
+    "udl_principles": [
+      "action_expression"
+    ],
+    "udl_rationale": "action_expression: students draw and color an original piece by following sequenced, achievable steps",
+    "evidence": "Beginner artists need some simple projects to get started, so this How to Draw a Bear Face tutorial is a good choice for them."
+  },
+  {
+    "link": "https://kinderart.com/grades-3-5/emotion/",
+    "title": "Emotion Painting",
+    "description": "A grades 3-5 lesson where students warm up with pencil sketches, then use color, line, and brushwork to paint an abstract piece that expresses a specific feeling.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "KinderArt",
+    "duration_minutes": null,
+    "materials": "Heavy paper or canvas, acrylic or tempera paint, brushes, water containers, mixing trays, pencils",
+    "learning_outcomes": [
+      "Students will be able to translate an emotion into color and mark-making choices.",
+      "Students will be able to create an abstract painting that communicates a specific feeling."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "KinderArt.com",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "painting",
+      "abstract-art",
+      "emotions",
+      "3-5",
+      "self-expression"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students generate and paint original abstract compositions; engagement: personal emotional connection increases investment in the work",
+    "evidence": "Students will gain an understanding of how much of a role emotion plays in artmaking as they create paintings based on feelings."
+  },
+  {
+    "link": "https://buffaloakg.org/learn-discover/educators/lesson-plans/contrasting-styles",
+    "title": "Contrasting Styles: Sculpting Animals in an Artist's Voice",
+    "description": "Students compare how Degas, Nevelson, and Marini each sculpted a horse in a different style, then build their own animal sculpture modeled on one artist's approach.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Buffalo AKG Art Museum",
+    "duration_minutes": null,
+    "materials": "Not itemized on page — sculpture medium of teacher's choice (e.g., clay, wire, found objects)",
+    "learning_outcomes": [
+      "Students will be able to compare how different artists sculpt the same subject in distinct styles.",
+      "Students will be able to build an original animal sculpture in the manner of a chosen artist."
+    ],
+    "cost": "free",
+    "price_note": "Free PDF download",
+    "source_site": "Buffalo AKG Art Museum",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "sculpture",
+      "3-5",
+      "animals",
+      "art-history-connection"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "representation"
+    ],
+    "udl_rationale": "action_expression: students build a physical 3D sculpture in a chosen style; representation: multiple artist examples show the same subject rendered different ways",
+    "evidence": "While Edgar Degas, Louise Nevelson, and Marino Marini each have a unique artistic style and process, each has used the horse as a subject."
+  },
+  {
+    "link": "https://www.crayola.com/lesson-plans/line-up-for-art-lesson-plan",
+    "title": "Line Up for Art",
+    "description": "A lesson introducing line as an art element, where students study how Van Gogh and Monet used different line types, then create their own marker drawing built entirely from varied lines.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Crayola",
+    "duration_minutes": null,
+    "materials": "Crayola markers, paper",
+    "learning_outcomes": [
+      "Students will be able to identify and name different types of line (straight, curved, dotted, zigzag).",
+      "Students will be able to compose an original drawing using varied line types."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Crayola Education",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "drawing",
+      "line",
+      "elements-of-art",
+      "3-5"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "representation"
+    ],
+    "udl_rationale": "action_expression: students draw an original composition using the line types studied; representation: comparing two artists' use of line before creating",
+    "evidence": "Line, as an art element, has been called the backbone of art."
+  },
+  {
+    "link": "https://kinderart.com/art-lessons/painting/foilart/",
+    "title": "Foil Etching",
+    "description": "A middle-school-ready printmaking-style project where students paint soap-tinted paint onto foil, then scratch a design into the surface with a popsicle stick to reveal a shiny etched image.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "KinderArt",
+    "duration_minutes": null,
+    "materials": "Cardboard, aluminum foil, tape, dark tempera or acrylic paint, dish soap, paintbrush, popsicle stick, mat board",
+    "learning_outcomes": [
+      "Students will be able to prepare a foil surface for an etching technique.",
+      "Students will be able to scratch a designed image into a painted surface to create contrast and detail."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "KinderArt.com",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "printmaking",
+      "etching",
+      "mixed-media",
+      "6-8"
+    ],
+    "udl_principles": [
+      "action_expression"
+    ],
+    "udl_rationale": "action_expression: students use a scratching/etching technique to physically produce an original image",
+    "evidence": "By using aluminum foil instead of paper, students will create fabulous (and shiny) works of art."
+  },
+  {
+    "link": "https://buffaloakg.org/learn-discover/educators/lesson-plans/creating-print-line-etchings",
+    "title": "Creating a Print: Line Etchings",
+    "description": "Inspired by Georges Braque's Cubist prints, students draw into a foam board, ink it with a brayer, and press paper onto it to pull their own relief print.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Buffalo AKG Art Museum",
+    "duration_minutes": null,
+    "materials": "Pencils, Scratch-Foam boards, printing paper, printmaking ink, brayers, inking surface (tile/plexiglass/tray)",
+    "learning_outcomes": [
+      "Students will be able to carve a design into a printing plate using line.",
+      "Students will be able to ink and pull a relief print from their own plate."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Buffalo AKG Art Museum",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "printmaking",
+      "etching",
+      "6-8",
+      "relief-print"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "representation"
+    ],
+    "udl_rationale": "action_expression: students carve, ink, and pull their own print by hand; representation: studying Braque's technique before students attempt it themselves",
+    "evidence": "Etching is a printmaking technique. To begin, a metal plate is treated in an acid-resistant wax-like coating."
+  },
+  {
+    "link": "https://www.crayola.com/lesson-plans/bridget-riley-inspired-op-art-lesson-plan",
+    "title": "Bridget Riley-Inspired Op Art",
+    "description": "Students study Bridget Riley's optical-illusion paintings, then design their own op art piece by filling shapes with precise straight or curved line patterns.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Crayola",
+    "duration_minutes": null,
+    "materials": "Crayola washable fine line markers, paper",
+    "learning_outcomes": [
+      "Students will be able to explain how repeated line patterns create the illusion of movement.",
+      "Students will be able to design an original op art composition."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Crayola Education",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "drawing",
+      "op-art",
+      "optical-illusion",
+      "6-8"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "representation"
+    ],
+    "udl_rationale": "action_expression: students design and execute a precise original op-art pattern; representation: Bridget Riley's work is studied as a model before creating",
+    "evidence": "Discuss op art, an abstract style that creates optical illusions that became very popular in the 1960s."
+  },
+  {
+    "link": "https://caffeinatedj.com/music-composition-activities-for-lower-elementary/",
+    "title": "Music Composition Activities for Lower Elementary",
+    "description": "A K-2 music teacher's guide to three low-stress composing activities: building rhythm patterns on a 1x4 matrix with body percussion, sticker-based high/low staff composition, and simple ostinato creation.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Caffeinated DJ",
+    "duration_minutes": null,
+    "materials": "Printable matrix/staff worksheets, stickers, body percussion or classroom percussion instruments",
+    "learning_outcomes": [
+      "Students will be able to compose a short rhythm pattern using a visual matrix.",
+      "Students will be able to notate a simple high/low melodic pattern on a staff."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Caffeinated DJ",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "music-composition",
+      "rhythm",
+      "k-2",
+      "body-percussion"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students originate and perform their own rhythm/melody patterns; engagement: low-stakes, playful formats (stickers, body percussion) lower anxiety around composing",
+    "evidence": "Music composition activities in lower elementary music class can be…tricky."
+  },
+  {
+    "link": "https://caffeinatedj.com/music-composition-activities-for-upper-elementary/",
+    "title": "Music Composition Activities for Upper Elementary",
+    "description": "A grades 3-5 guide to three composing activities: building a repeating ostinato, writing a 16-beat rhythm piece on a 4x4 matrix, and writing new lyrics (a parody) to a familiar song.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Caffeinated DJ",
+    "duration_minutes": null,
+    "materials": "Matrix worksheets, classroom percussion instruments, paper/pencil for lyric writing",
+    "learning_outcomes": [
+      "Students will be able to compose a 16-beat rhythm piece using a grid.",
+      "Students will be able to write and perform an original ostinato or song parody."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Caffeinated DJ",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "music-composition",
+      "rhythm",
+      "songwriting",
+      "3-5"
+    ],
+    "udl_principles": [
+      "action_expression"
+    ],
+    "udl_rationale": "action_expression: students compose original rhythm pieces and lyrics, then perform them on instruments",
+    "evidence": "The composition worksheets in the pictures of this post are part of my free music composition worksheet packet."
+  },
+  {
+    "link": "https://blog.flat.io/a-free-standards-aligned-middle-school-music-unit-nine-lessons-nafme-standards/",
+    "title": "Free Standards-Aligned Middle School Music Unit (9 Lessons)",
+    "description": "A free nine-lesson general music unit where grade 6-8 students compose original melodies, shape them into ternary form, combine pieces into a class ensemble, rehearse, and record a final performance.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Flat for Education / NAfME",
+    "duration_minutes": null,
+    "materials": "Flat for Education account (free trial available), instruments or classroom voice for performance/recording",
+    "learning_outcomes": [
+      "Students will be able to compose an original melody within given constraints.",
+      "Students will be able to combine individual compositions into a rehearsed class ensemble performance."
+    ],
+    "cost": "freemium",
+    "price_note": "Runs inside Flat for Education; usable on a free trial account, no purchase required for the unit itself",
+    "source_site": "Flat for Education (blog.flat.io)",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "music-composition",
+      "ensemble",
+      "6-8",
+      "performance",
+      "nafme"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students compose, rehearse, and record real performances across nine connected lessons; engagement: peer collaboration on a shared ensemble piece builds investment",
+    "evidence": "Every lesson includes: Explicit NAfME National Core Arts Standards references (strand and standard code)"
+  },
+  {
+    "link": "https://dramaresource.com/make-your-own-frog-puppet/",
+    "title": "Make Your Own Frog and Toad Puppet",
+    "description": "A K-2 puppet-making activity from Norwich Puppet Theatre where children construct their own simple frog or toad puppet to use in follow-on drama and storytelling play.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Drama Resource / Norwich Puppet Theatre",
+    "duration_minutes": null,
+    "materials": "Not fully itemized on page — simple puppet-making craft materials (paper/card, glue, scissors) shown in linked video",
+    "learning_outcomes": [
+      "Students will be able to construct a simple hand puppet.",
+      "Students will be able to use their puppet to improvise a character's voice and movement."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Drama Resource",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "puppetry",
+      "drama",
+      "k-2",
+      "craft"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students build a physical puppet and use it to perform; engagement: an animal character puppet motivates imaginative play",
+    "evidence": "The wonderful Norwich Puppet Theatre teach you to make a toad puppet!"
+  },
+  {
+    "link": "https://dramaresource.com/key-stage-two-drama-ideas/",
+    "title": "Key Stage 2 Drama Ideas",
+    "description": "A grades 3-5 collection of ready-to-run drama techniques — including freeze frames, thought-tracking, sound pictures, and sculptor-and-statue — that students use to build and perform their own scenes.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Drama Resource",
+    "duration_minutes": null,
+    "materials": "None required — open space to move; optional classroom instruments for sound pictures",
+    "learning_outcomes": [
+      "Students will be able to create a frozen tableau that communicates a scene or idea.",
+      "Students will be able to build a soundscape collaboratively using voice and simple instruments."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Drama Resource",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "drama",
+      "improvisation",
+      "3-5",
+      "tableau",
+      "key-stage-2"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students physically create tableaus, soundscapes, and improvised dialogue; engagement: partner and small-group formats keep every student performing",
+    "evidence": "Drama is a natural learning method for key stage two pupils."
+  },
+  {
+    "link": "https://www.theatrefolk.com/free-resources",
+    "title": "Free Resources for Middle and High School Theatre Teachers",
+    "description": "A free library of royalty-free monologues and scenes that grades 6-8 students can rehearse and perform in class, for auditions, or for competition.",
+    "description_source": "generated",
+    "subject": "Arts",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Theatrefolk",
+    "duration_minutes": null,
+    "materials": "None — printed scripts only",
+    "learning_outcomes": [
+      "Students will be able to rehearse and perform a monologue or scene from a provided script.",
+      "Students will be able to make character choices in voice, movement, and expression during performance."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Theatrefolk",
+    "license": "All rights reserved",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "drama",
+      "monologues",
+      "scenes",
+      "6-8",
+      "performance"
+    ],
+    "udl_principles": [
+      "action_expression"
+    ],
+    "udl_rationale": "action_expression: students rehearse and physically perform a script in front of an audience",
+    "evidence": "Free resources for use in your classroom. You're welcome to perform these scenes without royalty for auditions, classwork, and competitions such as Thespian IEs."
+  },
+  {
+    "link": "https://www2.heart.org/site/SPageServer?pagename=khc_resources_educational",
+    "title": "Kids Heart Challenge - Educator Resources",
+    "description": "American Heart Association hub of free elementary PE activities pairing jump rope, basketball, and movement games with heart-health, stress-management, and vaping-prevention lessons.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "activity",
+    "scope": "unit",
+    "publisher": "American Heart Association",
+    "duration_minutes": null,
+    "materials": "Jump ropes, basketballs (varies by activity); digital device for online modules",
+    "learning_outcomes": [
+      "Students will be able to identify behaviors that support heart health.",
+      "Students will be able to participate in jump rope and basketball activities that build cardiovascular fitness."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "American Heart Association (heart.org)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "cardiovascular fitness",
+      "jump rope",
+      "basketball",
+      "heart health",
+      "elementary pe"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: gamified team-challenge format with incentives motivates participation; action_expression: offers movement-based (jump rope, basketball) and digital module options for demonstrating learning",
+    "evidence": "Free online resources with topics such as life skills, vaping, mental well-being, physical activity, professional development and more"
+  },
+  {
+    "link": "https://www.pecentral.org/",
+    "title": "PE Central",
+    "description": "A long-running library of teacher-submitted, editor-reviewed physical education lesson plans, assessments, and best practices searchable by grade level and skill.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "PE Central",
+    "duration_minutes": null,
+    "materials": "Varies by lesson",
+    "learning_outcomes": [
+      "Students will be able to access grade-appropriate locomotor, sport-skill, and fitness lesson plans selected by their teacher.",
+      "Teachers will be able to find assessment ideas aligned to specific PE skills and grade levels."
+    ],
+    "cost": "free",
+    "price_note": "Lesson plans, bulletin boards, and assessments are free; the site separately sells optional paid PD courses.",
+    "source_site": "PE Central (pecentral.org)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "pe lesson plans",
+      "elementary",
+      "locomotor skills",
+      "assessment",
+      "teacher submitted"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: large searchable library lets teachers pick lessons matched to varied skill levels; engagement: wide variety of games and challenge formats sustains motivation",
+    "evidence": "Practical, proven lesson plans written and submitted by real teachers and approved by our expert editorial team!"
+  },
+  {
+    "link": "https://www.actionforhealthykids.org/nutrition-toolkit/",
+    "title": "Nutrition Toolkit",
+    "description": "Action for Healthy Kids' collection of elementary-friendly nutrition activities, taste-test guides, and printable tip sheets that teachers can use to build healthy-eating habits.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Action for Healthy Kids (sponsored by Dole)",
+    "duration_minutes": null,
+    "materials": "Varies (recipe ingredients, taste-test samples, printables)",
+    "learning_outcomes": [
+      "Students will be able to identify a variety of fruits and vegetables through taste-test activities.",
+      "Students will be able to explain simple strategies for building a healthy plate."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Action for Healthy Kids (actionforhealthykids.org)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "nutrition",
+      "healthy eating",
+      "taste test",
+      "elementary health"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: hands-on taste tests and morning-announcement tie-ins make nutrition concrete and fun; representation: mixes recipes, tip sheets, and posters so the same concept is shown multiple ways",
+    "evidence": "Eating better helps improve kids' learning, behavior, and emotional health, so start building healthy habits with these recipes, resources, and ideas on a variety of topics."
+  },
+  {
+    "link": "https://www.uab.edu/icac/images/4th_Grade_Lesson_Plans/Science/Body_Systems_Prezi_Lesson_Plan.pdf",
+    "title": "Body Systems (UAB 4th-5th Grade Lesson Plan)",
+    "description": "A University of Alabama at Birmingham lesson plan spanning several one-hour class sessions where grade 4-5 students research one organ system in groups and build a Prezi presentation to teach classmates.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "3-5",
+    "age_min": 9,
+    "age_max": 11,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "University of Alabama at Birmingham (UAB)",
+    "duration_minutes": null,
+    "materials": "Computer, science/reference books, internet access, classroom Prezi account",
+    "learning_outcomes": [
+      "Students will be able to identify the major organ systems and the organs within each system.",
+      "Students will be able to create and present a Prezi describing the function of one body system."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "UAB Institute for Computer Assisted Courses (uab.edu)",
+    "license": "Not specified on page",
+    "standards": "Alabama Science (4) 6.1; Alabama Science (5) 8; Alabama Technology (3-5) 2, 12",
+    "granularity": "specific",
+    "tags": [
+      "human body",
+      "organ systems",
+      "science",
+      "prezi",
+      "group project"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: students choose how to research and build their Prezi to demonstrate learning; engagement: group research and peer-teaching format adds collaboration and choice",
+    "evidence": "The class will learn about tissues, organs, and the major organ systems of our body. They will use technology presentations to share the information they have learned."
+  },
+  {
+    "link": "https://www.sja.org.uk/get-advice/first-aid-lesson-plans/key-stage-2/",
+    "title": "Key Stage 2 First Aid Lesson Plans",
+    "description": "Free downloadable first-aid lesson plans from the UK charity St John Ambulance covering choking, bleeding, burns, and calling for help, written for students ages 7-11.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "3-5",
+    "age_min": 7,
+    "age_max": 11,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "St John Ambulance",
+    "duration_minutes": null,
+    "materials": "None required; printable scenario cards",
+    "learning_outcomes": [
+      "Students will be able to describe the steps to take when someone is choking, bleeding, or has a burn.",
+      "Students will be able to explain when and how to call for emergency help."
+    ],
+    "cost": "free",
+    "price_note": "Not an accredited or certified qualification; for classroom teaching only.",
+    "source_site": "St John Ambulance (sja.org.uk)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "first aid",
+      "emergency response",
+      "safety",
+      "choking",
+      "bleeding"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: scenario cards and practical demonstrations make emergencies concrete and low-stakes to practice; representation: topics broken into short, focused lesson plans by emergency type",
+    "evidence": "These resources are not accredited. They must not be used as a substitute for statutory workplace first aid qualifications."
+  },
+  {
+    "link": "https://dpi.wi.gov/sites/default/files/imce/sspw/pdf/Grades_3-5_Mental_Health_Literacy_Instructional_Units.pdf",
+    "title": "Grades 3-5 Mental Health Literacy Instructional Units: Managing My Mental Health",
+    "description": "A free, state-published six-lesson unit from Wisconsin DPI teaching elementary students to name emotions, identify trusted adults, and use coping strategies for stress.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Wisconsin Department of Public Instruction",
+    "duration_minutes": null,
+    "materials": "Printable worksheets; no special equipment",
+    "learning_outcomes": [
+      "Students will be able to name and describe a range of emotions.",
+      "Students will be able to identify trusted adults and coping strategies for managing stress."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Wisconsin Department of Public Instruction (dpi.wi.gov)",
+    "license": "Not specified on page",
+    "standards": "Aligned to Wisconsin Social and Emotional Learning (SEL) Competencies (DPI, 2018)",
+    "granularity": "specific",
+    "tags": [
+      "mental health",
+      "emotions",
+      "coping skills",
+      "sel",
+      "elementary"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: includes warm-up, movement-moment, and mindful-moment segments to vary energy and sustain interest; action_expression: mixes whole-class discussion, small-group, and independent work formats",
+    "evidence": "Mental health includes emotional, psychological, and social well-being, and it affects how people think, feel, and act."
+  },
+  {
+    "link": "https://dpi.wi.gov/sites/default/files/imce/sspw/pdf/Grades_9-12_Mental_Health_Literacy_Instructional_Units.pdf",
+    "title": "Grades 9-12 Mental Health Literacy Instructional Units: Let's Talk About Mental Health",
+    "description": "A free, state-published eight-lesson high school unit from Wisconsin DPI covering stress management, personal boundaries, and how to start conversations about mental health.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Wisconsin Department of Public Instruction",
+    "duration_minutes": null,
+    "materials": "Printable worksheets; no special equipment",
+    "learning_outcomes": [
+      "Students will be able to develop a personal stress-management plan.",
+      "Students will be able to identify healthy boundaries and describe how to start a conversation about mental health with a trusted adult."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Wisconsin Department of Public Instruction (dpi.wi.gov)",
+    "license": "Not specified on page",
+    "standards": "Aligned to Wisconsin Social and Emotional Learning (SEL) Competencies",
+    "granularity": "specific",
+    "tags": [
+      "mental health",
+      "stress management",
+      "boundaries",
+      "sel",
+      "high school"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: mindful-moment and movement segments break up direct instruction; action_expression: students build a personal stress-management plan rather than a single fixed answer",
+    "evidence": "This unit of instruction aims to increase mental health literacy in grades 9-12 students using a skills-based health approach."
+  },
+  {
+    "link": "https://nida.nih.gov/research-topics/parents-educators/lesson-plans-and-activities",
+    "title": "Lesson Plans and Activities (NIDA)",
+    "description": "NIH's National Institute on Drug Abuse searchable library of free, science-based lesson plans on drug effects, overdose response, and evaluating health information for teens.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "National Institute on Drug Abuse (NIH)",
+    "duration_minutes": null,
+    "materials": "Varies by lesson; digital device",
+    "learning_outcomes": [
+      "Students will be able to evaluate the reliability of health information sources.",
+      "Students will be able to describe how to recognize and respond to a drug overdose."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Institute on Drug Abuse (nida.nih.gov)",
+    "license": "Not specified on page",
+    "standards": "Based on national science and health education standards",
+    "granularity": "collection",
+    "tags": [
+      "substance abuse prevention",
+      "drug education",
+      "overdose response",
+      "health literacy"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: searchable finder lets teachers filter by grade and topic to match complexity level; engagement: real overdose-response and media-literacy scenarios connect to teens' actual decisions",
+    "evidence": "All lessons are based on national science and education standards and were developed by scientists from leading universities and the National Institute on Drug Abuse."
+  },
+  {
+    "link": "https://agclassroom.org/matrix/lessons/666/",
+    "title": "What's On The Nutrition Facts Label?",
+    "description": "A free high school lesson from the National Agricultural Literacy Curriculum Matrix that has students use real food packages to interpret Nutrition Facts labels and compare products.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "National Agriculture in the Classroom",
+    "duration_minutes": null,
+    "materials": "8-10 food packages, handouts, scissors, glue, colored pencils, Food Label Smarts video",
+    "learning_outcomes": [
+      "Students will be able to interpret calories, nutrients, and serving information on a Nutrition Facts label.",
+      "Students will be able to use Nutrition Facts labels to compare the nutritional value of foods."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Agriculture in the Classroom (agclassroom.org)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "nutrition",
+      "food labels",
+      "fda",
+      "high school health"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: hands-on ranking and sorting of real food packages instead of a worksheet alone; action_expression: foldable notes let students organize and record findings in their own way",
+    "evidence": "Nutrition labels are standardized and regulated by the Food and Drug Administration (FDA) for consistency and accuracy."
+  },
+  {
+    "link": "https://sparkpe.org/free-lesson-downloads/",
+    "title": "Free SPARK PE Lesson Downloads",
+    "description": "A collection of no-cost sample physical education lesson plans from SPARK, filterable by grade band including high school, drawn from their evidence-based curriculum.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "SPARK PE (School Specialty)",
+    "duration_minutes": null,
+    "materials": "Varies by activity (e.g., cones, balls)",
+    "learning_outcomes": [
+      "Students will be able to perform skill-specific drills for a sampled sport or fitness unit.",
+      "Students will be able to sustain moderate-to-vigorous physical activity during a SPARK-style class."
+    ],
+    "cost": "freemium",
+    "price_note": "These sample lessons are free; SPARK's full curriculum packages are paid ($199-$499+).",
+    "source_site": "SPARK PE (sparkpe.org)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "physical education",
+      "fitness",
+      "sample lesson",
+      "high school pe"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: high-MVPA game formats are designed to keep all students active rather than waiting in line",
+    "evidence": "Browse a collection of free SPARK Physical Education and Physical Activity lesson plans."
+  },
+  {
+    "link": "https://www.nestfoundation.org/high-school-lessons/consent-and-healthy-relationships",
+    "title": "Consent and Healthy Relationships",
+    "description": "A free high school lesson from NEST Foundation's prevention curriculum where students unpack what consent means and examine healthy versus unhealthy relationship dynamics.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "NEST Foundation",
+    "duration_minutes": null,
+    "materials": "Discussion-based; Solutions Mural materials",
+    "learning_outcomes": [
+      "Students will be able to define consent and identify what its absence looks like.",
+      "Students will be able to distinguish characteristics of healthy versus unhealthy relationships."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "NEST Foundation (nestfoundation.org)",
+    "license": "Not specified on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "consent",
+      "healthy relationships",
+      "power and privilege",
+      "high school health"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: collaborative Solutions Mural activity gives students an ongoing, visible way to contribute ideas; representation: discussion is framed through multiple relationship types (romantic, platonic, professional, familial)",
+    "evidence": "There are many different types of relationships (romantic, platonic, professional, familial, friend)."
+  },
+  {
+    "link": "https://operationprevention.discoveryeducation.com/",
+    "title": "Operation Prevention",
+    "description": "A free DEA and Discovery Education hub of opioid-prevention lesson plans, videos, and a virtual field trip that teaches high schoolers the science of addiction.",
+    "description_source": "generated",
+    "subject": "PE / Health",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "unit",
+    "scope": "unit",
+    "publisher": "Drug Enforcement Administration (DEA) and Discovery Education",
+    "duration_minutes": null,
+    "materials": "Digital device; printable activity guides",
+    "learning_outcomes": [
+      "Students will be able to explain how opioids affect the brain and body.",
+      "Students will be able to identify strategies to resist pressure to misuse prescription drugs."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Discovery Education / getsmartaboutdrugs.gov",
+    "license": "Not specified on page",
+    "standards": "Aligned to national health and science standards",
+    "granularity": "collection",
+    "tags": [
+      "opioid prevention",
+      "substance abuse",
+      "addiction science",
+      "virtual field trip"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: virtual field trips and an interactive e-learning module replace a straight lecture on drug science; representation: content delivered through video, digital lessons, and hands-on investigations",
+    "evidence": "Join the DEA and Discovery Education to support the critical mission of preventing opioid misuse today in every school, every home, and every state."
   }
 ]

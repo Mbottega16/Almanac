@@ -948,3 +948,63 @@ nav a {
 .stats-breakdowns ul { list-style: none; padding: 0; font-size: 0.85rem; }
 .stats-breakdowns li { display: flex; justify-content: space-between; padding: 0.15rem 0; }
 .stats-breakdowns li span { opacity: 0.6; }
+
+.nav-push {
+  margin-left: auto;
+}
+
+/* --- mobile (2026-09-18) ------------------------------------------------ */
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-push {
+    margin-left: 0;
+  }
+
+  .entries-grid.view-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entries-grid.view-large {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .entry-card.view-list {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem;
+  }
+
+  .entry-card.view-list .entry-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entry-card.view-list .tag-row {
+    margin-left: 0;
+  }
+
+  .filter-row select,
+  .filter-row .age-input {
+    flex: 1 1 auto;
+    min-width: 8rem;
+  }
+
+  .favorites-panel {
+    width: 100vw;
+  }
+}
