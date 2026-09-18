@@ -10336,5 +10336,1320 @@
     ],
     "udl_rationale": "engagement: virtual field trips and an interactive e-learning module replace a straight lecture on drug science; representation: content delivered through video, digital lessons, and hands-on investigations",
     "evidence": "Join the DEA and Discovery Education to support the critical mission of preventing opioid misuse today in every school, every home, and every state."
+  },
+  {
+    "link": "https://bedtimemath.org/daily-math/",
+    "title": "Bedtime Math – Daily Math",
+    "description": "A free daily math problem wrapped in a short, funny real-world story, published every night for families to solve together at three difficulty tiers.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Bedtime Math Foundation",
+    "duration_minutes": 10,
+    "materials": "None — website or free app",
+    "learning_outcomes": [
+      "Students will be able to apply arithmetic operations to a real-world story context.",
+      "Students will be able to choose and justify a strategy at their own challenge level."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Bedtime Math",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "daily math",
+      "family math",
+      "story problems",
+      "number sense",
+      "early elementary"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: frames every problem as a short funny story instead of a bare equation, and offers three difficulty tiers so no one feels stuck or bored",
+    "evidence": "Bedtime Math sends parents a fun, new math problem every day on our website and on our free app."
+  },
+  {
+    "link": "https://www.roomrecess.com/pages/MathGamesForKids.html",
+    "title": "RoomRecess Math Games",
+    "description": "A free, ad-light arcade of dozens of short arithmetic and number-sense games for young kids, built by a former third-grade teacher and sorted by grade level.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "game",
+    "scope": "lesson",
+    "publisher": "RoomRecess",
+    "duration_minutes": 10,
+    "materials": "Computer or tablet with internet browser",
+    "learning_outcomes": [
+      "Students will be able to practice addition, subtraction, and number patterns through timed game play.",
+      "Students will be able to self-select a game matched to their skill level."
+    ],
+    "cost": "free",
+    "price_note": "No registration or fees required",
+    "source_site": "RoomRecess.com",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "arcade games",
+      "number sense",
+      "fact fluency",
+      "early elementary",
+      "no login"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: arcade-style games with playful themes (zombies, missiles, tic-tac-toe) turn fact practice into something kids choose to play",
+    "evidence": "These math games help kids learn essential math standards in a fun and engaging way."
+  },
+  {
+    "link": "https://www.prodigygame.com/main-en/prodigy-math",
+    "title": "Prodigy Math",
+    "description": "A free fantasy role-playing game where students battle monsters and explore a map by solving adaptive math problems matched to their grade level.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "K-2",
+    "age_min": 6,
+    "age_max": 9,
+    "resource_type": "game",
+    "scope": "lesson",
+    "publisher": "Prodigy Education",
+    "duration_minutes": 20,
+    "materials": "Computer or tablet, free account",
+    "learning_outcomes": [
+      "Students will be able to solve grade-level math problems embedded in game combat.",
+      "Students will be able to progress through an adaptive skill map at their own pace."
+    ],
+    "cost": "freemium",
+    "price_note": "Core math content and reporting are free; optional paid membership adds cosmetic upgrades and parent tools, not more math content",
+    "source_site": "Prodigy Education",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "rpg game",
+      "adaptive practice",
+      "wizard",
+      "quests",
+      "grades 1-4"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: math problems are the mechanic for casting spells and winning battles in a game kids choose to keep playing",
+    "evidence": "Adaptive math practice meets engaging game-based learning with Prodigy Math."
+  },
+  {
+    "link": "https://solveme.edc.org/mobiles/",
+    "title": "SolveMe Mobiles",
+    "description": "Free interactive balance-scale puzzles where students figure out the hidden weight of shapes, building algebraic equation-solving intuition without ever seeing an \"x.\"",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "game",
+    "scope": "lesson",
+    "publisher": "Education Development Center (EDC) / Transition to Algebra",
+    "duration_minutes": 15,
+    "materials": "Computer or tablet, larger screen recommended",
+    "learning_outcomes": [
+      "Students will be able to determine unknown values using visual balance reasoning.",
+      "Students will be able to build and share their own equation puzzles."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "SolveMe Puzzles (EDC)",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "algebra readiness",
+      "balance puzzles",
+      "equation solving",
+      "visual math",
+      "logic"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: puzzle-game format with progressive Explorer/Puzzler/Master levels hooks kids before they know they're solving equations; representation: shows algebra visually as a balance instead of only symbols",
+    "evidence": "These puzzles are designed for larger screens, so some aspects of the puzzles may not work as expected."
+  },
+  {
+    "link": "https://www.nbamathhoops.com/",
+    "title": "NBA Math Hoops",
+    "description": "A free basketball-themed board game and app from nonprofit Learn Fresh where students draft real NBA/WNBA players and use their stats to play out simulated games, building math fluency along the way.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "age_min": 9,
+    "age_max": 11,
+    "resource_type": "game",
+    "scope": "lesson",
+    "publisher": "Learn Fresh",
+    "duration_minutes": 30,
+    "materials": "Physical board game or free mobile app",
+    "learning_outcomes": [
+      "Students will be able to use real player statistics to make probability-based decisions.",
+      "Students will be able to compute scores and compare data under game-time pressure."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "NBA Math Hoops (Learn Fresh)",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "sports math",
+      "basketball",
+      "board game",
+      "statistics",
+      "fantasy team"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: real NBA/WNBA players and fantasy-team stakes make the math the fun part, not a barrier to it; action_expression: students choose plays and strategy, expressing math reasoning through gameplay decisions",
+    "evidence": "NBA Math Hoops leverages the game of basketball and the NBA/WNBA brands to build fundamental math skills through a physical and digital basketball-themed board game, a curriculum, and a community program experience."
+  },
+  {
+    "link": "https://www.kenkenpuzzle.com/play_now",
+    "title": "KenKen Puzzles",
+    "description": "Free daily logic-and-arithmetic grid puzzles, like Sudoku crossed with a math fact drill, solved by using each operation to fill a grid without repeating digits.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "game",
+    "scope": "lesson",
+    "publisher": "KenKen Puzzle LLC",
+    "duration_minutes": 10,
+    "materials": "Computer, tablet, or printed puzzle",
+    "learning_outcomes": [
+      "Students will be able to apply the four operations to satisfy grid constraints.",
+      "Students will be able to use logical elimination to solve multi-step puzzles."
+    ],
+    "cost": "freemium",
+    "price_note": "Free to play with ads; ad-free premium subscription available; free weekly puzzle sets for classrooms via the KenKen Classroom Program",
+    "source_site": "KenKenPuzzle.com",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "logic puzzle",
+      "grid puzzle",
+      "arithmetic",
+      "brain teaser",
+      "daily challenge"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: framed as a brain-training puzzle/game rather than a worksheet, with a satisfying single solved state that rewards persistence",
+    "evidence": "Fun, addicting, yet educational. The KenKen iOS and Android apps are perfect for the whole family!"
+  },
+  {
+    "link": "https://robertkaplinsky.com/work/how-many-soda-combinations-are-there-on-a-coke-freestyle/",
+    "title": "How Many Soda Combos Are There on a Coke Freestyle?",
+    "description": "A free real-world problem-based lesson where students figure out how many drink combinations a Coca-Cola Freestyle machine can make, turning a familiar vending machine into a counting investigation.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 9,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Robert Kaplinsky",
+    "duration_minutes": 45,
+    "materials": "Photo/video of Coke Freestyle machine (provided), printable handout",
+    "learning_outcomes": [
+      "Students will be able to systematically count combinations using organized lists or multiplication.",
+      "Students will be able to justify their counting strategy to classmates."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "robertkaplinsky.com",
+    "license": "Not stated on page",
+    "standards": "Common Core standards K-3 (counting/multiplication) as noted on the lesson page",
+    "granularity": "specific",
+    "tags": [
+      "real world math",
+      "problem based learning",
+      "counting",
+      "vending machine",
+      "combinations"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: uses a genuinely familiar object (a soda machine kids love) as the hook for a counting investigation instead of an abstract word problem",
+    "evidence": "The image below shows a woman using a Coca-Cola Freestyle machine. The drink dispenser allows you to take Coca-Cola soft drinks and add flavors to them including:"
+  },
+  {
+    "link": "https://www.visualpatterns.org/",
+    "title": "Visual Patterns",
+    "description": "A free library of 500+ growing visual patterns, built from images rather than numbers, that students describe algebraically by figuring out the rule behind what they see.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Fawn Nguyen",
+    "duration_minutes": 15,
+    "materials": "Printed or projected pattern images",
+    "learning_outcomes": [
+      "Students will be able to identify and generalize a pattern's growth rule.",
+      "Students will be able to write an algebraic expression to predict any step in a sequence."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "VisualPatterns.org",
+    "license": "CC BY 4.0 (Creative Commons Attribution)",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "visual patterns",
+      "algebraic thinking",
+      "pattern recognition",
+      "warm-up",
+      "pre-algebra"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: pattern-spotting has an immediate 'aha' payoff that pulls in students who shut down at symbolic algebra; representation: pairs a visual/pictorial pattern with its numeric and algebraic description",
+    "evidence": "Patterns to grow algebraic thinking and reasoning."
+  },
+  {
+    "link": "https://www.mathcounts.org/resources/problem-week-archive",
+    "title": "MATHCOUNTS Problem of the Week",
+    "description": "A free weekly multi-part challenge problem tied to a current event, holiday, or STEM topic, from the organization behind the national middle-school MATHCOUNTS competition.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "assessment",
+    "scope": "lesson",
+    "publisher": "MATHCOUNTS Foundation",
+    "duration_minutes": 20,
+    "materials": "Printable PDF or online problem",
+    "learning_outcomes": [
+      "Students will be able to solve a multi-part problem connected to a real current event or topic.",
+      "Students will be able to apply competition-style problem-solving strategies."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "MATHCOUNTS Foundation",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "competition math",
+      "problem solving",
+      "weekly challenge",
+      "middle school",
+      "STEM connection"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: ties each problem to a timely, fun hook (a holiday, event, or STEM topic) plus the prestige of a national competition organization",
+    "evidence": "Every week, we release a new multi-part problem related to a holiday, season, special event or cool STEM topic...completely for free!"
+  },
+  {
+    "link": "https://globalmathproject.org/exploding-dots/",
+    "title": "Exploding Dots",
+    "description": "A free, visually driven course that reframes place value, arithmetic, and algebra as a \"machine\" of exploding and imploding dots, with interactive widgets and videos students find genuinely surprising.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "interactive/sim",
+    "scope": "unit",
+    "publisher": "Global Math Project (James Tanton)",
+    "duration_minutes": 30,
+    "materials": "Computer with internet; optional printable guidebook",
+    "learning_outcomes": [
+      "Students will be able to model place value and operations using the dots-and-boxes machine.",
+      "Students will be able to extend the dots model to polynomial arithmetic."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Global Math Project",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "place value",
+      "visual math",
+      "algebra",
+      "interactive widget",
+      "exploding dots"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: described by students as 'mind blowing,' turning routine arithmetic into a strange, fun machine to explore; representation: gives a single visual model that spans place value through polynomial algebra",
+    "evidence": "Here we introduce and interact with a mysterious machine that sets the scene for the entire Exploding Dots story and a transformational mindset for mathematics."
+  },
+  {
+    "link": "https://estimation180.com/",
+    "title": "Estimation 180",
+    "description": "A free daily estimation routine built from real photographs (how tall is this stack, how many staples in that box) where students give a too-low, too-high, and best guess, then see the reveal.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Andrew Stadel",
+    "duration_minutes": 10,
+    "materials": "Projector or screen to show daily photo",
+    "learning_outcomes": [
+      "Students will be able to reason about relative size and benchmark quantities.",
+      "Students will be able to justify an estimate using number sense rather than calculation."
+    ],
+    "cost": "free",
+    "price_note": "Core estimation tasks are free; paid workshop/coaching options also exist",
+    "source_site": "Estimation180.com",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "estimation",
+      "number sense",
+      "daily routine",
+      "real photos",
+      "3-act tasks"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: real photos of everyday objects and a guess-then-reveal structure make a low-stakes routine feel like a game every student can jump into",
+    "evidence": "Estimation tasks that make math reasoning enjoyable and accessible to all students."
+  },
+  {
+    "link": "https://www.gapminder.org/dollar-street/about",
+    "title": "Dollar Street",
+    "description": "A free, photo-based data set of 469+ families across dozens of countries ordered by income, letting students use real data and images to compare living conditions and explore statistics without stereotypes.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "project",
+    "scope": "lesson",
+    "publisher": "Gapminder Foundation",
+    "duration_minutes": 45,
+    "materials": "Computer with internet",
+    "learning_outcomes": [
+      "Students will be able to draw conclusions from a real, sortable data set of photos and income figures.",
+      "Students will be able to critique claims about global income using primary data."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Gapminder",
+    "license": "CC BY 4.0 (Creative Commons)",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "data literacy",
+      "statistics",
+      "real world data",
+      "global income",
+      "photos as data"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: real photos of real families make abstract income statistics feel personal and worth investigating; representation: presents the same data as image, map, and number so students can enter through whichever they understand best",
+    "evidence": "Imagine the world as a street ordered by income. Everyone lives somewhere on the street."
+  },
+  {
+    "link": "https://www.citizenmath.com/",
+    "title": "Citizen Math",
+    "description": "Ready-to-teach, discussion-driven math lessons (formerly Mathalicious) that use math as a lens to debate real, sometimes unresolved issues, for grades 6-12.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "Citizen Math",
+    "duration_minutes": 50,
+    "materials": "Interactive tools and handouts provided per lesson",
+    "learning_outcomes": [
+      "Students will be able to apply grade-level math concepts to analyze a real, debatable issue.",
+      "Students will be able to support a position on an open-ended question using quantitative evidence."
+    ],
+    "cost": "freemium",
+    "price_note": "Free sign-up gives access; some lessons/features may require a paid plan",
+    "source_site": "Citizen Math",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "real world math",
+      "discussion based",
+      "inquiry lessons",
+      "grades 6-12",
+      "current issues"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: uses math to argue about genuinely contested real-world questions instead of illustrating a predetermined answer",
+    "evidence": "When teachers incorporate Citizen Math lessons into their curriculum, they help students think deeply about real issues and turn their classrooms into places for meaningful conversations."
+  },
+  {
+    "link": "https://mathkangaroo.org/mks/practice/free-question-samples/",
+    "title": "Math Kangaroo Free Sample Questions",
+    "description": "Free downloadable sample question sets from the international Math Kangaroo competition, sorted by grade band, giving students a taste of a fun, puzzle-style contest format used in 90+ countries.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "assessment",
+    "scope": "lesson",
+    "publisher": "Math Kangaroo USA",
+    "duration_minutes": 30,
+    "materials": "Printable PDF",
+    "learning_outcomes": [
+      "Students will be able to solve multiple-choice logic and math problems in a competition format.",
+      "Students will be able to gauge their readiness for the Math Kangaroo competition."
+    ],
+    "cost": "free",
+    "price_note": "Sample questions are free; the competition itself and extra prep materials have a fee",
+    "source_site": "Math Kangaroo USA",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "math competition",
+      "puzzle problems",
+      "international contest",
+      "practice questions",
+      "grades 9-12"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: frames problems as a global competition students opt into, with puzzle-style questions designed to be fun rather than routine",
+    "evidence": "Students who work on these type of math problems have better results at the competition."
+  },
+  {
+    "link": "https://momath.org/activities/",
+    "title": "MoMath Activities & Puzzles",
+    "description": "A free collection of hands-on math puzzles and projects from the National Museum of Mathematics, including a Pi Puzzle and a \"Fold and Cut\" challenge designed by mathematician Erik Demaine.",
+    "description_source": "generated",
+    "subject": "Math",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "project",
+    "scope": "lesson",
+    "publisher": "National Museum of Mathematics (MoMath)",
+    "duration_minutes": 30,
+    "materials": "Printable PDFs; scissors/paper for some activities",
+    "learning_outcomes": [
+      "Students will be able to complete a hands-on math puzzle designed by a research mathematician.",
+      "Students will be able to connect a physical construction, such as folding or cutting, to an underlying mathematical principle."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Museum of Mathematics",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "museum resource",
+      "hands-on puzzle",
+      "origami math",
+      "recreational math",
+      "STEM enrichment"
+    ],
+    "udl_principles": [
+      "engagement"
+    ],
+    "udl_rationale": "engagement: brings a real museum's hands-on puzzle culture, built by name mathematicians, into the classroom instead of a textbook exercise",
+    "evidence": "We have created a number of activities and puzzles."
+  },
+  {
+    "link": "https://vision.icivics.org/private-i-history-detectives-civic-virtues-collection/",
+    "title": "Private i History Detectives: Civic Virtues Collection",
+    "description": "A free four-unit inquiry collection built for K-2 classrooms, where students solve mystery questions about civic virtues like perseverance and generosity using real figures such as Benjamin Franklin, Wilma Rudolph, and Clara Barton.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "lesson plan",
+    "scope": "unit",
+    "publisher": "iCivics",
+    "duration_minutes": 40,
+    "materials": "Primary sources, mystery worksheets, free iCivics teacher account",
+    "learning_outcomes": [
+      "Students will be able to explain how a civic virtue such as perseverance or generosity helps a community.",
+      "Students will be able to use a simple primary source to investigate a historical figure's actions."
+    ],
+    "cost": "free",
+    "price_note": "Full lesson downloads require a free iCivics teacher account",
+    "source_site": "iCivics",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "civics",
+      "citizenship",
+      "character",
+      "inquiry",
+      "primary sources"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: mystery-based inquiry with real role models draws young students into an abstract idea; representation: pairs primary-source images with short text on the same civic-virtue concept",
+    "evidence": "How Can Being Civic-Minded Help Me Be a Good Citizen?"
+  },
+  {
+    "link": "https://econedlink.org/resources/toys-for-me/",
+    "title": "Toys for Me: A Lesson on Choice",
+    "description": "A free K-2 economics lesson centered on a read-aloud story about a character named Scarcity, who helps students sort wants from needs and rank toy-store choices with a drag-and-drop sorting activity.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Council for Economic Education (EconEdLink)",
+    "duration_minutes": null,
+    "materials": "Interactive story/poem, drag-and-drop sorting activity, printable version",
+    "learning_outcomes": [
+      "Students will be able to distinguish between a want and a need.",
+      "Students will be able to explain that scarcity means people must choose among the things they want."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "EconEdLink",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "economics",
+      "scarcity",
+      "choice",
+      "needs and wants"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: a playful scarcity character and toy-store story make an abstract economic idea concrete; action_expression: drag-and-drop sorting lets students show understanding without writing",
+    "evidence": "Scarcity means that you always want more than you can have"
+  },
+  {
+    "link": "https://education.nationalgeographic.org/resource/map-skills-for-students/",
+    "title": "Map Skills for Students, Ages 4-8",
+    "description": "A free National Geographic Education collection of hands-on map activities for early elementary students, building spatial-thinking skills like using a compass rose, map key, and cardinal directions through classroom-map projects.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "National Geographic Society",
+    "duration_minutes": null,
+    "materials": "Printable activity summaries, classroom map or globe",
+    "learning_outcomes": [
+      "Students will be able to use basic map language to describe where things are located.",
+      "Students will be able to create a simple map of a familiar space, such as their classroom."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Geographic Education",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "geography",
+      "maps",
+      "spatial thinking"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "representation: spatial concepts are taught with hands-on maps/globes rather than text alone; action_expression: students demonstrate map skills by building and using a real classroom map",
+    "evidence": "Spatial thinking allows students to comprehend and analyze phenomena related to the places and spaces around them, and is one of the most important skills students can develop as they learn geography."
+  },
+  {
+    "link": "https://www.pbslearningmedia.org/resource/our-community-helpers-lesson-plan/civics-for-kids-building-tomorrow-together/",
+    "title": "Our Community Helpers",
+    "description": "A free PBS LearningMedia lesson plan from the Civics for Kids collection that uses video clips and discussion to help K-2 students identify community helper roles and how each one supports the people around them.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "publisher": "PBS LearningMedia / WQED",
+    "duration_minutes": null,
+    "materials": "Video clips, discussion questions, printable extension activity",
+    "learning_outcomes": [
+      "Students will be able to identify roles that community helpers play (e.g., firefighter, mail carrier, doctor).",
+      "Students will be able to explain how a community helper's job supports the people around them."
+    ],
+    "cost": "free",
+    "price_note": "Optional free account to save/organize resources",
+    "source_site": "PBS LearningMedia",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "community helpers",
+      "civics",
+      "careers"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: real-world video clips connect the topic to helpers students recognize from daily life; representation: pairs video with discussion prompts instead of text alone",
+    "evidence": "Our Community Helpers | Civics for Kids | Grades PreK-K, K-2, 3-5 Social Studies Teaching and Lesson Resources"
+  },
+  {
+    "link": "https://www.pebblego.com/us/features",
+    "title": "PebbleGo Social Studies (Grades K-2+)",
+    "description": "A subscription nonfiction database built for early readers, with a Social Studies module covering families, maps, community, and holidays through short read-aloud articles with images and text-to-speech.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "publisher": "Capstone",
+    "duration_minutes": null,
+    "materials": "Subscription database login, read-aloud audio, text-to-speech",
+    "learning_outcomes": [
+      "Students will be able to read or listen to a leveled nonfiction article about a social studies topic such as maps or community.",
+      "Students will be able to use a simple nonfiction database to find facts about a topic."
+    ],
+    "cost": "paid",
+    "price_note": "School/library subscription required; free trial available",
+    "source_site": "PebbleGo",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "database",
+      "nonfiction",
+      "community",
+      "maps",
+      "research skills"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "representation: every article combines read-aloud audio, images, and simplified text; action_expression: built-in tools let students respond by creating, not just reading",
+    "evidence": "PebbleGo is a K-5+ digital learning platform that gives educators the resources to help every student grow their literacy skills while building essential science and social studies knowledge."
+  },
+  {
+    "link": "https://www.flatstanleyproject.com/",
+    "title": "The Flat Stanley Project",
+    "description": "A free, long-running literacy and geography project where students mail a paper cutout of Flat Stanley to people or classrooms elsewhere, then track his travels on a map when he returns with a journal and photos.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "project",
+    "scope": "unit",
+    "publisher": "The Flat Stanley Project (Dale Hubert)",
+    "duration_minutes": null,
+    "materials": "Paper Flat Stanley template, journal, postage",
+    "learning_outcomes": [
+      "Students will be able to locate on a map the places Flat Stanley traveled to.",
+      "Students will be able to describe a place or custom they learned about through a Flat Stanley exchange."
+    ],
+    "cost": "free",
+    "price_note": "Postage applies if mailing to a distant exchange partner",
+    "source_site": "Flat Stanley Project",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "project",
+      "geography",
+      "letter writing",
+      "cultures"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: mailing a personal paper character to real places makes geography personally meaningful; action_expression: students show learning through a journal and map instead of a worksheet",
+    "evidence": "Kids send a flat visitor to a school, a celebrity, a family member, a politician or anyone of interest and the recipient returns the little flat guy along with a completed journal and perhaps some souvenirs such as post cards, photos, or special items."
+  },
+  {
+    "link": "https://www.ixl.com/social-studies/kindergarten",
+    "title": "IXL Kindergarten Social Studies",
+    "description": "A leveled practice tool with dozens of kindergarten social studies skills (community roles, US symbols, map/location words, needs vs. wants, then-and-now) that gives instant right/wrong feedback on each question.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "assessment",
+    "scope": "lesson",
+    "publisher": "IXL Learning",
+    "duration_minutes": null,
+    "materials": "Device with internet access",
+    "learning_outcomes": [
+      "Students will be able to practice identifying community roles, US symbols, and basic location words with instant feedback.",
+      "Students will be able to answer simple sequencing and then-and-now comparison questions."
+    ],
+    "cost": "freemium",
+    "price_note": "Limited free practice per day; full access requires a paid membership",
+    "source_site": "IXL",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "practice",
+      "assessment",
+      "symbols",
+      "geography",
+      "economics"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: instant right/wrong feedback lets students self-correct without waiting on a teacher; engagement: skill categories and progress tracking give a visible sense of mastery",
+    "evidence": "Identify Earth's land features"
+  },
+  {
+    "link": "https://www.studiesweekly.com/social-studies/",
+    "title": "Studies Weekly Social Studies (Kindergarten, Grade 1, Grade 2)",
+    "description": "A paid weekly-periodical social studies curriculum with grade-specific K-2 editions (My World, The World Around Me, Connecting Communities) that pairs a print or online issue with a teacher edition and a built-in weekly assessment.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "unit",
+    "scope": "course",
+    "publisher": "Studies Weekly",
+    "duration_minutes": null,
+    "materials": "Consumable student periodicals, teacher edition, online platform login",
+    "learning_outcomes": [
+      "Students will be able to read a weekly nonfiction periodical connecting a civics, geography, or history topic to their own community.",
+      "Students will be able to complete that issue's built-in weekly assessment."
+    ],
+    "cost": "paid",
+    "price_note": "School/district purchase; contact publisher for a quote",
+    "source_site": "Studies Weekly",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "curriculum",
+      "periodical",
+      "assessment",
+      "civics",
+      "geography",
+      "economics"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: the same content is delivered as a print periodical, teacher slides, and an online platform; engagement: primary sources and real-world connections are built into every weekly issue",
+    "evidence": "Meet the needs of every learner with flexible instructional resources designed to support diverse learning styles and abilities."
+  },
+  {
+    "link": "https://bensguide.gpo.gov/learning-adventures-14more",
+    "title": "Ben's Guide to the U.S. Government — Apprentice Level",
+    "description": "A free government-run civics site with an Apprentice level built for ages 4-8, breaking topics like branches of government, how laws are made, national symbols, and elections into short, icon-led modules.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "publisher": "U.S. Government Publishing Office",
+    "duration_minutes": null,
+    "materials": "Device with internet access",
+    "learning_outcomes": [
+      "Students will be able to name the three branches of the US government in simple terms.",
+      "Students will be able to identify a national symbol and describe why the US holds elections."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Ben's Guide to the U.S. Government",
+    "license": "Not stated on page; likely public domain as a U.S. government work but not confirmed",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "government",
+      "civics",
+      "symbols",
+      "elections",
+      "federal"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: government concepts are broken into short, icon-led modules instead of dense text; engagement: an age-banded 'Apprentice' level signals content is pitched directly at young learners",
+    "evidence": "Learn about the branches of the U.S. Government."
+  },
+  {
+    "link": "https://www.pbslearningmedia.org/resource/around-the-world-media-gallery/lets-go-luna-learn-along-bingo-activity-gallery/",
+    "title": "Let's Go Luna: Around the World",
+    "description": "A free PBS LearningMedia media gallery tied to the Let's Go Luna show, using short video clips of the characters visiting real cities plus a printable bingo/activity sheet to introduce K-2 students to customs and landmarks in other countries.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "PBS KIDS / GBH",
+    "duration_minutes": null,
+    "materials": "Video clips, printable bingo/activity sheet",
+    "learning_outcomes": [
+      "Students will be able to name a custom, landmark, or food from a city the Let's Go Luna characters visit.",
+      "Students will be able to compare one everyday routine in their own community to one shown in another country."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "PBS LearningMedia",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "cultures",
+      "geography",
+      "world",
+      "video"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: an animated, character-led travel story motivates young viewers more than static text; representation: video and a bingo/activity sheet present the same cultural content two ways",
+    "evidence": "Around the World | Let's Go Luna | Grades PreK-K, K-2 Preschool Teaching and Lesson Resources"
+  },
+  {
+    "link": "https://www.kodable.com/learn/unplugged-coding-activities",
+    "title": "Unplugged Coding Activities for Elementary",
+    "description": "A free, printable collection of 20+ screen-free coding activities and worksheets that teach sequencing, loops, conditionals, and functions to K-3 students without any devices.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "unit",
+    "publisher": "Kodable",
+    "duration_minutes": null,
+    "materials": "Printer; most activities need only paper and pencil",
+    "learning_outcomes": [
+      "Students will be able to sequence a series of steps to complete a task without a computer.",
+      "Students will be able to identify and use loops and conditionals in simple unplugged exercises."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Kodable",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "unplugged",
+      "computational-thinking",
+      "sequencing",
+      "loops",
+      "printable"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: hands-on, screen-free format keeps young learners physically engaged; action_expression: printable worksheets let students show understanding through drawing/writing instead of typing",
+    "evidence": "Your Ultimate Guide for Elementary Unplugged Coding Activities includes 20+ projects that teach real coding concepts while emphasizing computer science mindsets - all with minimal prep and zero tech devices required."
+  },
+  {
+    "link": "https://codespark.com/educators",
+    "title": "codeSpark Academy for Educators",
+    "description": "A game-based coding app (The Foos) where K-2 students build their own animations and mini-games using a wordless, icon-based block language, free for verified public-school teachers with a full standards-aligned curriculum and dashboard.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "game",
+    "scope": "course",
+    "publisher": "codeSpark",
+    "duration_minutes": null,
+    "materials": "Tablet, Chromebook, or computer with internet access",
+    "learning_outcomes": [
+      "Students will be able to sequence blocks of code to move a character and complete a puzzle.",
+      "Students will be able to build and share an original animation or simple game using icon-based code blocks."
+    ],
+    "cost": "free",
+    "price_note": "Free for verified teachers/librarians at public schools and nonprofits in North America; homeschool families pay a discounted subscription.",
+    "source_site": "codeSpark",
+    "license": "Not stated on page",
+    "standards": "Aligns to Math, Science, and Computer Science standards (per publisher).",
+    "granularity": "collection",
+    "tags": [
+      "coding app",
+      "wordless",
+      "block-based",
+      "game-based learning",
+      "early-elementary"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: game format with a story and character motivates young players; representation: wordless, icon-based interface removes reading as a barrier to coding for pre/early readers",
+    "evidence": "codeSpark is 100% FREE for verified teachers and librarians of public schools in North America and non-profit organizations."
+  },
+  {
+    "link": "https://sites.bc.edu/codingasanotherlanguage/curricula/scratchjr-curricula/kindergarten-scratchjr/",
+    "title": "Coding as Another Language: ScratchJr Kindergarten Curriculum",
+    "description": "A free, research-based 24-lesson Kindergarten curriculum from Boston College's DevTech group that pairs the free ScratchJr app with literacy-style read-alouds, teaching coding as a form of storytelling; matching 1st- and 2nd-grade versions exist on the same site.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 6,
+    "resource_type": "lesson plan",
+    "scope": "course",
+    "publisher": "DevTech Research Group, Boston College (Prof. Marina Umaschi Bers)",
+    "duration_minutes": 45,
+    "materials": "iPads/tablets with the free ScratchJr app; downloadable printable storybooks and handouts",
+    "learning_outcomes": [
+      "Students will be able to sequence ScratchJr blocks to animate a character and tell a story.",
+      "Students will be able to connect coding concepts like sequence and loop to language and storytelling structures."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Coding as Another Language (DevTech, Boston College)",
+    "license": "CC BY-NC-SA 4.0",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "scratchjr",
+      "block coding",
+      "literacy integration",
+      "kindergarten",
+      "storytelling"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: pairs a picture-based coding app with read-aloud storybooks so pre-readers access content multiple ways; engagement: choice of story themes lets each child personalize their project",
+    "evidence": "The CAL curriculum for Kindergarten has 24 lessons, designed for a total of 18 hours, but can be adapted to any learning setting."
+  },
+  {
+    "link": "https://yes.mos.org/unit/sort-it-out-programming-robots-to-recycle/",
+    "title": "Sort It Out: Programming Robots to Recycle (Kindergarten CS Unit)",
+    "description": "A free, 9-lesson Kindergarten computer-science unit from the Museum of Science's Youth Engineering Solutions program where students give a robot (or an unplugged 'robot' classmate) step-by-step, looped instructions to sort trash and recycling in a park.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 6,
+    "resource_type": "lesson plan",
+    "scope": "unit",
+    "publisher": "Museum of Science, Boston (Youth Engineering Solutions / EiE)",
+    "duration_minutes": 35,
+    "materials": "Optional Code & Go Robot Mouse robot (unplugged pathway needs none); recycling-sorting props",
+    "learning_outcomes": [
+      "Students will be able to write a step-by-step program to direct a robot to complete a sorting task.",
+      "Students will be able to use a repeat/loop instruction to shorten a program with a repeating action."
+    ],
+    "cost": "free",
+    "price_note": "Digital teacher guide and student materials are free to download; the optional physical robot is sold separately.",
+    "source_site": "YES - Youth Engineering Solutions (Museum of Science, Boston)",
+    "license": "Not stated on page",
+    "standards": "Aligned to K-2 Computer Science standards (Data & Analysis; Algorithms & Programming) per publisher.",
+    "granularity": "specific",
+    "tags": [
+      "computer science",
+      "robotics",
+      "unplugged",
+      "recycling",
+      "kindergarten",
+      "algorithms"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ],
+    "udl_rationale": "action_expression: offers both a plugged (physical robot) and unplugged (peer-as-robot) pathway so students can show programming skill in the format that fits them; engagement: the real-world recycling/park cleanup story gives the coding task a concrete purpose",
+    "evidence": "Students learn how to give instructions to a robot. They modify their programs to include repeating instructions to make it easy to tell the robot to do the same action several times."
+  },
+  {
+    "link": "https://tech.aph.org/codeandgo/",
+    "title": "Code & Go Robot Mouse Activity Set",
+    "description": "A screen-free programmable robot mouse and maze set that lets K-2 students physically sequence directional coding cards to guide the mouse through a maze, building a tactile sense of algorithms before ever touching a keyboard.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 4,
+    "age_max": 8,
+    "resource_type": "activity",
+    "scope": "lesson",
+    "publisher": "Learning Resources",
+    "duration_minutes": 30,
+    "materials": "Code & Go Robot Mouse Activity Set (robot, maze grids/walls, coding cards) — physical kit sold separately",
+    "learning_outcomes": [
+      "Students will be able to sequence directional coding cards to program a robot mouse through a maze.",
+      "Students will be able to debug a program by testing and revising the card sequence when the mouse takes a wrong turn."
+    ],
+    "cost": "paid",
+    "price_note": "Physical activity set must be purchased from Learning Resources; this page hosts a free accessible activity guide.",
+    "source_site": "American Printing House for the Blind (APH) Tech — accessible guide for Learning Resources' Code & Go Robot Mouse",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "robot mouse",
+      "tangible coding",
+      "sequencing",
+      "maze",
+      "unplugged-friendly"
+    ],
+    "udl_principles": [
+      "action_expression",
+      "representation"
+    ],
+    "udl_rationale": "action_expression: students physically place coding cards and watch the result immediately, a non-keyboard way to program; representation: directional arrow cards use symbols instead of text, accessible to pre-readers",
+    "evidence": "Coding literally means the transformation of data into a form understandable by a computer-basically, telling a computer what you want it to do."
+  },
+  {
+    "link": "https://kinderlabrobotics.com/ai",
+    "title": "Thinking with KIBO: Introducing AI in Early Grades",
+    "description": "A free 5-lesson curriculum that uses the screen-free KIBO robot to introduce early-elementary students to basic artificial-intelligence ideas, letting them snap together wooden coding blocks to test how a 'thinking' machine makes decisions.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "lesson plan",
+    "scope": "unit",
+    "publisher": "KinderLab Robotics",
+    "duration_minutes": 45,
+    "materials": "KIBO robot kit (sold separately); free printable curriculum guide",
+    "learning_outcomes": [
+      "Students will be able to build a simple KIBO program using sequenced wooden blocks to represent a decision an AI system might make.",
+      "Students will be able to describe one way a computer/AI system 'senses,' 'thinks,' and 'acts' using their KIBO robot as an example."
+    ],
+    "cost": "free",
+    "price_note": "The curriculum guide is a free download; using it fully requires a KIBO robot kit, sold separately.",
+    "source_site": "KinderLab Robotics",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "robotics",
+      "artificial intelligence",
+      "screen-free",
+      "tangible programming",
+      "kibo"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: physically building and running a robot sustains attention better than a screen-based AI demo; action_expression: wooden block programming lets students test ideas by rearranging objects, not writing text",
+    "evidence": "Early STEM education, where children learn at a young age about technology, computers, coding, and AI, is the key to giving children understanding and mastery of AI tools."
+  },
+  {
+    "link": "https://www.barefootcomputing.org/primary-computing-resources",
+    "title": "Barefoot Computing: Primary Computing Resources",
+    "description": "A UK library of 80+ cross-curricular computing lesson plans for ages 5-11, including an Age 5-7 strand of short, often screen-free activities that teach algorithms, sequencing, and debugging alongside subjects like literacy and PE.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 7,
+    "resource_type": "lesson plan",
+    "scope": "course",
+    "publisher": "Barefoot Computing (BCS, The Chartered Institute for IT)",
+    "duration_minutes": null,
+    "materials": "Varies by lesson; many need no computer",
+    "learning_outcomes": [
+      "Students will be able to describe a sequence of instructions as an algorithm.",
+      "Students will be able to spot and fix a mistake (debug) in a simple set of instructions."
+    ],
+    "cost": "free",
+    "price_note": "Free with a teacher account registration.",
+    "source_site": "Barefoot Computing",
+    "license": "Not stated on page",
+    "standards": "Aligned to the UK National Curriculum for Computing, Key Stage 1 (ages 5-7).",
+    "granularity": "collection",
+    "tags": [
+      "unplugged",
+      "cross-curricular",
+      "algorithms",
+      "debugging",
+      "uk curriculum"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: lessons cross-link computing ideas into literacy/PE so the same concept is met in more than one context; engagement: many activities are physical/unplugged, giving movement-based learners a way in",
+    "evidence": "over 80 cross-curricular lesson plans and resources that bring computing to life, with or without a computer"
+  },
+  {
+    "link": "https://www.teachengineering.org/lessons/view/cub-2635-climate-change-cars-k-2-lesson",
+    "title": "Climate Change and Cars (K-2 Lesson)",
+    "description": "A free K-2 lesson from TeachEngineering.org that uses video, guided worksheets, and a think-pair-share discussion to introduce how gas-powered cars affect climate, closing with a formative 'Making Sense' assessment worksheet.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "assessment",
+    "scope": "lesson",
+    "publisher": "TeachEngineering (University of Colorado Boulder, NSF-funded)",
+    "duration_minutes": 45,
+    "materials": "Printed worksheets; internet access for video; no special equipment",
+    "learning_outcomes": [
+      "Students will be able to explain in simple terms how gas-powered cars contribute to climate change.",
+      "Students will be able to complete a 'Making Sense' assessment worksheet showing what they learned about cars and climate."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "TeachEngineering.org",
+    "license": "Not stated on page",
+    "standards": "NGSS-aligned (K-2 Engineering Design / Earth and Human Activity).",
+    "granularity": "specific",
+    "tags": [
+      "climate change",
+      "engineering",
+      "discussion-based",
+      "formative assessment",
+      "k-2"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "udl_rationale": "representation: pairs video with a guided worksheet so the same content is delivered by ear and by print; engagement: think-pair-share discussion lets students process the topic verbally with a partner before writing",
+    "evidence": "Understanding the negative impact gas-powered cars have on the environment empowers engineers to develop alternative modes of transportation."
+  },
+  {
+    "link": "https://stemteachers.asu.edu/stem-lesson-plans/jack-and-beanstalk-activity-2-beanstalk-building",
+    "title": "Jack and the Beanstalk: Beanstalk Building",
+    "description": "A free hands-on K-1 STEM activity from Arizona State University's outreach program where students use simple craft materials to build the tallest possible 'beanstalk,' then measure and compare results with classmates.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 7,
+    "resource_type": "project",
+    "scope": "lesson",
+    "publisher": "Arizona STEM Acceleration Project (ASAP), Arizona State University",
+    "duration_minutes": 40,
+    "materials": "Simple craft/building materials (e.g., straws, tape, paper) and a measuring tool",
+    "learning_outcomes": [
+      "Students will be able to construct a free-standing tower/structure using basic building materials.",
+      "Students will be able to measure their structure's height and compare it with a classmate's using nonstandard or standard units."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Arizona State University STEM Teachers (ASAP outreach)",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "engineering design",
+      "building challenge",
+      "measurement",
+      "storybook connection",
+      "kindergarten"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "engagement: ties the build challenge to a familiar fairy tale so students have a story hook for the task; action_expression: students show learning by building and measuring a physical object rather than writing about it",
+    "evidence": "Students build the tallest beanstalk they can with the provided materials. They then measure it and compare their beanstalk heights."
+  },
+  {
+    "link": "https://www.teachengineering.org/curriculum-search?collection=Lessons",
+    "title": "TeachEngineering: K-2 STEM Curriculum Search",
+    "description": "A free, searchable library of NGSS-aligned K-12 STEM lessons and activities from the University of Colorado Boulder; filtering to the K-2 grade band surfaces dozens of vetted, hands-on engineering-design lessons teachers can browse and download.",
+    "description_source": "generated",
+    "subject": "CS / STEM",
+    "grade_band": "K-2",
+    "age_min": 5,
+    "age_max": 8,
+    "resource_type": "lesson plan",
+    "scope": "course",
+    "publisher": "TeachEngineering (University of Colorado Boulder and partner institutions, NSF-funded)",
+    "duration_minutes": null,
+    "materials": "Varies by lesson",
+    "learning_outcomes": [
+      "Students will be able to complete the steps of the engineering design process (ask, imagine, plan, create, improve) in a chosen K-2 lesson.",
+      "Students will be able to test a simple prototype and redesign it based on the results."
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "TeachEngineering.org",
+    "license": "Not stated on page",
+    "standards": "NGSS Engineering Design; filterable by state and Common Core standards.",
+    "granularity": "collection",
+    "tags": [
+      "engineering design",
+      "curriculum search",
+      "ngss",
+      "k-12 database",
+      "filterable"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ],
+    "udl_rationale": "engagement: topic filters (space, robotics, environment, etc.) let teachers match a lesson to what their class is curious about; representation: each lesson bundles video, images, and text so teachers can pick the best format for their students",
+    "evidence": "Free, standards-aligned STEM curriculum for K-12. A collaboration of the University of Colorado Boulder and partner institutions, funded by the National Science Foundation."
   }
 ]
