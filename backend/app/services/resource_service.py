@@ -2,7 +2,7 @@ import re
 from datetime import datetime, timezone
 
 from sqlalchemy import func, select
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 
 from app.models.resource import Resource, resource_tags, resource_udl
 from app.models.standard import Standard, resource_standards
@@ -63,8 +63,12 @@ _SCALAR_FIELDS = (
     "age_min", "age_max", "resource_type", "scope", "publisher",
     "duration_minutes", "materials",
     "cost", "price_note", "source_site", "license", "standards",
-    "granularity", "udl_rationale",
+    "granularity", "udl_rationale", "audience", "credit_type", "credit_hours",
+    "credit_note",
 )
+
+AUDIENCES = ("students", "educators")
+CREDIT_TYPES = ("ceu", "pd_hours", "certificate", "graduate_credit")
 
 
 def _outcomes_to_str(outcomes: list[str] | None) -> str | None:
@@ -116,11 +120,24 @@ def _resolve_udl(db: Session, names: list[str]) -> list[UdlPrinciple]:
     )
 
 
+def _normalize_audience_fields(resource: Resource) -> None:
+    """Research passes and captures phrase these loosely ("Educators",
+    "none", "CEU"). Snap them to the fixed values the filters use; an unknown
+    audience is treated as student-facing, the library's default."""
+    audience = (resource.audience or "").strip().lower()
+    resource.audience = audience if audience in AUDIENCES else "students"
+    credit = (resource.credit_type or "").strip().lower()
+    resource.credit_type = credit if credit in CREDIT_TYPES else None
+    if resource.credit_type is None:
+        resource.credit_hours = None
+
+
 def _apply_fields(db: Session, resource: Resource, data) -> None:
     """Copy scalars + relationships + derived fields from a payload onto a
     Resource. Shared by create and upsert so they never drift apart."""
     for field in _SCALAR_FIELDS:
         setattr(resource, field, getattr(data, field))
+    _normalize_audience_fields(resource)
     # Audit-only column: present on ResourceCreate, not on ResourceUpdate.
     if getattr(data, "evidence", None) is not None:
         resource.evidence = data.evidence
@@ -147,11 +164,19 @@ def _base_query(
     standard: str | None = None,
     age: int | None = None,
     favorite: bool | None = None,
+    audience: str | None = None,
+    credit_type: str | None = None,
 ):
     """Hard filters only. Free-text `q` is not a filter here — it's a ranking
     problem, handled by `app.services.search` so that a query which matches
     nothing exactly can still fall back to what the library does have."""
     stmt = select(Resource)
+    if audience:
+        stmt = stmt.where(Resource.audience == audience)
+    if credit_type == "any":
+        stmt = stmt.where(Resource.credit_type.is_not(None))
+    elif credit_type:
+        stmt = stmt.where(Resource.credit_type == credit_type)
     if subject:
         stmt = stmt.where(Resource.subject == subject)
     if grade_band:
@@ -208,27 +233,56 @@ def list_resources(
     favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
+    audience: str | None = None,
+    credit_type: str | None = None,
 ) -> tuple[int, list[Resource], dict]:
     """Returns (total, page, search_meta). `search_meta` is empty for a plain
     filter browse and describes the query's fate when `q` is set — which
     terms the library had nothing for, and whether those had to be dropped."""
-    stmt = _base_query(
-        subject, grade_band, resource_type, scope, publisher, granularity,
-        cost, source_site, udl, tag, standard, age, favorite,
+    filters = dict(
+        subject=subject, grade_band=grade_band, resource_type=resource_type,
+        scope=scope, publisher=publisher, granularity=granularity, cost=cost,
+        source_site=source_site, udl=udl, tag=tag, standard=standard, age=age,
+        favorite=favorite, audience=audience, credit_type=credit_type,
     )
-    if not (q and q.strip()):
+    stmt = _base_query(**filters)
+    result = search.rank(db, q, _allowed_ids(db, stmt, filters)) if q and q.strip() else None
+    if result is None:
         total = db.execute(select(func.count()).select_from(stmt.subquery())).scalar_one()
-        page = stmt.order_by(Resource.created_at.desc()).limit(limit).offset(offset)
+        page = stmt.order_by(Resource.created_at.desc(), Resource.id.desc())
+        page = page.limit(limit).offset(offset).options(*_CARD_LOADS)
         return total, list(db.execute(page).scalars().unique()), {}
 
-    result = search.search(search.load_for_search(db, stmt), q)
-    ranked = result["items"]
-    meta = {
-        "matched_terms": result["matched_terms"],
-        "unmatched_terms": result["unmatched_terms"],
-        "broadened": result["broadened"],
-    }
-    return len(ranked), ranked[offset : offset + limit], meta
+    ids = result["ids"]
+    meta = {k: result[k] for k in ("matched_terms", "unmatched_terms", "broadened")}
+    return len(ids), _load_in_order(db, ids[offset : offset + limit]), meta
+
+
+# Relationships every card renders — loaded up front so a page of 60 cards is
+# three queries, not 180.
+_CARD_LOADS = (
+    selectinload(Resource.tags),
+    selectinload(Resource.udl_principles),
+    selectinload(Resource.standards_rel),
+)
+
+
+def _allowed_ids(db: Session, stmt, filters: dict) -> set[int] | None:
+    """Ids that pass the hard filters, or None when no filter is set (so an
+    unfiltered search never materialises the whole id list)."""
+    if all(v in (None, "") for v in filters.values()):
+        return None
+    return set(db.execute(stmt.with_only_columns(Resource.id).distinct()).scalars())
+
+
+def _load_in_order(db: Session, ids: list[int]) -> list[Resource]:
+    if not ids:
+        return []
+    rows = db.execute(
+        select(Resource).where(Resource.id.in_(ids)).options(*_CARD_LOADS)
+    ).scalars().unique()
+    by_id = {r.id: r for r in rows}
+    return [by_id[i] for i in ids if i in by_id]
 
 
 def get_resource(db: Session, resource_id: int) -> Resource | None:
@@ -256,11 +310,11 @@ def create_resource(db: Session, data, source: str = "manual", commit: bool = Tr
     resource = Resource(link=canonical_link(data.link), source=source)
     db.add(resource)  # in the session before _apply_fields flushes related rows
     _apply_fields(db, resource, data)
+    db.flush()  # assigns the id the search index is keyed on
+    search.index_resource(db, resource)
     if commit:
         db.commit()
         db.refresh(resource)
-    else:
-        db.flush()  # caller batches many creates into one transaction (seed load)
     return resource
 
 
@@ -280,12 +334,16 @@ def update_resource(db: Session, resource: Resource, data) -> Resource:
         resource.udl_principles = _resolve_udl(db, data.udl_principles)
     if "standards" in updates:
         resource.standards_rel = _get_or_create_standards(db, resource.standards)
+    _normalize_audience_fields(resource)
+    db.flush()
+    search.index_resource(db, resource)
     db.commit()
     db.refresh(resource)
     return resource
 
 
 def delete_resource(db: Session, resource: Resource) -> None:
+    search.remove_resource(db, resource.id)
     db.delete(resource)
     db.commit()
 
@@ -315,11 +373,11 @@ def upsert_resource(
     if existing is None:
         return create_resource(db, data, source=source, commit=commit), True
     _apply_fields(db, existing, data)
+    db.flush()
+    search.index_resource(db, existing)
     if commit:
         db.commit()
         db.refresh(existing)
-    else:
-        db.flush()
     return existing, False
 
 
@@ -345,6 +403,14 @@ def list_grade_bands_with_counts(db: Session) -> list[tuple[str, int]]:
 
 def list_resource_types_with_counts(db: Session) -> list[tuple[str, int]]:
     return _column_counts(db, Resource.resource_type)
+
+
+def list_audiences_with_counts(db: Session) -> list[tuple[str, int]]:
+    return _column_counts(db, Resource.audience)
+
+
+def list_credit_types_with_counts(db: Session) -> list[tuple[str, int]]:
+    return _column_counts(db, Resource.credit_type)
 
 
 def list_scopes_with_counts(db: Session) -> list[tuple[str, int]]:
@@ -387,28 +453,38 @@ def udl_coverage(
     subject: str | None = None,
     grade_band: str | None = None,
     tag: str | None = None,
+    audience: str | None = None,
 ) -> dict:
     """For a theme search, how many matching resources hit each UDL principle
     and each resource type — so a teacher can see at a glance which of the
     three principles is thin and needs filling.
 
     Counts the same set the results list shows, ranked search included, so
-    the strip can't claim a different number from the grid below it."""
-    stmt = _base_query(subject=subject, grade_band=grade_band, tag=tag)
-    matched = search.load_for_search(db, stmt)
-    if q and q.strip():
-        matched = search.search(matched, q)["items"]
+    the strip can't claim a different number from the grid below it. Works
+    on ids and two narrow columns rather than loading the matched rows, so it
+    stays cheap however many resources match."""
+    filters = dict(subject=subject, grade_band=grade_band, tag=tag, audience=audience)
+    stmt = _base_query(**filters)
+    ranked = search.rank(db, q, _allowed_ids(db, stmt, filters)) if q and q.strip() else None
+    if ranked is None:
+        ids = set(db.execute(stmt.with_only_columns(Resource.id).distinct()).scalars())
+    else:
+        ids = set(ranked["ids"])
 
     per_principle = {name: 0 for name in UDL_PRINCIPLES}
-    by_type: dict[str, int] = {}
-    for resource in matched:
-        for principle in resource.udl_principles:
-            if principle.name in per_principle:
-                per_principle[principle.name] += 1
-        if resource.resource_type:
-            by_type[resource.resource_type] = by_type.get(resource.resource_type, 0) + 1
+    pairs = select(resource_udl.c.resource_id, UdlPrinciple.name).join(
+        UdlPrinciple, UdlPrinciple.id == resource_udl.c.udl_principle_id
+    )
+    for rid, name in db.execute(pairs):
+        if rid in ids and name in per_principle:
+            per_principle[name] += 1
 
-    total = len(matched)
+    by_type: dict[str, int] = {}
+    for rid, rtype in db.execute(select(Resource.id, Resource.resource_type)):
+        if rid in ids and rtype:
+            by_type[rtype] = by_type.get(rtype, 0) + 1
+
+    total = len(ids)
     by_type = dict(sorted(by_type.items(), key=lambda kv: -kv[1]))
 
     return {

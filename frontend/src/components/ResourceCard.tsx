@@ -6,6 +6,7 @@ import {
   Scope,
   UDL_LABELS,
   UdlPrinciple,
+  creditLabel,
   markVisited,
   setFavorite,
 } from "../api/client";
@@ -115,7 +116,8 @@ export default function ResourceCard({
   const hasMore =
     description.length > summary.length ||
     resource.learning_outcomes.length > 0 ||
-    !!resource.materials;
+    !!resource.materials ||
+    !!resource.credit_note;
 
   const tintStyle = {
     "--card-accent": tint.accent,
@@ -165,7 +167,15 @@ export default function ResourceCard({
               {COST_LABEL[resource.cost] ?? resource.cost}
               {resource.price_note ? ` · ${resource.price_note}` : ""}
             </span>
-            {scopeLabel && (
+            {resource.credit_type && (
+              <span
+                className="credit-badge"
+                title={resource.credit_note || "Credit granted on completion"}
+              >
+                {creditLabel(resource.credit_type, resource.credit_hours)}
+              </span>
+            )}
+            {scopeLabel && resource.audience === "students" && (
               <span className={`scope-badge scope-${resource.scope}`}>{scopeLabel}</span>
             )}
             {resource.granularity === "collection" && (
@@ -208,6 +218,11 @@ export default function ResourceCard({
             {resource.materials && (
               <p className="materials">
                 <strong>Materials:</strong> {resource.materials}
+              </p>
+            )}
+            {resource.credit_note && (
+              <p className="materials">
+                <strong>Credit:</strong> {resource.credit_note}
               </p>
             )}
           </div>

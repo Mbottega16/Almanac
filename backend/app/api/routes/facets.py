@@ -27,6 +27,17 @@ def list_resource_types(db: Session = Depends(get_db)):
     return _as_counts(resource_service.list_resource_types_with_counts(db))
 
 
+@router.get("/audiences", response_model=list[NameCount])
+def list_audiences(db: Session = Depends(get_db)):
+    """'students' (lesson planning) vs 'educators' (professional learning)."""
+    return _as_counts(resource_service.list_audiences_with_counts(db))
+
+
+@router.get("/credit-types", response_model=list[NameCount])
+def list_credit_types(db: Session = Depends(get_db)):
+    return _as_counts(resource_service.list_credit_types_with_counts(db))
+
+
 @router.get("/scopes", response_model=list[NameCount])
 def list_scopes(db: Session = Depends(get_db)):
     return _as_counts(resource_service.list_scopes_with_counts(db))

@@ -1,37 +1,49 @@
 """Keyword search over the library.
 
-The old search was a single SQL LIKE across a handful of columns, so the
-whole query had to appear verbatim as one substring. A real teacher query
-("cheetah themed pre-K SEL kinesthetic activities") matched nothing, and
-tags — where the most specific words live — weren't searched at all.
+A teacher types a few loose words ("cheetah themed pre-K SEL kinesthetic
+activities") and expects the library to understand them. Three things make
+that work:
 
-This scores each resource against the query's individual terms across every
-field, weighted by where the term hit. Two behaviours matter most:
+1. Every term is matched on its own, across every field, and a resource is
+   ranked first by how many of the terms it covers — so several keywords
+   narrow the results instead of having to appear together verbatim.
+2. Rare terms count for more than common ones (BM25). "free", "lesson" and
+   "activity" match most of the library; the word carrying the teacher's
+   intent is usually the rare one.
+3. A term the library has nothing for is reported, not silently ignored. If
+   that leaves the query too narrow to answer well, broad programs are
+   favoured — they're the likeliest place for the missing specific thing —
+   so a micro question still gets a macro answer.
 
-1. Coverage dominates. A resource matching four of five terms beats one
-   matching a single term repeatedly, so multi-keyword queries narrow.
-2. A narrow query still answers. When some terms match nothing in the
-   library ("cheetah"), the search retries with only the terms that did
-   match and says so — a micro question gets a macro answer instead of an
-   empty page, and broad programs are favoured on that retry because
-   they're the ones likely to contain the missing specific thing.
+Matching runs on an SQLite FTS5 index (an inverted index): query cost tracks
+how many rows *match*, not how many exist, which is what lets the library
+grow into the tens of thousands. The earlier approach re-read every row in
+Python per query — ~90 ms at 385 rows, ~2 s at 8,000. It survives below as
+the fallback for a database without FTS5 (e.g. a future move to Postgres,
+where tsvector would replace this module's index).
 """
-import math
 import re
+import sqlite3
+import weakref
 
+from sqlalchemy import select, text
+from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, selectinload
 
 from app.models.resource import Resource
 
 # Multi-word forms collapsed before tokenizing, applied identically to the
-# query and to resource text so both sides normalize to the same token.
+# query and to indexed text so both sides land on the same token.
 _PHRASES = (
     ("pre-kindergarten", "prek"),
     ("prekindergarten", "prek"),
     ("pre-k", "prek"),
     ("pre k", "prek"),
+    ("early childhood", "prek"),
     ("social-emotional", "sel"),
     ("social emotional", "sel"),
+    ("self-regulation", "selfregulation"),
+    ("self regulation", "selfregulation"),
     ("hands-on", "handson"),
     ("hands on", "handson"),
     ("gross motor", "grossmotor"),
@@ -41,12 +53,14 @@ _PHRASES = (
     ("english language learner", "ell"),
     ("english learner", "ell"),
     ("special education", "sped"),
-    ("early childhood", "prek"),
+    ("professional development", "pd"),
+    ("professional learning", "pd"),
+    ("continuing education", "ceu"),
 )
 
-# Function words plus filler that would otherwise match nearly every row.
-# "students"/"will"/"able" are here because every learning outcome starts
-# with "Students will be able to" — left in, they match the whole library.
+# Function words, plus filler that would otherwise match nearly every row.
+# "students"/"will"/"able" are here because every learning outcome begins
+# "Students will be able to" — left in, they match the whole library.
 _STOPWORDS = {
     "a", "an", "the", "and", "or", "for", "of", "to", "in", "on", "with",
     "by", "about", "is", "are", "be", "that", "this", "it", "as", "at",
@@ -60,40 +74,19 @@ _STOPWORDS = {
     "do", "does", "make", "get", "new", "more", "most", "other", "into",
 }
 
-# (field name, weight). Title and tags carry the most signal: tags are where
-# the concrete topical words live ("cheetah", "moon phases", "kinesthetic").
-_FIELD_WEIGHTS = (
-    ("title", 6.0),
-    ("tags", 5.0),
-    ("subject", 3.0),
-    ("grade_band", 3.0),
-    ("resource_type", 3.0),
-    ("description", 2.5),
-    ("publisher", 2.0),
-    ("source_site", 2.0),
-    ("learning_outcomes", 2.0),
-    ("udl_principles", 2.0),
-    ("scope", 1.5),
-    ("materials", 1.5),
-    ("standards", 1.5),
-    ("udl_rationale", 1.5),
-    ("granularity", 1.0),
-)
-
-# Teacher vocabulary that should find resources filed under a different word.
-# Written in the same normalized/stemmed space the documents are, and scored
-# below a direct hit so precision survives.
+# Teacher vocabulary that should find resources filed under another word.
+# Written in the normalized space; scored below a direct hit.
 _SYNONYMS = {
     "kinesthetic": ("movement", "grossmotor", "physical", "dance", "active", "handson"),
     "movement": ("kinesthetic", "grossmotor", "physical", "dance"),
     "handson": ("kinesthetic", "tactile", "manipulative", "experiment", "build"),
     "sel": ("emotion", "feeling", "kindness", "mindfulness", "selfregulation"),
-    "prek": ("preschool", "kindergarten", "toddler", "earli"),
+    "prek": ("preschool", "kindergarten", "toddler"),
     "preschool": ("prek", "kindergarten", "toddler"),
     "printable": ("worksheet", "handout", "pdf"),
     "worksheet": ("printable", "handout"),
     "ell": ("esl", "multilingual", "bilingual"),
-    "sped": ("accommodation", "differentiation", "iep", "inclusive"),
+    "sped": ("accommodation", "differentiation", "iep", "inclusive", "inclusion"),
     "reading": ("literacy", "phonic", "ela"),
     "literacy": ("reading", "phonic", "ela"),
     "writing": ("ela", "composition", "narrative"),
@@ -103,36 +96,67 @@ _SYNONYMS = {
     "space": ("astronomy", "planet", "solar", "nasa"),
     "animal": ("wildlife", "zoo", "habitat", "creature"),
     "puzzle": ("logic", "brain", "challenge"),
+    "pd": ("educator", "training", "webinar", "ceu", "certificate"),
+    "ceu": ("pd", "credit", "certificate"),
+    "training": ("pd", "course", "webinar"),
 }
 _SYNONYM_FACTOR = 0.7
 
-# Added to a term's field weight so that matching another distinct term always
-# beats matching the same one somewhere better.
-_COVERAGE_BONUS = 8.0
-# Multiplied in after scoring: a specific query wants one class-ready thing;
-# a broadened one wants the big program that might contain the missing piece.
-_SPECIFIC_NUDGE = 1.06
-_COLLECTION_NUDGE = 1.15
-# Below this share of terms matched, the query is treated as too narrow and
-# retried without its dead terms.
-_BROADEN_COVERAGE = 0.6
-# Results scoring below this share of the best hit are dropped, so the result
-# count means "relevant" rather than "touched one common word".
-_RELEVANCE_FLOOR = 0.38
+# Indexed fields and their weights. The FTS table's columns are exactly
+# these, in this order, so bm25() weights line up by position.
+_FIELDS = (
+    ("title", 6.0),
+    ("tags", 5.0),
+    ("subject", 3.0),
+    ("grade_band", 3.0),
+    ("resource_type", 3.0),
+    ("audience", 3.0),
+    ("description", 2.5),
+    ("publisher", 2.0),
+    ("source_site", 2.0),
+    ("learning_outcomes", 2.0),
+    ("udl_principles", 2.0),
+    ("credit", 2.0),
+    ("scope", 1.5),
+    ("materials", 1.5),
+    ("standards", 1.5),
+    ("udl_rationale", 1.5),
+    ("granularity", 1.0),
+)
 
+# Ranking. Coverage (how many query terms a row answers) decides first; BM25
+# orders rows within a coverage level; the granularity bonus breaks near-ties
+# toward what the query seems to want.
+_COVERAGE_WEIGHT = 1000.0
+_BM25_WEIGHT = 10.0
+_GRANULARITY_BONUS = 60.0
+# Below this share of terms answered by the best row, the query is too narrow
+# and broad programs are preferred.
+_BROADEN_COVERAGE = 0.6
+# Rows covering less than this share of the best row's coverage are dropped,
+# so the result count means "relevant", not "touched one common word".
+_RELEVANCE_SHARE = 0.5
+
+_TABLE = "resources_fts"
 _WORD_RE = re.compile(r"[a-z0-9]+")
 
 
-def _normalize(text: str) -> str:
-    text = text.lower()
+def _normalize(text_: str) -> str:
+    text_ = text_.lower()
     for phrase, token in _PHRASES:
-        text = text.replace(phrase, token)
-    return text
+        text_ = text_.replace(phrase, token)
+    return text_
+
+
+def _words(text_: str) -> list[str]:
+    return _WORD_RE.findall(text_)
 
 
 def _stem(word: str) -> str:
-    """Crude plural stripper. Applied to both sides so the two agree; real
-    stemming isn't worth a dependency at this library's size."""
+    """Crude plural stripper for query terms and the fallback scorer. The FTS
+    index stems with Porter on both sides, so this only has to agree with
+    itself — Porter re-stemming an already-trimmed plural lands in the same
+    place."""
     if len(word) > 4 and word.endswith("ies"):
         return word[:-3] + "y"
     if len(word) > 4 and word.endswith("es") and word[:-2].endswith(("s", "x", "z", "ch", "sh")):
@@ -142,11 +166,10 @@ def _stem(word: str) -> str:
     return word
 
 
-def tokenize(text: str) -> list[str]:
-    """Query/document text -> deduped, stemmed, stopword-free terms."""
-    words = _WORD_RE.findall(_normalize(text))
+def tokenize(query: str) -> list[str]:
+    """Query text -> deduped, stemmed, stopword-free terms."""
     out: list[str] = []
-    for word in words:
+    for word in _words(_normalize(query)):
         if word in _STOPWORDS or len(word) < 2:
             continue
         stem = _stem(word)
@@ -155,26 +178,37 @@ def tokenize(text: str) -> list[str]:
     return out
 
 
-def _expand(term: str) -> list[tuple[str, float]]:
-    """A term plus its discounted synonyms, all in stemmed form."""
-    variants = [(term, 1.0)]
-    for synonym in _SYNONYMS.get(term, ()):
-        variants.append((_stem(synonym), _SYNONYM_FACTOR))
-    return variants
+# Extra words indexed alongside a coded value, so "ceu" or "professional
+# development" finds a resource whose column just says 'ceu' / 'educators'.
+_AUDIENCE_WORDS = {
+    "students": "students",
+    "educators": "educators educator pd training professional",
+}
+_CREDIT_WORDS = {
+    "ceu": "ceu credit continuing",
+    "pd_hours": "pd hours clock credit",
+    "certificate": "certificate",
+    "graduate_credit": "graduate credit",
+}
 
 
 def _field_text(resource: Resource) -> dict[str, str]:
+    credit = _CREDIT_WORDS.get(resource.credit_type or "", "")
+    if resource.credit_note:
+        credit = f"{credit} {resource.credit_note}"
     return {
         "title": resource.title or "",
         "tags": " ".join(t.name for t in resource.tags),
         "subject": resource.subject or "",
         "grade_band": resource.grade_band or "",
         "resource_type": resource.resource_type or "",
+        "audience": _AUDIENCE_WORDS.get(resource.audience or "students", ""),
         "description": resource.description or "",
         "publisher": resource.publisher or "",
         "source_site": resource.source_site or "",
         "learning_outcomes": resource.learning_outcomes or "",
         "udl_principles": " ".join(p.name.replace("_", " ") for p in resource.udl_principles),
+        "credit": credit,
         "scope": resource.scope or "",
         "materials": resource.materials or "",
         "standards": resource.standards or "",
@@ -183,134 +217,248 @@ def _field_text(resource: Resource) -> dict[str, str]:
     }
 
 
-class _Indexed:
-    """A resource plus its searchable text, prepared once per request."""
-
-    __slots__ = ("resource", "raw", "stems")
-
-    def __init__(self, resource: Resource):
-        self.resource = resource
-        raw = _field_text(resource)
-        self.raw = {name: _normalize(text) for name, text in raw.items()}
-        self.stems = {
-            name: {_stem(w) for w in _WORD_RE.findall(text)}
-            for name, text in self.raw.items()
-        }
-
-    def term_score(self, term: str) -> float:
-        """Best weight this term earns anywhere in the resource, 0 if absent.
-        A whole-word hit scores full weight; a substring hit scores less, so
-        'art' inside 'earth' can't outrank a real match. Synonyms count too,
-        discounted, so 'kinesthetic' still finds a movement activity."""
-        best = 0.0
-        for variant, factor in _expand(term):
-            for field, weight in _FIELD_WEIGHTS:
-                value = weight * factor
-                if value <= best:
-                    continue
-                if variant in self.stems[field]:
-                    best = value
-                elif len(variant) >= 4 and variant in self.raw[field]:
-                    best = max(best, value * 0.55)
-        return best
+# --- FTS5 index -----------------------------------------------------------
 
 
-def _score_all(
-    indexed: list[_Indexed], terms: list[str], prefer_broad: bool
-) -> tuple[list[tuple[float, Resource]], dict[str, int]]:
-    """Score every resource against `terms`. Also returns how many resources
-    each term hit, which is what tells us a term is dead in this library.
+def _fts5_compiled() -> bool:
+    """Whether this Python's SQLite has FTS5 + Porter built in. Checked on a
+    throwaway connection: module support is a property of the linked
+    library, and probing the app's own session could roll back its work."""
+    try:
+        conn = sqlite3.connect(":memory:")
+        conn.execute("CREATE VIRTUAL TABLE probe USING fts5(a, tokenize='porter unicode61')")
+        conn.close()
+        return True
+    except sqlite3.OperationalError:
+        return False
 
-    Terms are weighted by rarity. Without it every query drowns: "free",
-    "activity" and "lesson" match most of the library, so a resource hitting
-    only those would outrank the one actually about the rare word that
-    carried the teacher's intent.
-    """
-    hits: dict[str, int] = {t: 0 for t in terms}
-    rows: list[dict[str, float]] = []
-    for entry in indexed:
-        row: dict[str, float] = {}
-        for term in terms:
-            value = entry.term_score(term)
-            if value > 0:
-                row[term] = value
-                hits[term] += 1
-        rows.append(row)
 
-    count = max(1, len(indexed))
-    idf = {
-        term: max(0.15, math.log(count / hit) + 0.5) if hit else 0.0
-        for term, hit in hits.items()
-    }
+_FTS5 = _fts5_compiled()
+# Engines whose database already has the FTS table. Weak, not id()-keyed:
+# ids are reused after garbage collection, so a fresh database (every test
+# gets one) could otherwise inherit a stale "already created".
+_ensured: "weakref.WeakSet[Engine]" = weakref.WeakSet()
 
-    scored: list[tuple[float, Resource]] = []
-    for entry, row in zip(indexed, rows):
-        if not row:
+
+def backend_name(db: Session) -> str:
+    return "fts5" if _uses_fts(db) else "python"
+
+
+def _uses_fts(db: Session) -> bool:
+    return _FTS5 and db.get_bind().dialect.name == "sqlite"
+
+
+def ensure_index(db: Session) -> bool:
+    """Create the FTS table if missing. True when the FTS path is usable."""
+    if not _uses_fts(db):
+        return False
+    engine = db.get_bind()
+    if engine not in _ensured:
+        columns = ", ".join(name for name, _ in _FIELDS)
+        db.execute(
+            text(
+                f"CREATE VIRTUAL TABLE IF NOT EXISTS {_TABLE} "
+                f"USING fts5({columns}, tokenize='porter unicode61')"
+            )
+        )
+        _ensured.add(engine)
+    return True
+
+
+def _index_params(resource: Resource) -> dict:
+    fields = _field_text(resource)
+    params = {name: _normalize(fields[name]) for name, _ in _FIELDS}
+    params["rid"] = resource.id
+    return params
+
+
+_INSERT = (
+    f"INSERT INTO {_TABLE}(rowid, {', '.join(n for n, _ in _FIELDS)}) "
+    f"VALUES (:rid, {', '.join(':' + n for n, _ in _FIELDS)})"
+)
+
+
+def index_resource(db: Session, resource: Resource) -> None:
+    """(Re)index one resource. Call after a flush, so the row has an id."""
+    if not ensure_index(db):
+        return
+    db.execute(text(f"DELETE FROM {_TABLE} WHERE rowid = :rid"), {"rid": resource.id})
+    db.execute(text(_INSERT), _index_params(resource))
+
+
+def remove_resource(db: Session, resource_id: int) -> None:
+    if ensure_index(db):
+        db.execute(text(f"DELETE FROM {_TABLE} WHERE rowid = :rid"), {"rid": resource_id})
+
+
+def index_size(db: Session) -> int:
+    if not ensure_index(db):
+        return 0
+    return db.execute(text(f"SELECT count(*) FROM {_TABLE}")).scalar_one()
+
+
+def rebuild_index(db: Session) -> int:
+    """Reindex every resource from scratch. Used when an existing database
+    predates the index, and after bulk imports."""
+    if not ensure_index(db):
+        return 0
+    db.execute(text(f"DELETE FROM {_TABLE}"))
+    rows = (
+        db.execute(
+            select(Resource).options(
+                selectinload(Resource.tags), selectinload(Resource.udl_principles)
+            )
+        )
+        .scalars()
+        .all()
+    )
+    if rows:
+        db.execute(text(_INSERT), [_index_params(r) for r in rows])
+    db.commit()
+    return len(rows)
+
+
+def _quote(term: str) -> str:
+    # Terms are [a-z0-9]+ after tokenizing; quoting stops FTS reading a term
+    # like "or"/"not"/"near" as an operator.
+    return f'"{term}"'
+
+
+def _match_ids(db: Session, expression: str) -> set[int]:
+    return set(
+        db.execute(
+            text(f"SELECT rowid FROM {_TABLE} WHERE {_TABLE} MATCH :q"), {"q": expression}
+        ).scalars()
+    )
+
+
+def _rank_fts(db: Session, terms: list[str], allowed: set[int] | None) -> dict:
+    coverage: dict[int, float] = {}
+    hits: dict[str, int] = {}
+    for term in terms:
+        direct = _match_ids(db, _quote(term))
+        synonyms = [_stem(s) for s in _SYNONYMS.get(term, ())]
+        via_synonym = (
+            _match_ids(db, " OR ".join(_quote(s) for s in synonyms)) - direct
+            if synonyms
+            else set()
+        )
+        if allowed is not None:
+            direct &= allowed
+            via_synonym &= allowed
+        hits[term] = len(direct) + len(via_synonym)
+        for rid in direct:
+            coverage[rid] = coverage.get(rid, 0.0) + 1.0
+        for rid in via_synonym:
+            coverage[rid] = coverage.get(rid, 0.0) + _SYNONYM_FACTOR
+
+    live = [t for t in terms if hits[t]]
+    dead = [t for t in terms if not hits[t]]
+    if not coverage:
+        return {"ids": [], "matched_terms": live, "unmatched_terms": dead, "broadened": False}
+
+    best = max(coverage.values())
+    broadened = bool(dead) and best < max(1.0, len(terms) * _BROADEN_COVERAGE)
+
+    tokens: set[str] = set()
+    for term in live:
+        tokens.add(term)
+        tokens.update(_stem(s) for s in _SYNONYMS.get(term, ()))
+    weights = ", ".join(str(w) for _, w in _FIELDS)
+    relevance: dict[int, float] = {}
+    granularity: dict[int, str] = {}
+    for rid, gran, score in db.execute(
+        text(
+            f"SELECT rowid, granularity, bm25({_TABLE}, {weights}) "
+            f"FROM {_TABLE} WHERE {_TABLE} MATCH :q"
+        ),
+        {"q": " OR ".join(_quote(t) for t in tokens)},
+    ):
+        relevance[rid] = -score  # bm25() is negative; lower is better
+        granularity[rid] = gran
+
+    floor = best * _RELEVANCE_SHARE
+    scored: list[tuple[float, int]] = []
+    for rid, covered in coverage.items():
+        if covered < floor:
             continue
-        total = sum((weight + _COVERAGE_BONUS) * idf[term] for term, weight in row.items())
-        is_collection = entry.resource.granularity == "collection"
-        if prefer_broad and is_collection:
-            total *= _COLLECTION_NUDGE
-        elif not prefer_broad and not is_collection:
-            total *= _SPECIFIC_NUDGE
-        scored.append((total, entry.resource))
-
-    scored.sort(key=lambda pair: (-pair[0], (pair[1].title or "").lower()))
-    if scored:
-        floor = scored[0][0] * _RELEVANCE_FLOOR
-        scored = [pair for pair in scored if pair[0] >= floor]
-    return scored, hits
-
-
-def search(resources: list[Resource], q: str) -> dict:
-    """Rank `resources` against the query.
-
-    Returns the ordered resources plus what the search understood: which
-    terms found nothing, and whether it had to drop them to answer at all.
-    """
-    terms = tokenize(q)
-    if not terms:
-        return {
-            "items": list(resources),
-            "terms": [],
-            "matched_terms": [],
-            "unmatched_terms": [],
-            "broadened": False,
-        }
-
-    indexed = [_Indexed(r) for r in resources]
-    scored, hits = _score_all(indexed, terms, prefer_broad=False)
-
-    live = [t for t in terms if hits[t] > 0]
-    dead = [t for t in terms if hits[t] == 0]
-
-    # Narrow query: either nothing came back, or nothing covered enough of
-    # what was asked. Retry on the terms that exist in this library.
-    best_coverage = 0
-    for entry in indexed:
-        covered = sum(1 for t in terms if entry.term_score(t) > 0)
-        best_coverage = max(best_coverage, covered)
-    too_narrow = not scored or best_coverage < max(1, round(len(terms) * _BROADEN_COVERAGE))
-
-    broadened = False
-    if too_narrow and live and len(live) < len(terms):
-        scored, _ = _score_all(indexed, live, prefer_broad=True)
-        broadened = True
-
+        score = covered * _COVERAGE_WEIGHT + relevance.get(rid, 0.0) * _BM25_WEIGHT
+        is_collection = granularity.get(rid) == "collection"
+        if is_collection == broadened:
+            score += _GRANULARITY_BONUS
+        scored.append((score, rid))
+    scored.sort(key=lambda pair: (-pair[0], pair[1]))
     return {
-        "items": [r for _, r in scored],
-        "terms": terms,
+        "ids": [rid for _, rid in scored],
         "matched_terms": live,
         "unmatched_terms": dead,
         "broadened": broadened,
     }
 
 
-def load_for_search(db: Session, stmt) -> list[Resource]:
-    """Run a filter query with the relationships search reads eagerly, so
-    scoring doesn't fire a query per row."""
-    stmt = stmt.options(
-        selectinload(Resource.tags),
-        selectinload(Resource.udl_principles),
+# --- Fallback scorer (no FTS5) -----------------------------------------------
+
+
+def _rank_python(db: Session, terms: list[str], allowed: set[int] | None) -> dict:
+    stmt = select(Resource).options(
+        selectinload(Resource.tags), selectinload(Resource.udl_principles)
     )
-    return list(db.execute(stmt).scalars().unique())
+    if allowed is not None:
+        stmt = stmt.where(Resource.id.in_(allowed))
+    resources = db.execute(stmt).scalars().unique().all()
+
+    weights = dict(_FIELDS)
+    docs = []
+    for resource in resources:
+        fields = {n: {_stem(w) for w in _words(_normalize(t))} for n, t in _field_text(resource).items()}
+        docs.append((resource, fields))
+
+    coverage: dict[int, float] = {}
+    relevance: dict[int, float] = {}
+    hits = {t: 0 for t in terms}
+    for resource, fields in docs:
+        for term in terms:
+            variants = [(term, 1.0)] + [(_stem(s), _SYNONYM_FACTOR) for s in _SYNONYMS.get(term, ())]
+            best_factor, best_weight = 0.0, 0.0
+            for variant, factor in variants:
+                for name, words in fields.items():
+                    if variant in words and factor * weights[name] > best_factor * best_weight:
+                        best_factor, best_weight = factor, weights[name]
+            if best_factor:
+                hits[term] += 1
+                coverage[resource.id] = coverage.get(resource.id, 0.0) + best_factor
+                relevance[resource.id] = relevance.get(resource.id, 0.0) + best_weight
+
+    live = [t for t in terms if hits[t]]
+    dead = [t for t in terms if not hits[t]]
+    if not coverage:
+        return {"ids": [], "matched_terms": live, "unmatched_terms": dead, "broadened": False}
+    best = max(coverage.values())
+    broadened = bool(dead) and best < max(1.0, len(terms) * _BROADEN_COVERAGE)
+    gran = {r.id: r.granularity for r, _ in docs}
+    scored = []
+    for rid, covered in coverage.items():
+        if covered < best * _RELEVANCE_SHARE:
+            continue
+        score = covered * _COVERAGE_WEIGHT + relevance[rid]
+        if (gran.get(rid) == "collection") == broadened:
+            score += _GRANULARITY_BONUS
+        scored.append((score, rid))
+    scored.sort(key=lambda pair: (-pair[0], pair[1]))
+    return {"ids": [rid for _, rid in scored], "matched_terms": live,
+            "unmatched_terms": dead, "broadened": broadened}
+
+
+def rank(db: Session, query: str, allowed: set[int] | None = None) -> dict | None:
+    """Rank resource ids for a free-text query.
+
+    `allowed` restricts the result to ids that passed the hard filters (None =
+    no filters). Returns None when the query has no searchable words left
+    after stopwords, so the caller can treat it as a plain browse.
+    """
+    terms = tokenize(query)
+    if not terms:
+        return None
+    if ensure_index(db):
+        return _rank_fts(db, terms, allowed)
+    return _rank_python(db, terms, allowed)

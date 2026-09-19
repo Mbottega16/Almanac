@@ -37,6 +37,16 @@ def main() -> None:
         n = load_seed_rows(db)
         total = db.query(Resource).count()
 
+    # Ship the file without its search index. The index roughly doubles the
+    # file, and this file is re-committed on every content change, so it
+    # would double the repo's growth too. The app rebuilds it on boot when
+    # it's missing (app.main._bootstrap) — ~130 ms at 385 rows.
+    with engine.begin() as conn:
+        conn.exec_driver_sql("DROP TABLE IF EXISTS resources_fts")
+    with engine.connect() as conn:
+        conn.exec_driver_sql("VACUUM")
+    engine.dispose()
+
     print(f"built {SEED_DB.relative_to(BACKEND.parent)} — {n} rows in, {total} in db, {time.time() - t:.2f}s")
     print(f"size: {SEED_DB.stat().st_size / 1024:.0f} KB")
 

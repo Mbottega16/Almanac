@@ -9,10 +9,12 @@ from app import models as _models  # noqa: F401  (register models on Base.metada
 from app.api.routes import auth, capture, facets, health, resources, udl
 from app.auth import AuthGateMiddleware
 from app.db.base import Base
+from app.db.migrate import ensure_columns
 from app.db.seed import ensure_seed_db_file, load_seed_rows
 from app.db.session import SessionLocal, engine
 from app.models.resource import Resource
 from app.models.udl import seed_udl_principles
+from app.services import search
 
 log = logging.getLogger("almanac.bootstrap")
 
@@ -28,6 +30,9 @@ ensure_seed_db_file()
 # MVP: create tables directly from models. Switch to Alembic migrations
 # once the schema needs to evolve without dropping data.
 Base.metadata.create_all(bind=engine)
+_added = ensure_columns(engine)
+if _added:
+    log.warning("added missing columns to resources: %s", ", ".join(_added))
 
 
 def _bootstrap() -> None:
@@ -38,6 +43,13 @@ def _bootstrap() -> None:
             if db.query(Resource).count() == 0:
                 n = load_seed_rows(db)
                 log.warning("cold DB: loaded %d seed rows via JSON fallback", n)
+            if not search.ensure_index(db):
+                log.warning("SQLite has no FTS5 here — search is on the slow per-row fallback")
+            elif search.index_size(db) != db.query(Resource).count():
+                # A database built before the index existed, or edited around it.
+                n = search.rebuild_index(db)
+                log.warning("rebuilt search index: %d resources", n)
+            db.commit()
     except Exception:  # noqa: BLE001
         log.exception("bootstrap seeding failed; continuing with current DB state")
 

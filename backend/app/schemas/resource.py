@@ -25,6 +25,10 @@ class ResourceBase(BaseModel):
     standards: str | None = None
     granularity: str = "specific"
     udl_rationale: str | None = None
+    audience: str = "students"
+    credit_type: str | None = None
+    credit_hours: float | None = None
+    credit_note: str | None = None
     tags: list[str] = []
     udl_principles: list[str] = []
 
@@ -58,6 +62,10 @@ class ResourceUpdate(BaseModel):
     granularity: str | None = None
     evidence: str | None = None
     udl_rationale: str | None = None
+    audience: str | None = None
+    credit_type: str | None = None
+    credit_hours: float | None = None
+    credit_note: str | None = None
     tags: list[str] | None = None
     udl_principles: list[str] | None = None
 

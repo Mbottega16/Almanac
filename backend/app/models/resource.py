@@ -4,6 +4,7 @@ from sqlalchemy import (
     Boolean,
     Column,
     DateTime,
+    Float,
     ForeignKey,
     Integer,
     String,
@@ -84,6 +85,21 @@ class Resource(Base):
     # Lets Browse hide the "here's a website, go dig" rows when a teacher
     # needs something class-ready today.
     granularity: Mapped[str] = mapped_column(String, default="specific", index=True)
+    # Who the resource is for:
+    #   'students'  — something you teach with (lessons, units, curricula)
+    #   'educators' — the teacher's own professional learning (PD courses,
+    #                 webinars, certifications)
+    # A separate axis from `scope`, which measures the *size* of student-facing
+    # content: a course you teach and a course you take are different searches.
+    audience: Mapped[str] = mapped_column(String, default="students", index=True)
+    # Credit a professional-learning resource grants, if any:
+    # 'ceu' | 'pd_hours' | 'certificate' | 'graduate_credit'. Null = none.
+    credit_type: Mapped[str | None] = mapped_column(String, nullable=True, index=True)
+    credit_hours: Mapped[float | None] = mapped_column(Float, nullable=True)
+    # Who grants the credit and any catch ("certificate costs $10", "approved
+    # for social workers — check your district for teacher renewal"). Credit
+    # is easy to overstate; the qualifier lives here, next to the claim.
+    credit_note: Mapped[str | None] = mapped_column(Text, nullable=True)
     # One short, attributed sentence quoted from the page at research time —
     # proof the resource is real (a row describing a page that doesn't exist
     # is worse than no row). Audit-only, never shown to users. Stays inside

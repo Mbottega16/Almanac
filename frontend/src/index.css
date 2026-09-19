@@ -124,6 +124,82 @@ h1 {
   opacity: 0.7;
 }
 
+/* --- lesson planning vs professional learning ---------------------------- */
+/* Two different jobs — finding something to teach, and learning yourself —
+   so they're two tracks, not one more filter chip. */
+
+.audience-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.audience-switch button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #8884;
+  border-radius: 10px;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.audience-switch button.active {
+  opacity: 1;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent) inset;
+  background: #4a90e214;
+}
+
+.audience-title {
+  font-weight: 700;
+}
+
+.audience-sub {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.credit-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: #7a4fd11f;
+  color: #7a4fd1;
+  border: 1px solid #7a4fd166;
+  cursor: help;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.load-more button {
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
 /* Says which words the library couldn't answer, so a partial result doesn't
    look like the search simply ignored half the query. */
 .search-note {

@@ -22,6 +22,11 @@ export interface Resource {
   standards: string | null;
   standard_codes: string[];
   udl_rationale: string | null;
+  /** 'students' = something you teach with; 'educators' = your own PD. */
+  audience: Audience;
+  credit_type: CreditType | null;
+  credit_hours: number | null;
+  credit_note: string | null;
   tags: string[];
   udl_principles: string[];
   source: string;
@@ -89,6 +94,25 @@ export const SCOPE_LABELS: Record<Scope, string> = {
   curriculum: "Curriculum",
 };
 
+export type Audience = "students" | "educators";
+
+export const CREDIT_TYPES = ["ceu", "pd_hours", "certificate", "graduate_credit"] as const;
+export type CreditType = (typeof CREDIT_TYPES)[number];
+
+export const CREDIT_LABELS: Record<CreditType, string> = {
+  ceu: "CEU",
+  pd_hours: "PD hours",
+  certificate: "Certificate",
+  graduate_credit: "Graduate credit",
+};
+
+/** "1.5 CEUs", "3 PD hours", "Certificate" — the badge text on a card. */
+export function creditLabel(type: CreditType, hours: number | null): string {
+  if (hours == null || type === "certificate") return CREDIT_LABELS[type];
+  const unit = type === "ceu" ? (hours === 1 ? "CEU" : "CEUs") : CREDIT_LABELS[type];
+  return `${hours} ${unit}`;
+}
+
 const BASE = import.meta.env.VITE_API_BASE_URL || "";
 
 export class ApiError extends Error {
@@ -129,6 +153,9 @@ export interface ResourceQuery {
   standard?: string;
   age?: number | string;
   favorite?: boolean;
+  audience?: Audience;
+  /** A specific credit type, or "any" for everything that grants credit. */
+  credit_type?: string;
   limit?: number;
   offset?: number;
 }
@@ -178,8 +205,13 @@ export function fetchUdlCoverage(params: {
   subject?: string;
   grade_band?: string;
   tag?: string;
+  audience?: Audience;
 }): Promise<UdlCoverage> {
   return apiGet(`/api/udl-coverage?${toQs(params)}`);
+}
+
+export function fetchAudiences(): Promise<NameCount[]> {
+  return apiGet("/api/audiences");
 }
 
 export function randomResource(

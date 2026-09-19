@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
@@ -38,6 +38,10 @@ def _to_out(resource: Resource) -> ResourceOut:
         standards=resource.standards,
         granularity=resource.granularity,
         udl_rationale=resource.udl_rationale,
+        audience=resource.audience or "students",
+        credit_type=resource.credit_type,
+        credit_hours=resource.credit_hours,
+        credit_note=resource.credit_note,
         tags=[t.name for t in resource.tags],
         udl_principles=[p.name for p in resource.udl_principles],
         standard_codes=[s.code for s in resource.standards_rel],
@@ -67,13 +71,19 @@ def search_resources(
     standard: str | None = None,
     age: int | None = None,
     favorite: bool | None = None,
-    limit: int = 50,
-    offset: int = 0,
+    audience: str | None = None,
+    credit_type: str | None = None,
+    limit: int = Query(60, ge=1, le=200),
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
 ):
+    """`credit_type=any` returns everything that grants some credit.
+    `limit` is capped: pages are fetched incrementally as the user scrolls,
+    so no single response ever has to carry the whole library."""
     total, items, meta = resource_service.list_resources(
         db, q, subject, grade_band, resource_type, scope, publisher, granularity,
         cost, source_site, udl, tag, standard, age, favorite, limit, offset,
+        audience=audience, credit_type=credit_type,
     )
     return ResourceListOut(
         total=total,

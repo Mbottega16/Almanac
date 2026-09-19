@@ -38,3 +38,13 @@ export const RESOURCE_TYPES = [
   "game",
   "article/text",
 ] as const;
+
+// Formats professional learning comes in — a different set from what a
+// teacher hands to a class.
+export const PD_RESOURCE_TYPES = [
+  "course",
+  "webinar",
+  "video",
+  "article/text",
+  "interactive/sim",
+] as const;

@@ -153,7 +153,11 @@ def test_library_stats(client):
 def test_health(client):
     resp = client.get("/api/health")
     assert resp.status_code == 200
-    assert resp.json() == {"status": "ok"}
+    body = resp.json()
+    assert body["status"] == "ok"
+    # The indexed path, not the slow fallback — a regression here means
+    # search quietly got O(N) again.
+    assert body["search"] == "fts5"
 
 
 def test_create_and_get_resource(client):

@@ -1786,7 +1786,7 @@
     "grade_band": "HigherEd/Adult",
     "age_min": null,
     "age_max": null,
-    "resource_type": "lesson plan",
+    "resource_type": "course",
     "duration_minutes": null,
     "materials": "",
     "learning_outcomes": [],
@@ -1804,7 +1804,8 @@
       "representation"
     ],
     "link_status": "ok",
-    "granularity": "specific"
+    "granularity": "specific",
+    "audience": "educators"
   },
   {
     "link": "https://nearpod.com/nearpod-library",
@@ -2378,7 +2379,8 @@
       "representation"
     ],
     "link_status": "unreachable",
-    "granularity": "specific"
+    "granularity": "specific",
+    "audience": "educators"
   },
   {
     "link": "https://sharemylesson.com/a-place-for/pre-k-12-teachers",
@@ -4368,7 +4370,8 @@
       "representation"
     ],
     "link_status": "unreachable",
-    "granularity": "collection"
+    "granularity": "collection",
+    "audience": "educators"
   },
   {
     "link": "https://www.amoebasisters.com/",
@@ -7974,7 +7977,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "specific"
+    "granularity": "specific",
+    "audience": "educators"
   },
   {
     "link": "https://accessim.org/",
