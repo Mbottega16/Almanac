@@ -29,7 +29,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Our Text Library gives teachers access to thousands of free works of literature and texts, created by diverse and contemporary authors."
   },
   {
     "link": "https://www.readworks.org",
@@ -93,7 +94,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Dive into a sea of resources, knowledge, and inspiration for all your literacy needs."
   },
   {
     "link": "https://www.khanacademy.org/math",
@@ -571,7 +573,7 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.nasa.gov/stem",
+    "link": "https://www.nasa.gov/learning-resources/for-students-grades-k-4/",
     "title": "NASA STEM Education Resources",
     "description": "Free STEM lessons, simulations, and activities aligned to standards using real space exploration content and data.",
     "description_source": "generated",
@@ -599,7 +601,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "For Students Grades K-4 - NASA"
   },
   {
     "link": "https://education.nationalgeographic.org",
@@ -629,7 +632,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "An interactive multi-week program with live virtual events and activities designed for your students to learn about wildlife globally, while inspiring action locally."
   },
   {
     "link": "https://oercommons.org",
@@ -661,7 +665,7 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.sharemylesson.com",
+    "link": "https://sharemylesson.com/subject/math",
     "title": "Share My Lesson Classroom Resources",
     "description": "Community-driven platform with lesson plans and resources across subjects created by teachers for teachers.",
     "description_source": "generated",
@@ -688,7 +692,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Find free math lesson plans, teaching resources and professional development for grades PreK-12, higher education, and adult education."
   },
   {
     "link": "https://www.brainpop.com",
@@ -809,7 +814,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Page lists a \"High school math\" browse link, confirming this is TPT's live Math resources section."
   },
   {
     "link": "https://www.teacherspayteachers.com/Browse/Reading",
@@ -962,7 +968,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Curriki is a nonprofit organization committed to using technology to improve the quality of online education and make it available as widely as possible."
   },
   {
     "link": "https://www.achievethecore.org",
@@ -1265,7 +1272,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "The Learning Center is LFJ's online popular education space for everyone — community members, educators, parents and youth."
   },
   {
     "link": "https://www.facinghistory.org/holocaust-and-human-behavior",
@@ -1418,9 +1426,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.readwritethink.org/classroom-resources/student-interactives",
-    "title": "ReadWriteThink Interactive Writing Tools",
-    "description": "Collection of interactive tools for writing different text types including story builders, essay organizers, and comic creators.",
+    "link": "https://www.readwritethink.org/classroom-resources/student-interactives/story",
+    "title": "ReadWriteThink Story Map (Interactive Tool)",
+    "description": "Free interactive graphic-organizer tool where students map character, setting, conflict, and resolution before or while drafting a narrative.",
     "description_source": "generated",
     "subject": "ELA / Reading",
     "grade_band": "3-5",
@@ -1447,7 +1455,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "specific",
+    "evidence": "The organizers are intended to focus on the key elements of character, setting, conflict, and resolution development."
   },
   {
     "link": "https://www.brainpop.com/subject/science",
@@ -1595,7 +1604,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Share My Lesson is a community of teachers, paraprofessionals and school-related personnel."
   },
   {
     "link": "https://www.twinkl.com/resource/t2-e-2321-phonics-and-alphabet-flash-cards",
@@ -1836,7 +1846,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Access trusted and standards-aligned lessons, videos, learning games, and activities for every grade and subject."
   },
   {
     "link": "https://www.zinnedproject.org/collection/malcolm-x/",
@@ -2170,7 +2181,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "We have hundreds of standards-based lesson plans written and reviewed by educators using current research and the best instructional practices."
   },
   {
     "link": "https://oercommons.org/browse?f.material_types=full-course",
@@ -2320,7 +2332,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "NCAS is a program dedicated to connecting community college students with aerospace career pathways."
   },
   {
     "link": "https://www.readworks.org/nonfiction",
@@ -2692,7 +2705,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "We hope you'll enjoy working on these activities, linked to what you're learning at school"
   },
   {
     "link": "https://nrich.maths.org/secondary",
@@ -2866,7 +2880,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Our mission is to transform research into practical, teacher-friendly strategies for boosting student engagement and achievement."
   },
   {
     "link": "https://www.wodb.ca",
@@ -3371,7 +3386,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Shop 10,000+ STEM Resources from 150+ Brands"
   },
   {
     "link": "https://www.nasa.gov/education/",
@@ -3404,7 +3420,8 @@
       "representation"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "NASA's Office of STEM Engagement (OSTEM) is committed to preparing students for aerospace careers by engaging them through real-world, industry-aligned opportunities."
   },
   {
     "link": "https://khanacademy.org/computing/computer-science/algorithms",
@@ -3602,7 +3619,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve."
   },
   {
     "link": "https://newsela.com/",
@@ -3670,7 +3688,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Download our free App!"
   },
   {
     "link": "https://www.poetryfoundation.org/education",
@@ -3901,7 +3920,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Resources and tools by educators for the teaching of writing"
   },
   {
     "link": "https://www.colorincolorado.org/",
@@ -3936,7 +3956,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Colorín Colorado is a national multimedia project that offers a wealth of bilingual, research-based information, activities, and advice for educators and families of English language learners (ELLs)."
   },
   {
     "link": "https://www.fluentu.com/",
@@ -4242,7 +4263,7 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.getepic.com/sign-up/create-account",
+    "link": "https://www.getepic.com/",
     "title": "Epic! Free Student Library",
     "description": "Freemium digital library with 40,000+ books for classroom use. Free accounts for teachers grant student access to unlimited books with reading features.",
     "description_source": "generated",
@@ -4272,7 +4293,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Inspire a lifetime of reading and discovery with over 40,000 high-quality books and videos."
   },
   {
     "link": "https://www.wired.com/",
@@ -4436,7 +4458,8 @@
       "representation"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Internet Archive: Digital Library of Free & Borrowable Texts, Movies, Music & Wayback Machine"
   },
   {
     "link": "https://scholasticnews.scholastic.com/",
@@ -4602,7 +4625,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Worksheets and No Prep Teaching Resources"
   },
   {
     "link": "https://www.helpingwithwriting.com/",
@@ -4635,7 +4659,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Grammar is defined in the Collins Concise Dictionary as 'the rules of a language, that show how sentences are formed.'"
   },
   {
     "link": "https://www.mrnussbaum.com/",
@@ -4900,7 +4925,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "TVOKids doesn't have control over the new place you're about to visit, so please make sure you get your Parent or Guardian's permission first!"
   },
   {
     "link": "https://www.childrenslibrary.org/",
@@ -4932,7 +4958,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "dead",
     "granularity": "collection"
   },
   {
@@ -5345,7 +5371,8 @@
       "representation"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "We are engaging students in NASA's exciting missions, broad range of careers, and unique learning opportunities."
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/",
@@ -5418,7 +5445,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.hhmi.org/biointeractive/classroom-resources",
+    "link": "https://www.biointeractive.org/classroom-resources",
     "title": "HHMI BioInteractive Classroom Resources",
     "description": "Free, peer-reviewed interactive media, animations, and videos on molecular biology, evolution, and ecology. Includes hands-on virtual labs.",
     "description_source": "generated",
@@ -5729,7 +5756,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Playworks helps kids to stay active and build valuable skills through play."
   },
   {
     "link": "https://phet.colorado.edu/en/simulations/ramp-forces-and-motion",
@@ -5903,7 +5931,8 @@
       "representation"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Engage students with this successful approach to integrated studies that combines science, technology, engineering, and math."
   },
   {
     "link": "https://www.tinkercad.com/",
@@ -6418,7 +6447,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "If you're interested in learning about weather, science, and more, you've come to the right place!"
   },
   {
     "link": "https://www.ted.com/playlists/200/science-technology-and-learning",
@@ -6853,7 +6883,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Inquiry is wise"
   },
   {
     "link": "https://inquirygroup.org/history-lessons",
@@ -7680,7 +7711,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Since 1979, Committee for Children has been a leader in advancing the safety and well-being of children."
   },
   {
     "link": "https://www.kindness.org/",
@@ -7779,7 +7811,8 @@
       "engagement"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Edutopia is an initiative of the George Lucas Educational Foundation."
   },
   {
     "link": "https://www.morningsidecenter.org/",
@@ -7944,7 +7977,8 @@
       "action_expression"
     ],
     "link_status": "ok",
-    "granularity": "collection"
+    "granularity": "collection",
+    "evidence": "Panorama connects all your critical student data so teams understand every student and act together."
   },
   {
     "link": "https://greatergood.berkeley.edu/",
