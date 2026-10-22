@@ -13,6 +13,9 @@ venv/
 # SQLite data
 backend/data/*.db
 
+# Built from almanac-seed.json at deploy time (scripts/build_seed_db.py)
+backend/seed/almanac-seed.db
+
 # Node / frontend
 node_modules/
 frontend/dist/
@@ -30,4 +33,3 @@ backend/static/
 .idea/
 
 .agents/
-AGENTS.md

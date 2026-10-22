@@ -1,16 +1,19 @@
 """Build backend/seed/almanac-seed.db from backend/seed/almanac-seed.json.
 
-Commit the resulting .db file. On an ephemeral serverless deploy the app
-copies it into place on cold start (milliseconds) instead of re-inserting
-the JSON seed row-by-row (~8s, which was tripping the function timeout).
+The .db file is a build artifact. It is git-ignored: the JSON is the library,
+and the deploy builds the database from it (render.yaml `buildCommand`). On
+start the app copies the built file into place (milliseconds) instead of
+re-inserting the JSON seed row-by-row.
 
-Run from backend/ after any change to almanac-seed.json:
-  PYTHONPATH=. .venv/Scripts/python scripts/build_seed_db.py
+Run from backend/ (locally, only if you want the prebuilt file):
+  .venv/Scripts/python scripts/build_seed_db.py
 """
 import pathlib
+import sys
 import time
 
 BACKEND = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BACKEND))  # so `import app` works without PYTHONPATH
 SEED_DB = BACKEND / "seed" / "almanac-seed.db"
 
 

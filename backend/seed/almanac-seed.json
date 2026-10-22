@@ -4188,7 +4188,8 @@
       "engagement",
       "representation"
     ],
-    "granularity": "specific"
+    "granularity": "specific",
+    "link_status": "ok"
   },
   {
     "link": "https://www.ck12.org/student/",
@@ -4525,7 +4526,7 @@
       "action_expression",
       "engagement"
     ],
-    "link_status": "ok",
+    "link_status": "unreachable",
     "granularity": "collection"
   },
   {
@@ -4958,7 +4959,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "dead",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -6516,7 +6517,7 @@
       "representation",
       "action_expression"
     ],
-    "link_status": "ok",
+    "link_status": "bounced",
     "granularity": "specific"
   },
   {
@@ -8987,7 +8988,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: playful, short audio lessons hold young learners' attention; representation: bilingual English-Chinese audio pairs sound with meaning",
-    "evidence": "Miss Panda Chinese makes learning Mandarin simple and playful for non-native and heritage learners from the very beginning!"
+    "evidence": "Miss Panda Chinese makes learning Mandarin simple and playful for non-native and heritage learners from the very beginning!",
+    "link_status": "ok"
   },
   {
     "link": "https://rockalingua.com/",
@@ -9025,7 +9027,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: music and karaoke format motivates young learners; representation: vocabulary is presented through song, visuals, and text together",
-    "evidence": "Videos, songs, games and much more!"
+    "evidence": "Videos, songs, games and much more!",
+    "link_status": "ok"
   },
   {
     "link": "https://signingtime.com/pages/teachers-and-homeschoolers",
@@ -9063,7 +9066,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: vocabulary is shown orally, visually, and kinesthetically through sign; action_expression: students demonstrate understanding by producing signs rather than only speaking or writing",
-    "evidence": "Signing Time K-3 Classroom Curriculum brings American Sign Language (ASL) into the classroom"
+    "evidence": "Signing Time K-3 Classroom Curriculum brings American Sign Language (ASL) into the classroom",
+    "link_status": "ok"
   },
   {
     "link": "https://www.mamalisa.com/",
@@ -9101,7 +9105,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: familiar song and rhyme format draws in young learners; representation: original-language and translated text are shown side by side",
-    "evidence": "Mama Lisa's World, a place for songs, rhymes, and traditions from across the globe for both kids and grown-ups!"
+    "evidence": "Mama Lisa's World, a place for songs, rhymes, and traditions from across the globe for both kids and grown-ups!",
+    "link_status": "ok"
   },
   {
     "link": "https://littlepim.com/",
@@ -9139,7 +9144,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: short, character-led episodes suit young attention spans; representation: new words are paired with visuals and repetition",
-    "evidence": "Together with Little Pim, your child can learn 360 words and phrases, providing the essential building blocks for language learning."
+    "evidence": "Together with Little Pim, your child can learn 360 words and phrases, providing the essential building blocks for language learning.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.lifeprint.com/asl101/",
@@ -9177,7 +9183,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: grammar and culture content is presented visually, matching ASL as a visual language; action_expression: students demonstrate mastery through expressive/receptive projects and quizzes",
-    "evidence": "ASLU is a curriculum resource center. We do not offer a degree. We do not claim to prepare individuals for employment."
+    "evidence": "ASLU is a curriculum resource center. We do not offer a degree. We do not claim to prepare individuals for employment.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.chinesepod.com/",
@@ -9215,7 +9222,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: real dialogues and level tiers let students choose appropriately challenging content; representation: audio is paired with transcripts, vocabulary lists, and grammar notes",
-    "evidence": "Became a Chinese Mandarin master from a beginner with 4,000+ lessons and self-paced learning."
+    "evidence": "Became a Chinese Mandarin master from a beginner with 4,000+ lessons and self-paced learning.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.bonjourdefrance.com/",
@@ -9253,7 +9261,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: exercises are organized explicitly by CEFR proficiency level; action_expression: self-checking exercises give students immediate feedback on their own answers",
-    "evidence": "Venez apprendre le français en ligne gratuitement avec Bonjour de France"
+    "evidence": "Venez apprendre le français en ligne gratuitement avec Bonjour de France",
+    "link_status": "ok"
   },
   {
     "link": "https://www.marugoto-online.jp/info/",
@@ -9291,7 +9300,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: real recorded conversations connect language to authentic situations; action_expression: speaking activities require students to produce language, not just recognize it",
-    "evidence": "Registration (free) to the JF Japanese e-Learning Minato is required to take the Marugoto Japanese Online Course."
+    "evidence": "Registration (free) to the JF Japanese e-Learning Minato is required to take the Marugoto Japanese Online Course.",
+    "link_status": "ok"
   },
   {
     "link": "https://villa-albertine.org/va/professionals/cineschool/",
@@ -9329,7 +9339,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: authentic film content connects language learning to real Francophone culture; representation: pre-viewing workbooks scaffold the film's language and context before viewing",
-    "evidence": "CinéSchool is a free educational film program for young audiences, designed to support French language learning in the United States through French-language cinema."
+    "evidence": "CinéSchool is a free educational film program for young audiences, designed to support French language learning in the United States through French-language cinema.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.germanpod101.com/",
@@ -9367,7 +9378,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: real conversational audio gives purpose beyond vocabulary drilling; representation: lessons pair audio with vocabulary lists and study notes",
-    "evidence": "Our lessons take you by the hand and guide you through real German conversations."
+    "evidence": "Our lessons take you by the hand and guide you through real German conversations.",
+    "link_status": "ok"
   },
   {
     "link": "https://kinderart.com/art-lessons/painting/showers/",
@@ -9405,7 +9417,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students physically apply and manipulate paint materials to create an original piece; engagement: novelty of nature interacting with art hooks interest",
-    "evidence": "This activity shows kids how they can work with Mother Nature to create original works of raindrop art."
+    "evidence": "This activity shows kids how they can work with Mother Nature to create original works of raindrop art.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.deepspacesparkle.com/apple-art-project/",
@@ -9443,7 +9456,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students mix paint and physically cut/assemble their own collage; engagement: seasonal theme (apples/fall) connects to a familiar experience",
-    "evidence": "The children had fun anticipating what would become of the bright red apple."
+    "evidence": "The children had fun anticipating what would become of the bright red apple.",
+    "link_status": "ok"
   },
   {
     "link": "https://artprojectsforkids.org/draw-a-bear-head/",
@@ -9479,7 +9493,8 @@
       "action_expression"
     ],
     "udl_rationale": "action_expression: students draw and color an original piece by following sequenced, achievable steps",
-    "evidence": "Beginner artists need some simple projects to get started, so this How to Draw a Bear Face tutorial is a good choice for them."
+    "evidence": "Beginner artists need some simple projects to get started, so this How to Draw a Bear Face tutorial is a good choice for them.",
+    "link_status": "ok"
   },
   {
     "link": "https://kinderart.com/grades-3-5/emotion/",
@@ -9517,7 +9532,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students generate and paint original abstract compositions; engagement: personal emotional connection increases investment in the work",
-    "evidence": "Students will gain an understanding of how much of a role emotion plays in artmaking as they create paintings based on feelings."
+    "evidence": "Students will gain an understanding of how much of a role emotion plays in artmaking as they create paintings based on feelings.",
+    "link_status": "ok"
   },
   {
     "link": "https://buffaloakg.org/learn-discover/educators/lesson-plans/contrasting-styles",
@@ -9554,7 +9570,8 @@
       "representation"
     ],
     "udl_rationale": "action_expression: students build a physical 3D sculpture in a chosen style; representation: multiple artist examples show the same subject rendered different ways",
-    "evidence": "While Edgar Degas, Louise Nevelson, and Marino Marini each have a unique artistic style and process, each has used the horse as a subject."
+    "evidence": "While Edgar Degas, Louise Nevelson, and Marino Marini each have a unique artistic style and process, each has used the horse as a subject.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.crayola.com/lesson-plans/line-up-for-art-lesson-plan",
@@ -9591,7 +9608,8 @@
       "representation"
     ],
     "udl_rationale": "action_expression: students draw an original composition using the line types studied; representation: comparing two artists' use of line before creating",
-    "evidence": "Line, as an art element, has been called the backbone of art."
+    "evidence": "Line, as an art element, has been called the backbone of art.",
+    "link_status": "ok"
   },
   {
     "link": "https://kinderart.com/art-lessons/painting/foilart/",
@@ -9627,7 +9645,8 @@
       "action_expression"
     ],
     "udl_rationale": "action_expression: students use a scratching/etching technique to physically produce an original image",
-    "evidence": "By using aluminum foil instead of paper, students will create fabulous (and shiny) works of art."
+    "evidence": "By using aluminum foil instead of paper, students will create fabulous (and shiny) works of art.",
+    "link_status": "ok"
   },
   {
     "link": "https://buffaloakg.org/learn-discover/educators/lesson-plans/creating-print-line-etchings",
@@ -9664,7 +9683,8 @@
       "representation"
     ],
     "udl_rationale": "action_expression: students carve, ink, and pull their own print by hand; representation: studying Braque's technique before students attempt it themselves",
-    "evidence": "Etching is a printmaking technique. To begin, a metal plate is treated in an acid-resistant wax-like coating."
+    "evidence": "Etching is a printmaking technique. To begin, a metal plate is treated in an acid-resistant wax-like coating.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.crayola.com/lesson-plans/bridget-riley-inspired-op-art-lesson-plan",
@@ -9701,7 +9721,8 @@
       "representation"
     ],
     "udl_rationale": "action_expression: students design and execute a precise original op-art pattern; representation: Bridget Riley's work is studied as a model before creating",
-    "evidence": "Discuss op art, an abstract style that creates optical illusions that became very popular in the 1960s."
+    "evidence": "Discuss op art, an abstract style that creates optical illusions that became very popular in the 1960s.",
+    "link_status": "ok"
   },
   {
     "link": "https://caffeinatedj.com/music-composition-activities-for-lower-elementary/",
@@ -9738,7 +9759,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students originate and perform their own rhythm/melody patterns; engagement: low-stakes, playful formats (stickers, body percussion) lower anxiety around composing",
-    "evidence": "Music composition activities in lower elementary music class can be…tricky."
+    "evidence": "Music composition activities in lower elementary music class can be…tricky.",
+    "link_status": "ok"
   },
   {
     "link": "https://caffeinatedj.com/music-composition-activities-for-upper-elementary/",
@@ -9774,7 +9796,8 @@
       "action_expression"
     ],
     "udl_rationale": "action_expression: students compose original rhythm pieces and lyrics, then perform them on instruments",
-    "evidence": "The composition worksheets in the pictures of this post are part of my free music composition worksheet packet."
+    "evidence": "The composition worksheets in the pictures of this post are part of my free music composition worksheet packet.",
+    "link_status": "ok"
   },
   {
     "link": "https://blog.flat.io/a-free-standards-aligned-middle-school-music-unit-nine-lessons-nafme-standards/",
@@ -9812,7 +9835,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students compose, rehearse, and record real performances across nine connected lessons; engagement: peer collaboration on a shared ensemble piece builds investment",
-    "evidence": "Every lesson includes: Explicit NAfME National Core Arts Standards references (strand and standard code)"
+    "evidence": "Every lesson includes: Explicit NAfME National Core Arts Standards references (strand and standard code)",
+    "link_status": "ok"
   },
   {
     "link": "https://dramaresource.com/make-your-own-frog-puppet/",
@@ -9849,7 +9873,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students build a physical puppet and use it to perform; engagement: an animal character puppet motivates imaginative play",
-    "evidence": "The wonderful Norwich Puppet Theatre teach you to make a toad puppet!"
+    "evidence": "The wonderful Norwich Puppet Theatre teach you to make a toad puppet!",
+    "link_status": "ok"
   },
   {
     "link": "https://dramaresource.com/key-stage-two-drama-ideas/",
@@ -9887,7 +9912,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students physically create tableaus, soundscapes, and improvised dialogue; engagement: partner and small-group formats keep every student performing",
-    "evidence": "Drama is a natural learning method for key stage two pupils."
+    "evidence": "Drama is a natural learning method for key stage two pupils.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.theatrefolk.com/free-resources",
@@ -9924,7 +9950,8 @@
       "action_expression"
     ],
     "udl_rationale": "action_expression: students rehearse and physically perform a script in front of an audience",
-    "evidence": "Free resources for use in your classroom. You're welcome to perform these scenes without royalty for auditions, classwork, and competitions such as Thespian IEs."
+    "evidence": "Free resources for use in your classroom. You're welcome to perform these scenes without royalty for auditions, classwork, and competitions such as Thespian IEs.",
+    "link_status": "ok"
   },
   {
     "link": "https://www2.heart.org/site/SPageServer?pagename=khc_resources_educational",
@@ -9962,7 +9989,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: gamified team-challenge format with incentives motivates participation; action_expression: offers movement-based (jump rope, basketball) and digital module options for demonstrating learning",
-    "evidence": "Free online resources with topics such as life skills, vaping, mental well-being, physical activity, professional development and more"
+    "evidence": "Free online resources with topics such as life skills, vaping, mental well-being, physical activity, professional development and more",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pecentral.org/",
@@ -10000,7 +10028,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: large searchable library lets teachers pick lessons matched to varied skill levels; engagement: wide variety of games and challenge formats sustains motivation",
-    "evidence": "Practical, proven lesson plans written and submitted by real teachers and approved by our expert editorial team!"
+    "evidence": "Practical, proven lesson plans written and submitted by real teachers and approved by our expert editorial team!",
+    "link_status": "ok"
   },
   {
     "link": "https://www.actionforhealthykids.org/nutrition-toolkit/",
@@ -10037,7 +10066,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: hands-on taste tests and morning-announcement tie-ins make nutrition concrete and fun; representation: mixes recipes, tip sheets, and posters so the same concept is shown multiple ways",
-    "evidence": "Eating better helps improve kids' learning, behavior, and emotional health, so start building healthy habits with these recipes, resources, and ideas on a variety of topics."
+    "evidence": "Eating better helps improve kids' learning, behavior, and emotional health, so start building healthy habits with these recipes, resources, and ideas on a variety of topics.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.uab.edu/icac/images/4th_Grade_Lesson_Plans/Science/Body_Systems_Prezi_Lesson_Plan.pdf",
@@ -10075,7 +10105,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: students choose how to research and build their Prezi to demonstrate learning; engagement: group research and peer-teaching format adds collaboration and choice",
-    "evidence": "The class will learn about tissues, organs, and the major organ systems of our body. They will use technology presentations to share the information they have learned."
+    "evidence": "The class will learn about tissues, organs, and the major organ systems of our body. They will use technology presentations to share the information they have learned.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.sja.org.uk/get-advice/first-aid-lesson-plans/key-stage-2/",
@@ -10113,7 +10144,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: scenario cards and practical demonstrations make emergencies concrete and low-stakes to practice; representation: topics broken into short, focused lesson plans by emergency type",
-    "evidence": "These resources are not accredited. They must not be used as a substitute for statutory workplace first aid qualifications."
+    "evidence": "These resources are not accredited. They must not be used as a substitute for statutory workplace first aid qualifications.",
+    "link_status": "ok"
   },
   {
     "link": "https://dpi.wi.gov/sites/default/files/imce/sspw/pdf/Grades_3-5_Mental_Health_Literacy_Instructional_Units.pdf",
@@ -10151,7 +10183,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: includes warm-up, movement-moment, and mindful-moment segments to vary energy and sustain interest; action_expression: mixes whole-class discussion, small-group, and independent work formats",
-    "evidence": "Mental health includes emotional, psychological, and social well-being, and it affects how people think, feel, and act."
+    "evidence": "Mental health includes emotional, psychological, and social well-being, and it affects how people think, feel, and act.",
+    "link_status": "ok"
   },
   {
     "link": "https://dpi.wi.gov/sites/default/files/imce/sspw/pdf/Grades_9-12_Mental_Health_Literacy_Instructional_Units.pdf",
@@ -10189,7 +10222,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: mindful-moment and movement segments break up direct instruction; action_expression: students build a personal stress-management plan rather than a single fixed answer",
-    "evidence": "This unit of instruction aims to increase mental health literacy in grades 9-12 students using a skills-based health approach."
+    "evidence": "This unit of instruction aims to increase mental health literacy in grades 9-12 students using a skills-based health approach.",
+    "link_status": "ok"
   },
   {
     "link": "https://nida.nih.gov/research-topics/parents-educators/lesson-plans-and-activities",
@@ -10226,7 +10260,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: searchable finder lets teachers filter by grade and topic to match complexity level; engagement: real overdose-response and media-literacy scenarios connect to teens' actual decisions",
-    "evidence": "All lessons are based on national science and education standards and were developed by scientists from leading universities and the National Institute on Drug Abuse."
+    "evidence": "All lessons are based on national science and education standards and were developed by scientists from leading universities and the National Institute on Drug Abuse.",
+    "link_status": "ok"
   },
   {
     "link": "https://agclassroom.org/matrix/lessons/666/",
@@ -10263,7 +10298,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: hands-on ranking and sorting of real food packages instead of a worksheet alone; action_expression: foldable notes let students organize and record findings in their own way",
-    "evidence": "Nutrition labels are standardized and regulated by the Food and Drug Administration (FDA) for consistency and accuracy."
+    "evidence": "Nutrition labels are standardized and regulated by the Food and Drug Administration (FDA) for consistency and accuracy.",
+    "link_status": "ok"
   },
   {
     "link": "https://sparkpe.org/free-lesson-downloads/",
@@ -10299,7 +10335,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: high-MVPA game formats are designed to keep all students active rather than waiting in line",
-    "evidence": "Browse a collection of free SPARK Physical Education and Physical Activity lesson plans."
+    "evidence": "Browse a collection of free SPARK Physical Education and Physical Activity lesson plans.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.nestfoundation.org/high-school-lessons/consent-and-healthy-relationships",
@@ -10336,7 +10373,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: collaborative Solutions Mural activity gives students an ongoing, visible way to contribute ideas; representation: discussion is framed through multiple relationship types (romantic, platonic, professional, familial)",
-    "evidence": "There are many different types of relationships (romantic, platonic, professional, familial, friend)."
+    "evidence": "There are many different types of relationships (romantic, platonic, professional, familial, friend).",
+    "link_status": "ok"
   },
   {
     "link": "https://operationprevention.discoveryeducation.com/",
@@ -10373,7 +10411,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: virtual field trips and an interactive e-learning module replace a straight lecture on drug science; representation: content delivered through video, digital lessons, and hands-on investigations",
-    "evidence": "Join the DEA and Discovery Education to support the critical mission of preventing opioid misuse today in every school, every home, and every state."
+    "evidence": "Join the DEA and Discovery Education to support the critical mission of preventing opioid misuse today in every school, every home, and every state.",
+    "link_status": "ok"
   },
   {
     "link": "https://bedtimemath.org/daily-math/",
@@ -10410,7 +10449,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: frames every problem as a short funny story instead of a bare equation, and offers three difficulty tiers so no one feels stuck or bored",
-    "evidence": "Bedtime Math sends parents a fun, new math problem every day on our website and on our free app."
+    "evidence": "Bedtime Math sends parents a fun, new math problem every day on our website and on our free app.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.roomrecess.com/pages/MathGamesForKids.html",
@@ -10447,7 +10487,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: arcade-style games with playful themes (zombies, missiles, tic-tac-toe) turn fact practice into something kids choose to play",
-    "evidence": "These math games help kids learn essential math standards in a fun and engaging way."
+    "evidence": "These math games help kids learn essential math standards in a fun and engaging way.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.prodigygame.com/main-en/prodigy-math",
@@ -10484,7 +10525,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: math problems are the mechanic for casting spells and winning battles in a game kids choose to keep playing",
-    "evidence": "Adaptive math practice meets engaging game-based learning with Prodigy Math."
+    "evidence": "Adaptive math practice meets engaging game-based learning with Prodigy Math.",
+    "link_status": "ok"
   },
   {
     "link": "https://solveme.edc.org/mobiles/",
@@ -10522,7 +10564,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: puzzle-game format with progressive Explorer/Puzzler/Master levels hooks kids before they know they're solving equations; representation: shows algebra visually as a balance instead of only symbols",
-    "evidence": "These puzzles are designed for larger screens, so some aspects of the puzzles may not work as expected."
+    "evidence": "These puzzles are designed for larger screens, so some aspects of the puzzles may not work as expected.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.nbamathhoops.com/",
@@ -10560,7 +10603,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: real NBA/WNBA players and fantasy-team stakes make the math the fun part, not a barrier to it; action_expression: students choose plays and strategy, expressing math reasoning through gameplay decisions",
-    "evidence": "NBA Math Hoops leverages the game of basketball and the NBA/WNBA brands to build fundamental math skills through a physical and digital basketball-themed board game, a curriculum, and a community program experience."
+    "evidence": "NBA Math Hoops leverages the game of basketball and the NBA/WNBA brands to build fundamental math skills through a physical and digital basketball-themed board game, a curriculum, and a community program experience.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.kenkenpuzzle.com/play_now",
@@ -10597,7 +10641,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: framed as a brain-training puzzle/game rather than a worksheet, with a satisfying single solved state that rewards persistence",
-    "evidence": "Fun, addicting, yet educational. The KenKen iOS and Android apps are perfect for the whole family!"
+    "evidence": "Fun, addicting, yet educational. The KenKen iOS and Android apps are perfect for the whole family!",
+    "link_status": "ok"
   },
   {
     "link": "https://robertkaplinsky.com/work/how-many-soda-combinations-are-there-on-a-coke-freestyle/",
@@ -10634,7 +10679,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: uses a genuinely familiar object (a soda machine kids love) as the hook for a counting investigation instead of an abstract word problem",
-    "evidence": "The image below shows a woman using a Coca-Cola Freestyle machine. The drink dispenser allows you to take Coca-Cola soft drinks and add flavors to them including:"
+    "evidence": "The image below shows a woman using a Coca-Cola Freestyle machine. The drink dispenser allows you to take Coca-Cola soft drinks and add flavors to them including:",
+    "link_status": "ok"
   },
   {
     "link": "https://www.visualpatterns.org/",
@@ -10672,7 +10718,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: pattern-spotting has an immediate 'aha' payoff that pulls in students who shut down at symbolic algebra; representation: pairs a visual/pictorial pattern with its numeric and algebraic description",
-    "evidence": "Patterns to grow algebraic thinking and reasoning."
+    "evidence": "Patterns to grow algebraic thinking and reasoning.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.mathcounts.org/resources/problem-week-archive",
@@ -10709,7 +10756,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: ties each problem to a timely, fun hook (a holiday, event, or STEM topic) plus the prestige of a national competition organization",
-    "evidence": "Every week, we release a new multi-part problem related to a holiday, season, special event or cool STEM topic...completely for free!"
+    "evidence": "Every week, we release a new multi-part problem related to a holiday, season, special event or cool STEM topic...completely for free!",
+    "link_status": "ok"
   },
   {
     "link": "https://globalmathproject.org/exploding-dots/",
@@ -10747,7 +10795,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: described by students as 'mind blowing,' turning routine arithmetic into a strange, fun machine to explore; representation: gives a single visual model that spans place value through polynomial algebra",
-    "evidence": "Here we introduce and interact with a mysterious machine that sets the scene for the entire Exploding Dots story and a transformational mindset for mathematics."
+    "evidence": "Here we introduce and interact with a mysterious machine that sets the scene for the entire Exploding Dots story and a transformational mindset for mathematics.",
+    "link_status": "ok"
   },
   {
     "link": "https://estimation180.com/",
@@ -10784,7 +10833,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: real photos of everyday objects and a guess-then-reveal structure make a low-stakes routine feel like a game every student can jump into",
-    "evidence": "Estimation tasks that make math reasoning enjoyable and accessible to all students."
+    "evidence": "Estimation tasks that make math reasoning enjoyable and accessible to all students.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.gapminder.org/dollar-street/about",
@@ -10822,7 +10872,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: real photos of real families make abstract income statistics feel personal and worth investigating; representation: presents the same data as image, map, and number so students can enter through whichever they understand best",
-    "evidence": "Imagine the world as a street ordered by income. Everyone lives somewhere on the street."
+    "evidence": "Imagine the world as a street ordered by income. Everyone lives somewhere on the street.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.citizenmath.com/",
@@ -10859,7 +10910,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: uses math to argue about genuinely contested real-world questions instead of illustrating a predetermined answer",
-    "evidence": "When teachers incorporate Citizen Math lessons into their curriculum, they help students think deeply about real issues and turn their classrooms into places for meaningful conversations."
+    "evidence": "When teachers incorporate Citizen Math lessons into their curriculum, they help students think deeply about real issues and turn their classrooms into places for meaningful conversations.",
+    "link_status": "ok"
   },
   {
     "link": "https://mathkangaroo.org/mks/practice/free-question-samples/",
@@ -10896,7 +10948,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: frames problems as a global competition students opt into, with puzzle-style questions designed to be fun rather than routine",
-    "evidence": "Students who work on these type of math problems have better results at the competition."
+    "evidence": "Students who work on these type of math problems have better results at the competition.",
+    "link_status": "ok"
   },
   {
     "link": "https://momath.org/activities/",
@@ -10933,7 +10986,8 @@
       "engagement"
     ],
     "udl_rationale": "engagement: brings a real museum's hands-on puzzle culture, built by name mathematicians, into the classroom instead of a textbook exercise",
-    "evidence": "We have created a number of activities and puzzles."
+    "evidence": "We have created a number of activities and puzzles.",
+    "link_status": "ok"
   },
   {
     "link": "https://vision.icivics.org/private-i-history-detectives-civic-virtues-collection/",
@@ -10971,7 +11025,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: mystery-based inquiry with real role models draws young students into an abstract idea; representation: pairs primary-source images with short text on the same civic-virtue concept",
-    "evidence": "How Can Being Civic-Minded Help Me Be a Good Citizen?"
+    "evidence": "How Can Being Civic-Minded Help Me Be a Good Citizen?",
+    "link_status": "ok"
   },
   {
     "link": "https://econedlink.org/resources/toys-for-me/",
@@ -11008,7 +11063,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a playful scarcity character and toy-store story make an abstract economic idea concrete; action_expression: drag-and-drop sorting lets students show understanding without writing",
-    "evidence": "Scarcity means that you always want more than you can have"
+    "evidence": "Scarcity means that you always want more than you can have",
+    "link_status": "ok"
   },
   {
     "link": "https://education.nationalgeographic.org/resource/map-skills-for-students/",
@@ -11044,7 +11100,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: spatial concepts are taught with hands-on maps/globes rather than text alone; action_expression: students demonstrate map skills by building and using a real classroom map",
-    "evidence": "Spatial thinking allows students to comprehend and analyze phenomena related to the places and spaces around them, and is one of the most important skills students can develop as they learn geography."
+    "evidence": "Spatial thinking allows students to comprehend and analyze phenomena related to the places and spaces around them, and is one of the most important skills students can develop as they learn geography.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pbslearningmedia.org/resource/our-community-helpers-lesson-plan/civics-for-kids-building-tomorrow-together/",
@@ -11080,7 +11137,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: real-world video clips connect the topic to helpers students recognize from daily life; representation: pairs video with discussion prompts instead of text alone",
-    "evidence": "Our Community Helpers | Civics for Kids | Grades PreK-K, K-2, 3-5 Social Studies Teaching and Lesson Resources"
+    "evidence": "Our Community Helpers | Civics for Kids | Grades PreK-K, K-2, 3-5 Social Studies Teaching and Lesson Resources",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pebblego.com/us/features",
@@ -11118,7 +11176,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: every article combines read-aloud audio, images, and simplified text; action_expression: built-in tools let students respond by creating, not just reading",
-    "evidence": "PebbleGo is a K-5+ digital learning platform that gives educators the resources to help every student grow their literacy skills while building essential science and social studies knowledge."
+    "evidence": "PebbleGo is a K-5+ digital learning platform that gives educators the resources to help every student grow their literacy skills while building essential science and social studies knowledge.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.flatstanleyproject.com/",
@@ -11155,7 +11214,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: mailing a personal paper character to real places makes geography personally meaningful; action_expression: students show learning through a journal and map instead of a worksheet",
-    "evidence": "Kids send a flat visitor to a school, a celebrity, a family member, a politician or anyone of interest and the recipient returns the little flat guy along with a completed journal and perhaps some souvenirs such as post cards, photos, or special items."
+    "evidence": "Kids send a flat visitor to a school, a celebrity, a family member, a politician or anyone of interest and the recipient returns the little flat guy along with a completed journal and perhaps some souvenirs such as post cards, photos, or special items.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.ixl.com/social-studies/kindergarten",
@@ -11193,7 +11253,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: instant right/wrong feedback lets students self-correct without waiting on a teacher; engagement: skill categories and progress tracking give a visible sense of mastery",
-    "evidence": "Identify Earth's land features"
+    "evidence": "Identify Earth's land features",
+    "link_status": "ok"
   },
   {
     "link": "https://www.studiesweekly.com/social-studies/",
@@ -11232,7 +11293,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: the same content is delivered as a print periodical, teacher slides, and an online platform; engagement: primary sources and real-world connections are built into every weekly issue",
-    "evidence": "Meet the needs of every learner with flexible instructional resources designed to support diverse learning styles and abilities."
+    "evidence": "Meet the needs of every learner with flexible instructional resources designed to support diverse learning styles and abilities.",
+    "link_status": "ok"
   },
   {
     "link": "https://bensguide.gpo.gov/learning-adventures-14more",
@@ -11270,7 +11332,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: government concepts are broken into short, icon-led modules instead of dense text; engagement: an age-banded 'Apprentice' level signals content is pitched directly at young learners",
-    "evidence": "Learn about the branches of the U.S. Government."
+    "evidence": "Learn about the branches of the U.S. Government.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pbslearningmedia.org/resource/around-the-world-media-gallery/lets-go-luna-learn-along-bingo-activity-gallery/",
@@ -11307,7 +11370,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: an animated, character-led travel story motivates young viewers more than static text; representation: video and a bingo/activity sheet present the same cultural content two ways",
-    "evidence": "Around the World | Let's Go Luna | Grades PreK-K, K-2 Preschool Teaching and Lesson Resources"
+    "evidence": "Around the World | Let's Go Luna | Grades PreK-K, K-2 Preschool Teaching and Lesson Resources",
+    "link_status": "ok"
   },
   {
     "link": "https://www.kodable.com/learn/unplugged-coding-activities",
@@ -11345,7 +11409,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: hands-on, screen-free format keeps young learners physically engaged; action_expression: printable worksheets let students show understanding through drawing/writing instead of typing",
-    "evidence": "Your Ultimate Guide for Elementary Unplugged Coding Activities includes 20+ projects that teach real coding concepts while emphasizing computer science mindsets - all with minimal prep and zero tech devices required."
+    "evidence": "Your Ultimate Guide for Elementary Unplugged Coding Activities includes 20+ projects that teach real coding concepts while emphasizing computer science mindsets - all with minimal prep and zero tech devices required.",
+    "link_status": "ok"
   },
   {
     "link": "https://codespark.com/educators",
@@ -11383,7 +11448,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: game format with a story and character motivates young players; representation: wordless, icon-based interface removes reading as a barrier to coding for pre/early readers",
-    "evidence": "codeSpark is 100% FREE for verified teachers and librarians of public schools in North America and non-profit organizations."
+    "evidence": "codeSpark is 100% FREE for verified teachers and librarians of public schools in North America and non-profit organizations.",
+    "link_status": "ok"
   },
   {
     "link": "https://sites.bc.edu/codingasanotherlanguage/curricula/scratchjr-curricula/kindergarten-scratchjr/",
@@ -11421,7 +11487,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: pairs a picture-based coding app with read-aloud storybooks so pre-readers access content multiple ways; engagement: choice of story themes lets each child personalize their project",
-    "evidence": "The CAL curriculum for Kindergarten has 24 lessons, designed for a total of 18 hours, but can be adapted to any learning setting."
+    "evidence": "The CAL curriculum for Kindergarten has 24 lessons, designed for a total of 18 hours, but can be adapted to any learning setting.",
+    "link_status": "ok"
   },
   {
     "link": "https://yes.mos.org/unit/sort-it-out-programming-robots-to-recycle/",
@@ -11460,7 +11527,8 @@
       "engagement"
     ],
     "udl_rationale": "action_expression: offers both a plugged (physical robot) and unplugged (peer-as-robot) pathway so students can show programming skill in the format that fits them; engagement: the real-world recycling/park cleanup story gives the coding task a concrete purpose",
-    "evidence": "Students learn how to give instructions to a robot. They modify their programs to include repeating instructions to make it easy to tell the robot to do the same action several times."
+    "evidence": "Students learn how to give instructions to a robot. They modify their programs to include repeating instructions to make it easy to tell the robot to do the same action several times.",
+    "link_status": "ok"
   },
   {
     "link": "https://tech.aph.org/codeandgo/",
@@ -11498,7 +11566,8 @@
       "representation"
     ],
     "udl_rationale": "action_expression: students physically place coding cards and watch the result immediately, a non-keyboard way to program; representation: directional arrow cards use symbols instead of text, accessible to pre-readers",
-    "evidence": "Coding literally means the transformation of data into a form understandable by a computer-basically, telling a computer what you want it to do."
+    "evidence": "Coding literally means the transformation of data into a form understandable by a computer-basically, telling a computer what you want it to do.",
+    "link_status": "ok"
   },
   {
     "link": "https://kinderlabrobotics.com/ai",
@@ -11536,7 +11605,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: physically building and running a robot sustains attention better than a screen-based AI demo; action_expression: wooden block programming lets students test ideas by rearranging objects, not writing text",
-    "evidence": "Early STEM education, where children learn at a young age about technology, computers, coding, and AI, is the key to giving children understanding and mastery of AI tools."
+    "evidence": "Early STEM education, where children learn at a young age about technology, computers, coding, and AI, is the key to giving children understanding and mastery of AI tools.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.barefootcomputing.org/primary-computing-resources",
@@ -11574,7 +11644,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: lessons cross-link computing ideas into literacy/PE so the same concept is met in more than one context; engagement: many activities are physical/unplugged, giving movement-based learners a way in",
-    "evidence": "over 80 cross-curricular lesson plans and resources that bring computing to life, with or without a computer"
+    "evidence": "over 80 cross-curricular lesson plans and resources that bring computing to life, with or without a computer",
+    "link_status": "ok"
   },
   {
     "link": "https://www.teachengineering.org/lessons/view/cub-2635-climate-change-cars-k-2-lesson",
@@ -11612,7 +11683,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: pairs video with a guided worksheet so the same content is delivered by ear and by print; engagement: think-pair-share discussion lets students process the topic verbally with a partner before writing",
-    "evidence": "Understanding the negative impact gas-powered cars have on the environment empowers engineers to develop alternative modes of transportation."
+    "evidence": "Understanding the negative impact gas-powered cars have on the environment empowers engineers to develop alternative modes of transportation.",
+    "link_status": "ok"
   },
   {
     "link": "https://stemteachers.asu.edu/stem-lesson-plans/jack-and-beanstalk-activity-2-beanstalk-building",
@@ -11650,7 +11722,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: ties the build challenge to a familiar fairy tale so students have a story hook for the task; action_expression: students show learning by building and measuring a physical object rather than writing about it",
-    "evidence": "Students build the tallest beanstalk they can with the provided materials. They then measure it and compare their beanstalk heights."
+    "evidence": "Students build the tallest beanstalk they can with the provided materials. They then measure it and compare their beanstalk heights.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.teachengineering.org/curriculum-search?collection=Lessons",
@@ -11688,7 +11761,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: topic filters (space, robotics, environment, etc.) let teachers match a lesson to what their class is curious about; representation: each lesson bundles video, images, and text so teachers can pick the best format for their students",
-    "evidence": "Free, standards-aligned STEM curriculum for K-12. A collaboration of the University of Colorado Boulder and partner institutions, funded by the National Science Foundation."
+    "evidence": "Free, standards-aligned STEM curriculum for K-12. A collaboration of the University of Colorado Boulder and partner institutions, funded by the National Science Foundation.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.kidsyogastories.com/african-safari-animals-yoga/",
@@ -11731,7 +11805,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: an imaginary safari journey frames the poses as a story, which sustains attention for children who disengage from drill-style movement; action_expression: children show what they know with their bodies rather than with words, and poses can be simplified or held for shorter counts.",
-    "evidence": "Pretend to be a racing cheetah."
+    "evidence": "Pretend to be a racing cheetah.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.prekinders.com/safari-theme/",
@@ -11774,7 +11849,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a fast/slow contrast game needs no setup and pulls in children who are losing focus mid-lesson; action_expression: the response is whole-body, so children who cannot yet answer verbally still participate fully.",
-    "evidence": "When you say \"Cheetah!\", kids run in place super fast."
+    "evidence": "When you say \"Cheetah!\", kids run in place super fast.",
+    "link_status": "ok"
   },
   {
     "link": "https://toddlerapproved.com/ocean-animal-movements/",
@@ -11817,7 +11893,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: children move around the room instead of sitting, so the activity holds attention far longer than a picture book about the same animals; representation: each animal arrives as a picture, a spoken name and a movement at once, giving three routes to the same vocabulary.",
-    "evidence": "When you get to a card, point to the picture, say the name of the ocean animal, read the action statement."
+    "evidence": "When you get to a card, point to the picture, say the name of the ocean animal, read the action statement.",
+    "link_status": "ok"
   },
   {
     "link": "https://theearlychildhoodacademy.com/penguin-moves/",
@@ -11860,7 +11937,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: the teacher can pick two moves for a 60-second wiggle break or run the whole set as a lesson, matching the class's energy; action_expression: several moves target different skills (balancing, sliding, hopping), so a child who cannot hop can still slide or huddle.",
-    "evidence": "Encourage children to get creative with their movements and have fun exploring the various ways penguins navigate their icy habitats!"
+    "evidence": "Encourage children to get creative with their movements and have fun exploring the various ways penguins navigate their icy habitats!",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pre-kpages.com/dinosaur-activities-preschool/",
@@ -11903,7 +11981,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: the random roll keeps the next move unknown, which sustains interest through repeated rounds; action_expression: children respond with large body movements and each card can be scaled down for a child with limited mobility.",
-    "evidence": "Waiting for a turn is a very difficult for young children which helps them develop self-regulation skills."
+    "evidence": "Waiting for a turn is a very difficult for young children which helps them develop self-regulation skills.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pbs.org/parents/crafts-and-experiments/act-out-the-life-cycle-of-a-butterfly",
@@ -11946,7 +12025,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: acting out metamorphosis turns an abstract sequence into something children feel in their own bodies, which holds three-year-olds far better than a diagram; action_expression: sequence knowledge is demonstrated through movement, so pre-readers and children with limited expressive language can show mastery.",
-    "evidence": "Start out as tiny eggs, rolled up in a ball on the floor!"
+    "evidence": "Start out as tiny eggs, rolled up in a ball on the floor!",
+    "link_status": "ok"
   },
   {
     "link": "https://www.pre-kpages.com/caterpillar-and-butterfly-life-cycle-art-activity-shape-caterpillars/",
@@ -11989,7 +12069,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: the life cycle is presented as a sequence of physical pages the child can turn and revisit, not a one-time verbal explanation; action_expression: children build and draw rather than write, and the pre-cut shapes remove the scissor barrier for children still developing hand strength.",
-    "evidence": "Using glue from a squeeze bottle requires effort, which is a great way to sneak in some hand/arm strengthening!"
+    "evidence": "Using glue from a squeeze bottle requires effort, which is a great way to sneak in some hand/arm strengthening!",
+    "link_status": "ok"
   },
   {
     "link": "https://millymom.com/2018/07/26/farm-animals-music-movement-lesson-plan/",
@@ -12032,7 +12113,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: the session cycles through parachute, singing, instruments and dance, so a child who tunes out of one format is re-engaged by the next within minutes; representation: each farm animal is delivered as a picture, a sound, a song lyric and a movement.",
-    "evidence": "How fun it is to visit the farm! Don't you love farm animals?"
+    "evidence": "How fun it is to visit the farm! Don't you love farm animals?",
+    "link_status": "ok"
   },
   {
     "link": "https://www.education.com/lesson-plan/from-seeds-to-plants/",
@@ -12075,7 +12157,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: children handle real seeds and a real plant alongside the spoken explanation, which anchors an abstract process in something concrete; engagement: the lesson connects to a planting project children can tend over following days, giving the learning a visible payoff.",
-    "evidence": "Tell students that today they will be learning how seeds grow and develop into plants with the help of soil, water, sunshine, and carbon dioxide."
+    "evidence": "Tell students that today they will be learning how seeds grow and develop into plants with the help of soil, water, sunshine, and carbon dioxide.",
+    "link_status": "ok"
   },
   {
     "link": "https://preschooltoolkit.com/blog/leaf-science/",
@@ -12118,7 +12201,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: children gather evidence through sight, touch and smell rather than through a single verbal explanation of what leaves do in autumn; engagement: the outdoor collection walk and the multi-day wait give children a stake in the result.",
-    "evidence": "The crunch of dried leaves, the weight of heavy books, and the interesting results of the experiment all stack up to make this a fun fall activity."
+    "evidence": "The crunch of dried leaves, the weight of heavy books, and the interesting results of the experiment all stack up to make this a fun fall activity.",
+    "link_status": "ok"
   },
   {
     "link": "https://homeschoolpreschool.net/rain-cloud-in-a-jar/",
@@ -12161,7 +12245,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: an invisible process in the sky becomes a visible one in a jar, at the child's eye level; engagement: the dropper work gives every child a turn at the moment the rain appears, rather than watching the teacher demonstrate.",
-    "evidence": "The food coloring is sinking through the shaving cream cloud, like real rain falls from the sky!"
+    "evidence": "The food coloring is sinking through the shaving cream cloud, like real rain falls from the sky!",
+    "link_status": "ok"
   },
   {
     "link": "https://buggyandbuddy.com/math-kids-finding-shapes-playground/",
@@ -12204,7 +12289,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: shape learning moves outdoors onto equipment children already love, which reaches learners who disengage from worksheet geometry; action_expression: children demonstrate shape knowledge by pointing, photographing and building a book instead of by writing.",
-    "evidence": "As we walked around the playground we found circles, squares, rectangles, and triangles from different angles in the play structures."
+    "evidence": "As we walked around the playground we found circles, squares, rectangles, and triangles from different angles in the play structures.",
+    "link_status": "ok"
   },
   {
     "link": "https://lifeovercs.com/five-little-ducks-on-the-pond-gross-motor-activity/",
@@ -12247,7 +12333,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: pairing counting with a familiar song and with hopping keeps children in the activity longer than counters at a table; action_expression: a child shows number order by moving their body along the line, which works before they can write numerals.",
-    "evidence": "Counting is an important early math skill that's a precursor to learning number names and values."
+    "evidence": "Counting is an important early math skill that's a precursor to learning number names and values.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.fantasticfunandlearning.com/abc-cookies-preschool-alphabet-activity.html",
@@ -12290,7 +12377,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: embedding letter matching inside a bakery role-play gives a purpose children care about, unlike flashcard drill; action_expression: children handle, scoop and serve physical letters, so success does not depend on naming letters aloud.",
-    "evidence": "Tinker loved matching the upper and lowercase letters as she served up a whole batch of ABC cookies."
+    "evidence": "Tinker loved matching the upper and lowercase letters as she served up a whole batch of ABC cookies.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.readwritethink.org/classroom-resources/lesson-plans/apple-building-letter-recognition",
@@ -12332,7 +12420,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: letters are met as physical cards, as online game targets and as drawings, so the same content reaches children through three channels; action_expression: children show mastery by searching, drawing and reading aloud rather than only by writing.",
-    "evidence": "Becoming fluent in letter recognition helps children to become more familiar and at ease with the alphabet."
+    "evidence": "Becoming fluent in letter recognition helps children to become more familiar and at ease with the alphabet.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.prekinders.com/calm-down-corner-printables-ideas-free/",
@@ -12375,7 +12464,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: children choose their own strategy and their own timing, which builds self-regulation rather than relying on adult direction; representation: strategies appear as pictures plus words, so a pre-reader can use the cards independently.",
-    "evidence": "Young children are still learning how to manage their emotions"
+    "evidence": "Young children are still learning how to manage their emotions",
+    "link_status": "ok"
   },
   {
     "link": "https://masandpas.com/emotions-activity/",
@@ -12418,7 +12508,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: feelings are shown as changeable physical features rather than described in words, which makes the link between expression and emotion concrete; action_expression: a child answers by moving velcro pieces, so children with little expressive language can still show they understand.",
-    "evidence": "Being aware of feelings and why they get them, can help them learn how to control their reactions to strong emotions in the future."
+    "evidence": "Being aware of feelings and why they get them, can help them learn how to control their reactions to strong emotions in the future.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.gryphonhouse.com/early-childhood-activities/chinese-dragon-for-the-new-year",
@@ -12461,7 +12552,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a whole-class parade gives every child a visible role and ties a cultural celebration to something they build themselves; action_expression: children can take part by constructing, by carrying the dragon, or by playing an instrument, so there are three ways in.",
-    "evidence": "The Chinese dragon is a symbol of strength, wisdom, health, and good luck."
+    "evidence": "The Chinese dragon is a symbol of strength, wisdom, health, and good luck.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.famly.co/blog/were-going-on-a-bear-hunt-activities",
@@ -12504,7 +12596,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: the obstacle course makes story sequence something children move through rather than sit and listen to, which suits children who cannot hold still for a full read-aloud; action_expression: retelling is demonstrated physically, so children who are not yet talking in full sentences can still show they know the order.",
-    "evidence": "Encourage the children to imitate their movements as you read the story aloud."
+    "evidence": "Encourage the children to imitate their movements as you read the story aloud.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.nps.gov/teachers/classrooms/moon-phases-with-cookies.htm",
@@ -12547,7 +12640,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: food and sculpting make an abstract sky pattern immediately appealing; representation: the frosting gives a concrete visual of an otherwise distant phenomenon; action_expression: students show understanding by shaping and ordering models rather than writing definitions",
-    "evidence": "Use the popsicle stick or scraper to create the phases of the moon out of the frosting."
+    "evidence": "Use the popsicle stick or scraper to create the phases of the moon out of the frosting.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/moon-phases/",
@@ -12590,7 +12684,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: whole-body role play keeps every student physically involved; representation: the lamp-and-sphere model converts a 3D spatial relationship into something students can see directly; action_expression: understanding is demonstrated by positioning the model, not by verbal recall",
-    "evidence": "Explain to students that the bulb is the sun, each of their spheres is the moon and each student is Earth"
+    "evidence": "Explain to students that the bulb is the sun, each of their spheres is the moon and each student is Earth",
+    "link_status": "ok"
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/solar-system-bead-activity/",
@@ -12632,7 +12727,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: distance data becomes a physical object students can hold and compare; action_expression: students demonstrate scale reasoning by measuring and building, with calculation optional for students ready for it",
-    "evidence": "Students construct -- and where appropriate, calculate -- a scale model of the solar system using beads and string."
+    "evidence": "Students construct -- and where appropriate, calculate -- a scale model of the solar system using beads and string.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/create-a-comet-with-dry-ice/",
@@ -12674,7 +12770,8 @@
       "representation"
     ],
     "udl_rationale": "engagement: a smoking, hissing comet on the front desk is a genuine spectacle that anchors attention; representation: an object millions of kilometres away becomes a tangible thing students can watch change",
-    "evidence": "Comets are cosmic snowballs of frozen gases, rock and dust, roughly the size of a small town."
+    "evidence": "Comets are cosmic snowballs of frozen gases, rock and dust, roughly the size of a small town.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/mars-rover-driver-board-game/",
@@ -12716,7 +12813,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a competitive game with real mission roles gives a clear goal and social buy-in; action_expression: students express programming logic through physical moves and symbol sequences instead of typed code",
-    "evidence": "Students learn to write basic command sequences, which lay the groundwork for developing computer programming skills."
+    "evidence": "Students learn to write basic command sequences, which lay the groundwork for developing computer programming skills.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/art-and-the-cosmic-connection/",
@@ -12759,7 +12857,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: students choose which world to draw, which gives real ownership; representation: scientific content arrives visually rather than through text; action_expression: artwork plus spoken reflection lets non-writers show what they learned",
-    "evidence": "Utilizing art-making as a vehicle for scientific inquiry inspires and engages students, preparing them for a more rigorous exploration of space science."
+    "evidence": "Utilizing art-making as a vehicle for scientific inquiry inspires and engages students, preparing them for a more rigorous exploration of space science.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/planetary-poetry/",
@@ -12801,7 +12900,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: students choose their own space topic, so the writing has a subject they already care about; action_expression: several poetic forms are offered, so students can pick a structure that fits their writing confidence",
-    "evidence": "Space has been a source of inspiration and the subject of creative endeavors for ages."
+    "evidence": "Space has been a source of inspiration and the subject of creative endeavors for ages.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.teachengineering.org/activities/view/cub_natdis_lesson04_activity1",
@@ -12844,7 +12944,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: an actual eruption in the classroom creates strong anticipation; representation: an invisible underground process is made visible at classroom scale; action_expression: students record learning through measurements and sketches as well as written answers",
-    "evidence": "Engineers design and build devices to detect indications of an impending eruption."
+    "evidence": "Engineers design and build devices to detect indications of an impending eruption.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.teachengineering.org/activities/view/cub_rockets_lesson03_activity1",
@@ -12886,7 +12987,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: launching a rocket the student built themselves is an immediate hook with a visible result; action_expression: students show what they understand by building, launching and comparing flights rather than by explaining a formula",
-    "evidence": "The nozzle size and shape effects how fast the exhaust leaves the rocket as well as how much pressure it will have."
+    "evidence": "The nozzle size and shape effects how fast the exhaust leaves the rocket as well as how much pressure it will have.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.teachengineering.org/activities/view/ball_bounce_experiment",
@@ -12928,7 +13030,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: the data comes from sports equipment students already play with, so the question feels worth answering; action_expression: roles within each group let students contribute by dropping, timing, measuring or graphing",
-    "evidence": "These balls are carefully created with special features to make playing each sport a fun and exciting experience."
+    "evidence": "These balls are carefully created with special features to make playing each sport a fun and exciting experience.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.teachengineering.org/activities/cub_natdis_lesson03_activity1",
@@ -12970,7 +13073,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: shaking a tower until it falls is a fast, memorable failure students want to fix; action_expression: the redesign-and-retest cycle lets students demonstrate reasoning through building rather than writing",
-    "evidence": "Cross-bracing supports and balances tension and compression forces to help prevent the structure from collapsing during an earthquake."
+    "evidence": "Cross-bracing supports and balances tension and compression forces to help prevent the structure from collapsing during an earthquake.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.nps.gov/teachers/classrooms/save-the-bats.htm",
@@ -13013,7 +13117,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a blindfolded game turns an abstract sense into a game students want to play; representation: story, diagrams, photographs and a physical skull present the same content four ways; action_expression: students respond through movement and discussion, not worksheets",
-    "evidence": "Students will learn how they can help protect bats against human intervention and natural threats such as White-Nose Syndrome."
+    "evidence": "Students will learn how they can help protect bats against human intervention and natural threats such as White-Nose Syndrome.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.nps.gov/teachers/classrooms/a-fossil-s-journey.htm",
@@ -13056,7 +13161,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: making and breaking your own fossils taps directly into the dinosaur interest most of this age group already has; representation: the same idea is met through moulding, carving and diagram analysis; action_expression: students show understanding through physical models before the written post-assessment",
-    "evidence": "Fossils need not be mineralized (turned to rock) or even enclosed in rock."
+    "evidence": "Fossils need not be mineralized (turned to rock) or even enclosed in rock.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.nesdis.noaa.gov/about/k-12-education/scijinks/how-do-hurricanes-form",
@@ -13098,7 +13204,8 @@
       "engagement"
     ],
     "udl_rationale": "representation: animation and narration carry the explanation for students who struggle with dense science text; engagement: hurricanes are a high-stakes, newsworthy topic that many students have personal questions about",
-    "evidence": "Hurricanes typically only form in tropical regions where the ocean is at least 80 degrees Fahrenheit."
+    "evidence": "Hurricanes typically only form in tropical regions where the ocean is at least 80 degrees Fahrenheit.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.readwritethink.org/classroom-resources/lesson-plans/investigating-animals-using-nonfiction",
@@ -13141,7 +13248,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: students vote on the animal, so the research topic is genuinely theirs; representation: information comes from books, video and web sources together; action_expression: findings are shared orally and visually to an audience rather than only written up",
-    "evidence": "Young children are fascinated with the world around them, showing intense interest and curiosity about animals and their lives."
+    "evidence": "Young children are fascinated with the world around them, showing intense interest and curiosity about animals and their lives.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.readwritethink.org/classroom-resources/lesson-plans/weather-journey-nonfiction",
@@ -13183,7 +13291,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: the questions come from the students, and weather is something they can check out the window every day; action_expression: students publish in print or digital form and can contribute through drawing as well as writing",
-    "evidence": "Students begin by formulating questions on a subject (in this case, weather), then classify questions into topic areas."
+    "evidence": "Students begin by formulating questions on a subject (in this case, weather), then classify questions into topic areas.",
+    "link_status": "ok"
   },
   {
     "link": "https://agclassroom.org/matrix/lessons/57/",
@@ -13226,7 +13335,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a real taste test makes the content edible and personal; representation: story, cards, maps and physical food samples all carry the same idea; action_expression: students demonstrate learning by sorting, mapping and graphing",
-    "evidence": "Agriculture provides our food, such as ingredients for soup."
+    "evidence": "Agriculture provides our food, such as ingredients for soup.",
+    "link_status": "ok"
   },
   {
     "link": "https://agclassroom.org/matrix/lessons/718/",
@@ -13268,7 +13378,8 @@
       "action_expression"
     ],
     "udl_rationale": "representation: video, cards and posters give three routes into the same production sequence; action_expression: students show understanding by ordering cards, building a plate and presenting a poster",
-    "evidence": "Eggs are one of the few natural food sources of vitamin D, which along with calcium is critical for building strong bones."
+    "evidence": "Eggs are one of the few natural food sources of vitamin D, which along with calcium is critical for building strong bones.",
+    "link_status": "ok"
   },
   {
     "link": "https://agclassroom.org/matrix/lessons/84/",
@@ -13311,7 +13422,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: an outdoor role-play game gets the whole class moving on a topic tied to real food; representation: close observation, diagrams and simulation each show a different face of pollination; action_expression: students demonstrate learning by labelling, acting and sculpting",
-    "evidence": "Bees pollinate 95 different crops, helping to create nearly one-third of the world's food supply."
+    "evidence": "Bees pollinate 95 different crops, helping to create nearly one-third of the world's food supply.",
+    "link_status": "ok"
   },
   {
     "link": "https://beyondpenguins.ehe.osu.edu/pierre-the-penguin-teaching-about-heat-and-insulation-through-adaptations",
@@ -13354,7 +13466,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: a real penguin in a wetsuit gives an emotional story hook before the science; representation: magnified feathers plus a familiar Velcro comparison make an invisible structure understandable; action_expression: students can respond through expository writing, a persuasive letter or an illustrated book",
-    "evidence": "Penguin down feathers have a velcro-like structure that allows them to stick together, creating an effective insulator."
+    "evidence": "Penguin down feathers have a velcro-like structure that allows them to stick together, creating an effective insulator.",
+    "link_status": "ok"
   },
   {
     "link": "https://teachertalkprogram.org/",
@@ -13395,7 +13508,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Teacher Talk is now available for up to 3 category II Continuing Education Units (CEs) for Social Workers, Licensed Counselors, and Psychologists"
+    "evidence": "Teacher Talk is now available for up to 3 category II Continuing Education Units (CEs) for Social Workers, Licensed Counselors, and Psychologists",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/pd-hours/earn-pd-hours/",
@@ -13434,7 +13548,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "IRIS PD Certificates for Educators are currently free"
+    "evidence": "IRIS PD Certificates for Educators are currently free",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/product/iep01/",
@@ -13473,7 +13588,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "The module discusses the requirements for IEPs as outlined in the Individuals with Disabilities Education Act (IDEA)"
+    "evidence": "The module discusses the requirements for IEPs as outlined in the Individuals with Disabilities Education Act (IDEA)",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/product/acc-2/",
@@ -13511,7 +13627,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "This module overviews instructional and testing accommodations for students with disabilities, explains how accommodations differ from other kinds of instructional adaptations"
+    "evidence": "This module overviews instructional and testing accommodations for students with disabilities, explains how accommodations differ from other kinds of instructional adaptations",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/product/beh1_2021/",
@@ -13550,7 +13667,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "the effects of disruptive behaviors as well as important key concepts and foundational practices related to effective classroom behavior management"
+    "evidence": "the effects of disruptive behaviors as well as important key concepts and foundational practices related to effective classroom behavior management",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/product/di/",
@@ -13589,7 +13707,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "content, process (instructional methods), and product (assessment)"
+    "evidence": "content, process (instructional methods), and product (assessment)",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/product/udl/",
@@ -13632,7 +13751,8 @@
       "action_expression"
     ],
     "udl_rationale": "engagement: the module teaches the engagement principle directly; representation: covers the representation principle; action_expression: covers the action and expression principle",
-    "evidence": "This module examines the Universal Design for Learning (UDL) framework and discusses how educators can apply UDL to proactively design learning experiences"
+    "evidence": "This module examines the Universal Design for Learning (UDL) framework and discusses how educators can apply UDL to proactively design learning experiences",
+    "link_status": "ok"
   },
   {
     "link": "https://iris.peabody.vanderbilt.edu/product/ell/",
@@ -13671,7 +13791,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "This module helps teachers understand second language acquisition, the importance of academic English, and instructional practices that will enhance learning for English Learners"
+    "evidence": "This module helps teachers understand second language acquisition, the importance of academic English, and instructional practices that will enhance learning for English Learners",
+    "link_status": "ok"
   },
   {
     "link": "https://www.cast.org/connect/events/udl-con-2026-free-webinar-supporting-multilingual-learners-through-journey-mapping/",
@@ -13710,7 +13831,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Access the webinar recording with transcript on YouTube."
+    "evidence": "Access the webinar recording with transcript on YouTube.",
+    "link_status": "ok"
   },
   {
     "link": "https://home.edweb.net/browsewebinars/",
@@ -13748,7 +13870,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "edWebinar Recordings with CE Certificates Available On-Demand for FREE"
+    "evidence": "edWebinar Recordings with CE Certificates Available On-Demand for FREE",
+    "link_status": "ok"
   },
   {
     "link": "https://sharemylesson.com/webinars",
@@ -13787,7 +13910,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Share My Lesson works with our prestigious content partners to offer hundreds of free, for-credit professional development webinars"
+    "evidence": "Share My Lesson works with our prestigious content partners to offer hundreds of free, for-credit professional development webinars",
+    "link_status": "ok"
   },
   {
     "link": "https://sharemylesson.com/webinars/ell-resources-multilingual-learners",
@@ -13825,7 +13949,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "ELL strategies for literacy and content-area instruction, Artificial Intelligence (AI), school-wide support for ELLs, updates on ELL policy, and social-emotional support."
+    "evidence": "ELL strategies for literacy and content-area instruction, Artificial Intelligence (AI), school-wide support for ELLs, updates on ELL policy, and social-emotional support.",
+    "link_status": "ok"
   },
   {
     "link": "https://information.ascd.org/webinars",
@@ -13864,7 +13989,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "This is a free webinar, registration is required to receive credit."
+    "evidence": "This is a free webinar, registration is required to receive credit.",
+    "link_status": "ok"
   },
   {
     "link": "https://edu.exceedlms.com/student/path/1716233-fundamentals-training",
@@ -13903,7 +14029,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "By the end of this course, you'll be ready to take the exam to become a Google Certified Educator Level 1."
+    "evidence": "By the end of this course, you'll be ready to take the exam to become a Google Certified Educator Level 1.",
+    "link_status": "ok"
   },
   {
     "link": "https://learn.microsoft.com/en-us/training/courses/microsoft-educator-academy",
@@ -13942,7 +14069,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "To unlock the Microsoft Educator badge, successfully complete this online through the Learn Educator Center"
+    "evidence": "To unlock the Microsoft Educator badge, successfully complete this online through the Learn Educator Center",
+    "link_status": "ok"
   },
   {
     "link": "https://www.commonsense.org/education/recognition-educators",
@@ -13980,7 +14108,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Completing these steps should take approximately three to five hours."
+    "evidence": "Completing these steps should take approximately three to five hours.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.classroomwise.org/",
@@ -14020,7 +14149,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Classroom WISE is a FREE 3-part training package that assists K-12 educators and school staff in supporting the mental health of students in the classroom."
+    "evidence": "Classroom WISE is a FREE 3-part training package that assists K-12 educators and school staff in supporting the mental health of students in the classroom.",
+    "link_status": "ok"
   },
   {
     "link": "https://learn.nctsn.org/course/info.php?id=33",
@@ -14057,7 +14187,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Does not offer any certificates or CEs."
+    "evidence": "Does not offer any certificates or CEs.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.txel.org/ProfessionalDevelopment",
@@ -14096,7 +14227,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "All the courses below are offered asynchronously through TEALearn for free."
+    "evidence": "All the courses below are offered asynchronously through TEALearn for free.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.open.edu/openlearn/education-development/education/teaching-secondary-mathematics/content-section-0",
@@ -14134,7 +14266,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Free statement of participation on completion"
+    "evidence": "Free statement of participation on completion",
+    "link_status": "ok"
   },
   {
     "link": "https://www.open.edu/openlearn/education-development/developing-reading-pleasure-engaging-young-readers/",
@@ -14173,7 +14306,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "on successful completion of the course you will be awarded 24 CPD points."
+    "evidence": "on successful completion of the course you will be awarded 24 CPD points.",
+    "link_status": "ok"
   },
   {
     "link": "https://scienceofreadingacademy.com/",
@@ -14211,7 +14345,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Yes, you will receive a Laprea branded certificate of completion for PD hours."
+    "evidence": "Yes, you will receive a Laprea branded certificate of completion for PD hours.",
+    "link_status": "ok"
   },
   {
     "link": "https://promotingprogress.org/resource-collections/online-learning-courses",
@@ -14249,7 +14384,8 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "To access these courses, you will be asked to log in or create a free account."
+    "evidence": "To access these courses, you will be asked to log in or create a free account.",
+    "link_status": "ok"
   },
   {
     "link": "https://www.biointeractive.org/professional-learning/online-courses/assessing-learning-course",
@@ -14287,6 +14423,7 @@
     ],
     "udl_principles": [],
     "udl_rationale": "",
-    "evidence": "Completing all modules will take a minimum of 18–21 hours, and you can earn a “BioInteractive Assessing for Learning Course” certificate."
+    "evidence": "Completing all modules will take a minimum of 18–21 hours, and you can earn a “BioInteractive Assessing for Learning Course” certificate.",
+    "link_status": "ok"
   }
 ]

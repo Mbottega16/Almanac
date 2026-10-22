@@ -5,9 +5,10 @@ so the app re-seeds constantly. Re-seeding 289 rows through per-row commits
 took ~8s locally and was tripping the serverless function timeout
 (intermittent 504s). Two speed-ups here:
 
-1. `ensure_seed_db_file()` — if a committed, pre-built `seed/almanac-seed.db`
-   exists and the target SQLite file is missing, just copy the file. That's
-   milliseconds instead of seconds. Build it with `scripts/build_seed_db.py`.
+1. `ensure_seed_db_file()` — if a pre-built `seed/almanac-seed.db` exists and
+   the target SQLite file is missing, just copy the file. That's milliseconds
+   instead of seconds. The file is not in git: the Render build runs
+   `scripts/build_seed_db.py` to make it from the JSON seed.
 2. `load_seed_rows()` — the JSON fallback, but as ONE transaction instead of
    289 commits.
 

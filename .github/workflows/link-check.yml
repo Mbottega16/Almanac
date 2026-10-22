@@ -1,0 +1,76 @@
+# Weekly dead-link check. Records each link's result in
+# backend/seed/link-status.json and sets link_status on the seed rows, then
+# commits both; the push redeploys the site, which badges any link that has
+# failed twice in a row.
+# Also keeps one open issue listing those links.
+name: link-check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install certifi
+      - name: Check every link
+        working-directory: backend
+        run: python scripts/check_links.py --seed --write-status > ../link-report.txt || true
+      - name: Open a weekly branch with the results
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "almanac-link-check"
+          git config user.email "actions@users.noreply.github.com"
+          git add backend/seed/link-status.json backend/seed/almanac-seed.json
+          if git diff --cached --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          branch="link-check/$(date -u +%F)"
+          git checkout -b "$branch"
+          git commit -m "data: weekly link check"
+          git push -u origin "$branch"
+          # A person merges this PR. The Action never pushes to the default branch,
+          # so a link change cannot redeploy the public site unreviewed.
+          gh pr create --base "${GITHUB_REF_NAME}" --head "$branch" \
+            --title "Weekly link check $(date -u +%F)" \
+            --body "Automated weekly link check. Review the flagged links, then merge to publish the badges."
+      - name: Update the dead-links issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > issue.md
+          import json
+          status = json.load(open("backend/seed/link-status.json"))
+          bad = sorted((k, v) for k, v in status.items() if v["fails"] >= 2)
+          print(f"{len(bad)} link(s) returned a real 4xx twice in a row. Those carry a 'link may be broken' badge on the site.\n")
+          for link, v in bad:
+              print(f"- [ ] {link} — {v['status']} {v['detail']} (failed {v['fails']}x, last {v['checked']})")
+          slow = sorted(k for k, v in status.items() if v["status"] == "unreachable")
+          print(f"\n<details><summary>{len(slow)} unreachable from the runner (DNS/timeout — usually still alive, never badged)</summary>\n")
+          for link in slow:
+              print(f"- {link}")
+          print("\n</details>\n\nFix or remove the dead ones locally (see CLAUDE.md), then push.")
+          PY
+          count=$(python -c "import json;print(sum(v['fails']>=2 for v in json.load(open('backend/seed/link-status.json')).values()))")
+          num=$(gh issue list --label dead-links --state open --json number -q '.[0].number')
+          if [ "$count" -gt 0 ]; then
+            gh label create dead-links --color B45309 2>/dev/null || true
+            if [ -n "$num" ]; then gh issue edit "$num" --body-file issue.md
+            else gh issue create --title "Dead links" --label dead-links --body-file issue.md; fi
+          elif [ -n "$num" ]; then
+            gh issue close "$num" --comment "All links passed this week's check."
+          fi

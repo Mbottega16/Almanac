@@ -17,7 +17,26 @@ three principles (Engagement / Representation / Action & Expression) and
 in which formats, so gaps are obvious and a multi-modal lesson is fast
 to assemble.
 
-## Current state (2026-08-28)
+## How the library ships (2026-10-22)
+
+- **The library is `backend/seed/almanac-seed.json`** (409 resources). Git
+  tracks it. The database is a build artifact.
+- **The deploy builds the database.** `render.yaml`'s `buildCommand` runs
+  `scripts/build_seed_db.py`, which writes `backend/seed/almanac-seed.db`
+  (git-ignored). On start, `app.db.seed.ensure_seed_db_file()` copies that
+  file into place. If it is missing, the app loads the JSON (about 6 s at 409
+  rows). Build time grows with the library: about 13 ms per row.
+- **Link health runs itself.** `.github/workflows/link-check.yml` runs
+  `scripts/check_links.py --seed --write-status` every Monday. It writes
+  `backend/seed/link-status.json` (consecutive real-4xx failures per link)
+  and sets `link_status` on the seed rows. A link is `dead` only after two
+  failures in a row. The Action keeps one open "Dead links" issue.
+- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (47 pass).
+
+## Historical state (2026-08-28 to 2026-09-16)
+
+Older notes below. Some counts and deploy details are superseded by the
+section above.
 
 - **Deployed & live: https://almanac-api.vercel.app** — one Vercel Python
   service (project `almanac-api`, CheggaWeb team) serves the built SPA at
@@ -228,7 +247,7 @@ to assemble.
   before it goes live**, going public is the gate, not the cost.
 - **Auth gate before deploy**: single `ADMIN_PASSWORD` +
   `itsdangerous`-signed session cookie gating the whole app, mirroring
-  Atlas / LittleSprout-Rewards. Not built yet.
+  Atlas / LittleSprout-Rewards. Built and live on Render (2026-09-16).
 
 ## Content / copyright guardrail (do not cross)
 
@@ -252,6 +271,30 @@ learned when several scrape sources didn't pan out.
    (user signed off 2026-08-28). Follow-up: persistent DB.
 7. ✅ Live Claude-assisted capture built (dormant — set
    `ANTHROPIC_API_KEY` to turn on; spend is the operator's).
+
+## Never Read / Noise Zones (Do Not Scan)
+
+To keep search and file reads fast, **never scan or read inside**:
+- `backend/.venv/` and `frontend/node_modules/` — 9,780+ vendor files.
+- `backend/static/` and `frontend/dist/` — generated SPA build bundles.
+- `backend/data/*.db` and `backend/seed/almanac-seed.db` — binary SQLite databases (the seed `.db` is git-ignored, built at deploy).
+- `backend/seed/almanac-seed.json` — 409-row JSON seed (about 530 KB); query via Python/API or read targeted slices rather than loading the entire file into context.
+
+## Session Handoff (Last Worked On · Current State · Next Up)
+
+- **Last Worked On:**
+  - Deepened 42 portal-only seed links into specific lesson/resource links with a live page-fetching pass (`5160846`).
+  - Deployed live on Render (`https://almanac-0uue.onrender.com`) with `ADMIN_PASSWORD` auth gate enabled (`2026-09-16`).
+  - Fixed production auth-gate bug (`/api/auth-status` added to `OPEN_PATHS` in `backend/app/auth.py` + 5 new tests in `tests/test_auth.py`; 32 pytest tests passing).
+  - Fixed Windows SSL CA bundle in `scripts/check_links.py` via `certifi` and cleaned 14 confirmed-dead seed domains (`288 -> 274` curated resources).
+- **Current State (2026-10-22):**
+  - Live on Render (`https://almanac-0uue.onrender.com`), 409 curated UDL teaching resources, 47 passing backend pytest tests.
+  - The seed `.db` left git. The Render build now makes it from the JSON.
+  - Weekly link-check GitHub Action added. First run: use `workflow_dispatch`.
+- **What Needs To Be Worked On Next:**
+  1. Deepen portal-only/collection links (`granularity="collection"`) into specific lesson/unit links during future `/deep_curate` passes.
+  2. Delete the superseded standalone `almanac` Vercel project when convenient.
+  3. Keep live Claude-assisted capture (`ANTHROPIC_API_KEY`) dormant unless the owner explicitly approves API spend.
 
 ## Why this file exists
 
