@@ -47,7 +47,7 @@ jobs:
           # so a link change cannot redeploy the public site unreviewed.
           gh pr create --base "${GITHUB_REF_NAME}" --head "$branch" \
             --title "Weekly link check $(date -u +%F)" \
-            --body "Automated weekly link check. Review the flagged links, then merge to publish the badges."
+            --body "Automated weekly link check. Review the flagged links, then merge to publish the badges."             || echo "::warning::Could not open the PR. Turn on Settings > Actions > General > Allow GitHub Actions to create pull requests, or open a PR from $branch by hand."
       - name: Update the dead-links issue
         env:
           GH_TOKEN: ${{ github.token }}
