@@ -284,7 +284,7 @@ To keep search and file reads fast, **never scan or read inside**:
 
 - **Last Worked On:**
   - Added the Almanac editorial library shell: clearer brand/header, welcoming UDL-focused introduction, distinct navigation, calmer responsive surfaces, and improved card/filter hierarchy (2026-10-22; frontend-only).
-  - Fixed Vercel's FastAPI deployment configuration: set the `backend` project root to `backend` and removed the unavailable pinned `@vercel/python@5.2.2` runtime. A fresh production deployment still needs verification.
+  - Fixed Vercel's FastAPI deployment configuration: set the `backend` project root to `backend` and removed the unavailable pinned `@vercel/python@5.2.2` runtime. Production commit `324474d` deployed READY on 2026-10-22.
   - Deepened 42 portal-only seed links into specific lesson/resource links with a live page-fetching pass (`5160846`).
   - Deployed live on Render (`https://almanac-0uue.onrender.com`) with `ADMIN_PASSWORD` auth gate enabled (`2026-09-16`).
   - Fixed production auth-gate bug (`/api/auth-status` added to `OPEN_PATHS` in `backend/app/auth.py` + 5 new tests in `tests/test_auth.py`; 32 pytest tests passing).
