@@ -1253,12 +1253,6 @@
   "checked": "2026-10-22",
   "fails": 0
  },
- "https://www.esa.int/kids/en/home": {
-  "status": "bounced",
-  "detail": "-> https://kids.esa.int/",
-  "checked": "2026-10-22",
-  "fails": 0
- },
  "https://www.exploratorium.edu/science-snacks": {
   "status": "ok",
   "detail": "",
@@ -1354,12 +1348,6 @@
   "detail": "",
   "checked": "2026-10-22",
   "fails": 0
- },
- "https://www.frontiersin.org/education/": {
-  "status": "dead",
-  "detail": "HTTP 404",
-  "checked": "2026-10-22",
-  "fails": 1
  },
  "https://www.gapminder.org/dollar-street/about": {
   "status": "ok",
@@ -2326,12 +2314,6 @@
   "detail": "",
   "checked": "2026-10-22",
   "fails": 0
- },
- "https://www.usatoday.com/news/health/": {
-  "status": "dead",
-  "detail": "HTTP 402",
-  "checked": "2026-10-22",
-  "fails": 1
  },
  "https://www.uselessetymology.com/": {
   "status": "ok",
