@@ -92,12 +92,23 @@ export default function App() {
     return <DiscoverPage onDone={(f) => leaveDiscover(f)} onSkip={() => leaveDiscover()} />;
 
   return (
-    <div>
-      <h1>Almanac</h1>
-      <p className="tagline">
-        Search a theme, get teaching content for it — with every UDL principle in view.
-      </p>
-      <nav>
+    <div className="app-shell almanac-shell">
+      <header className="app-header">
+        <a className="brand-lockup" href="#" onClick={(e) => { e.preventDefault(); setTab("browse"); }} aria-label="Almanac home">
+          <span className="brand-mark" aria-hidden="true">A</span>
+          <span className="brand-name">almanac<span className="brand-period">.</span><small>TEACHING LIBRARY</small></span>
+        </a>
+        <div className="header-note"><span className="status-dot" /> A growing library for thoughtful teaching</div>
+      </header>
+      <section className="welcome-hero">
+        <div className="hero-copy">
+          <p className="eyebrow">PLAN WITH MORE POSSIBILITY</p>
+          <h1>Good teaching starts<br />with <em>good options.</em></h1>
+          <p className="tagline">Find lessons, activities, and courses that meet learners where they are — and bring every UDL principle into view.</p>
+        </div>
+        <div className="hero-art" aria-hidden="true"><span className="orbit orbit-one"/><span className="orbit orbit-two"/><span className="orbit-core">✳</span><span className="orbit-label orbit-label-one">ENGAGE</span><span className="orbit-label orbit-label-two">EXPLORE</span><span className="orbit-label orbit-label-three">EXPRESS</span></div>
+      </section>
+      <nav className="app-nav">
         <a
           href="#"
           onClick={(e) => {

@@ -1153,3 +1153,49 @@ nav a {
     width: 100vw;
   }
 }
+
+/* Almanac / Atlas shared editorial library shell */
+:root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:#f4f3ef; color:#20291f; --accent:#4b7056; --ink:#20291f; --muted:#748075; --paper:#fbfaf7; --line:#e4e5dc; }
+body { max-width:none; padding:0; background:#f4f3ef; color:var(--ink); }
+button,input,select { font:inherit; }
+.app-shell { max-width:1440px; margin:0 auto; padding:0 5.2vw 4rem; }
+.app-header { height:86px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.brand-lockup { display:flex; align-items:center; gap:11px; text-decoration:none; color:inherit; }
+.brand-mark { width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#dce8d9;color:#395b41;font-size:22px;font-weight:700; }
+.brand-name { font-family:Georgia,serif;font-size:24px;line-height:1;font-weight:700;letter-spacing:-.7px; }
+.brand-name small { display:block;margin-top:5px;font:700 8px/1.2 ui-sans-serif,system-ui;letter-spacing:1.65px;color:#899187; }
+.brand-period { color:var(--accent); }
+.header-note { display:flex;align-items:center;gap:9px;color:#748075;font-size:12px;letter-spacing:.02em; }
+.status-dot { width:7px;height:7px;border-radius:50%;background:#87a77f;box-shadow:0 0 0 4px #87a77f20; }
+.welcome-hero { min-height:290px; display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden;margin:25px 0 23px;padding:38px 6.5%;border-radius:20px;background:#e9eee4; }
+.hero-copy { max-width:650px;position:relative;z-index:1; }
+.eyebrow { margin:0 0 14px;color:#63806a;font-size:10px;font-weight:800;letter-spacing:2px; }
+.welcome-hero h1 { margin:0;font:500 clamp(37px,4.2vw,59px)/1.02 Georgia,"Times New Roman",serif;letter-spacing:-1.5px;color:#253629; }
+.welcome-hero h1 em { color:#62806a;font-weight:400; }
+.welcome-hero .tagline { max-width:555px;margin:17px 0 0;color:#637164;font-size:15px;line-height:1.65; }
+.hero-art { width:260px;height:230px;flex:none;position:relative;display:grid;place-items:center; }
+.orbit { position:absolute;border:1px solid #9eb49b88;border-radius:50%;transform:rotate(-28deg); }
+.orbit-one { width:190px;height:90px; }.orbit-two { width:220px;height:135px;transform:rotate(48deg); }
+.orbit-core { display:grid;place-items:center;width:70px;height:70px;border-radius:50%;background:#d3e2ce;color:#64836a;font-size:38px; }
+.orbit-label { position:absolute;padding:6px 9px;background:#f8f9f4;border:1px solid #dce6d8;border-radius:20px;color:#71816c;font-size:8px;font-weight:800;letter-spacing:1px; }
+.orbit-label-one { top:20px;right:15px; }.orbit-label-two { bottom:24px;right:33px; }.orbit-label-three { bottom:35px;left:0; }
+.app-nav { display:flex;align-items:center;gap:7px;padding:0 0 18px;border-bottom:1px solid var(--line); }
+.app-nav a { padding:10px 15px!important;border-radius:999px;color:#637164;text-decoration:none;font-size:13px;font-weight:650;transition:background .18s,color .18s; }
+.app-nav a:hover { background:#e8ece4;opacity:1!important; }
+.app-nav a[style*="opacity: 1"] { color:#36583d;background:#e1eade; }
+.app-nav .nav-push { margin-left:auto; }
+.app-nav a:last-child { margin-left:0; }
+.almanac-shell { --accent:#4b7056; --udl-engagement:#c47758; --udl-representation:#6384a5; --udl-action_expression:#62856b; }
+.almanac-shell .hero-art { margin-right:3%; }
+/* Gentle, tactile surfaces; keep existing controls and interactions intact. */
+.filter-bar { padding:20px;background:var(--paper);border:1px solid var(--line);border-radius:16px; }
+.filter-bar input,.filter-bar select { border:1px solid #e0e3da;border-radius:10px;background:#fff;color:#28332a; }
+.category-groups button,.cost-toggle button,.udl-toggle button { border-color:#dfe3da;background:#fff;color:#59685a;opacity:1; }
+.entries-grid.view-grid { gap:16px; }
+.entry-card { border:1px solid var(--line)!important;border-radius:15px!important;background:#fbfaf7!important;box-shadow:0 2px 8px #28332a08; }
+.entry-card:hover { box-shadow:0 12px 30px #28332a12!important; }
+.entry-card h3 { letter-spacing:-.2px; }
+.results-row { margin:18px 0 14px; }
+.udl-coverage { background:#fbfaf7;border-color:var(--line); }
+@media(max-width:760px) { .app-shell{padding:0 18px 3rem}.app-header{height:70px}.header-note{display:none}.welcome-hero{min-height:250px;padding:30px 25px;margin:18px 0}.hero-art{position:absolute;right:-75px;opacity:.45;transform:scale(.85)}.hero-copy{max-width:75%}.welcome-hero h1{font-size:clamp(34px,8vw,48px)}.welcome-hero .tagline{font-size:14px}.app-nav{overflow:auto;gap:2px}.app-nav a{white-space:nowrap;padding:9px 11px!important;font-size:12px}.app-nav .nav-push{margin-left:0} }
+@media(max-width:480px){.hero-copy{max-width:100%}.hero-art{right:-130px;opacity:.25}.welcome-hero{min-height:230px}.app-nav a{padding-inline:9px!important}}
