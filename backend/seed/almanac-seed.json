@@ -2916,7 +2916,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -6274,7 +6274,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "ok",
+    "link_status": "dead",
     "granularity": "specific"
   },
   {
@@ -6585,7 +6585,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "ok",
+    "link_status": "dead",
     "granularity": "specific"
   },
   {
@@ -9262,7 +9262,7 @@
     ],
     "udl_rationale": "representation: exercises are organized explicitly by CEFR proficiency level; action_expression: self-checking exercises give students immediate feedback on their own answers",
     "evidence": "Venez apprendre le français en ligne gratuitement avec Bonjour de France",
-    "link_status": "ok"
+    "link_status": "unreachable"
   },
   {
     "link": "https://www.marugoto-online.jp/info/",
@@ -10106,7 +10106,7 @@
     ],
     "udl_rationale": "action_expression: students choose how to research and build their Prezi to demonstrate learning; engagement: group research and peer-teaching format adds collaboration and choice",
     "evidence": "The class will learn about tissues, organs, and the major organ systems of our body. They will use technology presentations to share the information they have learned.",
-    "link_status": "ok"
+    "link_status": "unreachable"
   },
   {
     "link": "https://www.sja.org.uk/get-advice/first-aid-lesson-plans/key-stage-2/",

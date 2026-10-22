@@ -61,7 +61,7 @@
  },
  "https://artprojectsforkids.org/draw-a-bear-head/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -307,7 +307,7 @@
  },
  "https://estimation180.com/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -451,19 +451,19 @@
  },
  "https://kinderart.com/art-lessons/painting/foilart/": {
   "status": "ok",
-  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "detail": "",
   "checked": "2026-10-22",
   "fails": 0
  },
  "https://kinderart.com/art-lessons/painting/showers/": {
   "status": "ok",
-  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "detail": "",
   "checked": "2026-10-22",
   "fails": 0
  },
  "https://kinderart.com/grades-3-5/emotion/": {
   "status": "ok",
-  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "detail": "",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -715,7 +715,7 @@
  },
  "https://preschooltoolkit.com/blog/leaf-science/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -733,7 +733,7 @@
  },
  "https://readtoday.net/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -799,7 +799,7 @@
  },
  "https://signingtime.com/pages/teachers-and-homeschoolers": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 429 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -829,7 +829,7 @@
  },
  "https://stemfinity.com": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 429 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -990,8 +990,8 @@
   "fails": 0
  },
  "https://www.bonjourdefrance.com/": {
-  "status": "ok",
-  "detail": "",
+  "status": "unreachable",
+  "detail": "URLError",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -1261,7 +1261,7 @@
  },
  "https://www.exploratorium.edu/science-snacks": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 405 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -1359,7 +1359,7 @@
   "status": "dead",
   "detail": "HTTP 404",
   "checked": "2026-10-22",
-  "fails": 1
+  "fails": 2
  },
  "https://www.gapminder.org/dollar-street/about": {
   "status": "ok",
@@ -1441,7 +1441,7 @@
  },
  "https://www.helpingwithwriting.com/": {
   "status": "ok",
-  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "detail": "",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -1969,7 +1969,7 @@
  },
  "https://www.poetryfoundation.org/education": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -2287,7 +2287,7 @@
  },
  "https://www.topdocumentaryfilms.com/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -2304,16 +2304,16 @@
   "fails": 0
  },
  "https://www.twinkl.com/resource/t2-e-2321-phonics-and-alphabet-flash-cards": {
-  "status": "ok",
-  "detail": "",
+  "status": "dead",
+  "detail": "HTTP 404",
   "checked": "2026-10-22",
-  "fails": 0
+  "fails": 1
  },
  "https://www.twinkl.com/resource/t2-m-2654-early-years-maths-games": {
-  "status": "ok",
-  "detail": "",
+  "status": "dead",
+  "detail": "HTTP 404",
   "checked": "2026-10-22",
-  "fails": 0
+  "fails": 1
  },
  "https://www.txel.org/ProfessionalDevelopment": {
   "status": "ok",
@@ -2322,8 +2322,8 @@
   "fails": 0
  },
  "https://www.uab.edu/icac/images/4th_Grade_Lesson_Plans/Science/Body_Systems_Prezi_Lesson_Plan.pdf": {
-  "status": "ok",
-  "detail": "",
+  "status": "unreachable",
+  "detail": "URLError",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -2331,7 +2331,7 @@
   "status": "dead",
   "detail": "HTTP 402",
   "checked": "2026-10-22",
-  "fails": 1
+  "fails": 2
  },
  "https://www.uselessetymology.com/": {
   "status": "ok",
@@ -2364,8 +2364,8 @@
   "fails": 0
  },
  "https://www.wodb.ca": {
-  "status": "unreachable",
-  "detail": "URLError",
+  "status": "ok",
+  "detail": "",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -2419,19 +2419,19 @@
  },
  "https://www.zinnedproject.org/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
  "https://www.zinnedproject.org/collection/malcolm-x/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
  "https://www.zinnedproject.org/materials": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  },
@@ -2449,7 +2449,7 @@
  },
  "https://yes.mos.org/unit/sort-it-out-programming-robots-to-recycle/": {
   "status": "ok",
-  "detail": "",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
   "checked": "2026-10-22",
   "fails": 0
  }
