@@ -36,7 +36,8 @@ to assemble.
 ## Historical state (2026-08-28 to 2026-09-16)
 
 Older notes below. Some counts and deploy details are superseded by the
-section above.
+section above. Everything below about favorites, My Collection, or the Lesson
+plan view describes code that was cut on 2026-10-24.
 
 - **Deployed & live: https://almanac-api.vercel.app** — one Vercel Python
   service (project `almanac-api`, CheggaWeb team) serves the built SPA at
@@ -282,7 +283,7 @@ To keep search and file reads fast, **never scan or read inside**:
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-**Warning:** A push to `master` redeploys the live site. The redeploy clears the server-side favorites. Ask the owner before you push to `master`.
+**Warning:** A push to `master` redeploys the live site. Ask the owner before you push to `master`.
 
 - **Last Worked On (2026-10-24):**
   - Merged PR #2 (`ce6f3aa`) and PR #1 (`a38871a`). PR #1 added 690 entries from TeachEngineering, ReadWorks, and Math Is Fun.
@@ -293,13 +294,13 @@ To keep search and file reads fast, **never scan or read inside**:
 - **Current State (2026-10-24):**
   - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys on every push to `master`.
   - The live library has 1,098 resources.
-  - Favorites work. They form one shared list for everyone who opens the site. The free plan has no persistent disk, so a restart clears them.
+  - **Favorites are cut (2026-10-24).** A shared list needs a persistent database, and the owner will not pay for one. Gone: the ★ My Collection panel (and the Lesson plan view inside it), the card star, `POST /api/resources/{id}/favorite`, the `?favorite=` filter, and the `is_favorite` column. `test_favorites_are_gone` keeps them gone. Do not bring them back without a free way to store them. After pulling this change, delete any old local `backend/data/almanac.db`; deploys rebuild the database from the seed.
   - The first load after idle takes about 40 seconds on the free plan.
   - Live Claude capture stays off. `ANTHROPIC_API_KEY` is not set.
   - The Vercel `backend` check can still fail on new PRs. That check is noise. Render is the live site.
 - **What Needs To Be Worked On Next:**
   1. Decide whether to keep the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo. Replace it only with a method that beats the default on the 151 hand-tagged lessons and units.
-  2. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping. Keep favorites across restarts with a persistent disk or database. Make favorites per user if more people use the site.
+  2. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
   3. Keep live capture dormant unless the owner approves API spend.
 
 ## Why this file exists

@@ -33,12 +33,8 @@ function loadViewMode(): ViewMode {
 
 export default function BrowsePage({
   initialFilters,
-  onVisit,
-  onFavoriteToggle,
 }: {
   initialFilters?: Filters;
-  onVisit: () => void;
-  onFavoriteToggle: () => void;
 }) {
   const [filters, setFilters] = useState<Filters>(() => ({
     ...EMPTY_FILTERS,
@@ -255,8 +251,6 @@ export default function BrowsePage({
                 key={r.id}
                 resource={r}
                 view={view}
-                onVisit={onVisit}
-                onFavoriteToggle={onFavoriteToggle}
               />
             ))}
           </div>

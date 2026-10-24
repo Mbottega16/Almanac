@@ -243,16 +243,15 @@ def test_visit_marks_visited_at(client):
     assert client.post(f"/api/resources/{rid}/visit").json()["visited_at"] is not None
 
 
-def test_favorite_toggle_and_filter(client):
+def test_favorites_are_gone(client):
+    # Cut 2026-10-24: a shared favorites list needs a persistent database, and the
+    # owner will not pay for one. Nothing may bring the endpoint or the filter back quietly.
     a = client.post("/api/resources", json=_payload(link="https://fa.com")).json()
     client.post("/api/resources", json=_payload(link="https://fb.com"))
-    client.post(f"/api/resources/{a['id']}/favorite")
-
-    resp = client.get("/api/resources", params={"favorite": True})
-    assert resp.json()["total"] == 1
-    assert resp.json()["items"][0]["link"] == "https://fa.com"
-
-    assert client.post(f"/api/resources/{a['id']}/favorite", params={"favorite": False}).json()["is_favorite"] is False
+    assert "is_favorite" not in a
+    assert client.post(f"/api/resources/{a['id']}/favorite").status_code in (404, 405)
+    # An unknown query param is ignored, so the old filter must not narrow the list.
+    assert client.get("/api/resources", params={"favorite": True}).json()["total"] == 2
 
 
 def test_random_resource_scoped(client):

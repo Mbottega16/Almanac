@@ -46,7 +46,6 @@ def _to_out(resource: Resource) -> ResourceOut:
         udl_principles=[p.name for p in resource.udl_principles],
         standard_codes=[s.code for s in resource.standards_rel],
         source=resource.source,
-        is_favorite=resource.is_favorite,
         link_status=resource.link_status,
         link_checked_at=resource.link_checked_at,
         visited_at=resource.visited_at,
@@ -70,7 +69,6 @@ def search_resources(
     tag: str | None = None,
     standard: str | None = None,
     age: int | None = None,
-    favorite: bool | None = None,
     audience: str | None = None,
     credit_type: str | None = None,
     limit: int = Query(60, ge=1, le=200),
@@ -82,7 +80,7 @@ def search_resources(
     so no single response ever has to carry the whole library."""
     total, items, meta = resource_service.list_resources(
         db, q, subject, grade_band, resource_type, scope, publisher, granularity,
-        cost, source_site, udl, tag, standard, age, favorite, limit, offset,
+        cost, source_site, udl, tag, standard, age, limit, offset,
         audience=audience, credit_type=credit_type,
     )
     return ResourceListOut(
@@ -149,11 +147,3 @@ def visit_resource(resource_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Resource not found")
     return _to_out(resource_service.mark_visited(db, resource))
 
-
-@router.post("/resources/{resource_id}/favorite", response_model=ResourceOut)
-def favorite_resource(resource_id: int, favorite: bool = True, db: Session = Depends(get_db)):
-    """Toggle 'saved to my collection'. `favorite=false` un-saves."""
-    resource = resource_service.get_resource(db, resource_id)
-    if resource is None:
-        raise HTTPException(status_code=404, detail="Resource not found")
-    return _to_out(resource_service.set_favorite(db, resource, favorite))

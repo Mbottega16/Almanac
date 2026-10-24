@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import { ApiError, fetchAuthStatus, markVisited, randomResource, searchResources } from "./api/client";
-import CollectionPanel from "./components/CollectionPanel";
 import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
 import LoginGate from "./components/LoginGate";
 import BrowsePage from "./pages/BrowsePage";
@@ -44,9 +43,6 @@ export default function App() {
       }
     })();
   }, []);
-  const [collectionOpen, setCollectionOpen] = useState(false);
-  const [collectionRefreshKey, setCollectionRefreshKey] = useState(0);
-  const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [rolling, setRolling] = useState(false);
 
   const handleSurpriseMe = async () => {
@@ -55,22 +51,12 @@ export default function App() {
       const r = await randomResource();
       window.open(r.link, "_blank", "noopener,noreferrer");
       markVisited(r.id).catch(() => {});
-      handleVisit();
     } catch {
       // Silent — a failed roll just means "try again".
     } finally {
       setRolling(false);
     }
   };
-
-  const handleVisit = () => {
-    if (!hasAutoOpened) {
-      setCollectionOpen(true);
-      setHasAutoOpened(true);
-    }
-  };
-
-  const handleFavoriteToggle = () => setCollectionRefreshKey((k) => k + 1);
 
   const leaveDiscover = (filters?: Filters) => {
     try {
@@ -162,32 +148,15 @@ export default function App() {
         >
           🎲 Surprise me
         </a>
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setCollectionOpen((v) => !v);
-          }}
-          style={{ opacity: collectionOpen ? 1 : 0.5 }}
-        >
-          ★ My Collection
-        </a>
       </nav>
       {tab === "browse" && (
         <BrowsePage
           key={browseKey}
           initialFilters={browseFilters}
-          onVisit={handleVisit}
-          onFavoriteToggle={handleFavoriteToggle}
         />
       )}
       {tab === "capture" && <CapturePage />}
       {tab === "stats" && <StatsPage />}
-      <CollectionPanel
-        open={collectionOpen}
-        onClose={() => setCollectionOpen(false)}
-        refreshKey={collectionRefreshKey}
-      />
     </div>
   );
 }

@@ -136,7 +136,6 @@ https://phet.colorado.edu/en/simulations/..."
                 credit_hours: null,
                 credit_note: null,
                 standard_codes: [],
-                is_favorite: false,
                 link_status: "unknown",
                 link_checked_at: null,
                 visited_at: null,
