@@ -34537,29 +34537,6 @@
     "link_status": "ok"
   },
   {
-    "link": "https://khanacademy.org/math/cc-third-grade-math",
-    "title": "Khan Academy: 3rd grade math",
-    "description": "Free Khan Academy course covering 3rd grade math.",
-    "description_source": "generated",
-    "audience": "students",
-    "subject": "Math",
-    "grade_band": "3-5",
-    "resource_type": "course",
-    "scope": "course",
-    "cost": "free",
-    "source_site": "Khan Academy",
-    "license": "Not stated on page",
-    "standards": "",
-    "granularity": "specific",
-    "tags": [
-      "math"
-    ],
-    "udl_principles": [],
-    "udl_rationale": "",
-    "evidence": "Free Khan Academy course covering 3rd grade math.",
-    "link_status": "ok"
-  },
-  {
     "link": "https://khanacademy.org/math/cc-fourth-grade-math",
     "title": "Khan Academy: 4th grade math",
     "description": "Free Khan Academy course covering 4th grade math.",
@@ -34603,29 +34580,6 @@
     "udl_principles": [],
     "udl_rationale": "",
     "evidence": "Free Khan Academy course covering 5th grade math.",
-    "link_status": "ok"
-  },
-  {
-    "link": "https://khanacademy.org/math/cc-sixth-grade-math",
-    "title": "Khan Academy: 6th grade math",
-    "description": "Free Khan Academy course covering 6th grade math.",
-    "description_source": "generated",
-    "audience": "students",
-    "subject": "Math",
-    "grade_band": "6-8",
-    "resource_type": "course",
-    "scope": "course",
-    "cost": "free",
-    "source_site": "Khan Academy",
-    "license": "Not stated on page",
-    "standards": "",
-    "granularity": "specific",
-    "tags": [
-      "math"
-    ],
-    "udl_principles": [],
-    "udl_rationale": "",
-    "evidence": "Free Khan Academy course covering 6th grade math.",
     "link_status": "ok"
   },
   {
