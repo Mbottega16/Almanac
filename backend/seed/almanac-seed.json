@@ -33431,5 +33431,1349 @@
     "udl_rationale": "auto-tagged from format",
     "evidence": "A Hero in Disguise, Second Grade Reading Passage",
     "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/american-revolution",
+    "title": "The American Revolution",
+    "description": "Primary sources include images, manuscripts, maps, and newspapers; page provides a teacher guide and historical context.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Primary sources include images, manuscripts, maps, and newspapers; page provides a teacher guide and historical context.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/baseball-across-a-changing-nation",
+    "title": "Baseball Across a Changing Nation",
+    "description": "Uses historical sources to examine baseball and changes in U.S. society; includes teacher suggestions.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Uses historical sources to examine baseball and changes in U.S. society; includes teacher suggestions.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/immigration-challenges-for-new-americans",
+    "title": "Immigration: Challenges for New Americans",
+    "description": "Includes historical maps, images, and documents with teacher prompts, including a data comparison activity.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Includes historical maps, images, and documents with teacher prompts, including a data comparison activity.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/civil-rights-movement",
+    "title": "The Civil Rights Movement",
+    "description": "Sources cover movement leaders, activism, school integration, and pivotal events; includes a teacher guide.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Sources cover movement leaders, activism, school integration, and pivotal events; includes a teacher guide.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/informational-text",
+    "title": "Informational Text",
+    "description": "Multiformat historical sources support analysis of informational text, evidence, perspective, and communication.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "literacy",
+      "primary sources"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Multiformat historical sources support analysis of informational text, evidence, perspective, and communication.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/scientific-data",
+    "title": "Scientific Data: Observing, Recording, and Communicating Information",
+    "description": "Historical scientific texts, diagrams, and data displays support inquiry into scientific communication and models.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Historical scientific texts, diagrams, and data displays support inquiry into scientific communication and models.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/cold-war",
+    "title": "The Cold War",
+    "description": "Primary sources and background address Cold War competition, nuclear fears, and U.S. domestic responses.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Primary sources and background address Cold War competition, nuclear fears, and U.S. domestic responses.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/reconstruction",
+    "title": "Reconstruction",
+    "description": "Photographs, newspaper articles, and documents explore political, social, and cultural changes after the Civil War.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Photographs, newspaper articles, and documents explore political, social, and cultural changes after the Civil War.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/new-deal",
+    "title": "The New Deal",
+    "description": "Sources produced by New Deal agencies support inquiry into government programs and Great Depression-era problems.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "primary sources",
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Sources produced by New Deal agencies support inquiry into government programs and Great Depression-era problems.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/oral-history-and-social-history",
+    "title": "Oral History and Social History",
+    "description": "Students analyze oral histories and may conduct interviews to investigate changes in U.S. social life.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "u.s. history"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Students analyze oral histories and may conduct interviews to investigate changes in U.S. social life.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/nasas-beginning-engineering-science-and-technology-best-programming-activities",
+    "title": "NASA’s Beginning Engineering, Science and Technology (BEST) Programming Activities",
+    "description": "Collection of age-banded activities where students program peers as robots to complete a mission.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "CS / STEM",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "computer science",
+      "engineering design",
+      "technology"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Collection of age-banded activities where students program peers as robots to complete a mission.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/nasa-modern-figures-toolkit",
+    "title": "NASA Modern Figures Toolkit",
+    "description": "Toolkit with student activities and materials about Katherine Johnson and other human computers.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "biographies",
+      "history",
+      "mathematics",
+      "physical science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Toolkit with student activities and materials about Katherine Johnson and other human computers.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/learning-resources/for-kids-and-students/who-was-katherine-johnson-grades-k-4",
+    "title": "Who Was Katherine Johnson? (Grades K-4)",
+    "description": "Student-facing resource listed in NASA’s Modern Figures Toolkit.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "All",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "biography",
+      "history",
+      "mathematics"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Student-facing resource listed in NASA’s Modern Figures Toolkit.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/learning-resources/for-kids-and-students/who-was-katherine-johnson-grades-5-8",
+    "title": "Who Was Katherine Johnson? (Grades 5-8)",
+    "description": "Student-facing resource listed in NASA’s Modern Figures Toolkit.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "All",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "biography",
+      "history",
+      "mathematics"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Student-facing resource listed in NASA’s Modern Figures Toolkit.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/challenger-center-stem-at-home",
+    "title": "Challenger Center STEM at Home",
+    "description": "Collection of adaptable STEM lessons and activities intended for home or classroom use.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "chemistry",
+      "earth science",
+      "engineering",
+      "physical science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Collection of adaptable STEM lessons and activities intended for home or classroom use.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/artemis-i-stem-learning-pathway",
+    "title": "Artemis I STEM Learning Pathway",
+    "description": "Themed sets of activities and media that teachers can combine into a lesson sequence.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "engineering",
+      "space science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Themed sets of activities and media that teachers can combine into a lesson sequence.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://learninglab.si.edu/collections/exploring-identity-through-portraiture/AfsekHKtni1NAfE6",
+    "title": "Exploring Identity through Portraiture",
+    "description": "Uses portrait analysis to explore how artistic choices communicate individual, community, and national identity.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Arts",
+    "grade_band": "6-8",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Smithsonian Learning Lab",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "identity",
+      "social studies",
+      "visual arts"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Uses portrait analysis to explore how artistic choices communicate individual, community, and national identity.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/twentieth-century-entertainment-when-work-is-done",
+    "title": "Twentieth Century Entertainment: When Work is Done",
+    "description": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/immigrant-experience-down-the-rabbit-hole",
+    "title": "The Immigrant Experience: Down the Rabbit Hole",
+    "description": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/drakes-west-indian-voyage-1588-1589",
+    "title": "Drake's West Indian Voyage 1588 to 1589",
+    "description": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://loc.gov/classroom-materials/immigration-and-migration-our-changing-voices",
+    "title": "Immigration: Our Changing Voices",
+    "description": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "Library of Congress",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Official Library of Congress teacher-created lesson plan using primary sources; detailed grade and subject metadata not extracted yet.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/how-far-will-it-go-a-lesson-in-graphing",
+    "title": "How Far Will It Go?: A Lesson in Graphing",
+    "description": "Students investigate balloon-powered travel and record and graph test data.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "mathematics",
+      "measurement and data analysis",
+      "rocketry",
+      "technology"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Students investigate balloon-powered travel and record and graph test data.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/sensor-solutions-activity",
+    "title": "Sensor Solutions Activity",
+    "description": "Activity explores drone sensors and asks students to design a sensor-based response to a community problem.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "CS / STEM",
+    "grade_band": "All",
+    "resource_type": "activity",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "engineering design",
+      "technology"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Activity explores drone sensors and asks students to design a sensor-based response to a community problem.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/navigating-by-good-gyrations",
+    "title": "Navigating by Good Gyrations",
+    "description": "Demonstration uses a spinning bicycle wheel to introduce gyroscope behavior and spacecraft applications.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "activity",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "forces and motion",
+      "physical science",
+      "physics"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Demonstration uses a spinning bicycle wheel to introduce gyroscope behavior and spacecraft applications.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/stemonstrations-earth-observations",
+    "title": "STEMonstrations: Earth Observations",
+    "description": "NASA astronaut video is paired with a classroom connection about Earth observations and environmental monitoring.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "earth science",
+      "environmental science",
+      "technology"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "NASA astronaut video is paired with a classroom connection about Earth observations and environmental monitoring.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/stemonstrations-cell-organelles",
+    "title": "STEMonstrations: Cell Organelles",
+    "description": "Classroom connection relates cell organelle functions to the operations of the International Space Station.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "life science",
+      "space biology"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Classroom connection relates cell organelle functions to the operations of the International Space Station.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/lesson-4-watering-your-plants",
+    "title": "Lesson 4: Watering Your Plants",
+    "description": "Five-E lesson plan examines the parts of a system through the design of a plant-watering system.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "life science",
+      "space agriculture",
+      "systems"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Five-E lesson plan examines the parts of a system through the design of a plant-watering system.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/whats-hidden-inside-activity",
+    "title": "What's Hidden Inside? Activity",
+    "description": "Students use observations to infer the contents of a hidden bag and support a conclusion with collected data.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "activity",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "robotics",
+      "scientific observation",
+      "space science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Students use observations to infer the contents of a hidden bag and support a conclusion with collected data.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/feel-the-heat",
+    "title": "Feel the Heat Activity",
+    "description": "Engineering challenge has students build, test, and improve a solar hot-water heater.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "CS / STEM",
+    "grade_band": "9-12",
+    "resource_type": "activity",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "energy",
+      "engineering design",
+      "thermal science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Engineering challenge has students build, test, and improve a solar hot-water heater.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/diffusion-of-nasa-technology",
+    "title": "Diffusion of NASA Technology",
+    "description": "Lesson examines how NASA technologies have been adopted in society and includes educator and student editions.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "geography",
+      "social studies",
+      "technology"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Lesson examines how NASA technologies have been adopted in society and includes educator and student editions.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/the-importance-of-teamwork",
+    "title": "The Importance of Teamwork",
+    "description": "Activity connects teamwork to astronaut experiences and includes a printable student resource.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "activity",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "life science",
+      "social-emotional learning",
+      "space exploration"
+    ],
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Activity connects teamwork to astronaut experiences and includes a printable student resource.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/using-scrapbooks-in-science-educator-guide",
+    "title": "Using Scrapbooks in Science Educator Guide",
+    "description": "Educator guide gives teaching guidance for using student-created scrapbooks to represent science learning.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "literacy",
+      "science",
+      "visual arts"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Educator guide gives teaching guidance for using student-created scrapbooks to represent science learning.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/21st-century-explorer",
+    "title": "21st Century Explorer",
+    "description": "Collection page lists standards-based activities and lesson plans on science, mathematics, and space exploration topics.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "health and nutrition",
+      "life science",
+      "mathematics",
+      "space science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "Collection page lists standards-based activities and lesson plans on science, mathematics, and space exploration topics.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://nasa.gov/stem-content/teach-stem-activities",
+    "title": "Teach: STEM Activities",
+    "description": "NASA STEM Search entry links to JPL's searchable collection of STEM materials and activities.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Science",
+    "grade_band": "All",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "NASA STEM",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "earth science",
+      "mathematics",
+      "physical science",
+      "space science"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "NASA STEM Search entry links to JPL's searchable collection of STEM materials and activities.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://learninglab.si.edu/collections/activity-collection-artbots/Bs4TXY3Ym8M9uC75",
+    "title": "Activity Collection: ArtBots!",
+    "description": "An activity collection for making an art-producing robot, listed for grades 3-5.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Arts",
+    "grade_band": "3-5",
+    "resource_type": "unit",
+    "scope": "unit",
+    "cost": "free",
+    "source_site": "Smithsonian Learning Lab",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "collection",
+    "tags": [
+      "design",
+      "engineering",
+      "visual arts"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for units, not checked per resource",
+    "evidence": "An activity collection for making an art-producing robot, listed for grades 3-5.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://readwritethink.org/classroom-resources/student-interactives/venn-diagram",
+    "title": "Venn Diagram",
+    "description": "Online student interactive for building a Venn diagram to compare and contrast ideas, listed for grades K-12.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "All",
+    "resource_type": "interactive/sim",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "ReadWriteThink",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Online student interactive for building a Venn diagram to compare and contrast ideas, listed for grades K-12.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://readwritethink.org/classroom-resources/lesson-plans/amelia-bedelia-close-closely",
+    "title": "Amelia Bedelia Up Close! Closely Reading a Classic Story",
+    "description": "Standard lesson plan for grades 1-2 on closely reading a classic Amelia Bedelia story.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "K-2",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "ReadWriteThink",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Standard lesson plan for grades 1-2 on closely reading a classic Amelia Bedelia story.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://readwritethink.org/classroom-resources/lesson-plans/directed-listening-thinking-activity",
+    "title": "A Directed Listening-Thinking Activity for \"The Tell-Tale Heart\"",
+    "description": "Standard lesson plan for grades 6-8 that uses a directed listening-thinking activity with Poe's story The Tell-Tale Heart.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "lesson plan",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "ReadWriteThink",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "engagement",
+      "representation",
+      "action_expression"
+    ],
+    "udl_rationale": "default for lesson plans, not checked per resource",
+    "evidence": "Standard lesson plan for grades 6-8 that uses a directed listening-thinking activity with Poe's story The Tell-Tale Heart.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://readwritethink.org/classroom-resources/student-interactives/word-mover-b",
+    "title": "Word Mover",
+    "description": "Online student interactive for writing poetry by moving and arranging words, listed for grades 3-12.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "All",
+    "resource_type": "interactive/sim",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "ReadWriteThink",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Online student interactive for writing poetry by moving and arranging words, listed for grades 3-12.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://readwritethink.org/classroom-resources/printouts/editing-checklist-self-peer",
+    "title": "Editing Checklist for Self- and Peer Editing",
+    "description": "Printable editing checklist for self- and peer-editing, listed for grades 3-5 as an assessment tool.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "3-5",
+    "resource_type": "worksheet/printable",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "ReadWriteThink",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Printable editing checklist for self- and peer-editing, listed for grades 3-5 as an assessment tool.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://khanacademy.org/math/cc-third-grade-math",
+    "title": "Khan Academy: 3rd grade math",
+    "description": "Free Khan Academy course covering 3rd grade math.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "course",
+    "scope": "course",
+    "cost": "free",
+    "source_site": "Khan Academy",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "math"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Free Khan Academy course covering 3rd grade math.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://khanacademy.org/math/cc-fourth-grade-math",
+    "title": "Khan Academy: 4th grade math",
+    "description": "Free Khan Academy course covering 4th grade math.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "course",
+    "scope": "course",
+    "cost": "free",
+    "source_site": "Khan Academy",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "math"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Free Khan Academy course covering 4th grade math.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://khanacademy.org/math/cc-fifth-grade-math",
+    "title": "Khan Academy: 5th grade math",
+    "description": "Free Khan Academy course covering 5th grade math.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "3-5",
+    "resource_type": "course",
+    "scope": "course",
+    "cost": "free",
+    "source_site": "Khan Academy",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "math"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Free Khan Academy course covering 5th grade math.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://khanacademy.org/math/cc-sixth-grade-math",
+    "title": "Khan Academy: 6th grade math",
+    "description": "Free Khan Academy course covering 6th grade math.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "course",
+    "scope": "course",
+    "cost": "free",
+    "source_site": "Khan Academy",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "math"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Free Khan Academy course covering 6th grade math.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://khanacademy.org/math/cc-seventh-grade-math",
+    "title": "Khan Academy: 7th grade math",
+    "description": "Free Khan Academy course covering 7th grade math.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "Math",
+    "grade_band": "6-8",
+    "resource_type": "course",
+    "scope": "course",
+    "cost": "free",
+    "source_site": "Khan Academy",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "math"
+    ],
+    "udl_principles": [],
+    "udl_rationale": "",
+    "evidence": "Free Khan Academy course covering 7th grade math.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://commonlit.org/texts/the-champion-of-quiet",
+    "title": "The Champion of Quiet",
+    "description": "Fiction reading passage on CommonLit, listed at a 3rd grade reading level.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "3-5",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "CommonLit",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Fiction reading passage on CommonLit, listed at a 3rd grade reading level.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://commonlit.org/texts/seventh-grade",
+    "title": "Seventh Grade",
+    "description": "Fiction reading passage on CommonLit, listed at a 6th grade reading level.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "CommonLit",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Fiction reading passage on CommonLit, listed at a 6th grade reading level.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://commonlit.org/texts/the-road-not-taken",
+    "title": "The Road Not Taken",
+    "description": "Poem on CommonLit, listed at an 8th grade reading level.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "6-8",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "CommonLit",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Poem on CommonLit, listed at an 8th grade reading level.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://commonlit.org/texts/witchcraft-in-salem",
+    "title": "Witchcraft in Salem",
+    "description": "Non-fiction reading passage on CommonLit, listed at a 9th grade reading level.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "9-12",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "CommonLit",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Non-fiction reading passage on CommonLit, listed at a 9th grade reading level.",
+    "link_status": "ok"
+  },
+  {
+    "link": "https://commonlit.org/texts/a-poison-tree",
+    "title": "A Poison Tree",
+    "description": "Poem on CommonLit, listed at a 10th grade reading level.",
+    "description_source": "generated",
+    "audience": "students",
+    "subject": "ELA / Reading",
+    "grade_band": "9-12",
+    "resource_type": "article/text",
+    "scope": "lesson",
+    "cost": "free",
+    "source_site": "CommonLit",
+    "license": "Not stated on page",
+    "standards": "",
+    "granularity": "specific",
+    "tags": [
+      "ela / reading"
+    ],
+    "udl_principles": [
+      "representation"
+    ],
+    "udl_rationale": "auto-tagged from format",
+    "evidence": "Poem on CommonLit, listed at a 10th grade reading level.",
+    "link_status": "ok"
   }
 ]
