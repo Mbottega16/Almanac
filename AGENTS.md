@@ -282,7 +282,7 @@ To keep search and file reads fast, **never scan or read inside**:
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-**Warning:** A push to `master` redeploys the live site. The redeploy clears the server-side favorites. Ask the owner before you push to `master`.
+**Warning:** Render uses `rootDir: backend`. A push that changes files under `backend/` redeploys the live site. Other pushes do not. A redeploy clears the server-side favorites. Ask the owner before you push a `backend/` change.
 
 - **Last Worked On (2026-10-24):**
   - Merged PR #2 (`ce6f3aa`) and PR #1 (`a38871a`). PR #1 added 690 entries from TeachEngineering, ReadWorks, and Math Is Fun.
@@ -291,7 +291,7 @@ To keep search and file reads fast, **never scan or read inside**:
   - Checked this repo. 47 backend tests pass. The frontend builds. Favorites work on a local server.
   - Earlier: fixed the Vercel `backend` root (`324474d`), fixed the auth-status bug, and turned on the setting that lets the link check open its PR.
 - **Current State (2026-10-24):**
-  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys on every push to `master`.
+  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys only when files under `backend/` change.
   - The live library has 1,098 resources.
   - Favorites work. They form one shared list for everyone who opens the site. The free plan has no persistent disk, so a restart clears them.
   - The first load after idle takes about 40 seconds on the free plan.
