@@ -17853,7 +17853,7 @@
   {
     "link": "https://mathsisfun.com/acute.html",
     "title": "Acute Angles",
-    "description": "Different Angles have different names: <img src=geometry/images/angle-types.svg alt=Chart showing acute, right, obtuse, straight, reflex, and...",
+    "description": "Different Angles have different names.",
     "description_source": "excerpt",
     "audience": "students",
     "subject": "Math",
@@ -17873,7 +17873,7 @@
       "representation"
     ],
     "udl_rationale": "auto-tagged from format",
-    "evidence": "Different Angles have different names: <img src=geometry/images/angle-types.svg alt=Chart showing acute, right, obtuse, straight, reflex, and...",
+    "evidence": "Different Angles have different names.",
     "link_status": "ok"
   },
   {
