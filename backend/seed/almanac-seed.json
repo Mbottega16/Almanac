@@ -6244,7 +6244,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.frontiersin.org/education/",
+    "link": "https://kids.frontiersin.org/",
     "title": "Frontiers for Young Minds: Open Access Science for Kids",
     "description": "Peer-reviewed science articles written for young people (ages 8+). Real research made accessible; includes educator guides.",
     "description_source": "generated",
@@ -6486,7 +6486,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.esa.int/kids/en/home",
+    "link": "https://kids.esa.int/",
     "title": "ESA Kids: European Space Agency Education",
     "description": "Free space science resources from the European Space Agency. Includes games, activities, and information about space exploration.",
     "description_source": "generated",
@@ -6517,7 +6517,7 @@
       "representation",
       "action_expression"
     ],
-    "link_status": "bounced",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -6546,40 +6546,6 @@
       "current events",
       "engaging",
       "science news"
-    ],
-    "udl_principles": [
-      "representation",
-      "engagement"
-    ],
-    "link_status": "ok",
-    "granularity": "specific"
-  },
-  {
-    "link": "https://www.usatoday.com/news/health/",
-    "title": "USA Today Health News: Current Health Science",
-    "description": "Free health and wellness news from a major news outlet. Useful for connecting health science to current events and real-world context.",
-    "description_source": "generated",
-    "subject": "PE / Health",
-    "grade_band": "6-8",
-    "age_min": 11,
-    "age_max": 18,
-    "resource_type": "article/text",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [
-      "Students will be able to read health science news and analysis",
-      "Students will be able to apply critical thinking to health information"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "USA Today",
-    "license": "All rights reserved",
-    "standards": "",
-    "tags": [
-      "health news",
-      "journalism",
-      "current events",
-      "media literacy"
     ],
     "udl_principles": [
       "representation",
