@@ -282,21 +282,25 @@ To keep search and file reads fast, **never scan or read inside**:
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-- **Last Worked On:**
-  - Added the Almanac editorial library shell: clearer brand/header, welcoming UDL-focused introduction, distinct navigation, calmer responsive surfaces, and improved card/filter hierarchy (2026-10-22; frontend-only).
-  - Fixed Vercel's FastAPI deployment configuration: set the `backend` project root to `backend` and removed the unavailable pinned `@vercel/python@5.2.2` runtime. Production commit `324474d` deployed READY on 2026-10-22.
-  - Deepened 42 portal-only seed links into specific lesson/resource links with a live page-fetching pass (`5160846`).
-  - Deployed live on Render (`https://almanac-0uue.onrender.com`) with `ADMIN_PASSWORD` auth gate enabled (`2026-09-16`).
-  - Fixed production auth-gate bug (`/api/auth-status` added to `OPEN_PATHS` in `backend/app/auth.py` + 5 new tests in `tests/test_auth.py`; 32 pytest tests passing).
-  - Fixed Windows SSL CA bundle in `scripts/check_links.py` via `certifi` and cleaned 14 confirmed-dead seed domains (`288 -> 274` curated resources).
-- **Current State (2026-10-22):**
-  - Live on Render (`https://almanac-0uue.onrender.com`), 409 curated UDL teaching resources, 47 passing backend pytest tests.
-  - The seed `.db` left git. The Render build now makes it from the JSON.
-  - Weekly link-check GitHub Action added. First run: use `workflow_dispatch`.
+**Warning:** A push to `master` redeploys the live site. The redeploy clears the server-side favorites. Ask the owner before you push to `master`.
+
+- **Last Worked On (2026-10-24):**
+  - Fixed the TeachEngineering intake in the vault engine (`workflows/library/library.js`). Grade band and subject now come from each page. Articles, activities, lessons, and units now get UDL tags.
+  - Rebuilt harvest PR #1 (`harvest/2026-10-22`, head `bd43d93`) with 690 entries. Pytest passes. The seed builds with 1,099 rows.
+  - Checked this repo. 47 backend tests pass. The frontend builds. Favorites work on a local server.
+  - Earlier: fixed the Vercel `backend` root (`324474d`), fixed the auth-status bug, and turned on the setting that lets the link check open its PR.
+- **Current State (2026-10-24):**
+  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master` at `9626a12`. Render redeploys on every push to `master`.
+  - The live library has 409 resources. PR #1 adds 690 more. PR #2 has 3 link fixes. Neither PR is merged.
+  - Favorites work. They form one shared list for everyone who opens the site. The free plan has no persistent disk, so a restart clears them.
+  - The first load after idle takes about 40 seconds on the free plan.
+  - Live Claude capture stays off. `ANTHROPIC_API_KEY` is not set.
+  - The Vercel `backend` check fails on PRs #1 and #2. That check is noise. Render is the live site.
 - **What Needs To Be Worked On Next:**
-  1. Deepen portal-only/collection links (`granularity="collection"`) into specific lesson/unit links during future `/deep_curate` passes.
-  2. Verify the Vercel `backend` fallback after the FastAPI configuration fix; Render remains the canonical live deployment.
-  3. Keep live Claude-assisted capture (`ANTHROPIC_API_KEY`) dormant unless the owner explicitly approves API spend.
+  1. Merge PR #2, then PR #1. Read PR #1's description first. It discloses the lesson and unit default.
+  2. Keep or drop the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo.
+  3. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping. Keep favorites across restarts with a persistent disk or database. Make favorites per user if more people use the site.
+  4. Keep live capture dormant unless the owner approves API spend.
 
 ## Why this file exists
 
