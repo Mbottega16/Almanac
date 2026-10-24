@@ -163,7 +163,6 @@ def _base_query(
     tag: str | None = None,
     standard: str | None = None,
     age: int | None = None,
-    favorite: bool | None = None,
     audience: str | None = None,
     credit_type: str | None = None,
 ):
@@ -210,8 +209,6 @@ def _base_query(
         stmt = stmt.join(Resource.standards_rel).where(
             Standard.code == standard.strip().upper()
         )
-    if favorite is not None:
-        stmt = stmt.where(Resource.is_favorite == favorite)
     return stmt
 
 
@@ -230,7 +227,6 @@ def list_resources(
     tag: str | None = None,
     standard: str | None = None,
     age: int | None = None,
-    favorite: bool | None = None,
     limit: int = 50,
     offset: int = 0,
     audience: str | None = None,
@@ -243,7 +239,7 @@ def list_resources(
         subject=subject, grade_band=grade_band, resource_type=resource_type,
         scope=scope, publisher=publisher, granularity=granularity, cost=cost,
         source_site=source_site, udl=udl, tag=tag, standard=standard, age=age,
-        favorite=favorite, audience=audience, credit_type=credit_type,
+        audience=audience, credit_type=credit_type,
     )
     stmt = _base_query(**filters)
     result = search.rank(db, q, _allowed_ids(db, stmt, filters)) if q and q.strip() else None
@@ -350,13 +346,6 @@ def delete_resource(db: Session, resource: Resource) -> None:
 
 def mark_visited(db: Session, resource: Resource) -> Resource:
     resource.visited_at = datetime.now(timezone.utc)
-    db.commit()
-    db.refresh(resource)
-    return resource
-
-
-def set_favorite(db: Session, resource: Resource, is_favorite: bool) -> Resource:
-    resource.is_favorite = is_favorite
     db.commit()
     db.refresh(resource)
     return resource

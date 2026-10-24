@@ -36,7 +36,8 @@ to assemble.
 ## Historical state (2026-08-28 to 2026-09-16)
 
 Older notes below. Some counts and deploy details are superseded by the
-section above.
+section above. Everything below about favorites, My Collection, or the Lesson
+plan view describes code that was cut on 2026-10-24.
 
 - **Deployed & live: https://almanac-api.vercel.app** — one Vercel Python
   service (project `almanac-api`, CheggaWeb team) serves the built SPA at
@@ -282,9 +283,13 @@ To keep search and file reads fast, **never scan or read inside**:
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-**Warning:** Render uses `rootDir: backend`. A push that changes files under `backend/` redeploys the live site. Other pushes do not. A redeploy clears the server-side favorites. Ask the owner before you push a `backend/` change.
+**Warning:** Render uses `rootDir: backend`. A push that changes files under `backend/` redeploys the live site. Other pushes do not. Ask the owner before you push a `backend/` change.
 
-- **Last Worked On (2026-10-24):**
+- **Last Worked On (2026-10-24, later session):**
+  - Cut favorites (PR #4, open). Opened PR #7 (+48): 35 of the 176 staged candidates in `projects/almanac/intake/` (vault) and 13 resources found behind portal-only rows. Two Khan courses were dropped as duplicates of existing rows that use Khan's older URL slugs; the URL check cannot see that.
+  - Added `import` and `portal` commands to the vault engine, plus the `deep_portal` skill. `portal plan` counts the portal-only rows: 160 after PR #7 (119 to deepen before it, 33 already the right shape).
+  - Known limits of the engine, found on the way: loc.gov answers HTTP 429 (a Cloudflare challenge) after about 27 requests, so 112 staged LOC pages wait, parked as `unverifiable`. PBS LearningMedia's bare domain has an expired TLS certificate and the engine stores links without `www.`, so PBS pages are held until that is fixed.
+- **Earlier the same day:**
   - Merged PR #2 (`ce6f3aa`) and PR #1 (`a38871a`). PR #1 added 690 entries from TeachEngineering, ReadWorks, and Math Is Fun.
   - Fixed one Math Is Fun description that kept a cut-off image tag (`245f794`).
   - The intake engine (in the vault) gets grade and subject from TeachEngineering pages. It tags articles, activities, lessons, and units. Lessons and units get all three UDL principles as a labeled default.
@@ -293,14 +298,17 @@ To keep search and file reads fast, **never scan or read inside**:
 - **Current State (2026-10-24):**
   - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys only when files under `backend/` change.
   - The live library has 1,098 resources.
-  - Favorites work. They form one shared list for everyone who opens the site. The free plan has no persistent disk, so a restart clears them.
+  - **Favorites are cut (2026-10-24).** A shared list needs a persistent database, and the owner will not pay for one. Gone: the ★ My Collection panel (and the Lesson plan view inside it), the card star, `POST /api/resources/{id}/favorite`, the `?favorite=` filter, and the `is_favorite` column. `test_favorites_are_gone` keeps them gone. Do not bring them back without a free way to store them. After pulling this change, delete any old local `backend/data/almanac.db`; deploys rebuild the database from the seed.
   - The first load after idle takes about 40 seconds on the free plan.
   - Live Claude capture stays off. `ANTHROPIC_API_KEY` is not set.
   - The Vercel `backend` check can still fail on new PRs. That check is noise. Render is the live site.
 - **What Needs To Be Worked On Next:**
-  1. Decide whether to keep the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo. Replace it only with a method that beats the default on the 151 hand-tagged lessons and units.
-  2. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping. Keep favorites across restarts with a persistent disk or database. Make favorites per user if more people use the site.
-  3. Keep live capture dormant unless the owner approves API spend.
+  1. The owner merges PR #4 (favorites cut) and PR #7 (+48), then merges or closes PR #5 and PR #6. A session cannot merge: the permission check blocks it. Check `git merge-tree` first. #4 and #5 merge cleanly together, and so do #6 and #7.
+  2. Work the portal backlog: `node workflows/library/library.js portal next --n 8` in the vault, then follow `skills/deep_portal/SKILL.md`. Facing History & Ourselves blocks automated fetches and stays open.
+  3. Retry the 112 parked LOC pages in small batches: `requeue --app almanac --source <id> --status unverifiable`, then `prefilter --limit 20`, a day apart. Three OER Commons candidates need a person to open them.
+  4. Decide whether to keep the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo. Replace it only with a method that beats the default on the 151 hand-tagged lessons and units.
+  5. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
+  6. Keep live capture dormant unless the owner approves API spend.
 
 ## Why this file exists
 

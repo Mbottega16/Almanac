@@ -8,7 +8,6 @@ import {
   UdlPrinciple,
   creditLabel,
   markVisited,
-  setFavorite,
 } from "../api/client";
 import { tintFor } from "../palette";
 
@@ -41,38 +40,16 @@ const COST_LABEL: Record<string, string> = {
 export default function ResourceCard({
   resource,
   view = "grid",
-  onVisit,
-  onFavoriteToggle,
 }: {
   resource: Resource;
   view?: "grid" | "list" | "large";
-  onVisit?: () => void;
-  onFavoriteToggle?: () => void;
 }) {
   const [visited, setVisited] = useState(!!resource.visited_at);
-  const [favorite, setFavoriteState] = useState(resource.is_favorite);
-  const [busy, setBusy] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
   const handleOpen = () => {
     markVisited(resource.id).catch(() => {});
     setVisited(true);
-    onVisit?.();
-  };
-
-  const handleFavoriteClick = async () => {
-    if (busy) return;
-    setBusy(true);
-    const next = !favorite;
-    try {
-      await setFavorite(resource.id, next);
-      setFavoriteState(next);
-      onFavoriteToggle?.();
-    } catch {
-      // leave state as-is on failure
-    } finally {
-      setBusy(false);
-    }
   };
 
   const favicon = faviconUrl(resource.link);
@@ -131,14 +108,6 @@ export default function ResourceCard({
     >
       <div className="entry-card-accent" aria-hidden="true" />
       <div className="entry-card-head">
-        <button
-          className={`favorite-btn${favorite ? " active" : ""}`}
-          onClick={handleFavoriteClick}
-          title={favorite ? "Remove from collection" : "Save to collection"}
-          aria-pressed={favorite}
-        >
-          {favorite ? "★" : "☆"}
-        </button>
         <div className="entry-card-logo">
           {favicon ? (
             <img src={favicon} alt="" loading="lazy" />
