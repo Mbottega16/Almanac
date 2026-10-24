@@ -285,22 +285,22 @@ To keep search and file reads fast, **never scan or read inside**:
 **Warning:** A push to `master` redeploys the live site. The redeploy clears the server-side favorites. Ask the owner before you push to `master`.
 
 - **Last Worked On (2026-10-24):**
-  - Fixed the TeachEngineering intake in the vault engine (`workflows/library/library.js`). Grade band and subject now come from each page. Articles, activities, lessons, and units now get UDL tags.
-  - Rebuilt harvest PR #1 (`harvest/2026-10-22`, head `bd43d93`) with 690 entries. Pytest passes. The seed builds with 1,099 rows.
+  - Merged PR #2 (`ce6f3aa`) and PR #1 (`a38871a`). PR #1 added 690 entries from TeachEngineering, ReadWorks, and Math Is Fun.
+  - Fixed one Math Is Fun description that kept a cut-off image tag (`245f794`).
+  - The intake engine (in the vault) gets grade and subject from TeachEngineering pages. It tags articles, activities, lessons, and units. Lessons and units get all three UDL principles as a labeled default.
   - Checked this repo. 47 backend tests pass. The frontend builds. Favorites work on a local server.
   - Earlier: fixed the Vercel `backend` root (`324474d`), fixed the auth-status bug, and turned on the setting that lets the link check open its PR.
 - **Current State (2026-10-24):**
-  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master` at `9626a12`. Render redeploys on every push to `master`.
-  - The live library has 409 resources. PR #1 adds 690 more. PR #2 has 3 link fixes. Neither PR is merged.
+  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys on every push to `master`.
+  - The live library has 1,098 resources.
   - Favorites work. They form one shared list for everyone who opens the site. The free plan has no persistent disk, so a restart clears them.
   - The first load after idle takes about 40 seconds on the free plan.
   - Live Claude capture stays off. `ANTHROPIC_API_KEY` is not set.
-  - The Vercel `backend` check fails on PRs #1 and #2. That check is noise. Render is the live site.
+  - The Vercel `backend` check can still fail on new PRs. That check is noise. Render is the live site.
 - **What Needs To Be Worked On Next:**
-  1. Merge PR #2, then PR #1. Read PR #1's description first. It discloses the lesson and unit default.
-  2. Keep or drop the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo.
-  3. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping. Keep favorites across restarts with a persistent disk or database. Make favorites per user if more people use the site.
-  4. Keep live capture dormant unless the owner approves API spend.
+  1. Decide whether to keep the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo. Replace it only with a method that beats the default on the 151 hand-tagged lessons and units.
+  2. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping. Keep favorites across restarts with a persistent disk or database. Make favorites per user if more people use the site.
+  3. Keep live capture dormant unless the owner approves API spend.
 
 ## Why this file exists
 
