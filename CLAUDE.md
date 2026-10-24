@@ -283,7 +283,7 @@ To keep search and file reads fast, **never scan or read inside**:
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-**Warning:** A push to `master` redeploys the live site. Ask the owner before you push to `master`.
+**Warning:** Render uses `rootDir: backend`. A push that changes files under `backend/` redeploys the live site. Other pushes do not. Ask the owner before you push a `backend/` change.
 
 - **Last Worked On (2026-10-24):**
   - Merged PR #2 (`ce6f3aa`) and PR #1 (`a38871a`). PR #1 added 690 entries from TeachEngineering, ReadWorks, and Math Is Fun.
@@ -292,7 +292,7 @@ To keep search and file reads fast, **never scan or read inside**:
   - Checked this repo. 47 backend tests pass. The frontend builds. Favorites work on a local server.
   - Earlier: fixed the Vercel `backend` root (`324474d`), fixed the auth-status bug, and turned on the setting that lets the link check open its PR.
 - **Current State (2026-10-24):**
-  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys on every push to `master`.
+  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys only when files under `backend/` change.
   - The live library has 1,098 resources.
   - **Favorites are cut (2026-10-24).** A shared list needs a persistent database, and the owner will not pay for one. Gone: the ★ My Collection panel (and the Lesson plan view inside it), the card star, `POST /api/resources/{id}/favorite`, the `?favorite=` filter, and the `is_favorite` column. `test_favorites_are_gone` keeps them gone. Do not bring them back without a free way to store them. After pulling this change, delete any old local `backend/data/almanac.db`; deploys rebuild the database from the seed.
   - The first load after idle takes about 40 seconds on the free plan.
