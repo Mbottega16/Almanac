@@ -1,7 +1,6 @@
 from datetime import datetime, timezone
 
 from sqlalchemy import (
-    Boolean,
     Column,
     DateTime,
     Float,
@@ -119,7 +118,6 @@ class Resource(Base):
 
     # Row provenance: 'manual' (typed in directly) or 'capture' (batch/import flow).
     source: Mapped[str] = mapped_column(String, default="manual")
-    is_favorite: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     visited_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)
     updated_at: Mapped[datetime] = mapped_column(

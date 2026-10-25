@@ -30,7 +30,6 @@ export interface Resource {
   tags: string[];
   udl_principles: string[];
   source: string;
-  is_favorite: boolean;
   link_status: string;
   link_checked_at: string | null;
   visited_at: string | null;
@@ -152,7 +151,6 @@ export interface ResourceQuery {
   tag?: string;
   standard?: string;
   age?: number | string;
-  favorite?: boolean;
   audience?: Audience;
   /** A specific credit type, or "any" for everything that grants credit. */
   credit_type?: string;
@@ -223,10 +221,6 @@ export function randomResource(
 
 export function markVisited(id: number): Promise<Resource> {
   return apiPost(`/api/resources/${id}/visit`);
-}
-
-export function setFavorite(id: number, favorite: boolean): Promise<Resource> {
-  return apiPost(`/api/resources/${id}/favorite?favorite=${favorite}`);
 }
 
 // --- auth gate (dormant unless the backend has ADMIN_PASSWORD set) ---
