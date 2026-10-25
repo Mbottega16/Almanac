@@ -1,4 +1,4 @@
-# Almanac — house rules
+# Almanac — rules & map (read this first)
 
 A searchable, aggregated database of teaching resources for teachers,
 organized to make **UDL (Universal Design for Learning)** planning
@@ -7,214 +7,36 @@ TypeScript frontend. Deliberately the same stack and shape as **Atlas**
 (the personal link/tool library) — Almanac is "Atlas for teaching
 content." See `README.md` for the quickstart.
 
-## What it's for
+**History:** [`HISTORY.md`](HISTORY.md), newest first — the build record from 2026-08-28 on.
+Read it when a task touches past work. **Business side:** the owner's my-brain vault,
+`projects/almanac/context.md`. **Repo:** `Mbottega16/Almanac` (**public**; the old
+`EduSystems-Code` URL redirects) — PC `~/OneDrive/Desktop/Almanac`, Mac `projects/almanac/app`.
 
-A teacher searches a **theme** and immediately gets content for it:
-lessons, readings, videos, simulations, activities — sourced from many
-sites, gathered into one collective library. For any theme, the app
-shows **UDL coverage**: how many matching resources support each of the
-three principles (Engagement / Representation / Action & Expression) and
-in which formats, so gaps are obvious and a multi-modal lesson is fast
-to assemble.
+**Warning:** Render uses `rootDir: backend`. A push that changes files under `backend/` redeploys the live site. Other pushes do not. Ask the owner before you push a `backend/` change.
 
-## How the library ships (2026-10-22)
+## What this is
 
-- **The library is `backend/seed/almanac-seed.json`** (409 resources). Git
-  tracks it. The database is a build artifact.
-- **The deploy builds the database.** `render.yaml`'s `buildCommand` runs
-  `scripts/build_seed_db.py`, which writes `backend/seed/almanac-seed.db`
-  (git-ignored). On start, `app.db.seed.ensure_seed_db_file()` copies that
-  file into place. If it is missing, the app loads the JSON (about 6 s at 409
-  rows). Build time grows with the library: about 13 ms per row.
-- **Link health runs itself.** `.github/workflows/link-check.yml` runs
-  `scripts/check_links.py --seed --write-status` every Monday. It writes
-  `backend/seed/link-status.json` (consecutive real-4xx failures per link)
-  and sets `link_status` on the seed rows. A link is `dead` only after two
-  failures in a row. The Action keeps one open "Dead links" issue.
-- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (47 pass).
+- **What:** a teacher searches a **theme** and immediately gets content for it:
+  lessons, readings, videos, simulations, activities — sourced from many
+  sites, gathered into one collective library. For any theme, the app
+  shows **UDL coverage**: how many matching resources support each of the
+  three principles (Engagement / Representation / Action & Expression) and
+  in which formats, so gaps are obvious and a multi-modal lesson is fast
+  to assemble.
+- **For:** teachers building UDL-aligned lessons. The owner is the first user.
+- **Platform:** one Render web service on the free plan, <https://almanac-0uue.onrender.com>,
+  behind the `ADMIN_PASSWORD` gate. Free; no API spend.
+- **What "done" looks like (owner, 2026-10-24):** sort lessons by subject and age, pull
+  consistent lessons and activities, and adapt a lesson with UDL moves (Lesson Studio,
+  PR #5). These lesson tools are built here, not in Atlas.
+- **Direction:** thousands to tens of thousands of resources, grown by the vault's intake
+  engine through reviewed harvest PRs.
 
-## Historical state (2026-08-28 to 2026-09-16)
-
-Older notes below. Some counts and deploy details are superseded by the
-section above. Everything below about favorites, My Collection, or the Lesson
-plan view describes code that was cut on 2026-10-24.
-
-- **Deployed & live: https://almanac-api.vercel.app** — one Vercel Python
-  service (project `almanac-api`, CheggaWeb team) serves the built SPA at
-  `/` and the API at `/api/*`. `scripts/build_frontend.py` builds the
-  frontend into `backend/static/`; `app.main` mounts it via `StaticFiles`.
-  On Vercel `DATABASE_URL` is `/tmp` and the DB is wiped on every cold
-  start. **Cold-start seeding fix (2026-08-28):** re-inserting the 289 JSON
-  seed rows row-by-row took ~8s and was intermittently tripping the
-  serverless function timeout (504s / "backend failures"). Now `app.main`
-  first calls `db.seed.ensure_seed_db_file()`, which copies a committed
-  pre-built `backend/seed/almanac-seed.db` into `/tmp` (milliseconds); cold
-  import is ~1.8s. Rebuild that file with `scripts/build_seed_db.py`
-  whenever `almanac-seed.json` changes. The JSON path is still the fallback
-  (`load_seed_rows`, now one transaction). Favorites/visits still don't
-  survive a cold start — a persistent host (Render — `render.yaml` is
-  ready — or Vercel Postgres) is the real fix. Only the canonical `almanac-api.vercel.app` is public;
-  custom aliases 302 behind the team's Deployment Protection (disable it
-  or rename the project for a nicer URL). The old standalone `almanac`
-  Vercel project is superseded and can be deleted.
-- **Auth gate** (`app/auth.py` + `routes/auth.py`): built, **dormant** —
-  set `ADMIN_PASSWORD` (env var) to activate; the frontend then shows a
-  login screen. `itsdangerous`-signed cookie, `SameSite=None; Secure`.
-- **Live Claude-assisted capture** (`services/capture_service.py` + `POST
-  /api/capture/research`): built, **dormant** — 503s until
-  `ANTHROPIC_API_KEY` is set. Returns draft, unsaved resources; the
-  Capture page grows a paste-box + review UI when `GET
-  /api/capture/enabled` is true. Runs on the operator's key — off by
-  default on purpose.
-- **Backend**: `resources` model (Atlas's `Entry` fields plus
-  `subject`, `grade_band`, `resource_type`, `scope`, `publisher`,
-  `granularity`, `cost` (free/paid/freemium), `price_note`, `source_site`,
-  `license`, `standards`, `evidence`, `udl_rationale`, `link_status`,
-  `description_source`), many-to-many `tags`, `standards` (parsed codes),
-  **and** a fixed 3-row `udl_principles` join. Full CRUD, search/filter
-  (`q`/`subject`/`grade_band`/`resource_type`/`scope`/`publisher`/`granularity`/`cost`/`source_site`/`udl`/`tag`/`standard`/`age`/`favorite`),
-  `random`, `visit`, `favorite`, batch-upsert on `link`
-  (`POST /api/resources/batch`), faceted-count endpoints
-  (`/api/subjects|grade-bands|resource-types|scopes|publishers|sources|tags|standards`),
-  `GET /api/udl-coverage`, and `GET /api/stats` (library-wide gap map).
-  Links are canonicalized on write (`services/links.py`) so http/https/www
-  variants can't dupe. 27 passing pytest tests (in-memory SQLite).
-- **Frontend**: Browse page (theme search, Free/Paid toggle, a
-  **scope toggle**, subject chips, grade/format/theme/**standard**
-  selects, a **"Class-ready only"** toggle, three UDL-principle toggles,
-  grid/list/large view modes), a **UDL coverage strip** for any theme
-  search, resource cards with cost + scope + **"Browse page"** +
-  **"link may be broken"** badges, publisher line, and UDL pills with
-  per-principle **why-this-applies tooltips**. A **Stats page**
-  (subject×UDL heatmap + thinnest cells). A "My Collection" slide-in with
-  a **Lesson plan** view and a `localStorage` mirror. Guided discovery
-  asks a scope step and offers "undo last choice" on a dead-end.
-  Read-only Capture page. Type-checks and builds clean.
-- **Seed**: **274 curated resources** at `backend/seed/almanac-seed.json`
-  (was 288 until the 2026-09-15 dead-link cleanup below dropped 14)
-  (idempotent load via `scripts/import_seed.py`). One-off lessons grew
-  from 91 via four subject-cluster research passes; a 2026-08-29 pass
-  added **31 full courses / commercial curricula** (Illustrative
-  Mathematics, OpenSciEd, EL Education, Amplify, Great Minds / Eureka /
-  Wit & Wisdom, Zearn, Fishtank, Open Up Resources, CommonLit 360,
-  Carnegie Learning, Bridges, PLTW, iCivics, Code.org courses, Khan
-  Academy courses, MIT OCW, Crash Course, TERC, Bootstrap) with `scope`
-  and `publisher` set.
-- **Link-validation pass (2026-08-30):** added `scripts/check_links.py`
-  (ported from Atlas — reads `Resource.link`, flags 4xx/5xx, off-host
-  redirects, and deep-links that bounce to a homepage; 403/405/429/999
-  treated as anti-bot noise). First run flagged 132/320: fixed 64 URLs
-  (a systemic `phet.colorado.edu/en/simulations/html/<sim>` →
-  `/simulations/<sim>` bug across all PhET rows; provider reorgs at PBS
-  LearningMedia, NatGeo Education, NASA, OpenSciEd, SPLC/Learning for
-  Justice, iCivics, Kendall Hunt IM, SHEG→Inquiry Group) and dropped 29
-  dead rows (retired products, sites where only a homepage remained, and
-  a few fabricated entries) → 320 → 291. ~40 rows still flag as
-  `URLError`/timeout but are **live sites the build environment's DNS
-  can't resolve** (achievethecore.org, mindfulschools.org, scijinks,
-  crf-usa.org …) — re-run `check_links.py` from a normal network to
-  confirm those.
-- **Lesson format** (the "categorizer"): each resource also carries
-  `age_min`/`age_max`, `duration_minutes`, `materials`, and
-  `learning_outcomes` (list of "Students will be able to …"). Age
-  back-fills from `grade_band` via `resource_service.GRADE_TO_AGE` so the
-  `age` query param works library-wide; `q` also searches outcomes +
-  materials; the live-capture prompt extracts all of it.
-  `scripts/migrate_add_lesson_fields.py` is ready for a persistent DB.
-- **Lesson scope / commercial curriculum** (2026-08-29): every resource
-  carries `scope` — `lesson` (a single class period / one-off, the
-  default and all 289 original rows), `unit` (a multi-lesson module),
-  `course` (a semester or year of one subject), or `curriculum` (a
-  publisher's complete multi-grade program) — plus a `publisher` string
-  for the program behind a course/curriculum. Both are filterable
-  (`?scope=`, `?publisher=`), faceted (`/api/scopes`, `/api/publishers`),
-  and `publisher` is covered by `q` search. `course`/`curriculum` rows
-  are the commercial (and free-OER) full programs; a card shows a scope
-  badge and the publisher name in place of `source_site`.
-  `scripts/migrate_add_curriculum_fields.py` is ready for a persistent DB.
-- **Deep-critique build (2026-08-30):** ten items off `/deep_critique almanac`.
-  New columns (`migrate_add_critique_fields.py`): `granularity`
-  (`specific` | `collection` — hides browse/portal pages, `?granularity=`;
-  seed backfilled 185/103), `evidence` (one attributed quoted sentence,
-  write-only, proof the page is real), `udl_rationale` (one line per
-  principle, shown on card hover), `link_status` (`ok`/`dead`/`redirect`/
-  `bounced`/`unreachable`, set by `scripts/flag_dead_links.py`; a `dead`
-  row gets a warning badge). New: `standards` join table +
-  `extract_standard_codes()` (CCSS/NGSS/C3) + `?standard=` +
-  `/api/standards`; `GET /api/stats` + a **Stats page** (subject×UDL
-  heatmap, thinnest cells); a **Lesson plan** view in My Collection
-  (order by duration, union materials, combined UDL coverage) backed by a
-  `localStorage` mirror so favorites survive a `/tmp` cold start; Guided
-  discovery offers "undo last choice" on a zero-result dead-end;
-  `scripts/check_links.py` gained `--json`/`--write`;
-  `scripts/find_near_dupes.py` clusters soft duplicates for review. The
-  capture prompt now asks for `granularity` / `evidence` / `udl_rationale`.
-  27 passing pytest tests.
-- **Render deploy + link cleanup (2026-09-15):** `scripts/check_links.py`
-  had a real bug — Windows Python's `ssl` module carries no CA bundle by
-  default, so any link needing real chain validation (e.g. `nysed.gov`)
-  was misclassified `unreachable` instead of actually checked. Fixed by
-  pointing `urlopen` at `certifi`'s bundle + a retry for transient DNS
-  blips (`certifi` added to `requirements.txt`). Re-ran `flag_dead_links.py`
-  and cross-checked the still-flagged rows from a second, independent
-  network path: **14 confirmed-dead rows dropped** (domains that don't
-  resolve from two networks — `actively.learn`, `learnzillion.com`,
-  `scijinks.jpl.nasa.gov`, `estimationology.com`, `teachingchildrensbooks.com`,
-  `mathedinsight.com`, `miriammatthes.com`, `ireadlightly.com`,
-  `theindigebrief.org`, `culturaclassroom.org`, `pearsoneducation.com`,
-  `irasscience.org`, `greatergoodinaction.org`, `sensemaking.mit.edu`) and
-  **one seed typo fixed** (`openmidle.com` → `openmiddle.com`, confirmed
-  live and a real match for its row's title/description). 288 → 274 rows.
-  27 pytest still pass. A further ~30 rows still flag `unreachable` for
-  reasons that are real but not "confirmed dead" (broken/misconfigured
-  TLS, content that moved to an unrelated domain, or just flaky DNS) —
-  left alone pending a real curation pass, not dropped on a guess.
-  **`render.yaml` rewired for a real Render deploy** (was scaffolded but
-  never wired to build the frontend): `buildCommand` now also runs
-  `scripts/build_frontend.py` so the one Render web service serves the
-  built SPA + API from the same origin, same shape as the Vercel deploy
-  but on Render's disk instead of a serverless `/tmp` that resets every
-  cold start (mirrors how Atlas deployed to Render the same week).
-  Verified end-to-end locally: built the frontend, booted the app against
-  a fresh `sqlite:///./data/almanac.db`-style path, confirmed the seed
-  bootstraps once (288→274 rows show up via `/api/stats`), confirmed a
-  restart against the same file does not re-seed or duplicate rows, and
-  confirmed `/` serves the built SPA.
-- **Render deploy went live (2026-09-16):** the user created the Render
-  web service from this repo and set `ADMIN_PASSWORD` in its dashboard —
-  **live at https://almanac-0uue.onrender.com**. To verify it worked,
-  the user generated a Render personal API key (`RENDER_API_KEY` in
-  `backend/.env.local`, gitignored, never in chat) so a session could
-  call Render's API directly. That verification caught a real
-  production bug: **`/api/auth-status` wasn't in `OPEN_PATHS`**, so it
-  401'd for any unauthenticated request — but that endpoint's whole job
-  is telling an *unauthenticated* frontend whether to show the login
-  screen (`App.tsx` calls it before any login attempt). The 401 made
-  `fetchAuthStatus()` throw before reading `gate_enabled`, and
-  `App.tsx`'s catch-all set `authed = true` without ever rendering
-  `LoginGate` — so the moment `ADMIN_PASSWORD` went live, the site was
-  broken for anyone without a cookie: no way to log in, every real page
-  silently 401ing underneath a UI that looked fine. Fixed (`app/auth.py`
-  now includes `/api/auth-status` in `OPEN_PATHS`), covered by a new
-  `tests/test_auth.py` (5 tests — gate dormant/active, protected-route
-  blocking, login, wrong password), and `tests/conftest.py`'s shared
-  `client` fixture now uses `base_url="https://testserver"` (the login
-  cookie is `Secure`, which a plain-`http://` test client silently never
-  resends — matches how the app is actually always served, behind TLS).
-  32 pytest total. Pushed; Render auto-deployed; reconfirmed live
-  end-to-end (status check open, protected routes still gated, login
-  works, authenticated data returns 274 rows).
-- **Still to do**: decide whether to set `ANTHROPIC_API_KEY` on the
-  Render deploy to turn on live capture; delete the now-superseded
-  standalone `almanac` Vercel project (the live site is Render now;
-  `almanac-api.vercel.app` is still up too); deepen the portal-only
-  links.
-
-## Decisions already made
+## Settled decisions (don't re-argue)
 
 - **Same stack/shape as Atlas on purpose** — mirror its file layout,
   service patterns, and two-phase capture. Divergences: the
-  teaching-specific columns above, the `udl_principles` join, and the
+  teaching-specific columns, the `udl_principles` join, and the
   `GET /api/udl-coverage` endpoint + coverage strip.
 - **`link` is UNIQUE**; the batch endpoint upserts on it, so
   re-importing updates instead of duplicating.
@@ -233,6 +55,22 @@ plan view describes code that was cut on 2026-10-24.
   `cost` honestly (`free` for OER programs like IM / OpenSciEd,
   `freemium` where core is free, `paid` otherwise). Still a pointer
   index — never mirror the program's materials.
+- **Two tracks via `audience` (2026-09-19):** `students` (lesson planning) and `educators`
+  (professional learning: PD courses, webinars, CEUs) — a separate axis from `scope`. PD rows
+  carry `credit_type` / `credit_hours` / `credit_note`.
+- **Credit claims are recorded as the page states them**, with the qualifier in
+  `credit_note` (who grants it, what it costs, that a district decides renewal). Overstating
+  one could cost a teacher a license renewal.
+- **No SEL/mental-health content framed as treatment (owner, 2026-09-18)** — "this isn't a
+  social worker's resource, it's an educator's resource." Early-childhood classroom SEL
+  (feelings vocabulary, calm-down corners) is fine.
+- **Search is an SQLite FTS5 index (2026-09-19)** in `app/services/search.py` — coverage of
+  query terms first, BM25 within that. Moving to Postgres means replacing that one seam with
+  `tsvector`.
+- **Lesson and unit UDL tags are a labeled default (2026-10-24):** all three principles,
+  rationale "default". A keyword rule did worse on the 151 hand-tagged lessons and units, so
+  none ships. Change it in the vault engine's `UDL_BY_FORMAT`, not here, and only for a method
+  that beats the default on those 151.
 - **Quick-capture is two-phase**, exactly like Atlas:
   - *Now:* a Claude Code session rooted here researches pasted links /
     named sites via `WebFetch`/`WebSearch` and saves via
@@ -241,37 +79,53 @@ plan view describes code that was cut on 2026-10-24.
   - *Later (needs explicit sign-off + a real `ANTHROPIC_API_KEY`):* a
     `POST /api/capture/research` endpoint does live research and returns
     **draft, unsaved** resources; a second explicit action commits them
-    via the batch endpoint. Mirrors Chegga's `coaching_service.py`
-    guard — the key stays blank in `.env` until you say otherwise.
-- **Deployment: Render (backend) + Vercel (frontend), free tiers** —
-  the split Atlas ended up shipping. **Needs explicit user sign-off
-  before it goes live**, going public is the gate, not the cost.
-- **Auth gate before deploy**: single `ADMIN_PASSWORD` +
-  `itsdangerous`-signed session cookie gating the whole app, mirroring
-  Atlas / LittleSprout-Rewards. Built and live on Render (2026-09-16).
+    via the batch endpoint. **The owner has said no API spend (2026-09-18)**, so it stays off.
+- **Auth gate:** single `ADMIN_PASSWORD` + `itsdangerous`-signed session cookie
+  (`SameSite=None; Secure`) gating the whole app, mirroring Atlas / LittleSprout-Rewards.
+  Live on Render since 2026-09-16.
+- **Favorites are cut (2026-10-24, PR #4).** A shared list needs a persistent database, and
+  the owner will not pay for one. `test_favorites_are_gone` keeps them gone. Do not bring them
+  back without a free way to store them.
 
-## Content / copyright guardrail (do not cross)
+## How it's built
 
-Almanac is a **pointer index**, not a content mirror. For each resource
-store only: the `link`, a `title`, a **short** factual description (a
-brief attributed excerpt *or* a generated summary — set
-`description_source` accordingly), and metadata. Always link back to the
-source. **Never** store a resource's full body (worksheet text, full
-lesson plan, video transcript). Record `license` when known. For paid
-marketplaces (Teachers Pay Teachers, etc.), link the listing/category
-page and set `cost=paid`. **No bulk scraping** — hand-curation +
-user-supplied sources + session-assisted research only, the lesson Atlas
-learned when several scrape sources didn't pan out.
+- **The library is `backend/seed/almanac-seed.json`** (about 1,100 resources). Git
+  tracks it. The database is a build artifact.
+- **The deploy builds the database.** `render.yaml`'s `buildCommand` runs
+  `scripts/build_seed_db.py`, which writes `backend/seed/almanac-seed.db`
+  (git-ignored). On start, `app.db.seed.ensure_seed_db_file()` copies that
+  file into place. If it is missing, the app loads the JSON (about 6 s at 409
+  rows). Build time grows with the library: about 13 ms per row.
+- **Backend:** a `resources` model (Atlas's `Entry` fields plus `subject`, `grade_band`,
+  `age_min`/`age_max`, `resource_type`, `scope`, `publisher`, `audience`, `granularity`
+  (specific/collection), `duration_minutes`, `materials`, `learning_outcomes`, `cost`,
+  `price_note`, `source_site`, `license`, `standards`, `evidence` (write-only),
+  `udl_rationale`, `link_status`, `description_source`), many-to-many `tags`, a `standards`
+  join (parsed CCSS/NGSS/C3 codes), and the fixed 3-row `udl_principles` join. Faceted search,
+  batch-upsert on `link` (canonicalized on write, `services/links.py`), `GET /api/udl-coverage`,
+  `GET /api/stats`, `/api/standards`.
+- **Frontend:** Guided discovery (one question at a time, live match count), Browse (theme
+  search, Free/Paid, scope, subject, grade/format/theme/age/standard filters, UDL toggles,
+  "Class-ready only"), the UDL coverage strip, resource cards with cost/scope/publisher/UDL
+  pills and "link may be broken" badges, a Stats page (subject×UDL heatmap), and a read-only
+  Capture page.
+- **Link health runs itself.** `.github/workflows/link-check.yml` runs
+  `scripts/check_links.py --seed --write-status` every Monday. It writes
+  `backend/seed/link-status.json` (consecutive real-4xx failures per link)
+  and sets `link_status` on the seed rows. A link is `dead` only after two
+  failures in a row. The Action opens a `link-check/<date>` branch and keeps one open
+  "Dead links" issue.
+- **Growth:** the vault's `workflows/library/library.js` harvests (sitemaps, staged candidates,
+  portal deepening) and opens `harvest/<date>` PRs; a person merges them.
 
-## Phases
+## Commands & Verification
 
-1–4. ✅ Scaffold, data model, browse/capture UI, session-assisted
-   capture, first seed batch.
-5. ✅ Auth gate built (dormant — set `ADMIN_PASSWORD` to turn on).
-6. ✅ Deployed — one Vercel service at https://almanac-api.vercel.app
-   (user signed off 2026-08-28). Follow-up: persistent DB.
-7. ✅ Live Claude-assisted capture built (dormant — set
-   `ANTHROPIC_API_KEY` to turn on; spend is the operator's).
+- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (47 pass). `cd frontend && npm run build`.
+- **Rebuild the seed DB** after the JSON changes: `scripts/build_seed_db.py`.
+- **Links:** `scripts/check_links.py` (`--json`/`--write`), `scripts/flag_dead_links.py`,
+  `scripts/find_near_dupes.py` (soft duplicates for review).
+- **Portal backlog** (from the vault): `node workflows/library/library.js portal next --n 8`,
+  then follow `skills/deep_portal/SKILL.md`.
 
 ## Never Read / Noise Zones (Do Not Scan)
 
@@ -279,40 +133,55 @@ To keep search and file reads fast, **never scan or read inside**:
 - `backend/.venv/` and `frontend/node_modules/` — 9,780+ vendor files.
 - `backend/static/` and `frontend/dist/` — generated SPA build bundles.
 - `backend/data/*.db` and `backend/seed/almanac-seed.db` — binary SQLite databases (the seed `.db` is git-ignored, built at deploy).
-- `backend/seed/almanac-seed.json` — 409-row JSON seed (about 530 KB); query via Python/API or read targeted slices rather than loading the entire file into context.
+- `backend/seed/almanac-seed.json` — ~1,100-row JSON seed (well over 1 MB); query via Python/API or read targeted slices rather than loading the entire file into context.
+
+## Rules & Gotchas
+
+**Content / copyright guardrail (do not cross).** Almanac is a **pointer index**, not a content
+mirror. For each resource store only: the `link`, a `title`, a **short** factual description (a
+brief attributed excerpt *or* a generated summary — set `description_source` accordingly), and
+metadata. Always link back to the source. **Never** store a resource's full body (worksheet
+text, full lesson plan, video transcript). Record `license` when known. For paid marketplaces
+(Teachers Pay Teachers, etc.), link the listing/category page and set `cost=paid`. Harvesting
+through the vault engine is allowed (owner, 2026-10-22), but robots.txt, Crawl-delay, rate
+limits and pointer-only records still apply.
+
+- **Merging is the owner's call.** A session merges a PR only on the owner's explicit go-ahead
+  (`gh pr merge N --squash`, the repo's style; it worked 2026-10-25 — earlier attempts were
+  blocked by the permission check). Check `git merge-tree` first. Merging anything under
+  `backend/` redeploys the live site.
+- **The Vercel `backend` check can fail on new PRs. That check is noise.** Render is the live
+  site; `almanac-api.vercel.app` is an old fallback.
+- **Take URLs from `portal links`** (real hrefs, renders JavaScript pages). A summarizing fetch
+  tool once invented a host for CommonLit — 5 dead links, caught by the page check.
+- **loc.gov answers HTTP 429** (a Cloudflare challenge) after about 27 requests: retry in small
+  batches a day apart. **PBS LearningMedia's bare domain has an expired TLS certificate** and
+  the engine stores links without `www.`, so PBS pages are held until that is decided.
+- **The URL check can't see duplicates under old slugs** (two Khan courses had older URL slugs).
+- `check_links.py` uses `certifi`'s CA bundle — Windows Python's `ssl` has none, which once
+  misclassified real sites as unreachable.
+- After pulling the favorites cut, delete any old local `backend/data/almanac.db`; deploys
+  rebuild the database from the seed.
+- **This repo is public:** keep private business notes in the owner's vault, not here.
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-**Warning:** Render uses `rootDir: backend`. A push that changes files under `backend/` redeploys the live site. Other pushes do not. Ask the owner before you push a `backend/` change.
+*Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
 
-- **Last Worked On (2026-10-24, later session):**
-  - Cut favorites (PR #4, open). Opened PR #7 (+48): 35 of the 176 staged candidates in `projects/almanac/intake/` (vault) and 13 resources found behind portal-only rows. Two Khan courses were dropped as duplicates of existing rows that use Khan's older URL slugs; the URL check cannot see that.
-  - Added `import` and `portal` commands to the vault engine, plus the `deep_portal` skill. `portal plan` counts the portal-only rows: 160 after PR #7 (119 to deepen before it, 33 already the right shape).
-  - Known limits of the engine, found on the way: loc.gov answers HTTP 429 (a Cloudflare challenge) after about 27 requests, so 112 staged LOC pages wait, parked as `unverifiable`. PBS LearningMedia's bare domain has an expired TLS certificate and the engine stores links without `www.`, so PBS pages are held until that is fixed.
-- **Earlier the same day:**
-  - Merged PR #2 (`ce6f3aa`) and PR #1 (`a38871a`). PR #1 added 690 entries from TeachEngineering, ReadWorks, and Math Is Fun.
-  - Fixed one Math Is Fun description that kept a cut-off image tag (`245f794`).
-  - The intake engine (in the vault) gets grade and subject from TeachEngineering pages. It tags articles, activities, lessons, and units. Lessons and units get all three UDL principles as a labeled default.
-  - Checked this repo. 47 backend tests pass. The frontend builds. Favorites work on a local server.
-  - Earlier: fixed the Vercel `backend` root (`324474d`), fixed the auth-status bug, and turned on the setting that lets the link check open its PR.
-- **Current State (2026-10-24):**
-  - Live on Render at `https://almanac-0uue.onrender.com`. It runs `master`. Render redeploys only when files under `backend/` change.
-  - The live library has 1,098 resources.
-  - **Favorites are cut (2026-10-24).** A shared list needs a persistent database, and the owner will not pay for one. Gone: the ★ My Collection panel (and the Lesson plan view inside it), the card star, `POST /api/resources/{id}/favorite`, the `?favorite=` filter, and the `is_favorite` column. `test_favorites_are_gone` keeps them gone. Do not bring them back without a free way to store them. After pulling this change, delete any old local `backend/data/almanac.db`; deploys rebuild the database from the seed.
-  - The first load after idle takes about 40 seconds on the free plan.
-  - Live Claude capture stays off. `ANTHROPIC_API_KEY` is not set.
-  - The Vercel `backend` check can still fail on new PRs. That check is noise. Render is the live site.
-- **What Needs To Be Worked On Next:**
-  1. The owner merges PR #4 (favorites cut) and PR #7 (+48), then merges or closes PR #5 and PR #6. A session cannot merge: the permission check blocks it. Check `git merge-tree` first. #4 and #5 merge cleanly together, and so do #6 and #7.
-  2. Work the portal backlog: `node workflows/library/library.js portal next --n 8` in the vault, then follow `skills/deep_portal/SKILL.md`. Facing History & Ourselves blocks automated fetches and stays open.
-  3. Retry the 112 parked LOC pages in small batches: `requeue --app almanac --source <id> --status unverifiable`, then `prefilter --limit 20`, a day apart. Three OER Commons candidates need a person to open them.
-  4. Decide whether to keep the lesson and unit default. To drop it, edit `UDL_BY_FORMAT` in the vault engine, not in this repo. Replace it only with a method that beats the default on the 151 hand-tagged lessons and units.
-  5. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
-  6. Keep live capture dormant unless the owner approves API spend.
-
-## Why this file exists
-
-So a session opened in this repo has the real plan and constraints
-without re-deriving them — mirrors `Atlas/CLAUDE.md`. The vault-side
-`projects/almanac/context.md` in `my-brain` is a shorter cross-project
-summary; this file is authoritative for Almanac's own code.
+- **Last Worked On (2026-10-25):** PR #4 (favorites cut) merged on the owner's go-ahead
+  (squash, `17e5ec3`), which redeploys Render; the docs restructure landed on top. Before that
+  (2026-10-24): PR #7 opened (+48: 35 staged candidates and 13 portal finds), and the vault
+  engine gained `import` and `portal` commands plus the `deep_portal` skill. Full detail:
+  `HISTORY.md`.
+- **Current State (2026-10-25):** live on Render from `master`, 1,098 resources, behind the
+  password gate, favorites gone. First load after idle takes about 40 seconds. Live Claude
+  capture is off. Open PRs: #5 (Lesson Studio), #6 (lesson facts on 399 rows), #7 (+48) — each
+  merges cleanly into the new `master` (checked with `git merge-tree`, 2026-10-25).
+- **Next Up:**
+  1. The owner decides on PR #7, then merges or closes #5 and #6.
+  2. Work the portal backlog (`portal next --n 8`). Facing History & Ourselves blocks
+     automated fetches and stays open.
+  3. Retry the 112 parked LOC pages: `requeue --app almanac --source <id> --status
+     unverifiable`, then `prefilter --limit 20`, a day apart. Three OER Commons candidates need
+     a person to open them.
+  4. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
