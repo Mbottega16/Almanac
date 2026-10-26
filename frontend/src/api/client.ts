@@ -166,8 +166,40 @@ function toQs(params: Record<string, unknown>): string {
   ).toString();
 }
 
-export function searchResources(params: ResourceQuery): Promise<ResourceListResponse> {
-  return apiGet(`/api/resources?${toQs(params as Record<string, unknown>)}`);
+// Repeat searches are answered from sessionStorage, so going back to a result
+// skips the network. That matters on Render's free tier, where a cold start
+// can take about 40 seconds. Entries expire after 10 minutes, so a reload
+// does not keep old results for the rest of the tab's life.
+const SEARCH_CACHE_PREFIX = "almanac:search:";
+const SEARCH_CACHE_MS = 10 * 60 * 1000;
+
+function readSearchCache(key: string): ResourceListResponse | null {
+  try {
+    const raw = sessionStorage.getItem(key);
+    if (!raw) return null;
+    const { at, data } = JSON.parse(raw) as { at: number; data: ResourceListResponse };
+    return Date.now() - at < SEARCH_CACHE_MS ? data : null;
+  } catch {
+    return null; // storage blocked or corrupt: just fetch
+  }
+}
+
+function writeSearchCache(key: string, data: ResourceListResponse): void {
+  try {
+    sessionStorage.setItem(key, JSON.stringify({ at: Date.now(), data }));
+  } catch {
+    // Quota full or storage blocked: the search still works without the cache.
+  }
+}
+
+export async function searchResources(params: ResourceQuery): Promise<ResourceListResponse> {
+  const qs = toQs(params as Record<string, unknown>);
+  const key = `${SEARCH_CACHE_PREFIX}${qs}`;
+  const cached = readSearchCache(key);
+  if (cached) return cached;
+  const data = await apiGet<ResourceListResponse>(`/api/resources?${qs}`);
+  writeSearchCache(key, data);
+  return data;
 }
 
 export function fetchSubjects(): Promise<NameCount[]> {
