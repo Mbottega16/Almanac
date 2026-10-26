@@ -1,3 +1,4 @@
+from app import auth
 from app.config import settings
 
 
@@ -37,3 +38,24 @@ def test_wrong_password_rejected(client, monkeypatch):
     monkeypatch.setattr(settings, "admin_password", "test-password")
     login = client.post("/api/login", json={"password": "wrong"})
     assert login.status_code == 401
+
+
+def test_login_cookie_carries_the_session_lifetime(client, monkeypatch):
+    monkeypatch.setattr(settings, "admin_password", "test-password")
+    login = client.post("/api/login", json={"password": "test-password"})
+    assert f"Max-Age={auth.SESSION_MAX_AGE}" in login.headers["set-cookie"]
+
+
+def test_session_token_is_valid_until_it_expires():
+    token = auth.issue_cookie_value()
+    assert auth._cookie_is_valid(token) is True
+    # A token older than the allowed age is refused even though its signature is good.
+    assert auth._cookie_is_valid(token, max_age=-1) is False
+
+
+def test_expired_session_is_rejected_by_the_api(client, monkeypatch):
+    monkeypatch.setattr(settings, "admin_password", "test-password")
+    client.post("/api/login", json={"password": "test-password"})
+    # Lifetime shrunk to nothing: the cookie is still signed, but it is too old now.
+    monkeypatch.setattr(auth, "SESSION_MAX_AGE", -1)
+    assert client.get("/api/resources").status_code == 401

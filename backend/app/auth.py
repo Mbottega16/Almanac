@@ -7,7 +7,7 @@ the gate activates — every route except the always-open allowlist then needs
 a valid signed session cookie, obtained by POSTing the password to
 /api/login.
 """
-from itsdangerous import BadSignature, URLSafeSerializer
+from itsdangerous import BadSignature, URLSafeTimedSerializer
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse
@@ -15,6 +15,9 @@ from starlette.responses import JSONResponse
 from app.config import settings
 
 COOKIE_NAME = "almanac_session"
+# The token itself expires, not just the browser cookie: a copied cookie
+# stops working after this many seconds even if it is replayed.
+SESSION_MAX_AGE = 60 * 60 * 24 * 30
 # Requests to these paths are always allowed, gate or no gate.
 # auth-status must stay open: it's how an unauthenticated frontend decides
 # whether to show LoginGate. If it 401s, fetchAuthStatus() throws before the
@@ -23,21 +26,24 @@ COOKIE_NAME = "almanac_session"
 OPEN_PATHS = {"/api/health", "/api/login", "/api/auth-status", "/docs", "/openapi.json", "/redoc"}
 
 
-def _serializer() -> URLSafeSerializer:
+def _serializer() -> URLSafeTimedSerializer:
     secret = settings.admin_session_secret or settings.admin_password or "almanac-dev"
-    return URLSafeSerializer(secret, salt="almanac-auth")
+    return URLSafeTimedSerializer(secret, salt="almanac-auth")
 
 
 def issue_cookie_value() -> str:
     return _serializer().dumps({"ok": True})
 
 
-def _cookie_is_valid(raw: str | None) -> bool:
+def _cookie_is_valid(raw: str | None, max_age: int | None = None) -> bool:
     if not raw:
         return False
+    # Tokens issued before the timestamp was added have no signed time, so
+    # they fail here and the owner signs in once more.
     try:
-        return bool(_serializer().loads(raw).get("ok"))
-    except BadSignature:
+        age = SESSION_MAX_AGE if max_age is None else max_age
+        return bool(_serializer().loads(raw, max_age=age).get("ok"))
+    except BadSignature:  # includes SignatureExpired
         return False
 
 

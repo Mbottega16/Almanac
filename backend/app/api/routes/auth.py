@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Response
 from pydantic import BaseModel
 
-from app.auth import COOKIE_NAME, issue_cookie_value
+from app.auth import COOKIE_NAME, SESSION_MAX_AGE, issue_cookie_value
 from app.config import settings
 
 router = APIRouter()
@@ -36,7 +36,7 @@ def login(body: LoginRequest, response: Response):
         httponly=True,
         samesite="none",
         secure=True,
-        max_age=60 * 60 * 24 * 30,
+        max_age=SESSION_MAX_AGE,
     )
     return {"ok": True}
 
