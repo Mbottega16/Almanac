@@ -2916,7 +2916,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -4859,7 +4859,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -11689,7 +11689,7 @@
     ],
     "udl_rationale": "engagement: ties the build challenge to a familiar fairy tale so students have a story hook for the task; action_expression: students show learning by building and measuring a physical object rather than writing about it",
     "evidence": "Students build the tallest beanstalk they can with the provided materials. They then measure it and compare their beanstalk heights.",
-    "link_status": "ok"
+    "link_status": "unreachable"
   },
   {
     "link": "https://www.teachengineering.org/curriculum-search?collection=Lessons",
