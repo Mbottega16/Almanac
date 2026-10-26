@@ -11,6 +11,21 @@ import StatsPage from "./pages/StatsPage";
 type Tab = "browse" | "capture" | "stats";
 const DISCOVERED_KEY = "almanac.discovered";
 
+const DISPLAY_KEY = "almanac.display";
+
+// Display options a reader can switch on: a high-contrast palette and a
+// dyslexia-friendly typeface with looser spacing. Both are off by default.
+type Display = { contrast: boolean; dyslexiaFont: boolean };
+const DISPLAY_OFF: Display = { contrast: false, dyslexiaFont: false };
+
+function loadDisplay(): Display {
+  try {
+    return { ...DISPLAY_OFF, ...JSON.parse(localStorage.getItem(DISPLAY_KEY) ?? "{}") };
+  } catch {
+    return DISPLAY_OFF;
+  }
+}
+
 function seenDiscover(): boolean {
   try {
     return localStorage.getItem(DISCOVERED_KEY) === "1";
@@ -25,6 +40,19 @@ export default function App() {
   const [discovering, setDiscovering] = useState(!seenDiscover());
   const [browseFilters, setBrowseFilters] = useState<Filters>(EMPTY_FILTERS);
   const [browseKey, setBrowseKey] = useState(0);
+  const [display, setDisplay] = useState<Display>(loadDisplay);
+
+  // The CSS in index.css reads these two attributes on <html>.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.contrast = display.contrast ? "high" : "";
+    root.dataset.font = display.dyslexiaFont ? "dyslexia" : "";
+    try {
+      localStorage.setItem(DISPLAY_KEY, JSON.stringify(display));
+    } catch {
+      // fine — the choice just won't be remembered
+    }
+  }, [display]);
 
   useEffect(() => {
     (async () => {
@@ -85,6 +113,22 @@ export default function App() {
           <span className="brand-name">almanac<span className="brand-period">.</span><small>TEACHING LIBRARY</small></span>
         </a>
         <div className="header-note"><span className="status-dot" /> A growing library for thoughtful teaching</div>
+        <div className="display-toggles" role="group" aria-label="Display options">
+          <button
+            type="button"
+            aria-pressed={display.contrast}
+            onClick={() => setDisplay((d) => ({ ...d, contrast: !d.contrast }))}
+          >
+            High contrast
+          </button>
+          <button
+            type="button"
+            aria-pressed={display.dyslexiaFont}
+            onClick={() => setDisplay((d) => ({ ...d, dyslexiaFont: !d.dyslexiaFont }))}
+          >
+            Dyslexia-friendly font
+          </button>
+        </div>
       </header>
       <section className="welcome-hero">
         <div className="hero-copy">

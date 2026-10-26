@@ -11,6 +11,79 @@
   --udl-action_expression: #2e9e5b;
 }
 
+/* --- display options (set by the header toggles in App.tsx) ------------- */
+html[data-contrast="high"] {
+  color-scheme: light;
+  background: #fff;
+  color: #000;
+  --accent: #0000b0;
+  --free: #005a2b;
+  --paid: #8a3d00;
+  --freemium: #3b2fb3;
+  --udl-engagement: #9b0020;
+  --udl-representation: #003f8a;
+  --udl-action_expression: #005a2b;
+}
+
+html[data-contrast="high"] a {
+  color: #0000b0;
+  text-decoration: underline;
+}
+
+html[data-contrast="high"] button,
+html[data-contrast="high"] input,
+html[data-contrast="high"] select,
+html[data-contrast="high"] textarea {
+  border-color: #000;
+}
+
+html[data-contrast="high"] :focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+html[data-font="dyslexia"] {
+  font-family: Verdana, Arial, sans-serif;
+  letter-spacing: 0.03em;
+  word-spacing: 0.12em;
+  line-height: 1.7;
+}
+
+html[data-font="dyslexia"] button,
+html[data-font="dyslexia"] input,
+html[data-font="dyslexia"] select,
+html[data-font="dyslexia"] textarea {
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+.display-toggles {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.display-toggles button {
+  border: 1px solid #8886;
+  background: none;
+  color: inherit;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.7rem;
+  cursor: pointer;
+}
+
+.display-toggles button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.display-toggles button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   padding: 2rem;
