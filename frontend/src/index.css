@@ -1207,3 +1207,173 @@ button,input,select { font:inherit; }
   .studio-side { position:static; }
   .studio-basics { grid-template-columns:1fr 1fr; }
 }
+
+/* --- discovery overhaul: refine panel, active chips, card facts -------- */
+/* Everything past the search box lives behind the Refine toggle now. The
+   active filters stay visible as removable chips so a visitor who arrived
+   via the doors or a sentence can see what is narrowing their results. */
+
+.refine-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.refine-toggle {
+  border: 1px solid #8884;
+  background: none;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.refine-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.refine-count {
+  margin-left: 0.4rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.refine-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid #8883;
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+
+.active-chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.active-chip {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: #4a90e214;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  padding: 0.25rem 0.65rem;
+  cursor: pointer;
+}
+
+.active-chip:hover {
+  background: #4a90e22e;
+}
+
+.active-chip.clear-all {
+  border-color: #8886;
+  color: inherit;
+  background: none;
+  opacity: 0.75;
+}
+
+/* Glanceable lesson facts on a card: time, who it's for, materials. */
+.fact-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.55rem;
+}
+
+.fact {
+  border: 1px solid #8883;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  padding: 0.18rem 0.6rem;
+  white-space: nowrap;
+}
+
+.fact-long {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* --- discovery home: sentence chips + curated paths --------------------- */
+
+.discover-section-title {
+  font-size: 1.05rem;
+  margin: 2rem 0 0.9rem;
+  opacity: 0.85;
+}
+
+.discover-sentence {
+  margin-bottom: 0.5rem;
+}
+
+.parsed-chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.parsed-chip {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: #4a90e214;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+}
+
+.parsed-chip:hover {
+  background: #4a90e22e;
+}
+
+.parsed-theme {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.discover-paths {
+  margin-top: 0.5rem;
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.6rem;
+}
+
+.path-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border: 1px solid #8884;
+  border-radius: 10px;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.path-card:hover {
+  border-color: var(--accent);
+  background: #4a90e20d;
+}
+
+.path-title {
+  font-weight: 600;
+}
+
+.path-hint {
+  font-size: 0.82rem;
+  opacity: 0.6;
+}

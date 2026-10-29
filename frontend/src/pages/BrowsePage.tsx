@@ -14,6 +14,7 @@ import {
 import FilterBar, { EMPTY_FILTERS, Filters, toQuery } from "../components/FilterBar";
 import ResourceCard from "../components/ResourceCard";
 import UdlCoverageStrip from "../components/UdlCoverageStrip";
+import { durationInBucket } from "../discovery";
 
 type ViewMode = "grid" | "list" | "large";
 const VIEW_STORAGE_KEY = "almanac.viewMode";
@@ -52,6 +53,10 @@ export default function BrowsePage({
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [view, setView] = useState<ViewMode>(loadViewMode);
+  // Duration-filter mode: the API has no duration parameter, so when a
+  // duration bucket is set we fetch everything the other filters match and
+  // keep the pool here, filtering + paging it client-side.
+  const [localPool, setLocalPool] = useState<Resource[] | null>(null);
   // Bumped on every new search so a slow page from the previous search can't
   // land on top of the new results.
   const generation = useRef(0);
@@ -84,21 +89,62 @@ export default function BrowsePage({
     setLoading(true);
     setError(null);
     const handle = setTimeout(() => {
-      searchResources({ ...toQuery(filters), limit: PAGE_SIZE, offset: 0 })
-        .then((res) => {
-          if (mine !== generation.current) return;
-          setResources(res.items);
-          setTotal(res.total);
-          setUnmatched(res.unmatched_terms ?? []);
-        })
-        .catch(() => {
-          if (mine === generation.current) {
-            setError("Couldn't reach the Almanac backend — is it running?");
+      if (filters.duration) {
+        // Fetch the full match set page by page (the session cache makes
+        // repeats cheap), then keep only the chosen duration bucket.
+        (async () => {
+          const all: Resource[] = [];
+          let apiTotal = Infinity;
+          let unmatchedTerms: string[] = [];
+          for (let offset = 0; offset < apiTotal && offset < 2000; offset += 200) {
+            const res = await searchResources({
+              ...toQuery(filters),
+              limit: 200,
+              offset,
+            });
+            apiTotal = res.total;
+            unmatchedTerms = res.unmatched_terms ?? unmatchedTerms;
+            all.push(...res.items);
+            if (res.items.length === 0) break;
           }
-        })
-        .finally(() => {
-          if (mine === generation.current) setLoading(false);
-        });
+          return { all, unmatchedTerms };
+        })()
+          .then(({ all, unmatchedTerms }) => {
+            if (mine !== generation.current) return;
+            const pool = all.filter((r) =>
+              durationInBucket(r.duration_minutes, filters.duration)
+            );
+            setLocalPool(pool);
+            setResources(pool.slice(0, PAGE_SIZE));
+            setTotal(pool.length);
+            setUnmatched(unmatchedTerms);
+          })
+          .catch(() => {
+            if (mine === generation.current) {
+              setError("Couldn't reach the Almanac backend — is it running?");
+            }
+          })
+          .finally(() => {
+            if (mine === generation.current) setLoading(false);
+          });
+      } else {
+        setLocalPool(null);
+        searchResources({ ...toQuery(filters), limit: PAGE_SIZE, offset: 0 })
+          .then((res) => {
+            if (mine !== generation.current) return;
+            setResources(res.items);
+            setTotal(res.total);
+            setUnmatched(res.unmatched_terms ?? []);
+          })
+          .catch(() => {
+            if (mine === generation.current) {
+              setError("Couldn't reach the Almanac backend — is it running?");
+            }
+          })
+          .finally(() => {
+            if (mine === generation.current) setLoading(false);
+          });
+      }
 
       if (themeActive) {
         fetchUdlCoverage({
@@ -121,6 +167,11 @@ export default function BrowsePage({
 
   const loadMore = useCallback(() => {
     if (!hasMore || loadingMore) return;
+    if (localPool) {
+      // Duration mode: the next page is already here, just slice more off.
+      setResources((prev) => localPool.slice(0, prev.length + PAGE_SIZE));
+      return;
+    }
     const mine = generation.current;
     setLoadingMore(true);
     searchResources({ ...toQuery(filters), limit: PAGE_SIZE, offset: resources.length })
@@ -134,7 +185,7 @@ export default function BrowsePage({
       })
       .catch(() => {})
       .finally(() => setLoadingMore(false));
-  }, [filters, hasMore, loadingMore, resources.length]);
+  }, [filters, hasMore, loadingMore, resources.length, localPool]);
 
   // Fetch the next page when the end of the list scrolls into view. The
   // button below stays as the fallback for keyboards and old browsers.
@@ -263,9 +314,11 @@ export default function BrowsePage({
           )}
           {!loading && resources.length === 0 && (
             <p>
-              {lessonMode
-                ? "No resources match — try a broader theme or clear a filter."
-                : "No professional learning matches yet — try a broader topic."}
+              {!lessonMode
+                ? "No professional learning matches yet — try a broader topic."
+                : filters.duration
+                  ? "Nothing that lists a running time matches all of that — try removing the time chip above, or broadening another filter."
+                  : "No resources match — try a broader theme or clear a filter."}
             </p>
           )}
         </>
