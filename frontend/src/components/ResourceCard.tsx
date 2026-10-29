@@ -60,15 +60,30 @@ export default function ResourceCard({
       : null;
   const durationLabel =
     resource.duration_minutes != null ? `${resource.duration_minutes} min` : null;
-  const meta = [
-    resource.subject,
-    resource.grade_band,
-    ageLabel,
-    resource.resource_type,
-    durationLabel,
-  ]
-    .filter(Boolean)
-    .join(" · ");
+  const meta = [resource.subject, resource.resource_type].filter(Boolean).join(" · ");
+
+  // The glanceable facts a teacher scans for — time, who it's for, and what
+  // they'll need — up front on the card, not buried in Details. Only the
+  // facts a resource actually lists get a pill.
+  const gradesLabel =
+    resource.grade_band === "All"
+      ? "All grades"
+      : resource.grade_band
+        ? `Grades ${resource.grade_band}`
+        : null;
+  const whoLabel = [gradesLabel, ageLabel].filter(Boolean).join(" · ");
+  const facts: { icon: string; text: string; long?: boolean }[] = [];
+  if (durationLabel) facts.push({ icon: "⏱", text: durationLabel });
+  if (whoLabel) facts.push({ icon: "🎂", text: whoLabel });
+  if (resource.materials)
+    facts.push({
+      icon: "🧰",
+      text:
+        resource.materials.length > 72
+          ? `${resource.materials.slice(0, 72).replace(/\s+\S*$/, "")}…`
+          : resource.materials,
+      long: true,
+    });
 
   // Only worth calling out when it's bigger than a single lesson.
   const scopeLabel =
@@ -173,6 +188,15 @@ export default function ResourceCard({
       </div>
 
       <div className="entry-card-body">
+        {facts.length > 0 && (
+          <div className="fact-row" aria-label="Lesson facts">
+            {facts.map((f, i) => (
+              <span key={i} className={`fact${f.long ? " fact-long" : ""}`} title={f.long ? resource.materials ?? undefined : undefined}>
+                <span aria-hidden="true">{f.icon}</span> {f.text}
+              </span>
+            ))}
+          </div>
+        )}
         {summary && <p className="entry-summary">{summary}</p>}
         {expanded && (
           <div className="entry-details">
