@@ -19,6 +19,32 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-10-25 — state recorded in the previous handoff
+
+*Mac · Claude · (handoff moved here 2026-10-29 to make room for the discovery-overhaul handoff)*
+
+*Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
+
+- **Last Worked On (2026-10-25):** PR #4 (favorites cut) merged on the owner's go-ahead
+  (squash, `17e5ec3`), which redeploys Render; the docs restructure landed on top. Before that
+  (2026-10-24): PR #7 opened (+48: 35 staged candidates and 13 portal finds), and the vault
+  engine gained `import` and `portal` commands plus the `deep_portal` skill. Full detail:
+  `HISTORY.md`.
+- **Current State (2026-10-25):** live on Render from `master`, 1,098 resources, behind the
+  password gate, favorites gone. First load after idle takes about 40 seconds. Live Claude
+  capture is off. Open PRs: #5 (Lesson Studio), #6 (lesson facts on 399 rows), #7 (+48) — each
+  merges cleanly into the new `master` (checked with `git merge-tree`, 2026-10-25).
+- **Next Up:**
+  1. The owner decides on PR #7, then merges or closes #5 and #6.
+  2. Work the portal backlog (`portal next --n 8`). Facing History & Ourselves blocks
+     automated fetches and stays open.
+  3. Retry the 112 parked LOC pages: `requeue --app almanac --source <id> --status
+     unverifiable`, then `prefilter --limit 20`, a day apart. Three OER Commons candidates need
+     a person to open them.
+  4. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
+
+---
+
 ## 2026-10-25 — PR #4 merged; the docs restructure landed
 
 *Mac · Claude · commits `17e5ec3` (PR #4, squash), `47dfede` (docs)*
