@@ -2,2437 +2,6589 @@
  "https://about.zearn.org/curriculum": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://accessim.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://agclassroom.org/matrix/lessons/57/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://agclassroom.org/matrix/lessons/666/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://agclassroom.org/matrix/lessons/718/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://agclassroom.org/matrix/lessons/84/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://amplify.com/programs/amplify-ckla/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://amplify.com/programs/amplify-desmos-math/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://amplify.com/programs/amplify-science/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://archive.learningforjustice.org/classroom-resources/film-kits": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://artprojectsforkids.org/draw-a-bear-head/": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://artsandculture.google.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://artsedge.kennedy-center.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://bedtimemath.org/daily-math/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://bensguide.gpo.gov/learning-adventures-14more": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://beyondpenguins.ehe.osu.edu/pierre-the-penguin-teaching-about-heat-and-insulation-through-adaptations": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://blog.flat.io/a-free-standards-aligned-middle-school-music-unit-nine-lessons-nafme-standards/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://bootstrapworld.org/materials/fall2024/en-us/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://buffaloakg.org/learn-discover/educators/lesson-plans/contrasting-styles": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://buffaloakg.org/learn-discover/educators/lesson-plans/creating-print-line-etchings": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://buggyandbuddy.com/math-kids-finding-shapes-playground/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://c3teachers.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://caffeinatedj.com/music-composition-activities-for-lower-elementary/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://caffeinatedj.com/music-composition-activities-for-upper-elementary/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://casel.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://casel.org/fundamentals-of-sel/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://classroom.amplify.com/activity/560c53f7441172070b262215": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://classroommagazines.scholastic.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://code.org/curriculum/csf": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://code.org/educate/csd": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://code.org/educate/csp": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://code.org/en-US/curriculum": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://code.org/en-US/curriculum/computer-science-fundamentals": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://code.org/minecraft": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://codehs.com/free": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://codespark.com/educators": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://conjuguemos.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://csunplugged.org/en/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://dpi.wi.gov/sites/default/files/imce/sspw/pdf/Grades_3-5_Mental_Health_Literacy_Instructional_Units.pdf": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://dpi.wi.gov/sites/default/files/imce/sspw/pdf/Grades_9-12_Mental_Health_Literacy_Instructional_Units.pdf": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://dramaresource.com/key-stage-two-drama-ideas/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://dramaresource.com/make-your-own-frog-puppet/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://earth.google.com/web/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://econedlink.org/resources/toys-for-me/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://ed.icivics.org/games/branches-power": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://ed.icivics.org/games/do-i-have-right": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://edu.exceedlms.com/student/path/1716233-fundamentals-training": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://education.nationalgeographic.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://education.nationalgeographic.org/resource/map-skills-for-students/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://education.nationalgeographic.org/search/resources/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://energy.concord.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://estimation180.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://globalmathproject.org/exploding-dots/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://greatergood.berkeley.edu/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://greatminds.org/english/witwisdom": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://greatminds.org/math/eurekamath": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://greatminds.org/science/phdscience": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://home.edweb.net/browsewebinars/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://homeschoolpreschool.net/rain-cloud-in-a-jar/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://im.kendallhunt.com/MS/teachers/3/8/index.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://im.kendallhunt.com/k5/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://im.kendallhunt.com/k5/teachers/kindergarten/unit-1/lessons.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://information.ascd.org/webinars": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://inquirygroup.org/history-lessons": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://investigations.terc.edu/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/pd-hours/earn-pd-hours/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/product/acc-2/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/product/beh1_2021/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/product/di/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/product/ell/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/product/iep01/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://iris.peabody.vanderbilt.edu/product/udl/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://khanacademy.org/computing/computer-science/algorithms": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://kids.esa.int/": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://kids.frontiersin.org/": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://kids.nationalgeographic.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://kidshealth.org/classroom/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://kinderart.com/art-lessons/painting/foilart/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://kinderart.com/art-lessons/painting/showers/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://kinderart.com/grades-3-5/emotion/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://kinderlabrobotics.com/ai": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://languagegym.com/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://learn.microsoft.com/en-us/training/courses/microsoft-educator-academy": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://learn.nctsn.org/course/info.php?id=33": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://learninglab.si.edu/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://lifeovercs.com/five-little-ducks-on-the-pond-gross-motor-activity/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://littlepim.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://masandpas.com/emotions-activity/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://mathkangaroo.org/mks/practice/free-question-samples/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://mathlearningcenter.org/resources/apps": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/accuracy-precision.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/activity/buffons-needle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/activity/coin-grid.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/activity/dice-experiment-1.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/activity/garden-area.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/activity/questions-asking.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/activity/questions-improving.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/acute.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/algebra/shapes-freeplay.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/angles.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/area-calculation-tool.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/area.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/combinatorics/combinations-permutations-calculator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/combinatorics/combinations-permutations.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/analog-digital.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/bar-graphs.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/basic-counting-principle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/bayes-theorem.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/binomial-distribution.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/central-measures.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/chi-square-calculator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/chi-square-test.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/clear-thinking.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/confidence-interval-calculator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/confidence-interval.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/correlation-calculator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/correlation.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/cumulative-tables-graphs.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/data-discrete-continuous.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/data-graph.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/data.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/degrees-freedom.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/dot-plots.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/frequency-distribution-grouped.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/frequency-distribution.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/frequency-grouped-mean-median-mode.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/graph-paper-maker.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/histograms.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/least-squares-calculator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/least-squares-regression.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/line-graphs.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/lottery.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/mean-deviation.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/mean-frequency-table.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/mean-machine.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/normal-distribution-simulator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/outliers.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/percentiles.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/pictographs.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/pie-charts.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-complement.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-events-conditional.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-events-independent.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-events-types.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-false-negatives-positives.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-shared-birthday.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability-tree-diagrams.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/probability.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/quartiles.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/quincunx-explained.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/quincunx.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/random-words.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/range.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/relative-frequency.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/sampling.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/scatter-xy-plots.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/skewness.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/spinner.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/standard-deviation-calculator.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/standard-deviation-formulas.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/standard-deviation.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/standard-normal-distribution-table.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/standard-normal-distribution.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/stem-leaf-plots.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/straight_line_graph.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/students-t-test.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/survey-conducting.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/survey-questionnaire.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/survey-results.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/univariate-bivariate.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/data/weighted-mean.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/annulus.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/arc.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/area-polygon-drawing.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/area.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/circle-area-by-sectors.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/circle-area-lines.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/circle-sector-segment.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/circle-theorems.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/circle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/congruent.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/degrees.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/dimensions.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/drawing.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/full-rotation.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/hexagon.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/kite.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/line.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/paper-sizes.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/parallelogram-in-quadrilateral.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/parallelogram.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/pentagon.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/pentagram.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/perimeter.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/plane-geometry.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/plane.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/point.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/polygons-interactive.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/polygons.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/quadrilaterals-interactive.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/radians.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/rectangle-calc.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/rectangle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/regular-polygons.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/rhombus.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/similar.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/solid-geometry.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/square-calc.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/square.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/straight-angle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/symbols.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/trapezoid.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/geometry/triangles-interactive.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/math-tools.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/mean.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/median.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/mode.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/numbers/geometric-mean.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/numbers/harmonic-mean.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/numbers/number-chart.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/numbers/pi.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/obtuse.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/probability_line.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/quadrilaterals.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/reflex.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/right_angle_triangle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/rightangle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/shape.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/tables.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/timestable.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://mathsisfun.com/triangle.html": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://medicine.yale.edu/childstudy/services/community-and-schools-programs/center-for-emotional-intelligence/ruler/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://millymom.com/2018/07/26/farm-animals-music-movement-lesson-plan/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://momath.org/activities/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://mysteryscience.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://nearpod.com/nearpod-library": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://newsela.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://nida.nih.gov/research-topics/parents-educators/lesson-plans-and-activities": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://nrich.maths.org/primary": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://nrich.maths.org/secondary": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://oercommons.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://oercommons.org/browse": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://oercommons.org/browse?f.material_types=full-course": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://openscied.org/curriculum/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://openscied.org/curriculum/high-school/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://openscied.org/curriculum/middle-school/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://openupresources.org/math-curriculum/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://operationprevention.discoveryeducation.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://owl.purdue.edu/owl/general_writing/grammar/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/atomic-interactions": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/balancing-chemical-equations": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/circuit-construction-kit-ac": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/energy-forms-and-changes": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/filter?subjects=math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/forces-and-motion-basics": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/gene-expression-essentials": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/gravity-and-orbits": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/natural-selection": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/ramp-forces-and-motion": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/states-of-matter-basics": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://phet.colorado.edu/en/simulations/wave-interference": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://preschooltoolkit.com/blog/leaf-science/": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://projecteuler.net/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://promotingprogress.org/resource-collections/online-learning-courses": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://readtoday.net/": {
   "status": "ok",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/18--19--and-20-Year-Old-Americans-Get-the-Vote-in-1971/44ee89bf-83f8-498d-b110-6acbffedbe6a": {
+  "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/19th-Amendment/36877c2d-7650-4df1-a6c1-cc33bd415090": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/3-2-1-Blast-Off!/ce326567-072e-46de-a3d2-c8f428e79f4a": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Baby-Polar-Bear-Grows-Up/4da831d5-0f0a-4e86-9cc7-fc7d66567e92": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bad-Move/b61b12f4-7d0c-4a17-8fee-d9e129b275f9": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bad-Robot/2aebeca5-275f-4a58-99e4-5b8978f708ce": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Ball-and-a-Basket/c6e4353a-131e-4805-8351-15422af7c6ce": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bat-Mystery/c65cda17-6658-4fc8-9dcb-fd08efae0183": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Beautiful-Slot-Canyon/1088964c-bb25-4914-9bf1-70dda6ccd99b": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Big-Birthday-Celebration/6ec17859-c41a-4200-9438-5bd796865adc": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Big-Birthday-Celebration/df330b3e-04d6-418e-a7f6-ea2c4c91a4ba": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Big-Fight-Begins/224f4461-3d60-4bdd-bf21-3b5efd078d43": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Big-Push/66caac75-bde6-40f9-87ed-77a4e0366422": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Big-Star/c16226a0-452a-4e8e-bdf3-702e84ecf4c7": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bigger-Pond/69f66823-e2db-4dfb-9d8c-065669ad45d9": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bird-Came-Down-the-Walk/3ea2e5f4-4905-42dc-8910-e2343a29231d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bit-About-North-Carolina/f984e6e4-1199-497b-b056-1fd18413204a": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bit-about-Alabama/6aaf7808-e255-44cf-ad52-61671ad5a439": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bit-about-Buttons/441b103b-aef7-4d29-8efc-e77b4e8366f1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Blast-from-the-Past-Lees-Mountain-2/6dc81e46-f87c-4bbd-b89c-faf9594550d8": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bone-to-Pick/4b9c9fa2-71d8-4441-a2b2-a2feaa633678": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Brave-Woman-and-Pilot/7d9eb627-7c6e-4374-9a37-f301ef30377d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Brave-Young-Hero-The-Djinn-in-the-Pages-1/78379f88-189a-42ec-b68c-34746a89e836": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-British-View-of-Rebellious-Boston-1774/545294e2-553e-434f-a370-d6d2478fbd34": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Brush-with-History/1dc00abf-43b3-4782-97d7-8f96e1bd3e3e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Bumpy-Ride/c2ac9d2b-752d-4e1e-b456-6eed80b226eb": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Busy-Bird/210611b2-98f9-4e7c-9f8b-78d590544d25": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Butterflys-Body/5558be66-7815-4c1e-a81b-0bc011b74d45": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Butterflys-Life-Cycle/b54e61d3-4bca-4e3a-a5b5-53097ff168b6": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Butterflys-Life/7a7ce4e1-6980-41cd-a728-15eefc6a0b52": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Camping-Trip/2d6d1f1d-c85c-46e8-8166-f0df6ee9627d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Career-for-You-in-Esports/269716b8-914d-4609-9c30-f757c801d0d3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Chance-for-Freedom/98c9875c-6cbb-4db3-86ea-56ddcb15d8bf": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Change-for-the-Butter/74263bf2-f6ca-4e50-b5c5-d134c5f95d21": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Change-in-Thinking/f1525473-5ffb-461a-a793-eb02343566b5": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Child-in-Hiding/a3a02e73-8865-4bb4-8f62-922d733444a6": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Christmas-in-Guanito/03082368-b968-4f8c-beca-34acc85364ae": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Class-of-Twins/43462ee0-df3f-4124-8d3d-b193e2e15a20": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Clean-Drink-of-Water/e21f9a41-bb4f-4f8f-8a55-93f9bf1c199e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Clean-Park/95dea589-45f4-4604-b52b-6d9358fa9197": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Closer-Look-at-Mars/00321d0d-0e27-4fc9-b610-fd8972e0919a": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Closer-Look-at-Thanksgiving/c2014a95-d56f-43ac-8d67-8044f3793350": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Club-for-Explorers/2b9314f4-7e52-432f-b584-5f00107375f2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Cold-Place-to-Live/1cbdd500-6e90-43bb-b532-c213e77fc03d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Colorful-City-in-Chile/9b090236-ed6b-494a-9342-61ac1f0d198f": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Colorful-Man/00b3a797-816f-49ec-bf1e-71986c543b2d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Community-of-People/569f8adf-deeb-4b2c-9a38-9e9bd8ac5d36": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Constitution-for-Kids/c8fbf2ec-275e-4ae2-a6cd-d61226bb0ca8": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Cool-Pool!/fcd652dd-3344-4d39-9e8b-59082ff6138f": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Country-and-a-Continent/35d3730c-9720-4373-9377-4a1e576ecc2c": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Courtroom-in-the-Classroom/39f98960-bf5a-4fed-8392-d1ddfb57d8cd": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Crooked-Election/f735202b-cf6d-4f59-8e80-e3d7a5137a62": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dangerous-Dust-Storm/4560626d-80f7-4cdc-83ee-a82b705534d6": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dangerous-Game/8a13470f-5898-4987-b0e6-f8a2f64a5420": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dangerous-Landslide/fda0b556-2341-4598-b902-ceb48ce5239d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Date-with-Rachmaninov/11db9a78-f789-4fc2-a310-60f1de9e722e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Daughters-Mission-Rescuing-Elderly-Parents-Stranded-in-Puerto-Rico/2c4d0a49-4a55-46f8-aba1-9bae81186658": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-at-Angkor-Wat/eefa3ddf-29f2-4b57-afe5-be5e857dd962": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-at-the-Pumpkin-Farm/86ec8555-7ea7-4f58-809f-0570ab6bb2e2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-at-the-Zoo/300bdfc7-82e5-4508-abc0-7ab9703d22ca": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-for-Fishing/60d75061-2996-4bb7-82ce-d845213b29b5": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-for-United-States-Veterans/e7123b4a-8e87-4743-8fc8-bc45b96c54fc": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-in-Kindergarten/e3d049ce-92b5-4528-900b-3c46d65887cf": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-in-the-Life-of-a-Veterinary-Technician/0361d910-525e-4b77-84a7-33b00dc17d09": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-on-the-Slopes/174d46c3-b942-4532-91a2-812d42d6fd02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Day-to-Celebrate-Earth/b33adbba-a7f0-492a-b680-cc5d85448f35": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Deep-Sea-Wonderland/2aabeec6-2c52-4c66-ae7f-6d8e2656c2a4": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Delicious-Feast-in-Fiji/7e3836e4-8d45-4dbd-bf10-f078f147bd93": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dinosaur-with-Armor/045c9d68-afe8-47b6-b13b-c4df2e1d4631": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Diplomats-Son/9691e2a7-9c3b-4886-a7e5-5a73a42ad1ee": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Discouraging-Start/59e000aa-aaa5-4b4a-9ed9-7db9503676c8": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Distant-Relative/c34d9e7f-4afd-470a-aa03-a278361b32a0": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dodgeball-Mystery-Her-BFFs-Big-Secret-1/964ed93b-3c06-4290-82e4-304a98f17fab": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dodgy-Call/572ce9a9-a027-4fc3-92e0-4246db82b83e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dog-Is-a-Mammal/eef375de-837e-44bf-9901-a91210d89742": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Dream-Schedule/62a8e00e-0534-4a79-9ee7-881a30a0d8b2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Drops-Journey/c67960de-9b21-47b8-b84a-3abfca4ed4a9": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Duck-Out-of-Water/4e99a67a-dcce-468f-bca4-c55f88e16646": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Face-to-Face-Meeting-A-Change-in-Time-4/805ff803-d0b4-4c21-af50-5789543ca0b9": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Familiar-Face-Our-Family-Ghost-5/7b33e2ec-df83-42a5-8202-b683ad45137d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Family-Reunion/f38f7534-d39f-4ed4-a2c1-62f12bf95688": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Famous-Painting/9c8cb355-4035-494f-8180-7d8b452985b0": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Fawn-in-the-Forest/f179e51a-ed42-4322-b07c-acf62e879c49": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Feudal-Society/8eb4d797-22dd-4e6f-972d-6cebf1081597": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Fight-for-Hurling/d45472bb-9815-45ee-bfb1-f92b0630a5b2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Filipina-Playwright-and-Poet/6ad34fc2-20f3-48a7-9c95-d88f5d06be85": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Final-Journey/96b470f5-14a9-4602-abb9-ac44a0dcc7a0": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Fire-Safety-Checklist/6ec2d279-102d-465d-96b7-7e2577c010e1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-First-Aid-Kit/9dcd6565-0616-4ef1-aded-dcf851924003": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Fizzy-Reaction/46cb6fb8-d61d-47a7-976b-ba2ad75c722b": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Food-Discovery/2f393a91-c76f-4050-80c8-fe852c6f545e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Fortune-in-Fortnite/82105fa8-fdb8-4ee6-9d63-5218aeb26770": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Freezer/74cb1559-6d63-4b23-874a-c18dc65bc0b3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Frogs-Life-Cycle/64c0ec84-03ad-4f91-a3e9-51ef45c96b03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Frogs-Life/b407a944-e9f6-4005-8b43-7845b577dcac": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Fun-Dance-Show/6b38a926-2ab6-4e89-b562-f22fea14aa9f": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Funny-Old-Ballpark/45d29044-1628-4cbc-9db7-7b345ad6026b": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Funny-Old-Ballpark/a6a57d5c-07c4-4d71-8580-7bbc103e0152": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Gallery-of-North-American-Owls/9ea735da-4144-4ab4-b445-7597e5ba27f6": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Garden-of-Geysers/e5dda7c7-9675-4b03-845f-28b70f2c88bd": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Gold-Sheep/79bb58db-7d03-414a-b2e5-fa0f067b01eb": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Good-Deed-Lees-Mountain-5/2860cac0-0818-40ea-b519-39348cd9085d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Good-Night/ec823baa-8107-41c7-8da6-b32ffc8f81f2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Grand-Journey/5520b532-e675-4fef-a844-ce33bd99db0d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Grand-Old-Canyon/d0dc0d74-0a19-40fc-ac0f-9775295aab06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Great-Leader/658bb2c9-70a2-4ce0-9155-5d04ec03f54d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Great-Statue/a0d44123-df47-427a-bea6-8303be2a45ea": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Great-Waterfall/de83c16e-0179-40e7-ad43-f63cc0ccde9a": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Grocery-Store-Miracle/c3f9e187-db28-4deb-805d-831a8c944b64": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Healthy-Smile/041923f4-705a-42f3-b0bd-7bea1c3c0112": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Helper-at-the-School-Library/965eea75-da23-4fd0-96b5-f123f663a263": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/A-Hero-in-Disguise/2541c0b4-4e06-4bb2-b8a3-7d36aa4c7ca1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Aaron-Douglass-Magisterial-Aspects-of-Negro-Life/ec8c1aee-410f-4323-9571-b0a4b76bb2df": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abebe-Bikila/dd48245f-7385-411d-88df-0c9fd33d73cd": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abolition-Fanaticism-in-New-York/c89e6c38-9429-4226-9433-b2ffbb12d8a4": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/About-Cuirassier-Armor/474943fe-e916-4e87-9ba0-2efd66c62076": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/About-You-How-Music-Affects-Your-Moods/8c28de4a-8eb1-4ce7-abe2-0e3d2388768f": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/About-Your-Bones/762abcdc-2164-4ec8-a1a1-1d766f065894": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/About-the-Island/99da9028-106e-481c-991d-e60e2c8a3f43": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abraham-Lincoln/ae2e2df3-0b87-4ac5-9d08-5d27beb8e400": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abraham/a50f9d88-42f4-4b56-b58c-ff64a5469be1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abstract-Expressionism/c55515ef-ee9f-44e8-8151-64f893399027": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abuelas-Bake-Sale-Dish/80971d8f-da7f-4c49-9942-d1d0ace4d175": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Abuja/2409b5b0-27a4-4791-95b9-98e736553ae1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Accident-Prone/6d9fa158-75b8-4317-86f1-e017cb0207a8": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Accidental-Butterfly/766ab5ee-958b-4f9d-b585-396859ed8b11": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Acid-Rain-and-the-pH-Scale/dece3eb8-296a-414f-b633-62d1ff42e155": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Acrobats/db48a9d1-4809-4d16-a770-129c2828382e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Across-the-Continent-(lithograph)/bc4e21a4-31f8-4490-bc02-539c118d75b1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Across-the-Lake-Play/0ecf191b-0bc6-4053-b15d-581be44def9c": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Across-the-Lake/4020cea1-05f4-4e5e-89c1-6805cc381fc0": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Action-at-the-Edge/56724d55-3d40-4854-8fb3-c22fed5ca4d4": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Actors/88b345c4-87b5-4634-9c6b-8308879a033d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Addis-Ababa/ec597635-cf2e-4ad2-bd95-c27be2d42bf4": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Admiral-Heraldic-Carpet/8fde82d8-0be6-49ee-b227-9b25a8cff088": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Adobe-Homes/5cf85c4b-f1e6-497a-8d4d-448f8747ff07": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Adventure-on-a-Hot-Air-Balloon/4b320f4d-a480-418c-afbb-8da28a6c31fe": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Adventure-on-a-Hot-Air-Balloon/7ca03251-9309-4515-8e03-e3586748660d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Adventures-in-Story-Quilts-Crossing-Mountains/09231209-4dbf-4696-ba79-adf289addc3d": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-American-Leaders/99dece5a-edbd-4606-8f4a-2d7e46227a28": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-American-Men-Get-the-Vote-in-1870/4ff1ebe9-9c10-486e-99cf-8fed4cfef4ab": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-American-Newsmakers/6c52fc90-648f-4598-a934-5c60b4af8aaa": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-American-Troops-in-the-Civil-War/00c58d9b-02dd-4b30-ade4-af864691c5d0": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-Animals/1593aed1-ae6b-4578-8e10-18742f38df8e": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-Masks/938657a3-9283-43f0-a9bc-bef8156b3ba5": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-Migration-to-Colonial-America-Abridged/6306f24b-e177-4fef-be0e-ffe746287216": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-Rivers/02842b04-0dbd-493a-a618-28e92b1e3f46": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/African-Wormwood-A-Traditional-Medicine/a30add42-ba4d-4e1e-a0f7-4ceeb8e449c6": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/After-the-Floods/745612b4-1e50-4658-9d12-31dc675c18d3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://readworks.org/article/Afternoon-on-a-Hill/dd4fd42f-3625-4344-ae9f-09f4ca4500b3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://robertkaplinsky.com/work/how-many-soda-combinations-are-there-on-a-coke-freestyle/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://rockalingua.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://scholasticnews.scholastic.com/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://schools.duolingo.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://scienceofreadingacademy.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://scratch.mit.edu/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://sharemylesson.com/a-place-for/pre-k-12-teachers": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://sharemylesson.com/subject/math": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://sharemylesson.com/webinars": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://sharemylesson.com/webinars/ell-resources-multilingual-learners": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://signingtime.com/pages/teachers-and-homeschoolers": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://sites.bc.edu/codingasanotherlanguage/curricula/scratchjr-curricula/kindergarten-scratchjr/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://smarthistory.org/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://solveme.edc.org/mobiles/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://sparkpe.org/free-lesson-downloads/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://stemfinity.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://stemteachers.asu.edu/stem-lesson-plans/jack-and-beanstalk-activity-2-beanstalk-building": {
-  "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "status": "unreachable",
+  "detail": "TimeoutError",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://teach.nwp.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bgsu-2915-projectile-motion-arduino-launcher-competition-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bgsu-2919-all-charged-up-homemade-capacitor-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2703-insulator-design-challenge-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2802-distance-displacement-measurement-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2804-electrophoresis-gel-box-engineering-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2831-touch-sensor-arduino-trigger-led-buzzer": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2918-optical-telescope-building-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2920-elisa-point-of-care-devices-antigen-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/bos-2929-heat-capacity-water-oil-materials-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/clem-2888-investigations-nitinol-metal-shape-memory": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/clem-3005-sole-survivors-energy-orthotics-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/clem-3014-robotics-pick-place-challenge-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-2767-oil-spill-cleanup-polarity-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-2812-environmental-impact-storymap-collection-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-2812-environmental-justice-storymap-collection-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-2825-creative-engineering-electric-vehicle-design": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-2826-tinkercad-3d-design-ev-concept-car-workshop": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-2827-tinkercad-circuits-ev-motor-workshop": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-3078-magnets-magnetic-fields-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-3079-electromagnets-electricity-magnetic-field-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-3080-exploring-electric-motors-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/cub-3081-mini-electric-vehicles-engineering-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/eclips-3046-nasa-eclips-shower-clock-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/fiu-3023-light-based-diagnostic-device-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ind-2761-chasing-sun-solar-panel-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ind-2837-earth-critical-zone-edible-model-cross-sections": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ind-2962-arduino-air-quality-monitor-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ind-2993-arduino-geiger-counter-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ind-3011-straws-strings-fingers-informal-learning-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ind-3068-microbit-python-design-thinking-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/jpl-3028-robotic-arm-challenge-informal-learning-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/jpl-3042-mars-chemistry-coding-challenge-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/jpl-3049-mars-sample-return-coding-challenge": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/jpl-3053-mars-thermos-design-heat-transfer": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/jpl-3055-light-detector-space-communications-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2810-healthy-cancerous-cells-arduino-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2817-soft-materials-tactile-sensing-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2819-python-conditionals-artificial-intelligence-technology": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2820-arduino-warning-system-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2822-machine-learning-interactive-journey-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2824-stars-spectrometer-spectroscopy-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2924-microcontroller-instruments-medical-use-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2925-python-functions-copilot-computer-science-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2926-under-pressure-arduino-sensor-force-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/mis-2928-tap-testing-acoustic-sleuthing-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/nds-2779-flood-causes-mitigation-strategies-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/nds-2787-earthquake-effects-structural-integrity-building": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/nds-2865-forest-fires-cars-co2-emissions-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/nds-2866-environment-solutions-river-dynamics-mosquito-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/oks-2995-unlocking-secrets-semiconductors-logic-gates-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2615-simon-decoded-computational-thinking-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2789-polyvalency-polyresistance-organisms-bacteriophage-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2836-designing-prototypes-save-coral-reefs-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2898-protective-fashion-beach-edition-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2975-sediment-transport-bayou-design-solutions": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2985-sweet-machine-learning-data-diabetes-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-2989-microplastics-filtration-solutions-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-3008-fluid-forces-bridges-hydraulic-systems-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-3043-make-it-clean-cleaning-product-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-3052-dirty-water-chemical-environmental-engineering": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-3057-maze-craze-healthy-path-diabetes-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/rice-3060-rock-solid-solutions-challenge-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/tam-2983-life-cycle-energy-buildings-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/tam-3022-ethical-twist-engineering-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/tufts-3058-biomimicry-airborne-transport-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ual-3070-mBots-coordinate-plane-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ucb-2791-periodic-table-intro-elements-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/ucb-3064-typical-values-jupyter-notebook-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2900-brain-processing-senses-helmet-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2921-panic-attack-brain-computer-nervous-system-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2935-mapping-neuron-recuitment-muscle-action-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2936-virtual-lab-neuroscience-microcontrollers-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2937-neural-data-processing-database-python-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2938-neural-data-graphs-python-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2941-bright-ideas-light-reflection-microbits-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2942-mindful-messages-communication-solutions-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2947-genome-engineer-crispr-cas9-genetic-disorder-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2952-fear-pavlovs-dog-activity2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2952-neuron-electrical-impulses-activity1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2952-tone-shock-conditioning-activity3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2954-human-emg-signals-robot-movements-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2972-muscle-biopotential-signals-emg-sensors-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-2977-neuromaze-neural-pathways-robotic-navigation-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/umo-3044-robot-controller-line-follower-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uno-3063-caesar-ciphers-cryptography-cybersecurity-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2754-mechanized-farm-equipment-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2845-aquaponics-water-system-bolivia-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2846-raise-roof-engineering-leakproof-roofs-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2847-ping-pong-ball-retriever-engineering-challenge": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2849-engineering-sapling-guard-recycled-materials": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2852-international-market-accessibility-engineering-design": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2953-materials-down-hill-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2963-dragging-dilemma-overcoming-friction-move-rocks-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2964-toilet-paper-trouble-time-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2967-greater-good-designing-public-center-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-2974-lost-explorer-making-cyanotype-print-maps": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-3017-microchips-photolithography-light-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-3024-rush-hour-mayhem-logic-gates-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uod-3034-beyond-binary-building-blocks-digital-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2785-heat-transfer-solar-dryers-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2792-wave-refractions-angle-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2794-materials-matter-composites-properties-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2795-fluid-viscosity-temperature-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2797-robomentum-velocity-mass-momentum-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2800-power-drag-lab-work-energy": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2830-prototyping-engineering-solutions-cad": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2842-machine-free-manufacturing-process-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2858-biodegradable-leaves-nontoxic-packing-material": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoh-2894-paper-football-physics-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-2903-sustainable-separations-chemical-engineering-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-2910-surfactants-protein-aggregation-pharmaceuticals-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-2943-helping-hands-assisted-device-multiple-sclerosis-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-2949-safe-drinking-water-filtration-system-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-2996-statistical-analysis-noise-detection-soundproofing": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-3020-mission-myelin-model-damage-repair-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-3021-smart-prosthetic-hand-grip-arduino-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-3025-polymers-plastic-bioplastics-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-3026-additives-affect-surface-tension-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-3027-get-slimy-exploring-matter-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uok-3030-sweet-surfactants-surface-tension-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uol-2853-clustering-exploring-periodic-table-elements-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uol-3003-craft-production-efficiency-profit-purpose-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uol-3007-fast-track-factory-mass-production-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uon-2997-ethical-hacking-lab-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uon-2999-ethical-hacking-lab-podman-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uoo-2917-gatorade-gravity-machine-structure-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2689-exploring-matter-rock-candy-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2702-asymmetric-membranes-microfiltration-algae": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2763-exploring-light-holographic-chocolate-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2803-solar-powered-car-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2840-engineering-friction-grip-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2848-aluminum-rope-metal-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2873-scrub-scum-shine-materials-matter": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2884-save-clothes-avocados-matter-properties-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2885-power-produce-fruits-veggies-solar-cells-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2914-density-solutions-mixture-design-process-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2939-rising-sea-levels-density-mixtures-solutions-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2979-diy-microscope-challenge-light-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2980-drop-ball-material-physics-motion-quadratics": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-2982-fairy-tale-engineering-three-little-pigs-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-3002-mines-mobiles-aqueous-solutions-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-3040-cell-membranes-osmosis-gummy-bears": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-3045-unbeweavably-strong-structutes-materials-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-3050-memristor-materials-engineering-design-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-3062-pendulum-art-simple-harmonic-motion-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/uot-3072-sunscreen-showdown-mineral-UV-filters-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/usm-3009-biome-robots-polymers-survival-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/usu-2944-maglev-trains-electric-magnetic-field-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/activities/wst-3033-synthetic-biology-new-genes-proteins-activity": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/ced-creative-engineering-design-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/csm_asteroid_tg": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-air-greenhouse-effect-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-conservation-efficiency-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-conservation-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-electrical-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-nonrenewable-oil-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-renewable-solar-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-renewable-water-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-renewable-wind-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-sound-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-thermal-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-energy-use-systems-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-forces-friction-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-forces-mass-momentum-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-forces-stress-strain-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-forces-weight-gravity-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-motion-kinetic-potential-energy-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-motion-newton-laws-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub-work-force-energy-power-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_air_acid_rain_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_air_pollution_solutions_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_air_pollution_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_airplanes_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_airquality_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_biomed_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_brid_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_cells_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_china_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_creative_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_dams": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_earth_surface_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_electricity_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_enveng_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_environ_issues_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_environ_resources_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_environ_waste_recycling_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_environ_water_pollution_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_environ_weather_climate_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_housing_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_human_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_intro_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_lifescience_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_mars_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_natdis_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_navigation_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_rock_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_rockets_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_service_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_simp_machines_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_simple_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_solar_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_soundandlight_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_space8_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_surg_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_water_cycle_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/cub_weather_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_bmedevices_tech_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_bubble_mary_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_density_mary_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_friction_smary_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_heattransfer_smary_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_marine_musc_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_solar_tech_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/duk_surfacetensionunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/ucd_energy_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/ucd_fieldday_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo-2938-neural-engineering-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo-2952-brain-learning-process-unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo_challenges_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo_computerprogram_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo_ourbodies_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo_robotsandhumans": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/umo_sensorswork_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/uno_accelerometer_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/uoh_dig_mapping_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/uoh_dna_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/uoh_fluidmechanics_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/uoh_hp_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/uoh_nano_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/usf_stormwater_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_biomimicry_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_cancer_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_cleanupmess_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_feelbetter_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_floppy_unitdoc": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_heartvalves_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_hybrid_design_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_latex_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_linear_eqn_currunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_membrane_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_mri_curr": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_nanoparticles_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_oddsofcancer_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_robotic_vision_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_skeletal_system_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/van_troll_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/wpi_empathy_curricularunit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/wpi_fundamentalforces_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/curricular-units/wst_environmental_unit": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cla_lesson1_energyproblem": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cla_lesson3_energy_basics": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cla_lesson4_forms_states_conversions": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cla_lesson5_energy_sources_systems": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cla_lesson6_efficiency": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cla_lesson7_household_energy": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/clem_waves_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/clem_waves_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/csm-2353-algorithms-everyday-life-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub-2632-cars-air-quality-connections-k-2-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub-2633-internal-combustion-engine-electric-vehicles-3-5-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub-2635-climate-change-cars-k-2-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub-2636-climate-change-cars-3-5-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_air_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_airquality_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_aqueducts_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_bio_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_biomed_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_biomed_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_biomed_lesson09": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_brid_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_brid_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_dams_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_dams_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_dams_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_dams_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_design_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_earth_lesson1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_electricity_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_electricity_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_electricity_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_electricity_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_energy2_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_energy2_lesson07": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_enveng_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_environ_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_environ_lesson09": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_footprint_lesson1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_geotools_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_human_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_human_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_human_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_human_lesson07": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_humanwatercycle_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_intro_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_intro_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_intro_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_linear_programming_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_mars_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_measurement_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_mechanics_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_mechanics_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_mix_lesson1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_mix_lesson2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_mix_lesson3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_natdis_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_natdis_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_natdis_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_navigation_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_navigation_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_navigation_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_pend_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_polygons_angles_trusses_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_pveff_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_pveff_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_rock_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_rock_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_rockets_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_rockets_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_rockets_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_scale_model_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simp_machines_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simple_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simple_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simple_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simple_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simple_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_simple_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_solar_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_solar_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_solar_lesson05": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_solar_lesson08": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_solar_lesson09": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_spatviz_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_surg_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_surg_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_surg_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_watershed_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/cub_weather_lesson06": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_bycatchunit_musc_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_bycatchunit_musc_less2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_float_mary_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_heaveho_music_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_rollercoaster_music_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_sunflower_mary_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/duk_tall_mary_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/gat_robots_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ind-1996-friction-force-along-curved-path-ap-calculus": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ind-2472-analysis-forces-truss-bridge-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-1616-nondestructive-evaluation-systems-equations-fem": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2227-ultrasonics-uses-arduino-ultrasound-technology": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2230-photosynthesis-cellular-respiration-atomic-level": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2231-light-properties-sunglasses-electromagnetic-waves-polarization": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2348-mathematical-modeling-linear-approximations-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2476-corrosion-crisis-prevent-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2480-3d-printed-strain-sensors-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis-2484-machine-learning-perceptron-modeling-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_alloy_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_avida2_lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_avida_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_heartbloodflow_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_potholes_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_scaling_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/mis_sensor_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ncs-2026-nuclear-energy-virtual-field-trip": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ucd-1811-algae-energy-biomass-biofuel": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ucd_newton_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ucd_newton_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ucd_soil_solarization_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/ucla_clots_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/umo_challenges_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/umo_computerprogram_lesson04": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/umo_sensorswork_lesson03": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/unm-2006-photovoltaics-cells-solar-energy-panel-space": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uno_accelerometer_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uno_bug_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uno_curiosity_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uno_gaitway_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uod-2270-decibels-acoustical-engineering": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uof-2397-monumental-movements-3d-printing-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uof-2499-enzymes-power-laundry-detergents-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uoh_carbonfiber_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uoh_fluidmechanics_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uoh_mutations_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uok-2116-plastisphere-microplastics-pollution-wastewater-treatment": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uow-2262-integrating-gis-mathematics-engineering-gps": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uow-2546-cosmic-radiation-space-agency-scenario-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uow-2675-cell-signal-altitude-testing-strength-lesson": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/usf_healthcare_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/usf_traffic_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uva-1951-introduction-3d-bioprinting-human-tissue": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uva_eardevice_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/uva_pump_bme0607_less": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/van2-2268-intro-vectors-augmented-reality-kinematics-mirror": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/van_biomimicry_less1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/van_membrane_lesson2": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/van_oddsofcancer_lesson01": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/van_robotic_vision_less3": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/wpi_lesson_1": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
+  "fails": 0
+ },
+ "https://teachengineering.org/lessons/wst_environmental_lesson02": {
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://teachertalkprogram.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://tech.aph.org/codeandgo/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://thecrashcourse.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://thecrashcourse.com/topic/worldhistory1/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://theearlychildhoodacademy.com/penguin-moves/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://toddlerapproved.com/ocean-animal-movements/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://udlguidelines.cast.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://villa-albertine.org/va/professionals/cineschool/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://vision.icivics.org/private-i-history-detectives-civic-virtues-collection/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.achievethecore.org": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.achievethecore.org/aligned-resources": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.achievethecore.org/page/2962/high-quality-instruction": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.achievethecore.org/search?utf8=%E2%9C%93&focus=false&keyword=math": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.actionforhealthykids.org/nutrition-toolkit/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.amoebasisters.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.amplify.com/ela/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.archivally.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.archive.org/details/books": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.art21.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.artsonia.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.barefootcomputing.org/primary-computing-resources": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.bbc.com/learningenglish/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.biointeractive.org/classroom-resources": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.biointeractive.org/professional-learning/online-courses/assessing-learning-course": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.bonjourdefrance.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.bootstrapworld.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.brainpop.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.brainpop.com/subject/math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.brainpop.com/subject/science": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.carnegiehall.org/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.carnegielearning.com/solutions/math/mathia/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.cast.org/connect/events/udl-con-2026-free-webinar-supporting-multilingual-learners-through-journey-mapping/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.cdc.gov/healthyschools/index.html": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.cfchildren.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.childrenslibrary.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.chinesepod.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.citizenmath.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ck12.org/book/ck-12-algebra-i/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ck12.org/book/ck-12-biology/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ck12.org/book/ck-12-earth-science-for-high-school/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ck12.org/flexi/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ck12.org/student/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.classroomwise.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.clozemaster.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.cmu.edu/gelfand/education/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.codecademy.com/learn/paths/computer-science": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.colorincolorado.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.commonlit.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.commonlit.org/ela-curriculum": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.commonlit.org/en/texts/the-gettysburg-address": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.commonlit.org/en/texts/the-lottery": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.commonsense.org/education/recognition-educators": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.coreknowledge.org/curriculum/history-geography/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.coreknowledge.org/curriculum/language-arts/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.crayola.com/lesson-plans/bridget-riley-inspired-op-art-lesson-plan": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.crayola.com/lesson-plans/line-up-for-art-lesson-plan": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.crf-usa.org/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.curriki.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.deepspacesparkle.com/apple-art-project/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.desmos.com/calculator": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.docsteach.org/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.edhelper.com/english.htm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.education.com/lesson-plan/from-seeds-to-plants/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.educationperfect.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.edutopia.org/topic/social-emotional-learning": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.edutopia.org/topic/stem/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.eleducation.org/curriculum/language-arts": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.englishpage.com/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.exploratorium.edu/science-snacks": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 405 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.exploringcs.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.facinghistory.org/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.facinghistory.org/holocaust-and-human-behavior": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.facinghistory.org/resource-library": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.facinghistory.org/resource/civil-rights-movement": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.facinghistory.org/resource/prejudice-and-propaganda": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.famly.co/blog/were-going-on-a-bear-hunt-activities": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.fantasticfunandlearning.com/abc-cookies-preschool-alphabet-activity.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.fishtanklearning.org/curriculum/english-language-arts/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.fishtanklearning.org/curriculum/math/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.fitmoves.com/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.flatstanleyproject.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.flocabulary.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.fluentu.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.freecodecamp.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.gapminder.org/dollar-street/about": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.generationgenius.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.generationgenius.com/videolessons/ecosystems-video-for-kids/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.geogebra.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.germanpod101.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.getepic.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.getty.edu/education/for_teachers/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.gilderlehrman.org/history-resources/curriculum/lesson-plans-and-other-teaching-materials": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.goalbook.org/resources": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.goalbook.org/toolkit": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.gonoodle.com/teacher": {
   "status": "unreachable",
   "detail": "HTTP 500",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.gryphonhouse.com/early-childhood-activities/chinese-dragon-for-the-new-year": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.gutenberg.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.helpingwithwriting.com/": {
   "status": "ok",
-  "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.iexplore.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.iflscience.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.illustrativemathematics.org/6": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.incredibleart.org/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ipl.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ixl.com/social-studies/kindergarten": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/resources/lesson-plan/art-and-the-cosmic-connection/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/resources/lesson-plan/create-a-comet-with-dry-ice/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/resources/lesson-plan/mars-rover-driver-board-game/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/resources/lesson-plan/moon-phases/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/resources/lesson-plan/planetary-poetry/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/resources/lesson-plan/solar-system-bead-activity/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.jpl.nasa.gov/edu/teach/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.justforkids.org/": {
-  "status": "unreachable",
-  "detail": "URLError",
-  "checked": "2026-10-22",
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.keepingscore.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.kenkenpuzzle.com/play_now": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/computing/computer-science": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/humanities/us-history": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/algebra": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/algebra-home": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/cc-2nd-grade-math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/cc-3rd-grade-math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/cc-6th-grade-math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/geometry": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/math/statistics-probability": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/sat/passage-reading-and-writing": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/science": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/science/ap-biology": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/test-prep/praxis-core": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.khanacademy.org/test-prep/sat/sat-math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.kidsyogastories.com/african-safari-animals-yoga/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.kindness.org/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.kodable.com/learn/unplugged-coding-activities": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.lifeprint.com/asl101/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.literarydevices.net/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.loc.gov/collections": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.loc.gov/collections/by-the-people/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.loc.gov/teachers/classroommaterials": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mamalisa.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.marugoto-online.jp/info/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mathcounts.org/resources/problem-week-archive": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mathlearningcenter.org/curriculum/bridges": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mathopen.org": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mathsisfun.com/geometry/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.metmuseum.org/learn": {
   "status": "ok",
   "detail": "HTTP 429 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.metmuseum.org/toah/": {
   "status": "ok",
   "detail": "HTTP 429 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mindfulschools.org/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mindup.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.misspandachinese.com/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.moma.org/learn": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mondly.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.morningsidecenter.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.mrnussbaum.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nasa.gov/education/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nasa.gov/learning-resources/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nasa.gov/learning-resources/for-students-grades-k-4/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nasa.gov/learning-resources/nasa-stem-opportunities-activities/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nbamathhoops.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nearpod.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nesdis.noaa.gov/about/k-12-education/scijinks/how-do-hurricanes-form": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nestfoundation.org/high-school-lessons/consent-and-healthy-relationships": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nga.gov/education.html": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.noaa.gov/education/resource-collections/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nps.gov/teachers/classrooms/a-fossil-s-journey.htm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nps.gov/teachers/classrooms/moon-phases-with-cookies.htm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nps.gov/teachers/classrooms/save-the-bats.htm": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nucleuslearning.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nysed.gov/curriculum-instruction/engageny": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.nytimes.com/learning/xwords/index.html": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.open.edu/openlearn/education-development/developing-reading-pleasure-engaging-young-readers/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.open.edu/openlearn/education-development/education/teaching-secondary-mathematics/content-section-0": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.openmiddle.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.panoramaed.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbs.org/parents/crafts-and-experiments/act-out-the-life-cycle-of-a-butterfly": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/collection/social-emotional-learning/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/collection/steam-careers/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/resource/around-the-world-media-gallery/lets-go-luna-learn-along-bingo-activity-gallery/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/resource/our-community-helpers-lesson-plan/civics-for-kids-building-tomorrow-together/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/subjects/english-language-arts/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pbslearningmedia.org/subjects/science/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pebblego.com/us/features": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pecentral.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.playworks.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pltw.org/curriculum/pltw-computer-science": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.poetryfoundation.org/education": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pre-kpages.com/caterpillar-and-butterfly-life-cycle-art-activity-shape-caterpillars/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.pre-kpages.com/dinosaur-activities-preschool/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.prekinders.com/calm-down-corner-printables-ideas-free/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.prekinders.com/safari-theme/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.prodigygame.com/main-en/prodigy-math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readworks.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readworks.org/books": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readworks.org/nonfiction": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readworks.org/videos": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/lesson-plans": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/lesson-plans/apple-building-letter-recognition": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/lesson-plans/investigating-animals-using-nonfiction": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/lesson-plans/weather-journey-nonfiction": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/student-interactives/acrostic-poems": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/student-interactives/story": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.readwritethink.org/classroom-resources/swap-meet": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.retroreport.org/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.roomrecess.com/pages/MathGamesForKids.html": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.scholastic.com/teachers/lesson-plans/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.sciencebuddies.org/project-ideas": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.sciencebuddies.org/project-ideas/slime-science": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.secondstep.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.senorwooly.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.shapeamerica.org/education/resources": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.sharemylesson.com/lesson-plans": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.sja.org.uk/get-advice/first-aid-lesson-plans/key-stage-2/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.speechling.com/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.splcenter.org/learning-for-justice/frameworks/social-justice-standards/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.splcenter.org/learning-for-justice/frameworks/teaching-hard-history/american-slavery/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.splcenter.org/learning-for-justice/magazine/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.splcenter.org/learning-for-justice/the-learning-center/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.storycorps.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.storylineonline.net/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.studiesweekly.com/social-studies/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.studyspanish.com/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachengineering.org/activities/cub_natdis_lesson03_activity1": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachengineering.org/activities/view/ball_bounce_experiment": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachengineering.org/activities/view/cub_natdis_lesson04_activity1": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachengineering.org/activities/view/cub_rockets_lesson03_activity1": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachengineering.org/curriculum-search?collection=Lessons": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachengineering.org/lessons/view/cub-2635-climate-change-cars-k-2-lesson": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teacherspayteachers.com/Browse/Math": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teacherspayteachers.com/Browse/Reading": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teacherspayteachers.com/Browse/Science": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teacherspayteachers.com/Browse/Social-Studies": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teacherspayteachers.com/Browse/World-Language": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.teachingchannel.org/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.ted.com/playlists/200/science-technology-and-learning": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.theatrefolk.com/free-resources": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.thestorytellingcenter.com/": {
   "status": "unreachable",
   "detail": "URLError",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.tinkercad.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.topdocumentaryfilms.com/": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.tvokids.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.twinkl.com": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.twinkl.com/resource/t2-e-2321-phonics-and-alphabet-flash-cards": {
-  "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
-  "fails": 0
+  "status": "dead",
+  "detail": "HTTP 404",
+  "checked": "2026-10-26",
+  "fails": 1
  },
  "https://www.twinkl.com/resource/t2-m-2654-early-years-maths-games": {
-  "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
-  "fails": 0
+  "status": "dead",
+  "detail": "HTTP 404",
+  "checked": "2026-10-26",
+  "fails": 1
  },
  "https://www.txel.org/ProfessionalDevelopment": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.uab.edu/icac/images/4th_Grade_Lesson_Plans/Science/Body_Systems_Prezi_Lesson_Plan.pdf": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.uselessetymology.com/": {
   "status": "ok",
   "detail": "HTTP 403 (anti-bot, treated as ok)",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.visualpatterns.org/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.vocabulary.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.weather.gov/education/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.wired.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.wodb.ca": {
-  "status": "unreachable",
-  "detail": "URLError",
-  "checked": "2026-10-22",
+  "status": "ok",
+  "detail": "",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.wordnik.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youcubed.org": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youtube.com/@3blue1brown": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youtube.com/channel/UCQSqE2ujpnZ5bKaX3FJLzXQ": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youtube.com/channel/UCkRfArvrzheW2E7b6SVV7vA": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youtube.com/channel/UCt6eHjqUQF6XlCNcM5iZYrQ": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youtube.com/channel/UCuCkxoKLV3-ixblW73dW5Iw": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.youtube.com/channel/UCzu-SKIY05kwtGCQkcccBLg": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.zinnedproject.org/": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.zinnedproject.org/collection/malcolm-x/": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.zinnedproject.org/materials": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www.zonesofregulation.com/": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://www2.heart.org/site/SPageServer?pagename=khc_resources_educational": {
   "status": "ok",
   "detail": "",
-  "checked": "2026-10-22",
+  "checked": "2026-10-26",
   "fails": 0
  },
  "https://yes.mos.org/unit/sort-it-out-programming-robots-to-recycle/": {
   "status": "ok",
-  "detail": "",
-  "checked": "2026-10-22",
+  "detail": "HTTP 403 (anti-bot, treated as ok)",
+  "checked": "2026-10-26",
   "fails": 0
  }
 }
