@@ -6,9 +6,10 @@ import LoginGate from "./components/LoginGate";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";
 import DiscoverPage from "./pages/DiscoverPage";
+import LessonStudioPage from "./pages/LessonStudioPage";
 import StatsPage from "./pages/StatsPage";
 
-type Tab = "browse" | "capture" | "stats";
+type Tab = "browse" | "studio" | "capture" | "stats";
 const DISCOVERED_KEY = "almanac.discovered";
 
 const DISPLAY_KEY = "almanac.display";
@@ -153,6 +154,17 @@ export default function App() {
           href="#"
           onClick={(e) => {
             e.preventDefault();
+            setTab("studio");
+          }}
+          style={{ opacity: tab === "studio" ? 1 : 0.5 }}
+          title="Adapt a lesson with UDL moves"
+        >
+          Lesson Studio
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
             setTab("capture");
           }}
           style={{ opacity: tab === "capture" ? 1 : 0.5 }}
@@ -199,6 +211,7 @@ export default function App() {
           initialFilters={browseFilters}
         />
       )}
+      {tab === "studio" && <LessonStudioPage />}
       {tab === "capture" && <CapturePage />}
       {tab === "stats" && <StatsPage />}
     </div>
