@@ -37797,5 +37797,460 @@
     "link_status": "ok",
     "granularity": "collection",
     "evidence": "In addition to professional development events, the Teaching and Learning team offers a variety of resources to help educators engage their students in African American history."
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "The Smithsonian American Art Museum's education hub: programs and online resources for K-12 teachers, students, and adult learners, including teacher guides, classroom videoconferences, professional development, and learn-from-home activities built around American art.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Our local and national programs for teachers, students, and adult learners offer year-long professional opportunities for growth, learning, and professional development.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to analyze American artworks as evidence of U.S. history, culture, and identity",
+      "Students will be able to create and discuss original artwork in response to works in the museum's collection"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "lesson plan",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "american art",
+      "museum education",
+      "teacher resources",
+      "visual art"
+    ],
+    "title": "Smithsonian American Art Museum Education Resources",
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "Overview page for SAAM's K-12 teacher offerings: interdisciplinary field trips and school tours, classroom videoconferences, professional development, summer institutes, free teacher guides and resources, and a student artwork showcase.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Local and national programs for teachers offer year-long professional development opportunities, while students learn about American history through American art with engaging and reflective interactive tours and real-time video conferences.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to investigate American culture, identity, and history through close looking at artworks",
+      "Students will be able to connect artworks to social studies and English/language arts content"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education/k-12",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "lesson plan",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "k-12 teachers",
+      "field trips",
+      "museum education",
+      "american art"
+    ],
+    "title": "Smithsonian American Art Museum: For K-12 Teachers",
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "Free, downloadable teacher guides and classroom resources that use SAAM artworks to explore historical eras, literary themes, and civic ideas, each with corresponding standards and grade levels; featured resources include a civics teaching poster and a four-lesson community portraiture project using photography and oral history.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "SAAM's education resources use artworks as invitations to explore historical eras, literary themes, and connections to the present day.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to interpret artworks in the context of the people, movements, and stories of the United States",
+      "Students will be able to document their own communities through photography and oral-history projects"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education/k-12/resources",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "lesson plan",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "NCAS.VA K-12",
+    "subject": "Arts",
+    "tags": [
+      "teacher guides",
+      "lesson plans",
+      "portraiture",
+      "civics through art"
+    ],
+    "title": "Smithsonian American Art Museum Teacher Guides and Resources",
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": 8,
+    "cost": "free",
+    "description": "Free interactive videoconferences that bring SAAM museum presenters into the classroom: twelve inquiry-driven, object-centered Artful Connections topics aligned with national curriculum standards, for 3rd grade through adult learners, in 45-60 minute sessions booked through the Center for Interactive Learning and Collaboration (CILC).",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Museum presenters create connections between American art and your curriculum, engaging students and lifelong learners at schools, libraries, and senior centers throughout North America.",
+    "grade_band": "All",
+    "granularity": "specific",
+    "learning_outcomes": [
+      "Students will be able to cite visual evidence from an artwork to support conclusions in discussion and writing",
+      "Students will be able to compare how two or more artworks address similar themes or topics"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education/k-12/videoconferences",
+    "link_status": "ok",
+    "materials": "Videoconference connection; free CILC account for booking",
+    "price_note": "",
+    "resource_type": "activity",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "virtual field trip",
+      "videoconference",
+      "close looking",
+      "discussion"
+    ],
+    "title": "Smithsonian American Art Museum Classroom Videoconferences (Artful Connections)",
+    "udl_principles": [
+      "engagement",
+      "representation"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "SAAM's educator professional development: interactive virtual and in-person workshops with classroom-ready activities, self-paced courses on civic engagement and interdisciplinary teaching with museum objects, and a recorded workshop archive; certificates of completion provided for seat hours.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Designed for classroom teachers, SAAM's interactive workshops feature engaging \"Monday-ready\" activities that provoke deep thinking and invite students to apply content knowledge across the curriculum and in the world.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Teachers will be able to design lessons that pair artworks with texts and primary sources across art, social studies, and ELA",
+      "Teachers will be able to use museum objects to broaden perspectives and surface silenced stories in their curriculum"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education/k-12/professional-development",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "course",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "professional development",
+      "teacher workshops",
+      "arts integration",
+      "self-paced courses"
+    ],
+    "title": "Smithsonian American Art Museum Professional Development for Educators",
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "Week-long (four-day) summer institutes in Washington, DC, on teaching the humanities through art: immersive sessions with museum professionals exploring connections among visual art, social studies, and English/language arts, plus virtual sessions before and after; priority for teachers of grades 4-12, by application.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Spend four days at the Smithsonian American Art Museum in Washington, DC, refreshing your teaching practice with a community of educators from across the country.",
+    "grade_band": "All",
+    "granularity": "specific",
+    "learning_outcomes": [
+      "Teachers will be able to use American art in the classroom to foster critical thinking skills and develop visual literacy",
+      "Teachers will be able to integrate art, history, and ELA content into interdisciplinary lessons"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education/k-12/professional-development/summer-institutes",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "Application required; 2026 application due March 23, 2026",
+    "resource_type": "course",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "summer institute",
+      "professional development",
+      "humanities",
+      "visual literacy"
+    ],
+    "title": "Smithsonian American Art Museum Summer Institutes for Teachers",
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "SAAM's at-home learning collection: two social-emotional learning toolkits that use artwork for journaling and reflection (in English and Spanish, ages 10+ and 11+), Art to Go creativity packets with looking, writing, and drawing activities for elementary and middle school students, and Look, Talk, Play! play-based activities for young learners.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Self-guided looking, writing, and drawing activities engage elementary and middle school aged students in creative and critical thinking.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to identify and reflect on their emotions using artworks as prompts for journaling",
+      "Students will be able to use close-looking routines to think creatively and critically about artworks"
+    ],
+    "license": "Public Domain",
+    "link": "https://americanart.si.edu/education/learn-from-home",
+    "link_status": "ok",
+    "materials": "Printable PDF booklets and art cards; everyday drawing and writing materials",
+    "price_note": "",
+    "resource_type": "activity",
+    "source_site": "Smithsonian American Art Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "at-home learning",
+      "social-emotional learning",
+      "journaling",
+      "bilingual resources"
+    ],
+    "title": "Smithsonian American Art Museum: Learn from Home",
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "Cooper Hewitt's learning hub: design activities, comprehensive lesson plans, and career advice organized by audience, with tailored collections for K-12 classrooms, teens, families, professional development, and accessibility, plus design topics drawn from the museum's exhibitions and collection.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Discover how design can change the world with these engaging activities, comprehensive lesson plans, expert career advice, and more.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to explain how design shapes everyday life and can change the world",
+      "Students will be able to apply design thinking to problems in their own communities"
+    ],
+    "license": "Public Domain",
+    "link": "https://www.cooperhewitt.org/learning-resources/",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "lesson plan",
+    "source_site": "Cooper Hewitt, Smithsonian Design Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "design education",
+      "lesson plans",
+      "design thinking",
+      "museum education"
+    ],
+    "title": "Cooper Hewitt Learning Resources",
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "Cooper Hewitt's classroom collection of design lesson plans and activities for K-12: designer spotlights (textile dyeing, adobe architecture, poster design), hands-on prototyping and observation activities with stated grade levels and subjects, and links to additional activities on the Smithsonian Learning Lab.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Explore lesson plans and activities to help you empower your students to view the world with optimism and apply design literacy in their daily lives.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to view the world with optimism and apply design literacy in their daily lives",
+      "Students will be able to prototype and iterate design solutions for a specific user or community"
+    ],
+    "license": "Public Domain",
+    "link": "https://www.cooperhewitt.org/k-12-classroom-resources/",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "lesson plan",
+    "source_site": "Cooper Hewitt, Smithsonian Design Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "design literacy",
+      "lesson plans",
+      "prototyping",
+      "k-12"
+    ],
+    "title": "Cooper Hewitt K-12 Classroom Resources",
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "Cooper Hewitt's school program page for booking K-12 design field trips at the museum in New York: educator-guided gallery discussions paired with a hands-on design workshop, in leveled tracks (Design Explorers for grades K-2, Arts Integration: Design as Storytelling and STEM Prototyping for grades 3-12) developed to meet national and New York State standards.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Our Design Field Trips explore how design shapes and is shaped by our everyday lives.",
+    "grade_band": "All",
+    "granularity": "specific",
+    "learning_outcomes": [
+      "Students will be able to identify design features such as color, shape, texture, and material in everyday objects",
+      "Students will be able to engage the design process by prototyping and communicating their ideas"
+    ],
+    "license": "Public Domain",
+    "link": "https://www.cooperhewitt.org/design-field-trips/",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "Booking required; October-December dates filled at verification time, with a waitlist",
+    "resource_type": "activity",
+    "source_site": "Cooper Hewitt, Smithsonian Design Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "field trips",
+      "design process",
+      "museum visit",
+      "prototyping"
+    ],
+    "title": "Cooper Hewitt Design Field Trips",
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": null,
+    "age_min": null,
+    "cost": "free",
+    "description": "On-demand professional development materials from Cooper Hewitt: recorded workshop videos on bringing design into the classroom (data storytelling, sustainability, speculative storytelling, design literacy toolkits), the Design Skill Builders activity sets, and the Designing for Change youth toolkit.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Discover strategies and approaches to integrate design into your classroom through these materials and videos.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Teachers will be able to integrate design thinking strategies into their classrooms across subjects and grade levels",
+      "Teachers will be able to use design-based activities to build students' collaboration, problem-solving, and critical thinking skills"
+    ],
+    "license": "Public Domain",
+    "link": "https://www.cooperhewitt.org/professional-development-resources/",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "article/text",
+    "source_site": "Cooper Hewitt, Smithsonian Design Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "professional development",
+      "design thinking",
+      "workshop videos",
+      "educator resources"
+    ],
+    "title": "Cooper Hewitt Professional Development Resources",
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ]
+  },
+  {
+    "age_max": 18,
+    "age_min": 7,
+    "cost": "free",
+    "description": "Short, flexible design activities for grades 2-12 organized by skill (Observe, Understand, Collaborate, Brainstorm, Iterate, Prototype, Play, and more), inspired by objects from Cooper Hewitt's collection; includes classroom-ready activities, routines, warm-ups, and anchor charts in K-5 and 6-12 sets that can stand alone or build over time.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Design Skill Builders are quick activities for grades 2-12 that build creative confidence, problem solving, and flexible thinking.",
+    "grade_band": "All",
+    "granularity": "collection",
+    "learning_outcomes": [
+      "Students will be able to practice core design skills such as noticing details, exploring different perspectives, generating ideas, and refining their work",
+      "Students will be able to build creative confidence, problem solving, and flexible thinking across subject areas"
+    ],
+    "license": "Public Domain",
+    "link": "https://www.cooperhewitt.org/design-skill-builders/",
+    "link_status": "ok",
+    "materials": "Printable activities, warm-ups, and anchor charts",
+    "price_note": "",
+    "resource_type": "activity",
+    "source_site": "Cooper Hewitt, Smithsonian Design Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "design skills",
+      "warm-ups",
+      "creative thinking",
+      "anchor charts"
+    ],
+    "title": "Cooper Hewitt Design Skill Builders",
+    "udl_principles": [
+      "action_expression",
+      "engagement"
+    ]
+  },
+  {
+    "age_max": 18,
+    "age_min": 15,
+    "cost": "free",
+    "description": "A multi-part creative curriculum from Cooper Hewitt built around artist and stage designer Es Devlin's practice, with monthly themed sets of resources, prompts, and exercises (a creative life, drawing, texts, collaboration, ideation and iteration) designed to foster creative thinking; suitable for ages 15 and up, solo or in groups.",
+    "description_source": "generated",
+    "duration_minutes": null,
+    "evidence": "Whether you're looking to shake up your creative practice, expand skills, or try something completely new, we invite you to explore these pages and connect with your own creativity.",
+    "grade_band": "9-12",
+    "granularity": "specific",
+    "learning_outcomes": [
+      "Students will be able to sustain and adapt a personal creative process using drawing, reading, and iteration",
+      "Students will be able to collaborate and exchange creative ideas to strengthen a design outcome"
+    ],
+    "license": "Public Domain",
+    "link": "https://www.cooperhewitt.org/an-atlas-of-es-devlin-a-creative-curriculum/",
+    "link_status": "ok",
+    "materials": "",
+    "price_note": "",
+    "resource_type": "unit",
+    "source_site": "Cooper Hewitt, Smithsonian Design Museum",
+    "standards": "",
+    "subject": "Arts",
+    "tags": [
+      "curriculum",
+      "stage design",
+      "creative process",
+      "drawing"
+    ],
+    "title": "An Atlas of Es Devlin: A Creative Curriculum (Cooper Hewitt)",
+    "udl_principles": [
+      "engagement",
+      "action_expression"
+    ]
   }
 ]
