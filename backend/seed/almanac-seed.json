@@ -37295,5 +37295,507 @@
     "udl_rationale": "auto-tagged from format",
     "evidence": "Poem on CommonLit, listed at a 10th grade reading level.",
     "link_status": "ok"
+  },
+  {
+    "link": "https://www.loc.gov/classroom-materials/child-labor/",
+    "title": "Child Labor Primary Source Set",
+    "description": "Classroom-ready set of photographs, newspaper articles, cartoons, poems, and oral-history interviews documenting child labor in the early 1900s and the reform movement that fought it, with a teacher's guide and primary source analysis tool.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [
+      "Identify and compare persuasive techniques used across formats (photograph, cartoon, poem, newspaper article) in sources about child labor",
+      "Distinguish adult and child perspectives on child labor in primary sources and explain how the arguments differ"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.6-8.1",
+    "tags": [
+      "primary sources",
+      "child labor",
+      "industrialization",
+      "reform movements",
+      "photography analysis",
+      "labor history"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "In the early 20th century, a national reform movement took aim at child labor in the United States, igniting debates over the rights and responsibilities that parents, government institutions, and the community as a whole had to the nation's children."
+  },
+  {
+    "link": "https://www.loc.gov/classroom-materials/civil-rights-movement/",
+    "title": "The Civil Rights Movement Primary Source Set",
+    "description": "Primary source set on the mid-20th-century civil rights movement — newspaper coverage of Brown v. Board of Education, Rosa Parks' own account of her arrest, oral histories, the 'Letter from Birmingham Jail,' and the Civil and Voting Rights Acts — with a teacher's guide and suggestions for classroom analysis.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [
+      "Use clues in primary sources to place civil rights movement items in chronological order",
+      "Compare an oral history account of an event with a textbook or secondary account of the same event"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.6-8.1",
+    "tags": [
+      "primary sources",
+      "civil rights movement",
+      "Brown v. Board of Education",
+      "Martin Luther King Jr.",
+      "oral history",
+      "protest movements"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "In the middle of the 20th century, the United States was rocked by a nationwide movement for equal rights for African Americans and for an end to the racial segregation and exclusion that had been enforced by law and by practice throughout the Jim Crow era."
+  },
+  {
+    "link": "https://www.loc.gov/classroom-materials/immigration-challenges-for-new-americans/",
+    "title": "Immigration Challenges for New Americans Primary Source Set",
+    "description": "Primary source set on immigration from the early 1800s to the mid-1900s — Ellis Island and Angel Island photographs, emigration maps, census data, political cartoons, and songs — with an extensive teacher's guide on nativism, exclusion, and immigrant community-building.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [
+      "Compare immigration data from an earlier era with current immigration data and graph the comparison",
+      "Explain how American attitudes toward immigrants ranged from hostile to hospitable across different eras"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "C3.D2.His.2.6-12",
+    "tags": [
+      "primary sources",
+      "immigration",
+      "Ellis Island",
+      "maps",
+      "nativism",
+      "census data"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "With each new wave of immigration, Americans responded with a spectrum of attitudes ranging from the hostile to the hospitable."
+  },
+  {
+    "link": "https://www.loc.gov/classroom-materials/usa-new-york/",
+    "title": "New York: Selected Library of Congress Primary Sources",
+    "description": "State primary source set documenting key moments in New York's story — the Statue of Liberty, Ellis Island arrivals, the Brooklyn Dodgers, The North Star newspaper, and more — with a teacher's guide, question sets, and a primary source analysis tool for classroom use.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "3-5",
+    "age_min": 8,
+    "age_max": 11,
+    "resource_type": "activity",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [
+      "Use observation, reflection, and questioning to analyze state-history primary sources",
+      "Write a caption for a primary source or imagine what happened an hour before or after the moment it portrays"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "C3.D2.His.1.3-12",
+    "tags": [
+      "primary sources",
+      "New York state history",
+      "state history",
+      "photographs",
+      "maps"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "The primary sources in this set document key moments in the state's story, and provide opportunities for students to explore that rich history further."
+  },
+  {
+    "link": "https://www.loc.gov/classroom-materials/baseball-race-relations-and-jackie-robinson/",
+    "title": "Baseball, Race Relations and Jackie Robinson",
+    "description": "Two-to-three-class lesson in which students closely read Jackie Robinson's letter to Branch Rickey and Rickey's '100-Percent Wrong Club' speech to explore racism in the United States in and out of sports, using the Primary Source Analysis Tool.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "lesson plan",
+    "duration_minutes": null,
+    "materials": "Primary Source Analysis Tool",
+    "learning_outcomes": [
+      "Analyze primary documents closely",
+      "Research documents specific to the history of race relations in the mid-20th century United States",
+      "Draw conclusions moving from the specific documents to the broader society and test them for validity"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Library of Congress",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.9-10.1",
+    "tags": [
+      "lesson plan",
+      "primary sources",
+      "Jackie Robinson",
+      "civil rights",
+      "baseball",
+      "segregation"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "A close reading of two documents relating to Jackie Robinson's breaking of the racial barrier in professional baseball leads to a deeper exploration of racism in the United States, both in and out of sports."
+  },
+  {
+    "link": "https://www.docsteach.org/activities/teacher/comparing-the-magna-carta-and-english-bill-of-rights-with-the-us-bill-of-rights",
+    "title": "Comparing the Magna Carta and English Bill of Rights with the U.S. Bill of Rights",
+    "description": "DocsTeach activity for grades 10-12 in which students read excerpts from the Magna Carta, the English Bill of Rights, and the U.S. Constitution to trace how English legal traditions shaped the U.S. Bill of Rights — and where the American document went further.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "activity",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [
+      "Cite clear examples of the influence of English legal traditions in the U.S. Bill of Rights",
+      "Give examples of how the American document is unique in offering even further expanded rights"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "DocsTeach",
+    "license": "Public Domain",
+    "standards": "C3.D2.His.1.9-12",
+    "tags": [
+      "primary sources",
+      "Bill of Rights",
+      "Magna Carta",
+      "Constitution",
+      "civics",
+      "document analysis"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "In this activity students will examine the influences of the Magna Carta and the English Bill of Rights on the Bill of Rights in the U.S. Constitution."
+  },
+  {
+    "link": "https://www.docsteach.org/activities/teacher/the-civil-war-as-photographed-by-mathew-brady",
+    "title": "The Civil War as Photographed by Mathew Brady",
+    "description": "DocsTeach activity for grades 6-12 in which students analyze a series of Mathew Brady's Civil War photographs — charting people, objects, and actions, drawing inferences, and building a class list of adjectives describing a soldier's life. Approximately 60 minutes.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "6-8",
+    "age_min": 11,
+    "age_max": 14,
+    "resource_type": "activity",
+    "duration_minutes": 60,
+    "materials": "",
+    "learning_outcomes": [
+      "Analyze historical photographs by listing people, objects, and actions and drawing inferences from them",
+      "Support claims about soldiers' lives during the Civil War with specific evidence from photographs"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "DocsTeach",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.6-8.1",
+    "tags": [
+      "primary sources",
+      "Civil War",
+      "photography analysis",
+      "Mathew Brady",
+      "soldiers"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "Students will analyze a series of photographs taken by renowned photographer Mathew Brady to reflect on the lives of soldiers during the Civil War."
+  },
+  {
+    "link": "https://www.docsteach.org/activities/teacher/rights-and-responsibilities-learning-lab-previsit-activity",
+    "title": "Rights and Responsibilities Learning Lab Pre-visit Activity",
+    "description": "DocsTeach 'Weighing the Evidence' activity for grades 2-4 in which students sort primary source documents — posters, laws, photographs, and newspapers — into citizens' rights and responsibilities, then define both terms and connect them to their own lives.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "3-5",
+    "age_min": 7,
+    "age_max": 10,
+    "resource_type": "activity",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [
+      "Decide whether a primary source document is about American citizens' rights or responsibilities",
+      "Define rights and responsibilities and connect them to their own lives"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "DocsTeach",
+    "license": "Public Domain",
+    "standards": "C3.D2.Civ.2.3-5",
+    "tags": [
+      "civics",
+      "citizenship",
+      "rights and responsibilities",
+      "primary sources",
+      "sorting activity"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "Students will explore primary source documents and decide whether each document is about American citizens' rights or responsibilities."
+  },
+  {
+    "link": "https://www.docsteach.org/activities/teacher/analyzing-a-letter-from-jackie-robinson-fair-play-and-justice",
+    "title": "Analyzing a Letter from Jackie Robinson: Fair Play and Justice",
+    "description": "DocsTeach activity for grades 7-12 in which students analyze a 1944 letter Jackie Robinson wrote while serving in the Army in Texas, describing the racially charged incident for which he was court-martialed and acquitted, then reflect on its place in his path to breaking baseball's color barrier. Approximately 30 minutes.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "activity",
+    "duration_minutes": 30,
+    "materials": "",
+    "learning_outcomes": [
+      "Analyze a primary source letter and answer document-analysis questions about it",
+      "Explain how the 1944 incident fits on a timeline of Jackie Robinson's life and may have shaped his later civil rights activism"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "DocsTeach",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.9-10.1",
+    "tags": [
+      "primary sources",
+      "Jackie Robinson",
+      "civil rights",
+      "World War II",
+      "document analysis",
+      "segregation"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "In this activity, students will analyze a letter written by Jackie Robinson when he was in the Army in Texas in 1944."
+  },
+  {
+    "link": "https://www.docsteach.org/activities/teacher/from-slavery-to-juneteenth-emancipation-and-ending-enslavement",
+    "title": "From Slavery to Juneteenth: Emancipation and Ending Enslavement",
+    "description": "DocsTeach 'Finding a Sequence' activity for grades 8-12 in which students place 20 documents — from a 1790 abolition petition to the 1865 Juneteenth General Order No. 3 — in chronological order, judging which were steps forward toward emancipation and which were steps backward. Approximately 120 minutes.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "activity",
+    "duration_minutes": 120,
+    "materials": "",
+    "learning_outcomes": [
+      "Place documents about slavery and emancipation in chronological order using dates and document analysis",
+      "Explain key events that led to the end of slavery, citing several documents as evidence"
+    ],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "DocsTeach",
+    "license": "Public Domain",
+    "standards": "CCSS.RH.9-10.2",
+    "tags": [
+      "primary sources",
+      "slavery",
+      "emancipation",
+      "Juneteenth",
+      "Civil War era",
+      "chronology"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "In this activity, students sequence key events related to both the expansion of slavery and the emancipation of enslaved people by placing documents in chronological order."
+  },
+  {
+    "link": "https://americanhistory.si.edu/education",
+    "title": "National Museum of American History Education Resources",
+    "description": "The National Museum of American History's education hub: standards-aligned lesson plans, classroom activities, interactives, and media built around the museum's 3 million artifacts, searchable by grade level, keyword, and historical era, plus the annual National Youth Summit webcast for secondary students.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "age_min": null,
+    "age_max": null,
+    "resource_type": "lesson plan",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Museum of American History",
+    "license": "Public Domain",
+    "standards": "",
+    "tags": [
+      "museum collections",
+      "lesson plans",
+      "American history",
+      "artifacts",
+      "object-based learning"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "collection",
+    "evidence": "Our educational resources are designed to align with national standards, inspire curiosity and wonder, and contribute to a more just and compassionate learning environment."
+  },
+  {
+    "link": "https://americanhistory.si.edu/becoming-us/",
+    "title": "Becoming US: Immigration and Migration History",
+    "description": "National Museum of American History resource for high school teachers and students: case studies and lesson plans built around museum objects that teach immigration and migration history through essential understandings — who was already here, who was brought against their will, who came voluntarily, and who was absorbed by expanding borders.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "9-12",
+    "age_min": 14,
+    "age_max": 18,
+    "resource_type": "unit",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Museum of American History",
+    "license": "Public Domain",
+    "standards": "C3.D2.His.1.9-12",
+    "tags": [
+      "immigration",
+      "migration",
+      "case studies",
+      "inclusive history",
+      "museum objects"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "specific",
+    "evidence": "Becoming US is a new educational resource for high school teachers and students to learn immigration and migration history in a more accurate and inclusive way."
+  },
+  {
+    "link": "https://www.si.edu/openaccess",
+    "title": "Smithsonian Open Access",
+    "description": "Download, share, and reuse more than 5.2 million 2D and 3D digital items — images, data, and 3D models — from across the Smithsonian's museums, archives, libraries, and the National Zoo, released for free reuse without asking permission. A raw-material source for student projects, exhibits, and classroom displays across U.S. history topics.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "age_min": null,
+    "age_max": null,
+    "resource_type": "article/text",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "Smithsonian Institution",
+    "license": "CC0",
+    "standards": "",
+    "tags": [
+      "open access",
+      "CC0",
+      "images",
+      "3D models",
+      "museum collections",
+      "primary sources"
+    ],
+    "udl_principles": [
+      "representation",
+      "action_expression"
+    ],
+    "link_status": "ok",
+    "granularity": "collection",
+    "evidence": "Welcome to Smithsonian Open Access, where you can download, share, and reuse millions of the Smithsonian's images—right now, without asking."
+  },
+  {
+    "link": "https://nmaahc.si.edu/learn/educators/resources",
+    "title": "National Museum of African American History and Culture Educator Resources",
+    "description": "The NMAAHC Teaching and Learning team's educator hub: Learning Lab collections of objects and primary sources, a 'Becoming a Historian' skills series, curated reading lists for grades 3-12, and professional development resources for teaching African American history through multiple lenses.",
+    "description_source": "generated",
+    "subject": "Social Studies",
+    "grade_band": "All",
+    "age_min": null,
+    "age_max": null,
+    "resource_type": "lesson plan",
+    "duration_minutes": null,
+    "materials": "",
+    "learning_outcomes": [],
+    "cost": "free",
+    "price_note": "",
+    "source_site": "National Museum of African American History and Culture",
+    "license": "Public Domain",
+    "standards": "",
+    "tags": [
+      "African American history",
+      "museum collections",
+      "primary sources",
+      "professional development",
+      "reading lists"
+    ],
+    "udl_principles": [
+      "representation",
+      "engagement"
+    ],
+    "link_status": "ok",
+    "granularity": "collection",
+    "evidence": "In addition to professional development events, the Teaching and Learning team offers a variety of resources to help educators engage their students in African American history."
   }
 ]
