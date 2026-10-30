@@ -306,3 +306,58 @@ def test_udl_coverage(client):
     assert cov["action_expression"] == 1
     assert cov["engagement"] == 1
     assert cov["by_type"] == {"video": 1, "activity": 1}
+
+
+def _python_loop_coverage(db, ids):
+    """The per-request Python loop that udl_coverage used to run over every
+    row. Kept here as the reference the SQL GROUP BY has to match."""
+    from sqlalchemy import select
+
+    from app.models.resource import Resource, resource_udl
+    from app.models.udl import UDL_PRINCIPLES, UdlPrinciple
+
+    per_principle = {name: 0 for name in UDL_PRINCIPLES}
+    pairs = select(resource_udl.c.resource_id, UdlPrinciple.name).join(
+        UdlPrinciple, UdlPrinciple.id == resource_udl.c.udl_principle_id
+    )
+    for rid, name in db.execute(pairs):
+        if rid in ids and name in per_principle:
+            per_principle[name] += 1
+
+    by_type: dict[str, int] = {}
+    for rid, rtype in db.execute(select(Resource.id, Resource.resource_type)):
+        if rid in ids and rtype:
+            by_type[rtype] = by_type.get(rtype, 0) + 1
+    return per_principle, dict(sorted(by_type.items(), key=lambda kv: -kv[1]))
+
+
+def test_udl_coverage_sql_matches_python_loop_on_seed(db_session):
+    """Filtered and searched coverage counts from GROUP BY equal the old
+    full-table loop, run over the real seed library."""
+    from app.db.seed import load_seed_rows
+    from app.services import resource_service
+
+    assert load_seed_rows(db_session) > 0
+    cases = [
+        {"q": "", "subject": "Science"},
+        {"q": "", "grade_band": "6-8", "audience": "students"},
+        {"q": "", "audience": "educators"},
+        {"q": "", "tag": "fractions"},
+        {"q": "fractions"},
+        {"q": "water cycle", "grade_band": "3-5"},
+    ]
+    for case in cases:
+        _, rows, _ = resource_service.list_resources(
+            db_session, **case, limit=10_000
+        )
+        ids = {r.id for r in rows}
+        assert ids, f"seed matched nothing for {case}; the case proves nothing"
+
+        per_principle, by_type = _python_loop_coverage(db_session, ids)
+        cov = resource_service.udl_coverage(db_session, **case)
+
+        assert cov["total"] == len(ids), case
+        assert cov["engagement"] == per_principle["engagement"], case
+        assert cov["representation"] == per_principle["representation"], case
+        assert cov["action_expression"] == per_principle["action_expression"], case
+        assert cov["by_type"] == by_type, case

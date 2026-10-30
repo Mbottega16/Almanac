@@ -436,6 +436,9 @@ def list_standards_with_counts(db: Session) -> list[tuple[str, int]]:
 
 # --- UDL coverage -------------------------------------------------------
 
+# Max ids per IN (...) list when coverage is counted from ranked search ids.
+_IN_CHUNK = 500
+
 def udl_coverage(
     db: Session,
     q: str | None = None,
@@ -456,24 +459,42 @@ def udl_coverage(
     stmt = _base_query(**filters)
     ranked = search.rank(db, q, _allowed_ids(db, stmt, filters)) if q and q.strip() else None
     if ranked is None:
-        ids = set(db.execute(stmt.with_only_columns(Resource.id).distinct()).scalars())
+        # Unranked: the matched set stays in SQL as a subquery, never in Python.
+        matched = stmt.with_only_columns(Resource.id).distinct().correlate(None)
+        total = db.execute(select(func.count()).select_from(matched.subquery())).scalar_one()
+        id_sets = [matched]
     else:
-        ids = set(ranked["ids"])
+        ids = list(dict.fromkeys(ranked["ids"]))
+        total = len(ids)
+        # Ranked ids come back as a list; batch them so no IN (...) list grows past
+        # SQLite's bound-parameter limit on a large library.
+        id_sets = [ids[i : i + _IN_CHUNK] for i in range(0, len(ids), _IN_CHUNK)]
 
     per_principle = {name: 0 for name in UDL_PRINCIPLES}
-    pairs = select(resource_udl.c.resource_id, UdlPrinciple.name).join(
-        UdlPrinciple, UdlPrinciple.id == resource_udl.c.udl_principle_id
-    )
-    for rid, name in db.execute(pairs):
-        if rid in ids and name in per_principle:
-            per_principle[name] += 1
-
     by_type: dict[str, int] = {}
-    for rid, rtype in db.execute(select(Resource.id, Resource.resource_type)):
-        if rid in ids and rtype:
-            by_type[rtype] = by_type.get(rtype, 0) + 1
+    for id_set in id_sets:
+        principle_rows = db.execute(
+            select(UdlPrinciple.name, func.count(resource_udl.c.resource_id))
+            .join(resource_udl, resource_udl.c.udl_principle_id == UdlPrinciple.id)
+            .where(resource_udl.c.resource_id.in_(id_set))
+            .group_by(UdlPrinciple.name)
+        )
+        for name, count in principle_rows:
+            if name in per_principle:
+                per_principle[name] += count
 
-    total = len(ids)
+        type_rows = db.execute(
+            select(Resource.resource_type, func.count(Resource.id))
+            .where(
+                Resource.id.in_(id_set),
+                Resource.resource_type.is_not(None),
+                Resource.resource_type != "",
+            )
+            .group_by(Resource.resource_type)
+        )
+        for rtype, count in type_rows:
+            by_type[rtype] = by_type.get(rtype, 0) + count
+
     by_type = dict(sorted(by_type.items(), key=lambda kv: -kv[1]))
 
     return {
