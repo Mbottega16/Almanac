@@ -1,8 +1,8 @@
 """One-off, idempotent: add the curriculum columns (scope, publisher) to an
 existing `resources` table. `Base.metadata.create_all` only creates new
-tables, it doesn't alter existing ones. Only needed once there's a
-persistent database — the Vercel `/tmp` DB is recreated from models on
-every cold start.
+tables, it doesn't alter existing ones. Only needed for a database created
+before these columns existed. Render's DB is rebuilt from the seed on each
+boot, so it never needs this.
 
 Run from backend/:  .venv\\Scripts\\python scripts\\migrate_add_curriculum_fields.py
 """

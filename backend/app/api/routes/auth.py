@@ -28,8 +28,9 @@ def login(body: LoginRequest, response: Response):
     if body.password != settings.admin_password:
         response.status_code = 401
         return {"detail": "Wrong password"}
-    # SameSite=None; Secure so the cookie survives the cross-site hop from the
-    # Vercel frontend to the Vercel backend when the gate is enabled.
+    # SameSite=None; Secure so the cookie survives a cross-site hop, which only
+    # happens when the frontend is served from a different origin than the API.
+    # The Render deploy is same-origin.
     response.set_cookie(
         COOKIE_NAME,
         issue_cookie_value(),

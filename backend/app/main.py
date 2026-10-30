@@ -20,11 +20,10 @@ log = logging.getLogger("almanac.bootstrap")
 
 app = FastAPI(title="Almanac")
 
-# On an ephemeral serverless filesystem the SQLite file in /tmp is gone on
-# every cold start. Copying a pre-built seed DB into place (milliseconds)
-# instead of re-inserting the JSON seed row-by-row (~8s, was tripping the
-# function timeout) is what keeps cold starts fast. Must run before
-# create_all and any query.
+# Render's free plan has no persistent disk, so the SQLite file is gone after
+# every restart or deploy. Copying a pre-built seed DB into place (milliseconds)
+# instead of re-inserting the JSON seed row-by-row (slow at 1,098 rows) keeps
+# boot fast. Must run before create_all and any query.
 ensure_seed_db_file()
 
 # MVP: create tables directly from models. Switch to Alembic migrations
@@ -56,11 +55,13 @@ def _bootstrap() -> None:
 
 _bootstrap()
 
-# The frontend is deployed separately (Vercel), so the API accepts cross-origin
-# requests. Wide open — a single-user tool. The real protection is the auth
-# gate below (dormant until ADMIN_PASSWORD is set); see app/auth.py.
+# CORS only matters when the frontend is served from a different origin than
+# the API (e.g. a separate dev server pointed at a remote API). The Render
+# deploy is same-origin, so this is not needed there. Left wide open for that
+# case — a single-user tool. The real protection is the auth gate below
+# (dormant until ADMIN_PASSWORD is set); see app/auth.py.
 # allow_origin_regex (not allow_origins=["*"]) so the browser still accepts
-# responses when the frontend sends the auth-gate cookie cross-origin.
+# responses when a cross-origin frontend sends the auth-gate cookie.
 app.add_middleware(
     CORSMiddleware,
     allow_origin_regex=".*",

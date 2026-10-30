@@ -1,9 +1,9 @@
 # One combined Render Web Service: FastAPI serves /api/* and also the built
-# frontend (backend/static/, produced by scripts/build_frontend.py — same
-# one-service pattern as the Vercel deploy, just on a real disk instead of
-# a serverless /tmp that resets every cold start). ADMIN_PASSWORD must be
-# set by hand in the Render dashboard before first boot or the app is wide
-# open; ANTHROPIC_API_KEY stays unset until live capture is approved.
+# frontend (backend/static/, produced by scripts/build_frontend.py). No
+# persistent disk is attached, so the SQLite DB is rebuilt from the seed on
+# each boot. ADMIN_PASSWORD must be set by hand in the Render dashboard before
+# first boot or the app is wide open; ANTHROPIC_API_KEY stays unset until live
+# capture is approved.
 services:
   - type: web
     name: almanac

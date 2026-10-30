@@ -1,5 +1,5 @@
 """Build the frontend and copy it into backend/static/ so one deployment
-(the Vercel Python service) serves both the API and the app.
+(the Render web service) serves both the API and the app.
 
 Run from backend/:  .venv\\Scripts\\python scripts\\build_frontend.py
 Requires npm on PATH. The frontend is built with an empty VITE_API_BASE_URL

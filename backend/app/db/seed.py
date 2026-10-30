@@ -1,19 +1,19 @@
 """Seeding for ephemeral deploys.
 
-On Vercel the SQLite file lives in `/tmp` and is wiped on every cold start,
-so the app re-seeds constantly. Re-seeding 289 rows through per-row commits
-took ~8s locally and was tripping the serverless function timeout
-(intermittent 504s). Two speed-ups here:
+On Render's free plan there is no persistent disk, so the SQLite file is
+rebuilt after every restart or deploy. Re-seeding 1,098 rows through per-row
+commits is slow (about 13 ms per row, so roughly 14 s at this size). Two
+speed-ups here:
 
 1. `ensure_seed_db_file()` — if a pre-built `seed/almanac-seed.db` exists and
    the target SQLite file is missing, just copy the file. That's milliseconds
    instead of seconds. The file is not in git: the Render build runs
    `scripts/build_seed_db.py` to make it from the JSON seed.
 2. `load_seed_rows()` — the JSON fallback, but as ONE transaction instead of
-   289 commits.
+   1,098 commits.
 
 The real fix is a persistent database (see context.md); this keeps the
-serverless deploy from timing out until then.
+restart path fast until then.
 """
 import json
 import pathlib
