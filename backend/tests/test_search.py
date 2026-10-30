@@ -6,6 +6,20 @@ common ones, and still answer a query containing a word the library has
 nothing for.
 """
 
+import pytest
+
+
+@pytest.fixture(params=["fts5", "python"])
+def backend(request, monkeypatch):
+    """Run a ranking test on both paths: the FTS5 index and the no-FTS fallback."""
+    from app.services import search
+
+    if request.param == "python":
+        monkeypatch.setattr(search, "_FTS5", False)
+    elif not search._FTS5:
+        pytest.skip("this SQLite build has no FTS5")
+    return request.param
+
 
 def _make(client, link, **over):
     body = {
@@ -25,7 +39,7 @@ def _make(client, link, **over):
     return resp.json()
 
 
-def test_multi_keyword_query_matches_without_exact_phrase(client):
+def test_multi_keyword_query_matches_without_exact_phrase(client, backend):
     """The whole point: these words never appear together as one substring."""
     _make(
         client,
@@ -44,7 +58,7 @@ def test_multi_keyword_query_matches_without_exact_phrase(client):
     assert body["items"][0]["link"] == "https://ex.com/volcano"
 
 
-def test_tags_are_searchable(client):
+def test_tags_are_searchable(client, backend):
     """Tags hold the most specific words and the old search ignored them."""
     _make(client, "https://ex.com/tagged", title="Untitled Lesson", tags=["photosynthesis"])
     _make(client, "https://ex.com/other", title="Something Else")
@@ -54,7 +68,7 @@ def test_tags_are_searchable(client):
     assert body["items"][0]["link"] == "https://ex.com/tagged"
 
 
-def test_rare_term_outranks_common_one(client):
+def test_rare_term_outranks_common_one(client, backend):
     """Every row is 'free', so 'free' must not decide the ranking."""
     for i in range(6):
         _make(client, f"https://ex.com/common{i}", title="Free Science Lesson", cost="free")
@@ -70,7 +84,7 @@ def test_rare_term_outranks_common_one(client):
     assert body["items"][0]["link"] == "https://ex.com/rare"
 
 
-def test_unmatched_term_is_reported(client):
+def test_unmatched_term_is_reported(client, backend):
     _make(client, "https://ex.com/sel", subject="SEL", grade_band="K-2", tags=["feelings"])
 
     body = client.get("/api/resources", params={"q": "cheetah SEL"}).json()
@@ -78,7 +92,7 @@ def test_unmatched_term_is_reported(client):
     assert "sel" in body["matched_terms"]
 
 
-def test_dead_term_still_returns_the_rest(client):
+def test_dead_term_still_returns_the_rest(client, backend):
     """A micro question the library can't answer exactly should still get a
     macro answer rather than an empty page."""
     _make(
@@ -100,7 +114,7 @@ def test_dead_term_still_returns_the_rest(client):
     assert body["unmatched_terms"] == ["cheetah"]
 
 
-def test_synonym_finds_differently_worded_resource(client):
+def test_synonym_finds_differently_worded_resource(client, backend):
     """'kinesthetic' is teacher vocabulary; the resource says 'movement'."""
     _make(client, "https://ex.com/move", title="Movement Break Cards", tags=["movement"])
     _make(client, "https://ex.com/quiet", title="Silent Reading Log", tags=["reading"])
@@ -110,7 +124,7 @@ def test_synonym_finds_differently_worded_resource(client):
     assert body["items"][0]["link"] == "https://ex.com/move"
 
 
-def test_filters_still_apply_alongside_a_query(client):
+def test_filters_still_apply_alongside_a_query(client, backend):
     _make(client, "https://ex.com/k2", title="Weather Unit", grade_band="K-2", tags=["weather"])
     _make(client, "https://ex.com/hs", title="Weather Unit", grade_band="9-12", tags=["weather"])
 
@@ -141,7 +155,7 @@ def test_index_follows_edits_and_deletes(client):
     assert client.get("/api/resources", params={"q": "germination"}).json()["total"] == 0
 
 
-def test_pages_cover_every_result_once(client):
+def test_pages_cover_every_result_once(client, backend):
     """Browsing all 385 used to show 50 and stop. Pages must add up."""
     for i in range(7):
         _make(client, f"https://ex.com/p{i}", title=f"Lesson {i}", tags=["pagination"])
@@ -194,7 +208,7 @@ def test_credit_filter_and_normalisation(client):
     assert by_link["https://ex.com/none"]["credit_hours"] is None
 
 
-def test_search_by_credit_words(client):
+def test_search_by_credit_words(client, backend):
     _make(client, "https://ex.com/pd", title="Classroom Management Webinar",
           audience="educators", credit_type="pd_hours", credit_hours=1)
     _make(client, "https://ex.com/plain", title="Classroom Jobs Chart")
