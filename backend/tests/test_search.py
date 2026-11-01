@@ -230,6 +230,24 @@ def test_fallback_scorer_matches_when_fts5_is_missing(client, monkeypatch):
     assert client.get("/api/health").json()["search"] == "python"
 
 
+def test_dead_link_ranks_below_live_row_with_equal_match(client, db_session, backend):
+    """A confirmed-dead link sinks below an equally matching live one, but
+    stays in the results. The dead row is created first so id order alone
+    would put it on top."""
+    from app.models.resource import Resource
+
+    _make(client, "https://ex.com/dead", title="Volcano Model", tags=["volcano"])
+    _make(client, "https://ex.com/live", title="Volcano Model", tags=["volcano"])
+    db_session.query(Resource).filter(Resource.link == "https://ex.com/dead").update(
+        {"link_status": "dead"}
+    )
+    db_session.commit()
+
+    body = client.get("/api/resources", params={"q": "volcano"}).json()
+    assert [r["link"] for r in body["items"]] == ["https://ex.com/live", "https://ex.com/dead"]
+    assert body["total"] == 2
+
+
 def test_coverage_strip_counts_match_the_result_list(client):
     """The UDL strip and the grid under it must never disagree."""
     _make(client, "https://ex.com/w1", title="Weather Lesson", tags=["weather"],

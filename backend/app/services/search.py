@@ -136,6 +136,11 @@ _BROADEN_COVERAGE = 0.6
 # Rows covering less than this share of the best row's coverage are dropped,
 # so the result count means "relevant", not "touched one common word".
 _RELEVANCE_SHARE = 0.5
+# Rows whose link is confirmed dead stay in the results but sink: the penalty
+# is more than one whole coverage step, so a dead row falls below a live row
+# that answers one term fewer. Kept visible, because a teacher may still want
+# the page, and the link check can be wrong.
+_DEAD_PENALTY = _COVERAGE_WEIGHT * 2
 
 _TABLE = "resources_fts"
 _WORD_RE = re.compile(r"[a-z0-9]+")
@@ -332,6 +337,13 @@ def _match_ids(db: Session, expression: str) -> set[int]:
     )
 
 
+def _dead_ids(db: Session) -> set[int]:
+    """Ids whose link the weekly check confirmed dead. The FTS table doesn't
+    carry link_status, so this is read from resources (indexed column; the
+    set stays small)."""
+    return set(db.execute(select(Resource.id).where(Resource.link_status == "dead")).scalars())
+
+
 def _rank_fts(db: Session, terms: list[str], allowed: set[int] | None) -> dict:
     coverage: dict[int, float] = {}
     hits: dict[str, int] = {}
@@ -377,6 +389,7 @@ def _rank_fts(db: Session, terms: list[str], allowed: set[int] | None) -> dict:
         relevance[rid] = -score  # bm25() is negative; lower is better
         granularity[rid] = gran
 
+    dead_rows = _dead_ids(db)
     floor = best * _RELEVANCE_SHARE
     scored: list[tuple[float, int]] = []
     for rid, covered in coverage.items():
@@ -386,6 +399,8 @@ def _rank_fts(db: Session, terms: list[str], allowed: set[int] | None) -> dict:
         is_collection = granularity.get(rid) == "collection"
         if is_collection == broadened:
             score += _GRANULARITY_BONUS
+        if rid in dead_rows:
+            score -= _DEAD_PENALTY
         scored.append((score, rid))
     scored.sort(key=lambda pair: (-pair[0], pair[1]))
     return {
@@ -436,6 +451,7 @@ def _rank_python(db: Session, terms: list[str], allowed: set[int] | None) -> dic
     best = max(coverage.values())
     broadened = bool(dead) and best < max(1.0, len(terms) * _BROADEN_COVERAGE)
     gran = {r.id: r.granularity for r, _ in docs}
+    dead_rows = {r.id for r, _ in docs if r.link_status == "dead"}
     scored = []
     for rid, covered in coverage.items():
         if covered < best * _RELEVANCE_SHARE:
@@ -443,6 +459,8 @@ def _rank_python(db: Session, terms: list[str], allowed: set[int] | None) -> dic
         score = covered * _COVERAGE_WEIGHT + relevance[rid]
         if (gran.get(rid) == "collection") == broadened:
             score += _GRANULARITY_BONUS
+        if rid in dead_rows:
+            score -= _DEAD_PENALTY
         scored.append((score, rid))
     scored.sort(key=lambda pair: (-pair[0], pair[1]))
     return {"ids": [rid for _, rid in scored], "matched_terms": live,
