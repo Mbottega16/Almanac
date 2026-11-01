@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "test": "node --test src/api/searchCache.test.ts",
+    "test": "node --test src/api/searchCache.test.ts src/api/filters.test.ts",
     "preview": "vite preview"
   },
   "dependencies": {

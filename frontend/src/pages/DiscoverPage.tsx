@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { searchResources } from "../api/client";
-import { EMPTY_FILTERS, Filters, toQuery } from "../components/FilterBar";
+import { EMPTY_FILTERS, Filters, toQuery } from "../api/filters";
 
 // Only the string-valued filter keys can be a wizard step.
 type StepKey = "subject" | "grade_band" | "scope" | "resource_type" | "cost" | "udl" | "q";

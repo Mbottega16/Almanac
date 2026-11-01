@@ -11,7 +11,8 @@ import {
   fetchUdlCoverage,
   searchResources,
 } from "../api/client";
-import FilterBar, { EMPTY_FILTERS, Filters, toQuery } from "../components/FilterBar";
+import FilterBar from "../components/FilterBar";
+import { EMPTY_FILTERS, Filters, switchAudience, toQuery } from "../api/filters";
 import ResourceCard from "../components/ResourceCard";
 import UdlCoverageStrip from "../components/UdlCoverageStrip";
 
@@ -150,8 +151,8 @@ export default function BrowsePage({
   }, [hasMore, loadMore]);
 
   const countFor = (name: string) => audiences.find((a) => a.name === name)?.count;
-  const switchAudience = (audience: Filters["audience"]) =>
-    setFilters({ ...EMPTY_FILTERS, audience, q: filters.q });
+  const changeAudience = (audience: Filters["audience"]) =>
+    setFilters(switchAudience(filters, audience));
 
   return (
     <div>
@@ -160,7 +161,7 @@ export default function BrowsePage({
           role="tab"
           aria-selected={lessonMode}
           className={lessonMode ? "active" : ""}
-          onClick={() => switchAudience("students")}
+          onClick={() => changeAudience("students")}
         >
           <span className="audience-title">Lesson planning</span>
           <span className="audience-sub">
@@ -171,7 +172,7 @@ export default function BrowsePage({
           role="tab"
           aria-selected={!lessonMode}
           className={!lessonMode ? "active" : ""}
-          onClick={() => switchAudience("educators")}
+          onClick={() => changeAudience("educators")}
         >
           <span className="audience-title">Professional learning</span>
           <span className="audience-sub">

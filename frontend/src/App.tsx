@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { ApiError, fetchAuthStatus, markVisited, randomResource, searchResources } from "./api/client";
-import { EMPTY_FILTERS, Filters } from "./components/FilterBar";
+import { EMPTY_FILTERS, Filters } from "./api/filters";
 import LoginGate from "./components/LoginGate";
 import BrowsePage from "./pages/BrowsePage";
 import CapturePage from "./pages/CapturePage";

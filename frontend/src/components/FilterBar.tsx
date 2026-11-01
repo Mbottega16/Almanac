@@ -1,48 +1,7 @@
-import type { Audience, NameCount } from "../api/client";
+import type { NameCount } from "../api/client";
 import { UDL_LABELS, UDL_PRINCIPLES } from "../api/client";
+import type { Filters } from "../api/filters";
 import { GRADE_BANDS, PD_RESOURCE_TYPES, RESOURCE_TYPES, SUBJECTS } from "../subjectGroups";
-
-export interface Filters {
-  q: string;
-  // Lesson planning ('students') vs professional learning ('educators').
-  audience: Audience;
-  subject: string;
-  grade_band: string;
-  resource_type: string;
-  scope: string;
-  cost: string;
-  udl: string;
-  tag: string;
-  standard: string;
-  age: string;
-  // "" = anything, "any" = grants some credit, else a specific credit type
-  credit_type: string;
-  // true => only granularity=specific (hide browse/portal pages)
-  classReady: boolean;
-}
-
-export const EMPTY_FILTERS: Filters = {
-  q: "",
-  audience: "students",
-  subject: "",
-  grade_band: "",
-  resource_type: "",
-  scope: "",
-  cost: "",
-  udl: "",
-  tag: "",
-  standard: "",
-  age: "",
-  credit_type: "",
-  classReady: false,
-};
-
-// Filters -> API query params. `classReady` is a UI convenience for
-// `granularity=specific`; keep the translation in one place.
-export function toQuery(f: Filters) {
-  const { classReady, ...rest } = f;
-  return { ...rest, granularity: classReady ? "specific" : "" };
-}
 
 const COST_OPTIONS = [
   { value: "", label: "All" },
