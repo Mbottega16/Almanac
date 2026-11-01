@@ -53,6 +53,30 @@ def test_session_token_is_valid_until_it_expires():
     assert auth._cookie_is_valid(token, max_age=-1) is False
 
 
+def test_token_signed_with_another_secret_is_refused():
+    from itsdangerous import URLSafeTimedSerializer
+
+    forged = URLSafeTimedSerializer("not-the-real-secret", salt="almanac-auth").dumps({"ok": True})
+    assert auth._cookie_is_valid(forged) is False
+
+
+def test_tampered_token_is_refused():
+    token = auth.issue_cookie_value()
+    body, sig = token.rsplit(".", 1)
+    # Flip the last character of the signature; the payload is untouched.
+    flipped = sig[:-1] + ("A" if sig[-1] != "A" else "B")
+    assert auth._cookie_is_valid(f"{body}.{flipped}") is False
+
+
+def test_forged_cookie_gets_401_from_the_api(client, monkeypatch):
+    from itsdangerous import URLSafeTimedSerializer
+
+    monkeypatch.setattr(settings, "admin_password", "test-password")
+    forged = URLSafeTimedSerializer("not-the-real-secret", salt="almanac-auth").dumps({"ok": True})
+    client.cookies.set(auth.COOKIE_NAME, forged)
+    assert client.get("/api/resources").status_code == 401
+
+
 def test_expired_session_is_rejected_by_the_api(client, monkeypatch):
     monkeypatch.setattr(settings, "admin_password", "test-password")
     client.post("/api/login", json={"password": "test-password"})

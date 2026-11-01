@@ -50,6 +50,18 @@ def test_offset_past_the_end_returns_no_items(client):
     assert body["items"] == []
 
 
+def test_pages_walk_the_whole_list_without_overlap_or_gaps(client):
+    for n in range(3):
+        client.post("/api/resources", json=_payload(link=f"https://pg{n}.com", title=f"Page item {n}"))
+    first = client.get("/api/resources", params={"limit": 2, "offset": 0}).json()
+    second = client.get("/api/resources", params={"limit": 2, "offset": 2}).json()
+    assert first["total"] == second["total"] == 3
+    assert len(first["items"]) == 2
+    assert len(second["items"]) == 1
+    ids = [i["id"] for i in first["items"] + second["items"]]
+    assert len(set(ids)) == 3
+
+
 def test_search_limit_cap_applies_too(client):
     client.post("/api/resources", json=_payload(link="https://q1.com", title="Fractions one"))
     resp = client.get("/api/resources", params={"q": "fractions", "limit": 201})
