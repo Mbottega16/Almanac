@@ -18,7 +18,8 @@ Options:
   --timeout N      per-request timeout in seconds (default 12)
   --limit N        only check the first N resources (quick sample)
   --json           emit a JSON array [{id, link, status, detail}] instead of the report
-  --write          write status + link_checked_at back to the DB (implies a real run)
+  --write          write status + link_checked_at back to the DB (implies a real run); 'dead'
+                   follows the same two-strike rule as --write-status, from link-status.json
   --seed           read seed/almanac-seed.json instead of the DB
   --write-status   (with --seed) record each result in seed/link-status.json, counting
                    consecutive real-4xx failures per link, then set `link_status` on the
@@ -105,14 +106,28 @@ def _seed_rows(limit: int) -> list[tuple[int, str, str | None]]:
     return triples[:limit] if limit else triples
 
 
-def write_status(results: list[dict]) -> None:
+def _read_state() -> dict:
+    return json.loads(STATUS_FILE.read_text(encoding="utf-8")) if STATUS_FILE.exists() else {}
+
+
+def _next_link_status(status: str, fails: int) -> str | None:
+    """The link_status a row carries after this check, or None to leave it alone.
+
+    The only place the two-strike rule lives. A failing check shows as 'dead'
+    only at fails >= 2; a first failure returns None so the row keeps its status.
+    """
+    if status in _FAILING:
+        return "dead" if fails >= 2 else None
+    return status
+
+
+def write_status(results: list[dict]) -> dict:
     """Merge results into link-status.json and mirror them onto the seed rows.
 
-    `fails` counts consecutive failing checks; a passing check resets it. A seed
-    row gets link_status 'dead' only at fails >= 2. A first failure leaves the
-    row's current status alone, so one bad night changes nothing the site shows.
+    `fails` counts consecutive failing checks; a passing check resets it. Returns
+    the merged state, keyed by link.
     """
-    old = json.loads(STATUS_FILE.read_text(encoding="utf-8")) if STATUS_FILE.exists() else {}
+    old = _read_state()
     today = datetime.date.today().isoformat()
     new = {}
     for r in results:
@@ -125,14 +140,13 @@ def write_status(results: list[dict]) -> None:
         v = new.get(row["link"])
         if v is None:
             continue
-        if v["status"] in _FAILING:
-            if v["fails"] >= 2:
-                row["link_status"] = "dead"
-        else:
-            row["link_status"] = v["status"]
+        value = _next_link_status(v["status"], v["fails"])
+        if value is not None:
+            row["link_status"] = value
     SEED_FILE.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     flagged = sum(1 for v in new.values() if v["fails"] >= 2)
     print(f"{STATUS_FILE.name}: {len(new)} links, {flagged} failing twice or more")
+    return new
 
 
 def _rows(limit: int) -> list[tuple[int, str, str | None]]:
@@ -162,8 +176,7 @@ def main() -> None:
             results.append({"id": rid, "link": link, "title": title,
                             "status": status, "detail": detail})
 
-    if seed and "--write-status" in sys.argv:
-        write_status(results)
+    state = write_status(results) if seed and "--write-status" in sys.argv else _read_state()
 
     if write:
         from app.db.session import SessionLocal
@@ -173,9 +186,11 @@ def main() -> None:
         db = SessionLocal()
         try:
             for r in results:
-                db.query(Resource).filter(Resource.id == r["id"]).update(
-                    {"link_status": r["status"], "link_checked_at": now}
-                )
+                values = {"link_checked_at": now}
+                status = _next_link_status(r["status"], state.get(r["link"], {}).get("fails", 0))
+                if status is not None:
+                    values["link_status"] = status
+                db.query(Resource).filter(Resource.id == r["id"]).update(values)
             db.commit()
         finally:
             db.close()
