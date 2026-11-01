@@ -290,8 +290,15 @@ def random_resource(
     subject: str | None = None,
     tag: str | None = None,
     cost: str | None = None,
+    audience: str | None = "students",
+    granularity: str | None = "specific",
 ) -> Resource | None:
-    stmt = _base_query(subject=subject, tag=tag, cost=cost)
+    """'Surprise me' must land on a real, classroom-ready lesson: never a PD
+    course (audience=educators), a collection page, or a link that is dead."""
+    stmt = _base_query(
+        subject=subject, tag=tag, cost=cost, audience=audience, granularity=granularity
+    )
+    stmt = stmt.where(Resource.link_status != "dead")
     stmt = stmt.order_by(func.random()).limit(1)
     return db.execute(stmt).scalars().unique().first()
 

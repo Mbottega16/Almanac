@@ -104,11 +104,14 @@ def random_resource(
     subject: str | None = None,
     tag: str | None = None,
     cost: str | None = None,
+    audience: str | None = "students",
     db: Session = Depends(get_db),
 ):
     """Picks one random resource — powers the 'Surprise me' button. Optionally
-    scoped so 'surprise me, but a free science one' works too."""
-    resource = resource_service.random_resource(db, subject, tag, cost)
+    scoped so 'surprise me, but a free science one' works too. Defaults to
+    student lessons; pass audience=educators for a PD course. Dead links are
+    never picked."""
+    resource = resource_service.random_resource(db, subject, tag, cost, audience=audience)
     if resource is None:
         raise HTTPException(status_code=404, detail="No resources match")
     return _to_out(resource)

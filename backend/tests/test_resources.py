@@ -1,3 +1,6 @@
+from app.models.resource import Resource
+
+
 def _payload(**over):
     base = {
         "link": "https://example.com/lesson",
@@ -260,6 +263,26 @@ def test_random_resource_scoped(client):
     assert resp.status_code == 200
     assert resp.json()["subject"] == "Math"
     assert client.get("/api/resources/random", params={"subject": "Nope"}).status_code == 404
+
+
+def test_random_resource_only_lands_on_live_student_lessons(client, db_session):
+    # Surprise me must never open a PD course, a collection page, or a dead link.
+    live = client.post("/api/resources", json=_payload(link="https://live.com")).json()
+    client.post("/api/resources", json=_payload(link="https://pd.com", audience="educators"))
+    client.post(
+        "/api/resources", json=_payload(link="https://coll.com", granularity="collection")
+    )
+    dead = client.post("/api/resources", json=_payload(link="https://dead.com")).json()
+    db_session.get(Resource, dead["id"]).link_status = "dead"
+    db_session.commit()
+
+    # Only one row can qualify, so 20 draws must all return it.
+    for _ in range(20):
+        assert client.get("/api/resources/random").json()["id"] == live["id"]
+
+    # An explicit audience still works: the PD course is reachable on request.
+    pd = client.get("/api/resources/random", params={"audience": "educators"}).json()
+    assert pd["link"] == "https://pd.com"
 
 
 def test_batch_import_upserts_on_link(client):
