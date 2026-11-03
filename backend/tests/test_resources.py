@@ -330,6 +330,13 @@ def test_udl_coverage(client):
     assert cov["engagement"] == 1
     assert cov["by_type"] == {"video": 1, "activity": 1}
 
+    cov_video = client.get("/api/udl-coverage", params={"tag": "water cycle", "resource_type": "video"}).json()
+    assert cov_video["total"] == 1
+    assert cov_video["representation"] == 1
+    assert cov_video["action_expression"] == 0
+    assert cov_video["engagement"] == 0
+    assert cov_video["by_type"] == {"video": 1}
+
 
 def _python_loop_coverage(db, ids):
     """The per-request Python loop that udl_coverage used to run over every
@@ -368,6 +375,9 @@ def test_udl_coverage_sql_matches_python_loop_on_seed(db_session):
         {"q": "", "tag": "fractions"},
         {"q": "fractions"},
         {"q": "water cycle", "grade_band": "3-5"},
+        {"q": "", "cost": "free", "resource_type": "activity"},
+        {"q": "fractions", "cost": "free"},
+        {"q": "water cycle", "scope": "lesson"},
     ]
     for case in cases:
         _, rows, _ = resource_service.list_resources(

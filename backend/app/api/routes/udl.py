@@ -15,12 +15,31 @@ def udl_coverage(
     grade_band: str | None = None,
     tag: str | None = None,
     audience: str | None = None,
+    cost: str | None = None,
+    scope: str | None = None,
+    resource_type: str | None = None,
+    granularity: str | None = None,
+    standard: str | None = None,
+    age: int | None = None,
     db: Session = Depends(get_db),
 ):
     """For the current theme search, how many matching resources support each
     UDL principle (Engagement / Representation / Action & Expression) and each
     format. A thin principle is a gap the teacher still needs to fill."""
-    return resource_service.udl_coverage(db, q, subject, grade_band, tag, audience)
+    return resource_service.udl_coverage(
+        db,
+        q=q,
+        subject=subject,
+        grade_band=grade_band,
+        tag=tag,
+        audience=audience,
+        cost=cost,
+        scope=scope,
+        resource_type=resource_type,
+        granularity=granularity,
+        standard=standard,
+        age=age,
+    )
 
 
 @router.get("/stats")

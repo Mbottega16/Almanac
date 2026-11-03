@@ -204,14 +204,25 @@ export function fetchLibraryStats(): Promise<LibraryStats> {
   return apiGet("/api/stats");
 }
 
-export function fetchUdlCoverage(params: {
+export interface UdlCoverageQuery {
   q?: string;
   subject?: string;
   grade_band?: string;
+  resource_type?: string;
+  scope?: string;
+  publisher?: string;
+  granularity?: string;
+  cost?: string;
+  source_site?: string;
   tag?: string;
+  standard?: string;
+  age?: number | string;
   audience?: Audience;
-}): Promise<UdlCoverage> {
-  return apiGet(`/api/udl-coverage?${toQs(params)}`);
+  credit_type?: string;
+}
+
+export function fetchUdlCoverage(params: UdlCoverageQuery): Promise<UdlCoverage> {
+  return apiGet(`/api/udl-coverage?${toQs(params as Record<string, unknown>)}`);
 }
 
 export function fetchAudiences(): Promise<NameCount[]> {

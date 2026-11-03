@@ -248,14 +248,115 @@ def test_dead_link_ranks_below_live_row_with_equal_match(client, db_session, bac
     assert body["total"] == 2
 
 
-def test_coverage_strip_counts_match_the_result_list(client):
-    """The UDL strip and the grid under it must never disagree."""
-    _make(client, "https://ex.com/w1", title="Weather Lesson", tags=["weather"],
-          udl_principles=["engagement"])
-    _make(client, "https://ex.com/w2", title="Cloud Types", tags=["weather"],
-          udl_principles=["representation"])
+def test_coverage_strip_counts(client):
+    """The UDL strip and the grid under it must never disagree, including
+    when filters (cost, resource_type, scope, granularity, standard, age) are active."""
+    _make(
+        client,
+        "https://ex.com/w1",
+        title="Weather Lesson",
+        tags=["weather"],
+        resource_type="lesson plan",
+        cost="free",
+        scope="lesson",
+        granularity="specific",
+        standards="NGSS.MS-ESS2-5",
+        age_min=11,
+        age_max=14,
+        udl_principles=["engagement"],
+    )
+    _make(
+        client,
+        "https://ex.com/w2",
+        title="Cloud Types Video",
+        tags=["weather"],
+        resource_type="video",
+        cost="paid",
+        scope="unit",
+        granularity="collection",
+        standards="NGSS.MS-ESS2-6",
+        age_min=11,
+        age_max=14,
+        udl_principles=["representation"],
+    )
+    _make(
+        client,
+        "https://ex.com/w3",
+        title="Rain Activity",
+        tags=["weather"],
+        resource_type="activity",
+        cost="free",
+        scope="lesson",
+        granularity="specific",
+        age_min=3,
+        age_max=5,
+        udl_principles=["action_expression"],
+    )
     _make(client, "https://ex.com/nope", title="Algebra", subject="Math", tags=["algebra"])
 
+    # Base query without filters
     results = client.get("/api/resources", params={"q": "weather"}).json()
     coverage = client.get("/api/udl-coverage", params={"q": "weather"}).json()
-    assert coverage["total"] == results["total"]
+    assert coverage["total"] == results["total"] == 3
+    assert coverage["engagement"] == 1
+    assert coverage["representation"] == 1
+    assert coverage["action_expression"] == 1
+    assert coverage["by_type"] == {"lesson plan": 1, "video": 1, "activity": 1}
+
+    # Filter by cost
+    free_results = client.get("/api/resources", params={"q": "weather", "cost": "free"}).json()
+    free_cov = client.get("/api/udl-coverage", params={"q": "weather", "cost": "free"}).json()
+    assert free_cov["total"] == free_results["total"] == 2
+    assert free_cov["engagement"] == 1
+    assert free_cov["action_expression"] == 1
+    assert free_cov["representation"] == 0
+    assert free_cov["by_type"] == {"lesson plan": 1, "activity": 1}
+
+    paid_results = client.get("/api/resources", params={"q": "weather", "cost": "paid"}).json()
+    paid_cov = client.get("/api/udl-coverage", params={"q": "weather", "cost": "paid"}).json()
+    assert paid_cov["total"] == paid_results["total"] == 1
+    assert paid_cov["representation"] == 1
+    assert paid_cov["engagement"] == 0
+    assert paid_cov["by_type"] == {"video": 1}
+
+    # Filter by resource_type
+    video_results = client.get("/api/resources", params={"q": "weather", "resource_type": "video"}).json()
+    video_cov = client.get("/api/udl-coverage", params={"q": "weather", "resource_type": "video"}).json()
+    assert video_cov["total"] == video_results["total"] == 1
+    assert video_cov["representation"] == 1
+    assert video_cov["engagement"] == 0
+    assert video_cov["by_type"] == {"video": 1}
+
+    # Filter by scope
+    scope_results = client.get("/api/resources", params={"q": "weather", "scope": "lesson"}).json()
+    scope_cov = client.get("/api/udl-coverage", params={"q": "weather", "scope": "lesson"}).json()
+    assert scope_cov["total"] == scope_results["total"] == 2
+    assert scope_cov["by_type"] == {"lesson plan": 1, "activity": 1}
+
+    # Filter by granularity
+    gran_results = client.get("/api/resources", params={"q": "weather", "granularity": "specific"}).json()
+    gran_cov = client.get("/api/udl-coverage", params={"q": "weather", "granularity": "specific"}).json()
+    assert gran_cov["total"] == gran_results["total"] == 2
+
+    # Filter by standard
+    std_results = client.get("/api/resources", params={"q": "weather", "standard": "MS-ESS2-5"}).json()
+    std_cov = client.get("/api/udl-coverage", params={"q": "weather", "standard": "MS-ESS2-5"}).json()
+    assert std_cov["total"] == std_results["total"] == 1
+    assert std_cov["engagement"] == 1
+
+    # Filter by age
+    age_results = client.get("/api/resources", params={"q": "weather", "age": 4}).json()
+    age_cov = client.get("/api/udl-coverage", params={"q": "weather", "age": 4}).json()
+    assert age_cov["total"] == age_results["total"] == 1
+    assert age_cov["action_expression"] == 1
+
+    # Unranked tag browsing with active cost filter
+    tag_results = client.get("/api/resources", params={"tag": "weather", "cost": "free"}).json()
+    tag_cov = client.get("/api/udl-coverage", params={"tag": "weather", "cost": "free"}).json()
+    assert tag_cov["total"] == tag_results["total"] == 2
+    assert tag_cov["by_type"] == {"lesson plan": 1, "activity": 1}
+
+
+def test_coverage_strip_counts_match_the_result_list(client):
+    """The UDL strip and the grid under it must never disagree."""
+    return test_coverage_strip_counts(client)

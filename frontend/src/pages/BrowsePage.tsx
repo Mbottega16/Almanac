@@ -102,13 +102,8 @@ export default function BrowsePage({
         });
 
       if (themeActive) {
-        fetchUdlCoverage({
-          q: filters.q,
-          subject: filters.subject,
-          grade_band: filters.grade_band,
-          tag: filters.tag,
-          audience: filters.audience,
-        })
+        const { udl: _udl, ...coverageFilters } = toQuery(filters);
+        fetchUdlCoverage(coverageFilters)
           .then((c) => mine === generation.current && setCoverage(c))
           .catch(() => setCoverage(null));
       } else {

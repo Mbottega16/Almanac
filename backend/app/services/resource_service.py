@@ -453,6 +453,12 @@ def udl_coverage(
     grade_band: str | None = None,
     tag: str | None = None,
     audience: str | None = None,
+    cost: str | None = None,
+    scope: str | None = None,
+    resource_type: str | None = None,
+    granularity: str | None = None,
+    standard: str | None = None,
+    age: int | None = None,
 ) -> dict:
     """For a theme search, how many matching resources hit each UDL principle
     and each resource type — so a teacher can see at a glance which of the
@@ -462,7 +468,18 @@ def udl_coverage(
     the strip can't claim a different number from the grid below it. Works
     on ids and two narrow columns rather than loading the matched rows, so it
     stays cheap however many resources match."""
-    filters = dict(subject=subject, grade_band=grade_band, tag=tag, audience=audience)
+    filters = dict(
+        subject=subject,
+        grade_band=grade_band,
+        tag=tag,
+        audience=audience,
+        cost=cost,
+        scope=scope,
+        resource_type=resource_type,
+        granularity=granularity,
+        standard=standard,
+        age=age,
+    )
     stmt = _base_query(**filters)
     ranked = search.rank(db, q, _allowed_ids(db, stmt, filters)) if q and q.strip() else None
     if ranked is None:
