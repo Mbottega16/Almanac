@@ -100,6 +100,16 @@ export default function App() {
     setDiscovering(false);
   };
 
+  const handleSelectFilter = (filters: Partial<Filters>) => {
+    setBrowseFilters({
+      ...EMPTY_FILTERS,
+      ...filters,
+    });
+    setBrowseKey((k) => k + 1);
+    setTab("browse");
+    setDiscovering(false);
+  };
+
   if (authed === null) return <div style={{ padding: "2rem" }}>Loading…</div>;
   if (authed === false) return <LoginGate onAuthed={() => setAuthed(true)} />;
   if (discovering)
@@ -200,7 +210,7 @@ export default function App() {
         />
       )}
       {tab === "capture" && <CapturePage />}
-      {tab === "stats" && <StatsPage />}
+      {tab === "stats" && <StatsPage onSelectFilter={handleSelectFilter} />}
     </div>
   );
 }

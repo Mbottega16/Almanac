@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 
 import { LibraryStats, UDL_LABELS, UDL_PRINCIPLES, UdlPrinciple, fetchLibraryStats } from "../api/client";
+import type { Filters } from "../api/filters";
 
-export default function StatsPage() {
+export interface StatsPageProps {
+  onSelectFilter?: (filters: Partial<Filters>) => void;
+}
+
+export default function StatsPage({ onSelectFilter }: StatsPageProps = {}) {
   const [stats, setStats] = useState<LibraryStats | null>(null);
   const [error, setError] = useState(false);
 
@@ -49,7 +54,15 @@ export default function StatsPage() {
                       style={{ background: `rgba(70,130,180,${(n / max) * 0.75})` }}
                       title={`${n} ${s} resources support ${UDL_LABELS[p as UdlPrinciple]}`}
                     >
-                      {n}
+                      <button
+                        type="button"
+                        className="stats-cell-btn"
+                        onClick={() => onSelectFilter?.({ subject: s, udl: p })}
+                        title={`${n} ${s} resources support ${UDL_LABELS[p as UdlPrinciple]}`}
+                        aria-label={`${s}, ${UDL_LABELS[p as UdlPrinciple]}: ${n} resources`}
+                      >
+                        {n}
+                      </button>
                     </td>
                   );
                 })}
@@ -63,8 +76,15 @@ export default function StatsPage() {
       <ul className="stats-thin">
         {stats.thin_cells.map((c, i) => (
           <li key={i}>
-            <strong>{c.subject}</strong> · {UDL_LABELS[c.principle as UdlPrinciple] ?? c.principle}
-            <span className="stats-thin-count"> — {c.count}</span>
+            <button
+              type="button"
+              className="stats-thin-btn"
+              onClick={() => onSelectFilter?.({ subject: c.subject, udl: c.principle })}
+              title={`Browse ${c.subject} resources supporting ${UDL_LABELS[c.principle as UdlPrinciple] ?? c.principle}`}
+            >
+              <strong>{c.subject}</strong> · {UDL_LABELS[c.principle as UdlPrinciple] ?? c.principle}
+              <span className="stats-thin-count"> — {c.count}</span>
+            </button>
           </li>
         ))}
       </ul>

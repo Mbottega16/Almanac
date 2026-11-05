@@ -119,3 +119,14 @@ test("groupStandardsByFramework handles empty or missing framework gracefully", 
   assert.equal(grouped.length, 1);
   assert.equal(grouped[0].framework, "Other");
 });
+
+test("stats matrix filter patch produces valid query with subject and udl", () => {
+  const statsFilter: Partial<Filters> = { subject: "Math", udl: "representation" };
+  const combined: Filters = { ...EMPTY_FILTERS, ...statsFilter };
+  const query = toQuery(combined);
+
+  assert.equal(query.subject, "Math");
+  assert.equal(query.udl, "representation");
+  assert.equal(query.audience, "students");
+  assert.equal(query.q, "");
+});
