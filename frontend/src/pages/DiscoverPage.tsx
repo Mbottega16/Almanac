@@ -127,9 +127,21 @@ export default function DiscoverPage({
   // The last narrowing choice, so a dead-end run can undo it in one tap.
   const [lastPick, setLastPick] = useState<{ key: StepKey; label: string } | null>(null);
   const dragX = useRef<number | null>(null);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const step = STEPS[i];
   const last = i === STEPS.length - 1;
+
+  // Debounce free-text theme input into filters.q so live match count updates as typed.
+  useEffect(() => {
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(() => {
+      setFilters((prev) => (prev.q === text ? prev : { ...prev, q: text }));
+    }, 200);
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    };
+  }, [text]);
 
   // Live "how many match so far" — the pinpoint feedback.
   useEffect(() => {
@@ -142,7 +154,14 @@ export default function DiscoverPage({
     };
   }, [filters]);
 
-  const advance = () => (last ? finish(filters) : setI((n) => n + 1));
+  const advance = () => {
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    setText("");
+    const next = { ...filters, q: "" };
+    setFilters(next);
+    if (last) finish(next);
+    else setI((n) => n + 1);
+  };
   const back = () => setI((n) => Math.max(0, n - 1));
 
   const pick = (value: string) => {
@@ -162,7 +181,7 @@ export default function DiscoverPage({
     setI((n) => Math.max(0, n - 1));
   };
 
-  const finish = (f: Filters) => onDone({ ...f, q: (f.q || text).trim() });
+  const finish = (f: Filters) => onDone(f);
 
   // Pointer/touch swipe: drag left = next, right = back.
   const onDown = (e: React.PointerEvent) => (dragX.current = e.clientX);
@@ -204,7 +223,8 @@ export default function DiscoverPage({
                   className="discover-freetext"
                   onSubmit={(e) => {
                     e.preventDefault();
-                    finish(filters);
+                    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+                    finish({ ...filters, q: text.trim() });
                   }}
                 >
                   <input
@@ -253,7 +273,7 @@ export default function DiscoverPage({
           </span>
         )}
         <button className="discover-nav" onClick={advance}>
-          {last ? "Done" : "Skip this →"}
+          Skip this →
         </button>
       </footer>
     </div>

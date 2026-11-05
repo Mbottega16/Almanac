@@ -130,3 +130,12 @@ test("stats matrix filter patch produces valid query with subject and udl", () =
   assert.equal(query.audience, "students");
   assert.equal(query.q, "");
 });
+
+test("theme filter updates query and explicitly clearing q resets query", () => {
+  const withTheme = withFilters({ q: "fractions", subject: "Math" });
+  assert.equal(toQuery(withTheme).q, "fractions");
+
+  const cleared = { ...withTheme, q: "" };
+  assert.equal(toQuery(cleared).q, "");
+});
+
