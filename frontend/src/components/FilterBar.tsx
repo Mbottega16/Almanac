@@ -1,6 +1,6 @@
-import type { NameCount } from "../api/client";
+import type { NameCount, StandardCount } from "../api/client";
 import { UDL_LABELS, UDL_PRINCIPLES } from "../api/client";
-import type { Filters } from "../api/filters";
+import { groupStandardsByFramework, type Filters } from "../api/filters";
 import { GRADE_BANDS, PD_RESOURCE_TYPES, RESOURCE_TYPES, SUBJECTS } from "../subjectGroups";
 
 const COST_OPTIONS = [
@@ -38,7 +38,7 @@ export default function FilterBar({
   onChange: (next: Filters) => void;
   subjects: NameCount[];
   tags: NameCount[];
-  standards?: NameCount[];
+  standards?: StandardCount[];
 }) {
   const countFor = (name: string) => subjects.find((s) => s.name === name)?.count ?? 0;
   const known = new Set(subjects.map((s) => s.name));
@@ -179,10 +179,17 @@ export default function FilterBar({
             title="Filter to resources aligned to a specific standard"
           >
             <option value="">Any standard</option>
-            {standards.map((s) => (
-              <option key={s.name} value={s.name}>
-                {s.name} ({s.count})
-              </option>
+            {groupStandardsByFramework(standards).map(({ framework, items }) => (
+              <optgroup key={framework} label={framework}>
+                {items.map((s) => {
+                  const code = s.code || s.name;
+                  return (
+                    <option key={code} value={code}>
+                      {code} ({s.count})
+                    </option>
+                  );
+                })}
+              </optgroup>
             ))}
           </select>
         )}

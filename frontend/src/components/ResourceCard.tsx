@@ -94,7 +94,8 @@ export default function ResourceCard({
     description.length > summary.length ||
     resource.learning_outcomes.length > 0 ||
     !!resource.materials ||
-    !!resource.credit_note;
+    !!resource.credit_note ||
+    (resource.standard_codes && resource.standard_codes.length > 0);
 
   const tintStyle = {
     "--card-accent": tint.accent,
@@ -192,6 +193,11 @@ export default function ResourceCard({
             {resource.credit_note && (
               <p className="materials">
                 <strong>Credit:</strong> {resource.credit_note}
+              </p>
+            )}
+            {resource.standard_codes && resource.standard_codes.length > 0 && (
+              <p className="materials standards">
+                <strong>Standards:</strong> {resource.standard_codes.join(", ")}
               </p>
             )}
           </div>

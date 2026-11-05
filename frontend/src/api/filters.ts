@@ -2,7 +2,7 @@
 // API query translation, and the audience-switch reset. No React and no
 // Vite-only imports, so `node --test` can run it directly.
 
-import type { Audience } from "./client";
+import type { Audience, StandardCount } from "./client";
 
 export interface Filters {
   q: string;
@@ -51,4 +51,27 @@ export function toQuery(f: Filters) {
 // a track they don't apply to.
 export function switchAudience(filters: Filters, audience: Audience): Filters {
   return { ...EMPTY_FILTERS, audience, q: filters.q };
+}
+
+export interface FrameworkGroup {
+  framework: string;
+  items: StandardCount[];
+}
+
+export function groupStandardsByFramework(standards: StandardCount[]): FrameworkGroup[] {
+  if (!standards || standards.length === 0) return [];
+  const map = new Map<string, StandardCount[]>();
+  for (const s of standards) {
+    const fw = s.framework || "Other";
+    const existing = map.get(fw);
+    if (existing) {
+      existing.push(s);
+    } else {
+      map.set(fw, [s]);
+    }
+  }
+  return Array.from(map.entries()).map(([framework, items]) => ({
+    framework,
+    items,
+  }));
 }

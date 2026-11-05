@@ -431,11 +431,15 @@ def list_tags_with_counts(db: Session) -> list[tuple[str, int]]:
     return list(db.execute(stmt).all())
 
 
-def list_standards_with_counts(db: Session) -> list[tuple[str, int]]:
+def list_standards_with_counts(db: Session) -> list[tuple[str, str, int]]:
     stmt = (
-        select(Standard.code, func.count(resource_standards.c.resource_id))
+        select(
+            Standard.code,
+            Standard.framework,
+            func.count(resource_standards.c.resource_id),
+        )
         .join(resource_standards, resource_standards.c.standard_id == Standard.id)
-        .group_by(Standard.code)
+        .group_by(Standard.code, Standard.framework)
         .order_by(Standard.framework, Standard.code)
     )
     return list(db.execute(stmt).all())

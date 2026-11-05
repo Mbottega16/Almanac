@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_db
-from app.schemas.resource import NameCount
+from app.schemas.resource import NameCount, StandardCount
 from app.services import resource_service
 
 router = APIRouter()
@@ -58,8 +58,11 @@ def list_tags(db: Session = Depends(get_db)):
     return _as_counts(resource_service.list_tags_with_counts(db))
 
 
-@router.get("/standards", response_model=list[NameCount])
+@router.get("/standards", response_model=list[StandardCount])
 def list_standards(db: Session = Depends(get_db)):
     """CCSS / NGSS / C3 codes parsed out of resources' `standards` text —
     so a teacher can jump straight to 'what covers CCSS.MATH.6.RP.A.3'."""
-    return _as_counts(resource_service.list_standards_with_counts(db))
+    return [
+        StandardCount(code=code, framework=framework, count=count, name=code)
+        for code, framework, count in resource_service.list_standards_with_counts(db)
+    ]

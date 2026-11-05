@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { EMPTY_FILTERS, switchAudience, toQuery, type Filters } from "./filters.ts";
+import { EMPTY_FILTERS, groupStandardsByFramework, switchAudience, toQuery, type Filters } from "./filters.ts";
+import type { StandardCount } from "./client.ts";
 
 function withFilters(patch: Partial<Filters>): Filters {
   return { ...EMPTY_FILTERS, ...patch };
@@ -88,4 +89,33 @@ test("the classReady flag does not survive an audience switch into a query", () 
   const query = toQuery(after);
 
   assert.equal(query.granularity, "");
+});
+
+test("groupStandardsByFramework groups standards by framework using optgroup format", () => {
+  const standards: StandardCount[] = [
+    { name: "D2.CIV.1.K-2", code: "D2.CIV.1.K-2", framework: "C3", count: 1 },
+    { name: "CCSS.MATH.3.NF.A.1", code: "CCSS.MATH.3.NF.A.1", framework: "CCSS", count: 2 },
+    { name: "MS-LS1-1", code: "MS-LS1-1", framework: "NGSS", count: 3 },
+  ];
+
+  const grouped = groupStandardsByFramework(standards);
+  assert.equal(grouped.length, 3);
+  assert.equal(grouped[0].framework, "C3");
+  assert.equal(grouped[0].items.length, 1);
+  assert.equal(grouped[0].items[0].code, "D2.CIV.1.K-2");
+  assert.equal(grouped[1].framework, "CCSS");
+  assert.equal(grouped[1].items[0].code, "CCSS.MATH.3.NF.A.1");
+  assert.equal(grouped[2].framework, "NGSS");
+  assert.equal(grouped[2].items[0].code, "MS-LS1-1");
+});
+
+test("groupStandardsByFramework handles empty or missing framework gracefully", () => {
+  assert.deepEqual(groupStandardsByFramework([]), []);
+
+  const standards = [
+    { name: "CUSTOM-1", code: "CUSTOM-1", framework: "", count: 1 },
+  ] as StandardCount[];
+  const grouped = groupStandardsByFramework(standards);
+  assert.equal(grouped.length, 1);
+  assert.equal(grouped[0].framework, "Other");
 });

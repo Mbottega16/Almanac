@@ -65,6 +65,11 @@ export interface NameCount {
   count: number;
 }
 
+export interface StandardCount extends NameCount {
+  code: string;
+  framework: string;
+}
+
 export interface UdlCoverage {
   total: number;
   engagement: number;
@@ -197,7 +202,7 @@ export function fetchPublishers(): Promise<NameCount[]> {
 export function fetchTags(): Promise<NameCount[]> {
   return apiGet("/api/tags");
 }
-export function fetchStandards(): Promise<NameCount[]> {
+export function fetchStandards(): Promise<StandardCount[]> {
   return apiGet("/api/standards");
 }
 export function fetchLibraryStats(): Promise<LibraryStats> {

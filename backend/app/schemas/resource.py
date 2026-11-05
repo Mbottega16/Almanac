@@ -98,6 +98,13 @@ class NameCount(BaseModel):
     count: int
 
 
+class StandardCount(BaseModel):
+    code: str
+    framework: str
+    count: int
+    name: str
+
+
 class UdlCoverageOut(BaseModel):
     total: int
     engagement: int

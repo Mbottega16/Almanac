@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   NameCount,
   Resource,
+  StandardCount,
   UdlCoverage,
   fetchAudiences,
   fetchStandards,
@@ -46,7 +47,7 @@ export default function BrowsePage({
   const [unmatched, setUnmatched] = useState<string[]>([]);
   const [subjects, setSubjects] = useState<NameCount[]>([]);
   const [tags, setTags] = useState<NameCount[]>([]);
-  const [standards, setStandards] = useState<NameCount[]>([]);
+  const [standards, setStandards] = useState<StandardCount[]>([]);
   const [audiences, setAudiences] = useState<NameCount[]>([]);
   const [coverage, setCoverage] = useState<UdlCoverage | null>(null);
   const [loading, setLoading] = useState(true);

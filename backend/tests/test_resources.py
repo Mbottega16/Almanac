@@ -126,8 +126,13 @@ def test_standards_parsed_and_filterable(client):
     assert "MS-LS1-1" in body["items"][0]["standard_codes"]
     # case-insensitive on the query
     assert client.get("/api/resources", params={"standard": "ms-ls1-1"}).json()["total"] == 1
-    codes = {c["name"] for c in client.get("/api/standards").json()}
+    standards_res = client.get("/api/standards").json()
+    codes = {c["name"] for c in standards_res}
     assert {"MS-LS1-1", "3-LS1-1", "CCSS.MATH.CONTENT.6.RP.A.3"} <= codes
+    by_code = {c["code"]: c for c in standards_res}
+    assert by_code["MS-LS1-1"]["framework"] == "NGSS"
+    assert by_code["MS-LS1-1"]["count"] == 1
+    assert by_code["CCSS.MATH.CONTENT.6.RP.A.3"]["framework"] == "CCSS"
 
 
 def test_scope_and_publisher_facets(client):
