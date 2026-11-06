@@ -200,7 +200,7 @@ limits and pointer-only records still apply.
      answered 11 of 14 requests. Retry about 20 a day (`requeue` now keeps their titles).
   4. Thinnest graded cells after #17: Math 3-5 (22) and 9-12 (16); Social Studies K-2 (13),
      3-5 (8) and 6-8 (12); Arts and PE/Health in every band.
-  5. 11 local `crew/*` branches wait for review. None is pushed.
+  5. 12 local `crew/*` branches on the PC wait for review. None is pushed.
   6. Later: the teacher upload/pull phase (not started), a keep-alive ping, and a persistent
      database before about 20,000 rows.
 
