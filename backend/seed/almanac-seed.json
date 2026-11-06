@@ -22819,42 +22819,6 @@
     ]
   },
   {
-    "link": "https://teachengineering.org/activities/tufts-3058-biomimicry-airborne-transport-design-activity",
-    "title": "Introduction to Biomimicry: Airborne Transport Design",
-    "description": "Students are introduced to biomimicry through an airborne transport design challenge inspired by wind-dispersed seeds and pollen. Students analyze the structures, properties, and actions of five plants adapted for wind dispersal. Working in teams, students apply their observations to design and buil",
-    "description_source": "excerpt",
-    "audience": "students",
-    "subject": "Science",
-    "grade_band": "6-8",
-    "resource_type": "activity",
-    "scope": "lesson",
-    "cost": "free",
-    "source_site": "TeachEngineering",
-    "license": "Not stated on page",
-    "standards": "",
-    "granularity": "specific",
-    "tags": [
-      "engineering",
-      "hands-on",
-      "stem"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ],
-    "udl_rationale": "auto-tagged from format",
-    "evidence": "Students are introduced to biomimicry through an airborne transport design challenge inspired by wind-dispersed seeds and pollen. Students analyze the structures, properties, and actions of five plants adapted for wind dispersal. Working in",
-    "link_status": "ok",
-    "age_min": 11,
-    "age_max": 14,
-    "duration_minutes": 240,
-    "learning_outcomes": [
-      "Students will be able to apply the concept of structure and function to analyze how seeds and pollen get carried through the air",
-      "Students will be able to implement a biomimetic design process",
-      "Students will be able to investigate the strengths and weaknesses of different nature-inspired design ideas"
-    ]
-  },
-  {
     "link": "https://teachengineering.org/activities/rice-3052-dirty-water-chemical-environmental-engineering",
     "title": "Clean the Dirty Water: Introduction to Chemical and Environmental Engineering",
     "description": "Students take on the roles of chemical and environmental engineers to design, build, and test a simple water filtration system. Working in pairs, students examine a “dirty water” sample containing soil, sand, gravel, vegetable oil, and water, recording observations and measuring its pH. Following th",
