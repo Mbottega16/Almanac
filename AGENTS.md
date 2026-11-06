@@ -184,17 +184,17 @@ limits and pointer-only records still apply.
     TeachEngineering row (moved link) goes in the same PR.
   - Local `master` held one unpushed crew commit (accessibility toggles, `ecef7cf`). It now
     sits on branch `crew/a11y-toggles-unpushed`, and `master` matches GitHub.
-- **Current State (2026-11-06):**
-  - Live on Render from `master`: 1,405 rows, with the discovery overhaul (#9) and the PreK
-    Originals (#12). The live rows still carry the old lesson and unit UDL default.
-  - Open PRs: #13 (link check 2026-11-02, out of date), #15, #16, #17. A session's
-    `gh pr merge` was blocked by the permission check: the owner merges.
-  - Tests: 59 pass on `master`, 61 with #16. The seed database builds with #17 applied
-    (2,181 rows in, 2,179 stored: the 2 known LOC link pairs).
+- **Current State (2026-11-06, evening):**
+  - On the owner's word, #15 (merge commit `253ff3c`), #17 (squash `8eeb37a`) and #16 (squash
+    `3714d47`) are merged. Render shows `3714d47` live since 23:20 UTC; the site answers.
+  - The library has 2,180 rows (2,178 stored: the 2 known LOC link pairs), with the discovery
+    overhaul (#9) and the PreK Originals (#12). Lessons and units carry no default UDL tags.
+  - Open PR: #13 (link check 2026-11-02, out of date). The permission check blocked a session
+    from closing it.
+  - Tests: 61 pass on `master`.
 - **Next Up:**
-  1. The owner merges #15 with **Create a merge commit** (a squash would conflict with #17),
-     then #17, then #16. Close #13: its real findings are 2 dead Twinkl links, 5 unreachable
-     links and 1 recovered link, and next Monday's run replaces it.
+  1. The owner closes #13. Its real findings are 2 dead Twinkl links, 5 unreachable links and
+     1 recovered link, and next Monday's run (2026-11-09) checks the new seed.
   2. Portal backlog: 126 to do, 6 assigned and blocked (`portal next --n 8`).
   3. LOC: 111 pages parked. HTML pages get a Cloudflare challenge; the `?fo=json` form
      answered 11 of 14 requests. Retry about 20 a day (`requeue` now keeps their titles).
