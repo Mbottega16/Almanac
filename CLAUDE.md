@@ -104,9 +104,11 @@ Read it when a task touches past work. **Business side:** the owner's my-brain v
   join (parsed CCSS/NGSS/C3 codes), and the fixed 3-row `udl_principles` join. Faceted search,
   batch-upsert on `link` (canonicalized on write, `services/links.py`), `GET /api/udl-coverage`,
   `GET /api/stats`, `/api/standards`.
-- **Frontend:** Guided discovery (one question at a time, live match count), Browse (theme
-  search, Free/Paid, scope, subject, grade/format/theme/age/standard filters, UDL toggles,
-  "Class-ready only"), the UDL coverage strip, resource cards with cost/scope/publisher/UDL
+- **Frontend:** a discovery front door (#9, 2026-10-29): a plain-language sentence box whose
+  filters show as removable chips, three doors (who / what / how much time) with live counts,
+  and curated situation paths. Browse (theme search; Free/Paid, scope, subject,
+  grade/format/theme/age/standard filters, UDL toggles and "Class-ready only" behind a
+  "Refine" toggle, active filters as chips), the UDL coverage strip, resource cards with cost/scope/publisher/UDL
   pills and "link may be broken" badges, a Stats page (subject×UDL heatmap), and a read-only
   Capture page.
 - **Link health runs itself.** `.github/workflows/link-check.yml` runs
@@ -120,7 +122,7 @@ Read it when a task touches past work. **Business side:** the owner's my-brain v
 
 ## Commands & Verification
 
-- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (47 pass). `cd frontend && npm run build`.
+- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (59 pass; 61 with PR #16). `cd frontend && npm run build`.
 - **Rebuild the seed DB** after the JSON changes: `scripts/build_seed_db.py`.
 - **Links:** `scripts/check_links.py` (`--json`/`--write`), `scripts/flag_dead_links.py`,
   `scripts/find_near_dupes.py` (soft duplicates for review).
@@ -133,7 +135,7 @@ To keep search and file reads fast, **never scan or read inside**:
 - `backend/.venv/` and `frontend/node_modules/` — 9,780+ vendor files.
 - `backend/static/` and `frontend/dist/` — generated SPA build bundles.
 - `backend/data/*.db` and `backend/seed/almanac-seed.db` — binary SQLite databases (the seed `.db` is git-ignored, built at deploy).
-- `backend/seed/almanac-seed.json` — ~1,100-row JSON seed (well over 1 MB); query via Python/API or read targeted slices rather than loading the entire file into context.
+- `backend/seed/almanac-seed.json` — 1,405-row JSON seed (2,180 with PR #17; about 3 MB, 2-space indent); query via Python/API or read targeted slices rather than loading the entire file into context.
 
 ## Rules & Gotchas
 
@@ -147,15 +149,20 @@ through the vault engine is allowed (owner, 2026-10-22), but robots.txt, Crawl-d
 limits and pointer-only records still apply.
 
 - **Merging is the owner's call.** A session merges a PR only on the owner's explicit go-ahead
-  (`gh pr merge N --squash`, the repo's style; it worked 2026-10-25 — earlier attempts were
-  blocked by the permission check). Check `git merge-tree` first. Merging anything under
-  `backend/` redeploys the live site.
+  (`gh pr merge N --squash`, the repo's style; it worked 2026-10-25 — earlier attempts and
+  2026-11-06 were blocked by the permission check). Check `git merge-tree` first. Merging
+  anything under `backend/` redeploys the live site. A PR stacked on another needs
+  **Create a merge commit** for the lower one, or the upper one conflicts.
 - **The Vercel `backend` check can fail on new PRs. That check is noise.** Render is the live
   site; `almanac-api.vercel.app` is an old fallback.
 - **Take URLs from `portal links`** (real hrefs, renders JavaScript pages). A summarizing fetch
   tool once invented a host for CommonLit — 5 dead links, caught by the page check.
 - **loc.gov answers HTTP 429** (a Cloudflare challenge) after about 27 requests: retry in small
-  batches a day apart. **PBS LearningMedia's bare domain has an expired TLS certificate** and
+  batches a day apart. On 2026-11-06 its HTML pages answered 403 (the challenge) at once, but
+  the `?fo=json` form the engine reads still answered.
+- **Write the seed with a 2-space indent and a final newline** (`JSON.stringify(rows, null, 2)`,
+  or `json.dumps(rows, indent=2, ensure_ascii=False)`). The engine and the link check both do.
+  Any other indent rewrites the whole file in the diff. **PBS LearningMedia's bare domain has an expired TLS certificate** and
   the engine stores links without `www.`, so PBS pages are held until that is decided.
 - **The URL check can't see duplicates under old slugs** (two Khan courses had older URL slugs).
 - `check_links.py` uses `certifi`'s CA bundle — Windows Python's `ssl` has none, which once
@@ -166,31 +173,34 @@ limits and pointer-only records still apply.
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-- **Last Worked On (2026-10-29):** discovery overhaul on branch `discovery-overhaul`
-  (local only, NOT pushed): the 7-step guided wizard was replaced by a front door with
-  (1) a plain-language sentence box whose extracted filters show as removable chips,
-  (2) a three-door flow — who / what / how much time — with live counts, and
-  (3) curated situation paths; Browse's filters moved behind a collapsed "Refine"
-  toggle with active filters as chips; cards gained a glanceable facts strip
-  (time · grades/ages · materials). Commits `e28fbf9`..`57c96fc`.
-- **Current State (2026-10-29):** branch is frontend-only — no backend/API change.
-  The API has no duration parameter, so time filtering is client-side: Filters
-  gained a `duration` field (stripped from the API query); BrowsePage fetches the
-  full match set and filters by `duration_minutes` (only rows that list a time
-  participate — 533 of 1,146). Door 1 maps to the `age` filter (back-filled age
-  ranges overlap bands), NOT exact-match `grade_band`, which would hide the ~355
-  "All"-band rows. Verified: `npm run build` clean; backend pytest 59 passed;
-  door/path mappings exercised against the real API on the built seed DB
-  (door 1: 369/502/503/490; every door-3 bucket count matches a seed simulation);
-  the parser's worked example yields exactly Science · Grade 4 · ~45 min ·
-  Hands-on; the password gate was re-checked end-to-end (401 unauth, login 200).
+- **Last Worked On (2026-11-06, PC):**
+  - The owner dropped the lesson and unit UDL default. PR #15 clears it from 280 rows and
+    puts back the seed's 2-space indent. The vault engine no longer writes the default.
+  - PR #16: the weekly link check skips Almanac Originals. PR #13 had marked all 232 of them
+    `unreachable`, because no web request can open an `almanac-original://` link.
+  - PR #17, stacked on #15: +775 entries. ReadWorks 299, TeachEngineering 315 (lessons,
+    activities, units), Math Is Fun 135, portal batch 002 (NASA and National Geographic, 10),
+    and a hand-picked gap batch of 17 graded Math and Social Studies rows. One dead
+    TeachEngineering row (moved link) goes in the same PR.
+  - Local `master` held one unpushed crew commit (accessibility toggles, `ecef7cf`). It now
+    sits on branch `crew/a11y-toggles-unpushed`, and `master` matches GitHub.
+- **Current State (2026-11-06):**
+  - Live on Render from `master`: 1,405 rows, with the discovery overhaul (#9) and the PreK
+    Originals (#12). The live rows still carry the old lesson and unit UDL default.
+  - Open PRs: #13 (link check 2026-11-02, out of date), #15, #16, #17. A session's
+    `gh pr merge` was blocked by the permission check: the owner merges.
+  - Tests: 59 pass on `master`, 61 with #16. The seed database builds with #17 applied
+    (2,181 rows in, 2,179 stored: the 2 known LOC link pairs).
 - **Next Up:**
-  1. The owner reviews `discovery-overhaul` and decides on pushing/merging
-     (frontend-only push does not redeploy Render per the rootDir rule — the
-     Vercel fallback serves the SPA, so confirm where the frontend ships from
-     before merging).
-  2. The unpushed Social Studies harvest batch (+14) still waits in its own
-     clone for the owner's "push" — it goes up as a harvest PR in the style of #7.
-  3. Later phase (owner's direction): teacher upload/pull — accounts, an upload
-     form over the seed schema, and the moderation queue. Not started.
+  1. The owner merges #15 with **Create a merge commit** (a squash would conflict with #17),
+     then #17, then #16. Close #13: its real findings are 2 dead Twinkl links, 5 unreachable
+     links and 1 recovered link, and next Monday's run replaces it.
+  2. Portal backlog: 126 to do, 6 assigned and blocked (`portal next --n 8`).
+  3. LOC: 111 pages parked. HTML pages get a Cloudflare challenge; the `?fo=json` form
+     answered 11 of 14 requests. Retry about 20 a day (`requeue` now keeps their titles).
+  4. Thinnest graded cells after #17: Math 3-5 (22) and 9-12 (16); Social Studies K-2 (13),
+     3-5 (8) and 6-8 (12); Arts and PE/Health in every band.
+  5. 11 local `crew/*` branches wait for review. None is pushed.
+  6. Later: the teacher upload/pull phase (not started), a keep-alive ping, and a persistent
+     database before about 20,000 rows.
 
