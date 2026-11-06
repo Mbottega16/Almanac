@@ -99,9 +99,16 @@ STATUS_FILE = SEED_DIR / "link-status.json"
 _FAILING = {"dead"}
 
 
+def _checkable(link: str | None) -> bool:
+    """Only a web link can be fetched. An Almanac Original lives in the library
+    itself (an almanac-original:// link), so the checker skips it. Without this,
+    every Original came back 'unreachable'."""
+    return urlsplit(link or "").scheme in ("http", "https")
+
+
 def _seed_rows(limit: int) -> list[tuple[int, str, str | None]]:
     rows = json.loads(SEED_FILE.read_text(encoding="utf-8"))
-    triples = [(i, r["link"], r.get("title")) for i, r in enumerate(rows)]
+    triples = [(i, r["link"], r.get("title")) for i, r in enumerate(rows) if _checkable(r["link"])]
     return triples[:limit] if limit else triples
 
 
@@ -142,7 +149,7 @@ def _rows(limit: int) -> list[tuple[int, str, str | None]]:
     db = SessionLocal()
     try:
         q = db.query(Resource.id, Resource.link, Resource.title).order_by(Resource.id)
-        return [tuple(r) for r in (q.limit(limit).all() if limit else q.all())]
+        return [tuple(r) for r in (q.limit(limit).all() if limit else q.all()) if _checkable(r[1])]
     finally:
         db.close()
 
