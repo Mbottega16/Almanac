@@ -184,19 +184,17 @@ limits and pointer-only records still apply.
     TeachEngineering row (moved link) goes in the same PR.
   - Local `master` held one unpushed crew commit (accessibility toggles, `ecef7cf`). It now
     sits on branch `crew/a11y-toggles-unpushed`, and `master` matches GitHub.
-- **Current State (2026-11-06, evening):**
-  - On the owner's word, #15 (merge commit `253ff3c`), #17 (squash `8eeb37a`) and #16 (squash
-    `3714d47`) are merged. Render shows `3714d47` live since 23:20 UTC; the site answers.
-  - The library has 2,180 rows (2,178 stored: the 2 known LOC link pairs), with the discovery
-    overhaul (#9) and the PreK Originals (#12). Lessons and units carry no default UDL tags.
-  - Open PRs: #18 (18 kindergarten Originals: three 5-day Social Studies units; K-2 Social
-    Studies 13 → 31) and #13 (link check 2026-11-02, out of date; a session was blocked from
-    closing it).
-  - Tests: 61 pass on `master`, and on #18 (seed builds 2,198 rows, 2,196 stored).
+- **Current State (2026-11-06, night):**
+  - On the owner's word, #15 (merge commit `253ff3c`), #17 (squash `8eeb37a`), #16 (squash
+    `3714d47`) and #18 (squash `dd68110`) are merged, and #13 is closed. Render shows `dd68110`
+    live; the site answers.
+  - The library has 2,198 rows (2,196 stored: the 2 known LOC link pairs), with the discovery
+    overhaul (#9), the PreK Originals (#12) and 18 kindergarten Originals (#18, Social Studies).
+    Lessons and units carry no default UDL tags. No PR is open.
+  - Tests: 61 pass on `master`.
 - **Next Up:**
-  1. The owner reviews and merges #18, and closes #13. #13's real findings are 2 dead Twinkl
-     links, 5 unreachable links and 1 recovered link; next Monday's run (2026-11-09) checks the
-     new seed.
+  1. Next Monday's link check (2026-11-09) runs on the new seed. #13's real findings were 2
+     dead Twinkl links, 5 unreachable links and 1 recovered link.
   2. Portal backlog: 126 to do, 6 assigned and blocked (`portal next --n 8`).
   3. LOC: 111 pages parked. HTML pages get a Cloudflare challenge; the `?fo=json` form
      answered 11 of 14 requests. Retry about 20 a day (`requeue` now keeps their titles).
