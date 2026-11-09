@@ -1633,7 +1633,7 @@
     "udl_principles": [
       "representation"
     ],
-    "link_status": "ok",
+    "link_status": "dead",
     "granularity": "specific"
   },
   {
@@ -2241,7 +2241,7 @@
       "action_expression",
       "engagement"
     ],
-    "link_status": "ok",
+    "link_status": "dead",
     "granularity": "specific"
   },
   {
@@ -2916,7 +2916,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "ok",
+    "link_status": "unreachable",
     "granularity": "collection"
   },
   {
@@ -4559,7 +4559,7 @@
       "representation",
       "action_expression"
     ],
-    "link_status": "ok",
+    "link_status": "unreachable",
     "granularity": "specific"
   },
   {
@@ -4659,7 +4659,7 @@
       "representation",
       "action_expression"
     ],
-    "link_status": "ok",
+    "link_status": "unreachable",
     "granularity": "collection",
     "evidence": "Grammar is defined in the Collins Concise Dictionary as 'the rules of a language, that show how sentences are formed.'"
   },
@@ -6984,7 +6984,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -7116,7 +7116,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "ok",
+    "link_status": "unreachable",
     "granularity": "specific"
   },
   {
@@ -9384,7 +9384,7 @@
     ],
     "udl_rationale": "action_expression: students physically apply and manipulate paint materials to create an original piece; engagement: novelty of nature interacting with art hooks interest",
     "evidence": "This activity shows kids how they can work with Mother Nature to create original works of raindrop art.",
-    "link_status": "ok"
+    "link_status": "unreachable"
   },
   {
     "link": "https://www.deepspacesparkle.com/apple-art-project/",
@@ -9499,7 +9499,7 @@
     ],
     "udl_rationale": "action_expression: students generate and paint original abstract compositions; engagement: personal emotional connection increases investment in the work",
     "evidence": "Students will gain an understanding of how much of a role emotion plays in artmaking as they create paintings based on feelings.",
-    "link_status": "ok"
+    "link_status": "unreachable"
   },
   {
     "link": "https://buffaloakg.org/learn-discover/educators/lesson-plans/contrasting-styles",
@@ -9612,7 +9612,7 @@
     ],
     "udl_rationale": "action_expression: students use a scratching/etching technique to physically produce an original image",
     "evidence": "By using aluminum foil instead of paper, students will create fabulous (and shiny) works of art.",
-    "link_status": "ok"
+    "link_status": "unreachable"
   },
   {
     "link": "https://buffaloakg.org/learn-discover/educators/lesson-plans/creating-print-line-etchings",
