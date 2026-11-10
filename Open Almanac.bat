@@ -1,0 +1,3 @@
+@echo off
+echo Opening Almanac...
+start "" "https://almanac-api.vercel.app"
