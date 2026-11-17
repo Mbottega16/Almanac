@@ -139,3 +139,25 @@ test("theme filter updates query and explicitly clearing q resets query", () => 
   assert.equal(toQuery(cleared).q, "");
 });
 
+test("appending tag badge to active filter set preserves active filters and produces query with tag", () => {
+  const active = withFilters({ subject: "Science", grade_band: "6-8", cost: "free" });
+  const updated: Filters = { ...active, tag: "biology" };
+  const query = toQuery(updated);
+
+  assert.equal(query.subject, "Science");
+  assert.equal(query.grade_band, "6-8");
+  assert.equal(query.cost, "free");
+  assert.equal(query.tag, "biology");
+});
+
+test("appending standard badge to active filter set preserves active filters and produces query with standard", () => {
+  const active = withFilters({ subject: "Math", cost: "free", tag: "fractions" });
+  const updated: Filters = { ...active, standard: "CCSS.MATH.CONTENT.6.RP.A.3" };
+  const query = toQuery(updated);
+
+  assert.equal(query.subject, "Math");
+  assert.equal(query.cost, "free");
+  assert.equal(query.tag, "fractions");
+  assert.equal(query.standard, "CCSS.MATH.CONTENT.6.RP.A.3");
+});
+

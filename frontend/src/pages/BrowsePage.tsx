@@ -150,6 +150,14 @@ export default function BrowsePage({
   const changeAudience = (audience: Filters["audience"]) =>
     setFilters(switchAudience(filters, audience));
 
+  const handleSelectTag = useCallback((tag: string) => {
+    setFilters((prev) => ({ ...prev, tag }));
+  }, []);
+
+  const handleSelectStandard = useCallback((standard: string) => {
+    setFilters((prev) => ({ ...prev, standard }));
+  }, []);
+
   return (
     <div>
       <div className="audience-switch" role="tablist" aria-label="What are you looking for">
@@ -248,6 +256,8 @@ export default function BrowsePage({
                 key={r.id}
                 resource={r}
                 view={view}
+                onSelectTag={handleSelectTag}
+                onSelectStandard={handleSelectStandard}
               />
             ))}
           </div>

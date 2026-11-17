@@ -37,13 +37,19 @@ const COST_LABEL: Record<string, string> = {
   freemium: "Freemium",
 };
 
+export interface ResourceCardProps {
+  resource: Resource;
+  view?: "grid" | "list" | "large";
+  onSelectTag?: (tag: string) => void;
+  onSelectStandard?: (standard: string) => void;
+}
+
 export default function ResourceCard({
   resource,
   view = "grid",
-}: {
-  resource: Resource;
-  view?: "grid" | "list" | "large";
-}) {
+  onSelectTag,
+  onSelectStandard,
+}: ResourceCardProps) {
   const [visited, setVisited] = useState(!!resource.visited_at);
   const [expanded, setExpanded] = useState(false);
 
@@ -197,7 +203,21 @@ export default function ResourceCard({
             )}
             {resource.standard_codes && resource.standard_codes.length > 0 && (
               <p className="materials standards">
-                <strong>Standards:</strong> {resource.standard_codes.join(", ")}
+                <strong>Standards:</strong>{" "}
+                {resource.standard_codes.map((code) => (
+                  <button
+                    key={code}
+                    type="button"
+                    className="standard-pill badge-pill"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectStandard?.(code);
+                    }}
+                    title={`Filter by standard: ${code}`}
+                  >
+                    {code}
+                  </button>
+                ))}
               </p>
             )}
           </div>
@@ -228,10 +248,19 @@ export default function ResourceCard({
           ))}
         </div>
         <div className="tag-row">
-          {resource.tags.map((t) => (
-            <span key={t} className="tag-pill">
+          {(resource.tags || []).map((t) => (
+            <button
+              key={t}
+              type="button"
+              className="tag-pill badge-pill"
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelectTag?.(t);
+              }}
+              title={`Filter by theme: ${t}`}
+            >
               {t}
-            </span>
+            </button>
           ))}
         </div>
       </div>

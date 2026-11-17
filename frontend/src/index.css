@@ -691,6 +691,19 @@ h1 {
   opacity: 0.75;
 }
 
+.materials.standards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 1;
+}
+
+.materials.standards strong {
+  margin-right: 0.2rem;
+  opacity: 0.75;
+}
+
 .age-input {
   width: 5rem;
 }
@@ -734,13 +747,39 @@ h1 {
   margin-top: auto;
 }
 
-.tag-pill {
+.tag-pill,
+.standard-pill {
   display: inline-block;
   border-radius: 999px;
   padding: 0.1rem 0.6rem;
   font-size: 0.75rem;
   background: #8882;
   margin-right: 0.35rem;
+}
+
+button.tag-pill,
+button.standard-pill,
+button.badge-pill {
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: inherit;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+button.tag-pill:hover,
+button.standard-pill:hover,
+button.badge-pill:hover {
+  background: #8884;
+  color: var(--accent);
+}
+
+button.tag-pill:focus-visible,
+button.standard-pill:focus-visible,
+button.badge-pill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 nav {
