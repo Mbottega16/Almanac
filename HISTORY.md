@@ -19,6 +19,79 @@ This repo is public, so private planning notes stay in the owner's vault, not he
 
 ---
 
+## 2026-10-29 to 2026-10-30 — PRs #9 to #12 merged (rebuilt from git on 2026-11-06)
+
+*Mac · Claude · `7bc6d34`, `62a19ea`, `e83e7d3`, `e8cb771`*
+
+- **Changed:** the discovery overhaul merged as #9 (`7bc6d34`). Harvest PRs #10 (+14 Social
+  Studies: LOC, DocsTeach, Smithsonian) and #11 (+13 Arts: Smithsonian American Art, Cooper
+  Hewitt) merged. #12 added 232 PreK Almanac Originals (38 units, 194 day plans) with
+  `almanac-original://` links. The seed reached 1,405 rows (1,403 in the database).
+- **Left open:** the handoff below was not updated after these merges. #12 wrote the seed with
+  a 1-space indent, so its diff rewrote the whole file (fixed in #15).
+
+---
+
+## 2026-10-29 — state recorded in the previous handoff
+
+*Mac · Claude · (handoff moved here 2026-11-06)*
+
+- **Last Worked On (2026-10-29):** discovery overhaul on branch `discovery-overhaul`
+  (local only, NOT pushed): the 7-step guided wizard was replaced by a front door with
+  (1) a plain-language sentence box whose extracted filters show as removable chips,
+  (2) a three-door flow — who / what / how much time — with live counts, and
+  (3) curated situation paths; Browse's filters moved behind a collapsed "Refine"
+  toggle with active filters as chips; cards gained a glanceable facts strip
+  (time · grades/ages · materials). Commits `e28fbf9`..`57c96fc`.
+- **Current State (2026-10-29):** branch is frontend-only — no backend/API change.
+  The API has no duration parameter, so time filtering is client-side: Filters
+  gained a `duration` field (stripped from the API query); BrowsePage fetches the
+  full match set and filters by `duration_minutes` (only rows that list a time
+  participate — 533 of 1,146). Door 1 maps to the `age` filter (back-filled age
+  ranges overlap bands), NOT exact-match `grade_band`, which would hide the ~355
+  "All"-band rows. Verified: `npm run build` clean; backend pytest 59 passed;
+  door/path mappings exercised against the real API on the built seed DB
+  (door 1: 369/502/503/490; every door-3 bucket count matches a seed simulation);
+  the parser's worked example yields exactly Science · Grade 4 · ~45 min ·
+  Hands-on; the password gate was re-checked end-to-end (401 unauth, login 200).
+- **Next Up:**
+  1. The owner reviews `discovery-overhaul` and decides on pushing/merging
+     (frontend-only push does not redeploy Render per the rootDir rule — the
+     Vercel fallback serves the SPA, so confirm where the frontend ships from
+     before merging).
+  2. The unpushed Social Studies harvest batch (+14) still waits in its own
+     clone for the owner's "push" — it goes up as a harvest PR in the style of #7.
+  3. Later phase (owner's direction): teacher upload/pull — accounts, an upload
+     form over the seed schema, and the moderation queue. Not started.
+
+---
+
+## 2026-10-25 — state recorded in the previous handoff
+
+*Mac · Claude · (handoff moved here 2026-10-29 to make room for the discovery-overhaul handoff)*
+
+*Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
+
+- **Last Worked On (2026-10-25):** PR #4 (favorites cut) merged on the owner's go-ahead
+  (squash, `17e5ec3`), which redeploys Render; the docs restructure landed on top. Before that
+  (2026-10-24): PR #7 opened (+48: 35 staged candidates and 13 portal finds), and the vault
+  engine gained `import` and `portal` commands plus the `deep_portal` skill. Full detail:
+  `HISTORY.md`.
+- **Current State (2026-10-25):** live on Render from `master`, 1,098 resources, behind the
+  password gate, favorites gone. First load after idle takes about 40 seconds. Live Claude
+  capture is off. Open PRs: #5 (Lesson Studio), #6 (lesson facts on 399 rows), #7 (+48) — each
+  merges cleanly into the new `master` (checked with `git merge-tree`, 2026-10-25).
+- **Next Up:**
+  1. The owner decides on PR #7, then merges or closes #5 and #6.
+  2. Work the portal backlog (`portal next --n 8`). Facing History & Ourselves blocks
+     automated fetches and stays open.
+  3. Retry the 112 parked LOC pages: `requeue --app almanac --source <id> --status
+     unverifiable`, then `prefilter --limit 20`, a day apart. Three OER Commons candidates need
+     a person to open them.
+  4. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
+
+---
+
 ## 2026-10-25 — PR #4 merged; the docs restructure landed
 
 *Mac · Claude · commits `17e5ec3` (PR #4, squash), `47dfede` (docs)*

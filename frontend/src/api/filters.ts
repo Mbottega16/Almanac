@@ -21,6 +21,9 @@ export interface Filters {
   credit_type: string;
   // true => only granularity=specific (hide browse/portal pages)
   classReady: boolean;
+  // "" = any length, else a DurationBucket key. NOT an API parameter: matched
+  // client-side by BrowsePage over the returned items (see discovery.ts).
+  duration: string;
 }
 
 export const EMPTY_FILTERS: Filters = {
@@ -37,12 +40,13 @@ export const EMPTY_FILTERS: Filters = {
   age: "",
   credit_type: "",
   classReady: false,
+  duration: "",
 };
 
 // Filters -> API query params. `classReady` is a UI convenience for
 // `granularity=specific`; keep the translation in one place.
 export function toQuery(f: Filters) {
-  const { classReady, ...rest } = f;
+  const { classReady, duration: _duration, ...rest } = f;
   return { ...rest, granularity: classReady ? "specific" : "" };
 }
 

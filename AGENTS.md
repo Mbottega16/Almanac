@@ -104,9 +104,11 @@ Read it when a task touches past work. **Business side:** the owner's my-brain v
   join (parsed CCSS/NGSS/C3 codes), and the fixed 3-row `udl_principles` join. Faceted search,
   batch-upsert on `link` (canonicalized on write, `services/links.py`), `GET /api/udl-coverage`,
   `GET /api/stats`, `/api/standards`.
-- **Frontend:** Guided discovery (one question at a time, live match count), Browse (theme
-  search, Free/Paid, scope, subject, grade/format/theme/age/standard filters, UDL toggles,
-  "Class-ready only"), the UDL coverage strip, resource cards with cost/scope/publisher/UDL
+- **Frontend:** a discovery front door (#9, 2026-10-29): a plain-language sentence box whose
+  filters show as removable chips, three doors (who / what / how much time) with live counts,
+  and curated situation paths. Browse (theme search; Free/Paid, scope, subject,
+  grade/format/theme/age/standard filters, UDL toggles and "Class-ready only" behind a
+  "Refine" toggle, active filters as chips), the UDL coverage strip, resource cards with cost/scope/publisher/UDL
   pills and "link may be broken" badges, a Stats page (subject×UDL heatmap), and a read-only
   Capture page.
 - **Link health runs itself.** `.github/workflows/link-check.yml` runs
@@ -120,7 +122,7 @@ Read it when a task touches past work. **Business side:** the owner's my-brain v
 
 ## Commands & Verification
 
-- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (47 pass). `cd frontend && npm run build`.
+- **Tests:** `cd backend && .venv/Scripts/python -m pytest` (59 pass; 61 with PR #16). `cd frontend && npm run build`.
 - **Rebuild the seed DB** after the JSON changes: `scripts/build_seed_db.py`.
 - **Links:** `scripts/check_links.py` (`--json`/`--write`), `scripts/flag_dead_links.py`,
   `scripts/find_near_dupes.py` (soft duplicates for review).
@@ -133,7 +135,7 @@ To keep search and file reads fast, **never scan or read inside**:
 - `backend/.venv/` and `frontend/node_modules/` — 9,780+ vendor files.
 - `backend/static/` and `frontend/dist/` — generated SPA build bundles.
 - `backend/data/*.db` and `backend/seed/almanac-seed.db` — binary SQLite databases (the seed `.db` is git-ignored, built at deploy).
-- `backend/seed/almanac-seed.json` — ~1,100-row JSON seed (well over 1 MB); query via Python/API or read targeted slices rather than loading the entire file into context.
+- `backend/seed/almanac-seed.json` — 1,405-row JSON seed (2,180 with PR #17; about 3 MB, 2-space indent); query via Python/API or read targeted slices rather than loading the entire file into context.
 
 ## Rules & Gotchas
 
@@ -147,15 +149,20 @@ through the vault engine is allowed (owner, 2026-10-22), but robots.txt, Crawl-d
 limits and pointer-only records still apply.
 
 - **Merging is the owner's call.** A session merges a PR only on the owner's explicit go-ahead
-  (`gh pr merge N --squash`, the repo's style; it worked 2026-10-25 — earlier attempts were
-  blocked by the permission check). Check `git merge-tree` first. Merging anything under
-  `backend/` redeploys the live site.
+  (`gh pr merge N --squash`, the repo's style; it worked 2026-10-25 — earlier attempts and
+  2026-11-06 were blocked by the permission check). Check `git merge-tree` first. Merging
+  anything under `backend/` redeploys the live site. A PR stacked on another needs
+  **Create a merge commit** for the lower one, or the upper one conflicts.
 - **The Vercel `backend` check can fail on new PRs. That check is noise.** Render is the live
   site; `almanac-api.vercel.app` is an old fallback.
 - **Take URLs from `portal links`** (real hrefs, renders JavaScript pages). A summarizing fetch
   tool once invented a host for CommonLit — 5 dead links, caught by the page check.
 - **loc.gov answers HTTP 429** (a Cloudflare challenge) after about 27 requests: retry in small
-  batches a day apart. **PBS LearningMedia's bare domain has an expired TLS certificate** and
+  batches a day apart. On 2026-11-06 its HTML pages answered 403 (the challenge) at once, but
+  the `?fo=json` form the engine reads still answered.
+- **Write the seed with a 2-space indent and a final newline** (`JSON.stringify(rows, null, 2)`,
+  or `json.dumps(rows, indent=2, ensure_ascii=False)`). The engine and the link check both do.
+  Any other indent rewrites the whole file in the diff. **PBS LearningMedia's bare domain has an expired TLS certificate** and
   the engine stores links without `www.`, so PBS pages are held until that is decided.
 - **The URL check can't see duplicates under old slugs** (two Khan courses had older URL slugs).
 - `check_links.py` uses `certifi`'s CA bundle — Windows Python's `ssl` has none, which once
@@ -166,22 +173,34 @@ limits and pointer-only records still apply.
 
 ## Session Handoff (Last Worked On · Current State · Next Up)
 
-*Overwrite this at the end of every session; move the previous handoff into `HISTORY.md` first.*
-
-- **Last Worked On (2026-10-25):** PR #4 (favorites cut) merged on the owner's go-ahead
-  (squash, `17e5ec3`), which redeploys Render; the docs restructure landed on top. Before that
-  (2026-10-24): PR #7 opened (+48: 35 staged candidates and 13 portal finds), and the vault
-  engine gained `import` and `portal` commands plus the `deep_portal` skill. Full detail:
-  `HISTORY.md`.
-- **Current State (2026-10-25):** live on Render from `master`, 1,098 resources, behind the
-  password gate, favorites gone. First load after idle takes about 40 seconds. Live Claude
-  capture is off. Open PRs: #5 (Lesson Studio), #6 (lesson facts on 399 rows), #7 (+48) — each
-  merges cleanly into the new `master` (checked with `git merge-tree`, 2026-10-25).
+- **Last Worked On (2026-11-06, PC):**
+  - The owner dropped the lesson and unit UDL default. PR #15 clears it from 280 rows and
+    puts back the seed's 2-space indent. The vault engine no longer writes the default.
+  - PR #16: the weekly link check skips Almanac Originals. PR #13 had marked all 232 of them
+    `unreachable`, because no web request can open an `almanac-original://` link.
+  - PR #17, stacked on #15: +775 entries. ReadWorks 299, TeachEngineering 315 (lessons,
+    activities, units), Math Is Fun 135, portal batch 002 (NASA and National Geographic, 10),
+    and a hand-picked gap batch of 17 graded Math and Social Studies rows. One dead
+    TeachEngineering row (moved link) goes in the same PR.
+  - Local `master` held one unpushed crew commit (accessibility toggles, `ecef7cf`). It now
+    sits on branch `crew/a11y-toggles-unpushed`, and `master` matches GitHub.
+- **Current State (2026-11-06, night):**
+  - On the owner's word, #15 (merge commit `253ff3c`), #17 (squash `8eeb37a`), #16 (squash
+    `3714d47`) and #18 (squash `dd68110`) are merged, and #13 is closed. Render shows `dd68110`
+    live; the site answers.
+  - The library has 2,198 rows (2,196 stored: the 2 known LOC link pairs), with the discovery
+    overhaul (#9), the PreK Originals (#12) and 18 kindergarten Originals (#18, Social Studies).
+    Lessons and units carry no default UDL tags. No PR is open.
+  - Tests: 61 pass on `master`.
 - **Next Up:**
-  1. The owner decides on PR #7, then merges or closes #5 and #6.
-  2. Work the portal backlog (`portal next --n 8`). Facing History & Ourselves blocks
-     automated fetches and stays open.
-  3. Retry the 112 parked LOC pages: `requeue --app almanac --source <id> --status
-     unverifiable`, then `prefilter --limit 20`, a day apart. Three OER Commons candidates need
-     a person to open them.
-  4. Later, when the owner asks to optimize: remove the cold start with a keep-alive ping.
+  1. Next Monday's link check (2026-11-09) runs on the new seed. #13's real findings were 2
+     dead Twinkl links, 5 unreachable links and 1 recovered link.
+  2. Portal backlog: 126 to do, 6 assigned and blocked (`portal next --n 8`).
+  3. LOC: 111 pages parked. HTML pages get a Cloudflare challenge; the `?fo=json` form
+     answered 11 of 14 requests. Retry about 20 a day (`requeue` now keeps their titles).
+  4. Thinnest graded cells after #17: Math 3-5 (22) and 9-12 (16); Social Studies K-2 (13),
+     3-5 (8) and 6-8 (12); Arts and PE/Health in every band.
+  5. 12 local `crew/*` branches on the PC wait for review. None is pushed.
+  6. Later: the teacher upload/pull phase (not started), a keep-alive ping, and a persistent
+     database before about 20,000 rows.
+
