@@ -42,6 +42,11 @@ def _to_out(resource: Resource) -> ResourceOut:
         credit_type=resource.credit_type,
         credit_hours=resource.credit_hours,
         credit_note=resource.credit_note,
+        plan_text=(
+            resource.evidence
+            if resource.link.startswith("almanac-original://")
+            else None
+        ),
         tags=[t.name for t in resource.tags],
         udl_principles=[p.name for p in resource.udl_principles],
         standard_codes=[s.code for s in resource.standards_rel],

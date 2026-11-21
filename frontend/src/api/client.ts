@@ -31,6 +31,9 @@ export interface Resource {
   credit_note: string | null;
   tags: string[];
   udl_principles: string[];
+  /** Almanac Originals only: the full plan text, stored with the entry.
+   *  Null for external resources — their links open the source site. */
+  plan_text?: string | null;
   source: string;
   link_status: string;
   link_checked_at: string | null;

@@ -73,6 +73,12 @@ class ResourceUpdate(BaseModel):
 class ResourceOut(ResourceBase):
     model_config = ConfigDict(from_attributes=True)
 
+    # Almanac Originals only: the entry's own full plan text. Originals store
+    # their plan in the `evidence` column (it is Almanac's own content, not a
+    # quote from someone else's page), and `_to_out` fills this in solely for
+    # `almanac-original://` links. External entries keep `evidence` audit-only
+    # and always get None here.
+    plan_text: str | None = None
     id: int
     source: str
     standard_codes: list[str] = []

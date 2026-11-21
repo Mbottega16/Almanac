@@ -434,7 +434,11 @@ function PrincipleCard({
         <ul className="studio-companions">
           {mine.map((c) => (
             <li key={c.id}>
-              <a href={c.link} target="_blank" rel="noreferrer">{c.title}</a>
+              {c.link.startsWith("almanac-original://") ? (
+                <span>{c.title} (Almanac Original — read it from its card in Browse)</span>
+              ) : (
+                <a href={c.link} target="_blank" rel="noreferrer">{c.title}</a>
+              )}
               <button onClick={() => onChange({ companions: lesson.companions.filter((x) => x.id !== c.id) })} aria-label={`Remove ${c.title}`}>✕</button>
             </li>
           ))}
@@ -448,9 +452,13 @@ function PrincipleCard({
           {found.length === 0 && <li className="studio-note">Nothing new found for this lesson.</li>}
           {found.map((r) => (
             <li key={r.id}>
-              <a href={r.link} target="_blank" rel="noreferrer">
-                {r.title || r.link}
-              </a>
+              {r.link.startsWith("almanac-original://") ? (
+                <span>{r.title || r.link} (Almanac Original)</span>
+              ) : (
+                <a href={r.link} target="_blank" rel="noreferrer">
+                  {r.title || r.link}
+                </a>
+              )}
               <span>{[r.subject, r.grade_band, r.resource_type].filter(Boolean).join(" · ")}</span>
               <button onClick={() => attach(r)}>Add</button>
             </li>

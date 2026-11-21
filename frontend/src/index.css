@@ -474,6 +474,38 @@ h1 {
   font-size: 0.88rem;
 }
 
+/* Almanac Originals: the title is a button (no web address to open) that
+   expands the stored plan, and the plan renders in place on the card. */
+.entry-title-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.entry-title-button:hover {
+  text-decoration: underline;
+}
+
+.entry-plan {
+  margin-bottom: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #8883;
+  border-radius: 8px;
+  max-height: 26rem;
+  overflow-y: auto;
+}
+
+.entry-plan p {
+  margin: 0 0 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
 .entry-more {
   align-self: flex-start;
   margin-bottom: 0.6rem;

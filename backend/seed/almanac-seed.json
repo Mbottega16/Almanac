@@ -258,8 +258,8 @@
   },
   {
     "link": "https://www.nysed.gov/curriculum-instruction/engageny",
-    "title": "Eureka Math Grade 3 Module 1",
-    "description": "Complete instructional module with lesson plans, problem sets, and teacher guidance aligned to Common Core standards. Part of the archived EngageNY curriculum (ELA and math, PreK-12), now hosted by the New York State Education Department.",
+    "title": "EngageNY Archive — NYSED Curriculum Resources",
+    "description": "NYSED's standards resources page, which archives the complete EngageNY ELA and math curriculum modules. EngageNY.org was discontinued in 2022; the module files remain free to download here under CC BY-NC-SA.",
     "description_source": "generated",
     "subject": "Math",
     "grade_band": "3-5",
@@ -286,7 +286,7 @@
       "representation",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -910,9 +910,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.goalbook.org/toolkit",
+    "link": "https://goalbook.com/explore-toolkit/",
     "title": "Goalbook Toolkit for UDL",
-    "description": "Free online platform with UDL strategies, lesson plan templates, and resources for creating accessible instruction.",
+    "description": "Subscription toolkit of UDL-aligned instructional strategies and scaffolds for teachers. Goalbook's formerly free strategy library is now part of this paid product.",
     "description_source": "generated",
     "subject": "Other",
     "grade_band": "All",
@@ -922,8 +922,8 @@
     "duration_minutes": null,
     "materials": "",
     "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
+    "cost": "paid",
+    "price_note": "School membership, $5,150/year (site pricing, Nov 2026)",
     "source_site": "Goalbook",
     "license": "CC BY-NC",
     "standards": "",
@@ -937,7 +937,7 @@
       "action_expression",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -1698,9 +1698,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.achievethecore.org/aligned-resources",
-    "title": "Achieve the Core Aligned Resources",
-    "description": "Collection of math and ELA lessons aligned to college and career readiness standards with teacher guides.",
+    "link": "https://www.learnwithsap.org/",
+    "title": "Learn with SAP — Student Achievement Partners",
+    "description": "Current home of Student Achievement Partners, the organization behind Achieve the Core: literacy and math instructional tools, mini-assessments, and professional learning resources.",
     "description_source": "generated",
     "subject": "Math",
     "grade_band": "3-5",
@@ -1712,7 +1712,7 @@
     "learning_outcomes": [],
     "cost": "free",
     "price_note": "",
-    "source_site": "Achieve the Core",
+    "source_site": "Student Achievement Partners",
     "license": "CC BY-NC",
     "standards": "CCSS.MATH.3.NF.A.1",
     "tags": [
@@ -1724,7 +1724,7 @@
       "representation",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -1879,37 +1879,6 @@
     ],
     "link_status": "ok",
     "granularity": "specific"
-  },
-  {
-    "link": "https://www.goalbook.org/resources",
-    "title": "Goalbook UDL Strategy Library",
-    "description": "Database of evidence-based UDL strategies with practical examples and implementation guidance for diverse learners.",
-    "description_source": "generated",
-    "subject": "Other",
-    "grade_band": "All",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "article/text",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Goalbook",
-    "license": "CC BY-NC",
-    "standards": "",
-    "tags": [
-      "udl strategies",
-      "differentiation",
-      "accessibility"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression",
-      "engagement"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
   },
   {
     "link": "https://im.kendallhunt.com/k5/teachers/kindergarten/unit-1/lessons.html",
@@ -2366,36 +2335,6 @@
     "granularity": "collection"
   },
   {
-    "link": "https://www.achievethecore.org/page/2962/high-quality-instruction",
-    "title": "Achieve the Core Math Instructional Strategies",
-    "description": "Research-based instructional practices for teaching rigorous, equitable math with examples and implementation tools.",
-    "description_source": "generated",
-    "subject": "Math",
-    "grade_band": "All",
-    "age_min": null,
-    "age_max": null,
-    "resource_type": "article/text",
-    "duration_minutes": null,
-    "materials": "",
-    "learning_outcomes": [],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Achieve the Core",
-    "license": "CC BY-NC",
-    "standards": "",
-    "tags": [
-      "instructional strategies",
-      "professional development",
-      "equity"
-    ],
-    "udl_principles": [
-      "representation"
-    ],
-    "link_status": "unreachable",
-    "granularity": "specific",
-    "audience": "educators"
-  },
-  {
     "link": "https://sharemylesson.com/a-place-for/pre-k-12-teachers",
     "title": "Share My Lesson Interactive Activities",
     "description": "Peer-reviewed interactive lessons and activities for engaging students across subject areas with multimedia.",
@@ -2455,9 +2394,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.illustrativemathematics.org/6",
-    "title": "Illustrative Mathematics Grade 6",
-    "description": "Grade 6 curriculum with problem-based lessons on ratios, fractions, and early algebraic thinking.",
+    "link": "https://accessim.org/6-8/grade-6/course-guide/scope-and-sequence?a=teacher",
+    "title": "Illustrative Mathematics Grade 6 Course Guide (IM v.360)",
+    "description": "Official IM v.360 Grade 6 course guide: the unit-by-unit scope and sequence with lesson summaries for the problem-based middle school math curriculum, free from Access IM.",
     "description_source": "generated",
     "subject": "Math",
     "grade_band": "6-8",
@@ -3159,39 +3098,6 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.achievethecore.org/search?utf8=%E2%9C%93&focus=false&keyword=math",
-    "title": "Achieve the Core: High-Quality Math Lessons",
-    "description": "Repository of exemplary lessons and assessments aligned to Common Core, vetted for quality, with detailed teacher guidance and student materials.",
-    "description_source": "generated",
-    "subject": "Math",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 8,
-    "resource_type": "lesson plan",
-    "duration_minutes": 45,
-    "materials": "Varies by lesson, typically paper and manipulatives",
-    "learning_outcomes": [
-      "Students will master grade-level concepts",
-      "Students will engage in mathematical practices"
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Achieve the Core",
-    "license": "CC BY",
-    "standards": "K.OA, 1.OA, 2.OA, 2.NBT",
-    "tags": [
-      "standards-aligned",
-      "lesson plans",
-      "formative assessment"
-    ],
-    "udl_principles": [
-      "representation",
-      "action_expression"
-    ],
-    "link_status": "unreachable",
-    "granularity": "collection"
-  },
-  {
     "link": "https://www.khanacademy.org/math/geometry",
     "title": "Khan Academy: Geometry",
     "description": "High school geometry course with video lessons on proofs, transformations, and coordinate geometry. Includes practice problems and step-by-step hints.",
@@ -3291,7 +3197,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.mathopen.org",
+    "link": "https://www.mathopenref.com/",
     "title": "Math Open Reference: Geometry Dictionary",
     "description": "Interactive geometry reference with definitions, diagrams, and animations of geometric concepts. Students can manipulate diagrams to understand properties.",
     "description_source": "generated",
@@ -3319,7 +3225,7 @@
     "udl_principles": [
       "representation"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -4125,8 +4031,8 @@
     "granularity": "specific"
   },
   {
-    "link": "https://languagegym.com/",
-    "title": "Language Gym Spanish Practice Platform",
+    "link": "https://www.language-gym.com/",
+    "title": "The Language Gym — Language Practice Platform",
     "description": "Free platform offering targeted Spanish grammar exercises, vocabulary drills, and comprehension practice. Teacher dashboards track student progress.",
     "description_source": "generated",
     "subject": "World Languages",
@@ -4142,7 +4048,7 @@
     ],
     "cost": "free",
     "price_note": "",
-    "source_site": "Language Gym",
+    "source_site": "The Language Gym",
     "license": "All rights reserved",
     "standards": "",
     "tags": [
@@ -4154,7 +4060,7 @@
       "action_expression",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -4364,9 +4270,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.teachingchannel.org/",
+    "link": "https://www.teachingchannel.com/",
     "title": "Teaching Channel Professional Development Videos",
-    "description": "Free library of teaching strategy videos demonstrating best practices in literacy instruction. Includes classroom footage with expert commentary.",
+    "description": "Professional learning for teachers: online courses for graduate credit, certificates, and license renewal, plus classroom exemplar videos for schools and districts. Teaching Channel's old free video library at teachingchannel.org is retired; this is the organization's current site.",
     "description_source": "generated",
     "subject": "ELA / Reading",
     "grade_band": "All",
@@ -4379,8 +4285,8 @@
       "Teachers will be able to observe effective literacy practices",
       "Teachers will be able to implement instructional strategies"
     ],
-    "cost": "free",
-    "price_note": "",
+    "cost": "paid",
+    "price_note": "Paid online courses for graduate credit and license renewal",
     "source_site": "Teaching Channel",
     "license": "CC BY-NC",
     "standards": "",
@@ -4392,7 +4298,7 @@
     "udl_principles": [
       "representation"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection",
     "audience": "educators"
   },
@@ -4463,9 +4369,9 @@
     "evidence": "Internet Archive: Digital Library of Free & Borrowable Texts, Movies, Music & Wayback Machine"
   },
   {
-    "link": "https://scholasticnews.scholastic.com/",
+    "link": "https://sn4.scholastic.com/",
     "title": "Scholastic News Student Magazine Online",
-    "description": "Free access to leveled nonfiction articles designed for elementary students. Includes discussion questions and vocabulary support for guided reading.",
+    "description": "Grade 4 edition of Scholastic News, the weekly student newsmagazine: short nonfiction texts on current events and science with teacher support materials. Subscription required.",
     "description_source": "generated",
     "subject": "ELA / Reading",
     "grade_band": "3-5",
@@ -4478,8 +4384,8 @@
       "Students will be able to read leveled nonfiction text",
       "Students will be able to answer comprehension questions about current events"
     ],
-    "cost": "free",
-    "price_note": "",
+    "cost": "paid",
+    "price_note": "Classroom subscription (print + digital)",
     "source_site": "Scholastic",
     "license": "All rights reserved",
     "standards": "CCSS.ELA-LITERACY.RI.4.1",
@@ -4492,7 +4398,7 @@
       "representation",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -4596,9 +4502,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.edhelper.com/english.htm",
-    "title": "edHelper ELA Worksheets",
-    "description": "Free extensive library of printable ELA worksheets covering all standards and grades. Customizable and organized by topic and difficulty level.",
+    "link": "https://www.edhelper.com/",
+    "title": "edHelper — Printable Worksheets and Lesson Materials",
+    "description": "Hub for edHelper's printable worksheets and lesson materials across subjects, including the ELA worksheets collection. The old deep link to the English worksheets page now returns edHelper's missing-page notice, so this points at the main site.",
     "description_source": "generated",
     "subject": "ELA / Reading",
     "grade_band": "3-5",
@@ -4829,9 +4735,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.justforkids.org/",
-    "title": "Just for Kids Literacy Activities",
-    "description": "Free collection of interactive reading and writing activities designed for children. Includes printables, games, and online activities promoting literacy.",
+    "link": "https://www.starfall.com/",
+    "title": "Starfall — Learn to Read and K-5 Learning Games",
+    "description": "Interactive phonics, reading, and math games, books, and songs for PreK-5 from the nonprofit Starfall Education Foundation. (Just for Kids, the previous entry, is defunct.)",
     "description_source": "generated",
     "subject": "ELA / Reading",
     "grade_band": "K-2",
@@ -4844,9 +4750,9 @@
       "Students will be able to engage in writing and reading activities",
       "Students will be able to develop early literacy skills"
     ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Just for Kids",
+    "cost": "freemium",
+    "price_note": "Learn-to-Read program free; full access by membership",
+    "source_site": "Starfall Education",
     "license": "All rights reserved",
     "standards": "CCSS.ELA-LITERACY.W.1.1",
     "tags": [
@@ -5029,7 +4935,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.speechling.com/",
+    "link": "https://speechling.com/",
     "title": "Speechling Conversation Practice",
     "description": "Free platform for language learners to record and share language recordings with native speakers for feedback. Supports multiple languages.",
     "description_source": "generated",
@@ -5058,7 +4964,7 @@
       "action_expression",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -5657,7 +5563,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.gonoodle.com/teacher",
+    "link": "https://www.gonoodle.com/",
     "title": "GoNoodle: Movement and Wellness Videos",
     "description": "Free library of 1-3 minute movement videos for brain breaks and physical activity. Includes dance, yoga, and mindfulness activities for K-5.",
     "description_source": "generated",
@@ -5687,7 +5593,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -6278,9 +6184,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.fitmoves.com/",
-    "title": "FitMoves: Elementary PE Curriculum",
-    "description": "Free K-5 PE curriculum with lesson plans emphasizing movement competence and fitness knowledge. Structured, progressive skill-building.",
+    "link": "https://openphysed.org/",
+    "title": "OPEN Physical Education Curriculum",
+    "description": "Free physical education curriculum modules and activity plans for K-12 PE teachers from the Online Physical Education Network, a public service of Varsity Brands. (FitMoves, the previous entry, is defunct.)",
     "description_source": "generated",
     "subject": "PE / Health",
     "grade_band": "K-2",
@@ -6293,9 +6199,9 @@
       "Students will be able to develop motor skills progressively",
       "Students will be able to engage in lifetime physical activities"
     ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "FitMoves",
+    "cost": "freemium",
+    "price_note": "Free with registration",
+    "source_site": "OPEN — Online Physical Education Network",
     "license": "All rights reserved",
     "standards": "",
     "tags": [
@@ -6308,7 +6214,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "specific"
   },
   {
@@ -6621,7 +6527,7 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.loc.gov/collections/by-the-people/",
+    "link": "https://crowd.loc.gov/",
     "title": "By the People: Crowdsourcing",
     "description": "Collaborative transcription project where students and teachers help digitize historical documents from the Library of Congress while learning primary source analysis.",
     "description_source": "generated",
@@ -7384,9 +7290,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.incredibleart.org/",
-    "title": "Incredible Art Department",
-    "description": "Database of searchable art lesson plans for K-12 covering painting, drawing, sculpture, printmaking, and mixed media; created by teachers.",
+    "link": "https://www.deepspacesparkle.com/",
+    "title": "Deep Space Sparkle — Art Lessons for Kids",
+    "description": "Elementary art lesson plans and projects (K-7) with technique guidance and standards alignment. (The Incredible Art Department, the previous entry, is unreachable and appears retired.)",
     "description_source": "generated",
     "subject": "Arts",
     "grade_band": "All",
@@ -7399,9 +7305,9 @@
       "Students will be able to create artworks",
       "Students will be able to follow art processes"
     ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Incredible Art Department",
+    "cost": "freemium",
+    "price_note": "Free lessons on the site; full curriculum via Sparklers' Club membership",
+    "source_site": "Deep Space Sparkle",
     "license": "All rights reserved",
     "standards": "NCAS.VA.CR.1.K-12",
     "tags": [
@@ -7413,7 +7319,7 @@
       "action_expression",
       "engagement"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -7848,9 +7754,9 @@
     "granularity": "specific"
   },
   {
-    "link": "https://www.mindfulschools.org/",
-    "title": "Mindful Schools Training & Resources",
-    "description": "Organization offering free and paid mindfulness resources for K-12; includes sample lessons, meditation audio, and teacher training.",
+    "link": "https://www.smilingmind.com.au/",
+    "title": "Smiling Mind — Mindfulness Programs for Schools",
+    "description": "Evidence-based mindfulness and mental-fitness programs for schools, with curriculum-aligned lessons for primary students and a free app for families. (Mindful Schools, the previous entry, closed in 2024.)",
     "description_source": "generated",
     "subject": "SEL",
     "grade_band": "All",
@@ -7864,8 +7770,8 @@
       "Students will reduce stress"
     ],
     "cost": "freemium",
-    "price_note": "Free resources available; full training requires enrollment fee",
-    "source_site": "Mindful Schools",
+    "price_note": "Free app; school programs by subscription",
+    "source_site": "Smiling Mind",
     "license": "All rights reserved",
     "standards": "CASEL.SEL.2.K-12",
     "tags": [
@@ -7877,7 +7783,7 @@
       "engagement",
       "action_expression"
     ],
-    "link_status": "unreachable",
+    "link_status": "ok",
     "granularity": "collection"
   },
   {
@@ -11651,45 +11557,6 @@
     "udl_rationale": "representation: pairs video with a guided worksheet so the same content is delivered by ear and by print; engagement: think-pair-share discussion lets students process the topic verbally with a partner before writing",
     "evidence": "Understanding the negative impact gas-powered cars have on the environment empowers engineers to develop alternative modes of transportation.",
     "link_status": "ok"
-  },
-  {
-    "link": "https://stemteachers.asu.edu/stem-lesson-plans/jack-and-beanstalk-activity-2-beanstalk-building",
-    "title": "Jack and the Beanstalk: Beanstalk Building",
-    "description": "A free hands-on K-1 STEM activity from Arizona State University's outreach program where students use simple craft materials to build the tallest possible 'beanstalk,' then measure and compare results with classmates.",
-    "description_source": "generated",
-    "subject": "CS / STEM",
-    "grade_band": "K-2",
-    "age_min": 5,
-    "age_max": 7,
-    "resource_type": "project",
-    "scope": "lesson",
-    "publisher": "Arizona STEM Acceleration Project (ASAP), Arizona State University",
-    "duration_minutes": 40,
-    "materials": "Simple craft/building materials (e.g., straws, tape, paper) and a measuring tool",
-    "learning_outcomes": [
-      "Students will be able to construct a free-standing tower/structure using basic building materials.",
-      "Students will be able to measure their structure's height and compare it with a classmate's using nonstandard or standard units."
-    ],
-    "cost": "free",
-    "price_note": "",
-    "source_site": "Arizona State University STEM Teachers (ASAP outreach)",
-    "license": "Not stated on page",
-    "standards": "",
-    "granularity": "specific",
-    "tags": [
-      "engineering design",
-      "building challenge",
-      "measurement",
-      "storybook connection",
-      "kindergarten"
-    ],
-    "udl_principles": [
-      "engagement",
-      "action_expression"
-    ],
-    "udl_rationale": "engagement: ties the build challenge to a familiar fairy tale so students have a story hook for the task; action_expression: students show learning by building and measuring a physical object rather than writing about it",
-    "evidence": "Students build the tallest beanstalk they can with the provided materials. They then measure it and compare their beanstalk heights.",
-    "link_status": "unreachable"
   },
   {
     "link": "https://www.teachengineering.org/curriculum-search?collection=Lessons",
@@ -36326,9 +36193,9 @@
     "evidence": "A close reading of two documents relating to Jackie Robinson's breaking of the racial barrier in professional baseball leads to a deeper exploration of racism in the United States, both in and out of sports."
   },
   {
-    "link": "https://www.docsteach.org/activities/teacher/comparing-the-magna-carta-and-english-bill-of-rights-with-the-us-bill-of-rights",
-    "title": "Comparing the Magna Carta and English Bill of Rights with the U.S. Bill of Rights",
-    "description": "DocsTeach activity for grades 10-12 in which students read excerpts from the Magna Carta, the English Bill of Rights, and the U.S. Constitution to trace how English legal traditions shaped the U.S. Bill of Rights — and where the American document went further.",
+    "link": "https://chicagohistory.org/app/uploads/2016/10/chm-historylab-dof-4.pdf",
+    "title": "Magna Carta and Its Legacy (History Lab Lesson)",
+    "description": "Students read excerpts from the Magna Carta, the British Bill of Rights, and the U.S. Bill of Rights and trace how the Magna Carta influenced the later documents. Middle and high school; about three class periods. (Replaces a DocsTeach activity that no longer exists.)",
     "description_source": "generated",
     "subject": "Social Studies",
     "grade_band": "9-12",
@@ -36343,7 +36210,7 @@
     ],
     "cost": "free",
     "price_note": "",
-    "source_site": "DocsTeach",
+    "source_site": "Chicago History Museum",
     "license": "Public Domain",
     "standards": "C3.D2.His.1.9-12",
     "tags": [
@@ -36399,9 +36266,9 @@
     "evidence": "Students will analyze a series of photographs taken by renowned photographer Mathew Brady to reflect on the lives of soldiers during the Civil War."
   },
   {
-    "link": "https://www.docsteach.org/activities/teacher/rights-and-responsibilities-learning-lab-previsit-activity",
-    "title": "Rights and Responsibilities Learning Lab Pre-visit Activity",
-    "description": "DocsTeach 'Weighing the Evidence' activity for grades 2-4 in which students sort primary source documents — posters, laws, photographs, and newspapers — into citizens' rights and responsibilities, then define both terms and connect them to their own lives.",
+    "link": "https://thinktv.pbslearningmedia.org/resource/our-rights-responsibilities-lesson-plan/civics-for-kids-building-tomorrow-together/",
+    "title": "Our Rights and Responsibilities | Civics for Kids",
+    "description": "Elementary civics lesson that helps students tell rights apart from responsibilities and discuss why both matter in a community. (Replaces a DocsTeach pre-visit activity that no longer exists.)",
     "description_source": "generated",
     "subject": "Social Studies",
     "grade_band": "3-5",
@@ -36416,7 +36283,7 @@
     ],
     "cost": "free",
     "price_note": "",
-    "source_site": "DocsTeach",
+    "source_site": "PBS LearningMedia",
     "license": "Public Domain",
     "standards": "C3.D2.Civ.2.3-5",
     "tags": [

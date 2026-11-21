@@ -52,10 +52,21 @@ export default function ResourceCard({
 }: ResourceCardProps) {
   const [visited, setVisited] = useState(!!resource.visited_at);
   const [expanded, setExpanded] = useState(false);
+  const [planOpen, setPlanOpen] = useState(false);
 
   const handleOpen = () => {
     markVisited(resource.id).catch(() => {});
     setVisited(true);
+  };
+
+  // Almanac Originals have no web address — the `almanac-original://` link
+  // is just an id for content Almanac itself holds. The full plan text comes
+  // back on the resource (`plan_text`); clicking opens it right on the card
+  // instead of sending the browser to a scheme it cannot resolve.
+  const isOriginal = resource.link.startsWith("almanac-original://");
+  const handleOpenPlan = () => {
+    handleOpen();
+    setPlanOpen((v) => !v);
   };
 
   const favicon = faviconUrl(resource.link);
@@ -141,9 +152,15 @@ export default function ResourceCard({
         </div>
         <div className="entry-card-headings">
           <h3>
-            <a href={resource.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
-              {resource.title || resource.link}
-            </a>
+            {isOriginal ? (
+              <button type="button" className="entry-title-button" onClick={handleOpenPlan}>
+                {resource.title || resource.link}
+              </button>
+            ) : (
+              <a href={resource.link} target="_blank" rel="noreferrer" onClick={handleOpen}>
+                {resource.title || resource.link}
+              </a>
+            )}
           </h3>
           <div className="meta">
             {meta}
@@ -158,6 +175,11 @@ export default function ResourceCard({
               {COST_LABEL[resource.cost] ?? resource.cost}
               {resource.price_note ? ` · ${resource.price_note}` : ""}
             </span>
+            {isOriginal && (
+              <span className="scope-badge" title="Written for Almanac — the full plan is stored with this entry">
+                Almanac Original
+              </span>
+            )}
             {resource.credit_type && (
               <span
                 className="credit-badge"
@@ -254,6 +276,26 @@ export default function ResourceCard({
           >
             {expanded ? "Less" : "Details"}
           </button>
+        )}
+        {isOriginal && resource.plan_text && (
+          <button
+            className="entry-more"
+            onClick={handleOpenPlan}
+            aria-expanded={planOpen}
+          >
+            {planOpen ? "Close the plan" : "Read the plan"}
+          </button>
+        )}
+        {isOriginal && planOpen && resource.plan_text && (
+          <div className="entry-plan">
+            {resource.plan_text
+              .split(/\n{2,}/)
+              .map((para) => para.trim())
+              .filter(Boolean)
+              .map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+          </div>
         )}
         <div className="udl-row">
           {resource.udl_principles.map((p) => (
